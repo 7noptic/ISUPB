@@ -1,0 +1,11 @@
+.modules {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 340px;
+  padding-top: 45px;
+  &__btn{
+    font-weight: 700;
+    width: 100%;
+    padding: 14px 46px;
+  }
+}

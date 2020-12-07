@@ -1,0 +1,8 @@
+.logo{
+  cursor: pointer;
+  transition: $transition4;
+
+  &:hover{
+    transform: scale(1.1);
+  }
+}

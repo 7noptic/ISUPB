@@ -1,0 +1,13 @@
+.stages{
+  max-width: 1500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 50px;
+  &__title{
+    font-weight: 700;
+    font-size: 40px;
+    padding-bottom: 100px;
+  }
+}

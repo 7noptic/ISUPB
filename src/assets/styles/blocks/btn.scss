@@ -1,0 +1,11 @@
+.btn{
+  background-color: $orange;
+  border-radius: $radiusBtn;
+  transition: $transition4;
+  color: #fff;
+
+  &:hover{
+    background-color: #fff;
+    color: $orange;
+  }
+}

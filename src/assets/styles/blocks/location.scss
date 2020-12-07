@@ -1,0 +1,16 @@
+.location{
+  display: flex;
+  justify-content: space-between;
+
+  &__item{
+    padding: 10px 55px 10px 12px;
+    display: flex;
+    align-items: center;
+    &-text{
+      padding-left: 11px;
+    }
+    &:last-child{
+      padding: 10px 0 10px 12px;
+    }
+  }
+}

@@ -1,0 +1,83 @@
+.dots {
+  display: flex;
+  width: 200px;
+  flex-wrap: wrap;
+
+  &__dot {
+    cursor: pointer;
+    position: relative;
+    width: 10px;
+    height: 6px;
+    background-color: #000000;
+    margin: 3px 20px 0 0;
+    transition: $transition4;
+
+    &:before,
+    &:after {
+      content: "";
+      position: absolute;
+      width: 0;
+      border-left: 5px solid transparent;
+      border-right: 5px solid transparent;
+    }
+
+    &:before {
+      bottom: 100%;
+      border-bottom: 2.89px solid #000000;
+    }
+
+    &:after {
+      top: 100%;
+      width: 0;
+      border-top: 2.89px solid #000000;
+    }
+
+    &-active {
+      background-color: $orange;
+      transform: scale(1.5);
+
+      &:before {
+        bottom: 100%;
+        border-bottom: 2.89px solid $orange;
+        transform: scale(1.15);
+      }
+
+      &:after {
+        top: 100%;
+        width: 0;
+        border-top: 2.89px solid $orange;
+        transform: scale(1.15);
+      }
+
+      &:hover {
+        background-color: $orange;
+
+        &:before {
+          bottom: 100%;
+          border-bottom: 2.89px solid $orange;
+        }
+
+        &:after {
+          top: 100%;
+          width: 0;
+          border-top: 2.89px solid $orange;
+        }
+      }
+    }
+
+    &:hover {
+      background-color: $orange;
+
+      &:before {
+        bottom: 100%;
+        border-bottom: 2.89px solid $orange;
+      }
+
+      &:after {
+        top: 100%;
+        width: 0;
+        border-top: 2.89px solid $orange;
+      }
+    }
+  }
+}

@@ -1,0 +1,15 @@
+.stages-list{
+  width: 50%;
+  list-style: decimal;
+  &__item{
+    padding-bottom: 57px;
+
+  }
+  &__link{
+    font-size: 18px;
+    &-active{
+      font-size: 18px;
+      font-weight: 700;
+    }
+  }
+}

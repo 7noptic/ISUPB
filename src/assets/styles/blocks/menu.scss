@@ -1,0 +1,20 @@
+.menu{
+  display: flex;
+  justify-content: space-between;
+  &__item{
+
+  }
+  &__link{
+
+    font-size: 16px;
+    font-weight: 500;
+    padding: 10.5px 25px;
+    transition: $transition4;
+    border-radius: $radiusBtn;
+  &:hover,&:active,&:focus{
+    background-color: $orange;
+    color: #fff;
+  }
+
+  }
+}

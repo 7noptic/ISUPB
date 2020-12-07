@@ -1,0 +1,19 @@
+.header-info{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding-left: 75px;
+  &__top{
+    padding-left: 25px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    align-items: center;
+  }
+  &__bottom{
+    padding-top: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

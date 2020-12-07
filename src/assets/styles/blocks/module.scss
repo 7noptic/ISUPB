@@ -1,0 +1,33 @@
+.module{
+  padding-bottom: 25px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+
+  &__img{
+    width: 140px;
+    height: 160px;
+    background-image: url("../img/polygon.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: $transition4;
+    cursor: pointer;
+    &:hover{
+      background-image: url("../img/polygon-orange.svg");
+      & svg path{
+        fill: #fff;
+      }
+    }
+  }
+  &__text{
+    font-size: 14px;
+    font-weight: 300;
+    text-align: center;
+    padding-top: 5px;
+  }
+}

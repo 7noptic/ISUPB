@@ -1,0 +1,24 @@
+.form-search{
+  position: relative;
+
+  &__search{
+    width: 356px;
+    padding: 10.5px 20px 10.5px 45px;
+    background-color: #f7f7f7;
+    border-radius: $radiusBtn;
+    &::placeholder{
+      font-size: 12px;
+
+    }
+
+  }
+  &::before{
+    content: url("../img/search.svg");
+    display: block;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 9px;
+    left: 11px;
+  }
+}
