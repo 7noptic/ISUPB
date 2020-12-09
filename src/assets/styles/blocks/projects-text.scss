@@ -1,0 +1,32 @@
+.projects-text {
+  max-width: 400px;
+  width: 40%;
+  font-weight: 700;
+text-align: center;
+  text-transform: uppercase;
+  &__title {
+    font-size: 317px;
+    color: $yellow;
+    line-height: 250px;
+  }
+
+  &__subtitle {
+    font-size: 28px;
+  }
+
+  &__description {
+    font-size: 22px;
+    font-weight: 400;
+    max-width: 280px;
+    margin: 0 auto;
+    line-height: 24px;
+  }
+
+  &__text {
+    font-size: 51px;
+    line-height: 70px;
+    & span {
+      font-size: 103px;
+    }
+  }
+}

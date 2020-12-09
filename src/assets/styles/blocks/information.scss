@@ -1,6 +1,8 @@
 .information{
-  max-width: 1630px;
-  margin: 0 auto;
-  display: flex;
-  padding: 42px 26px;
+  width: 100%;
+  position: relative;
+  background-image: url("../img/informationbg.svg");
+  background-position: 10px 25px;;
+  background-repeat: no-repeat;
+  background-size: contain;
 }

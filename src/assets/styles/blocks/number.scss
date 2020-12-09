@@ -1,0 +1,15 @@
+.number{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  &__num{
+    font-size: 150px;
+    font-weight: 700;
+    color: $orange;
+  }
+  &__subtitle{
+    font-size: 18px;
+    font-weight: 700;
+  }
+}

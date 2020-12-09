@@ -1,0 +1,56 @@
+.news-mailing {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  height: 288.94px;
+  background-color: #f7f7f7;
+  margin: 115.47px 0;
+  padding: 15px 100px;
+  mix-blend-mode: normal;
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    width: 0;
+    border-left: 250px solid transparent;
+    border-right: 250px solid transparent;
+    mix-blend-mode: normal;
+  }
+
+  &:before {
+    bottom: 100%;
+    border-bottom: 144.47px solid #f7f7f7;
+  }
+
+  &:after {
+    top: 100%;
+    width: 0;
+    border-top: 144.47px solid #f7f7f7;
+  }
+
+  &__hexagon-top {
+    position: absolute;
+    top:-133px;
+    right: 0;
+    & svg{
+      mix-blend-mode: darken;
+    }
+  }
+  &__hexagon-bottom{
+    position: absolute;
+    left: -300px;
+    bottom: -312px;
+  }
+
+  &__title{
+    font-size: 18px;
+    font-weight: 700;
+    max-width: 235px;
+    padding-bottom: 20px;
+
+  }
+
+}

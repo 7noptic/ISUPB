@@ -1,15 +1,33 @@
-const path = require('path')
-const HTMLWebpackPlugin = require('html-webpack-plugin')
-const {CleanWebpackPlugin} = require('clean-webpack-plugin')
-const CopyWebpackPlugin = require('copy-webpack-plugin')
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-const OptimizeCssAssetsWebpackPlugin = require('optimize-css-assets-webpack-plugin')
-const TerserWebpackPlugin = require('terser-webpack-plugin')
-const {BundleAnalyzerPlugin} = require('webpack-bundle-analyzer')
-
+const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+//const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const TerserWebpackPlugin = require('terser-webpack-plugin');
+const OptimizeCssAssetWebpackPlugin = require('optimize-css-assets-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
+const fs = require('fs');
 //Проверка в каком режиме собирается проект
 const isDev = process.env.NODE_ENV === 'development'
 const isProd = !isDev
+//Поиск HTML
+
+function generateHtmlPlugins(templateDir) {
+    const templateFiles = fs.readdirSync(path.resolve(__dirname, templateDir));
+    return templateFiles.map(item => {
+        const parts = item.split('.');
+        const name = parts[0];
+        const extension = parts[1];
+        return new HtmlWebpackPlugin({
+            filename: `${name}.html`,
+            template: path.resolve(__dirname, `${templateDir}/${name}.${extension}`),
+            minify: {
+                collapseWhitespace: isProd
+            },
+            inject: true,
+        })
+    })
+}
+const htmlPlugins = generateHtmlPlugins('./src/assets/html/views')
 
 //Оптимизация??
 const optimization = () => {
@@ -20,7 +38,7 @@ const optimization = () => {
     }
     if (isProd) {
         config.minimizer = [
-            new OptimizeCssAssetsWebpackPlugin(),
+            new OptimizeCssAssetWebpackPlugin(),
             new TerserWebpackPlugin()
         ]
     }
@@ -39,9 +57,13 @@ const cssLoaders = extra => {
                 reloadAll: true
             },
         },
-        'css-loader',
-    ]
-
+        {
+            loader: 'css-loader',
+            options: {
+                url: false
+            }
+        }
+    ];
     if (extra) {
         loaders.push(extra)
     }
@@ -51,24 +73,30 @@ const cssLoaders = extra => {
 const babelOptions = preset => {
     const opts = {
         presets: [
-            "@babel/preset-env"
+            '@babel/preset-env'
         ],
-        plugins: ["@babel/plugin-proposal-class-properties"]
+        plugins: [
+            '@babel/plugin-proposal-class-properties',
+        ]
     }
+
     if (preset) {
         opts.presets.push(preset)
     }
+
     return opts
 }
+
 const plugins = () => {
     const base = [
-        new HTMLWebpackPlugin({
+        new HtmlWebpackPlugin({
             template: './index.html',
             minify: {
                 collapseWithSpace: isProd
             }
         }),
-        new CleanWebpackPlugin(),
+
+        //new CleanWebpackPlugin(),
         new CopyWebpackPlugin({
             patterns: [
                 {from: 'assets/img/', to: 'img'},
@@ -78,7 +106,7 @@ const plugins = () => {
         new MiniCssExtractPlugin({
             filename: fileName('css'),
         })
-    ]
+    ].concat(htmlPlugins)
 
     if(isProd){
         base.push(new BundleAnalyzerPlugin)
@@ -98,9 +126,12 @@ module.exports = {
         path: path.resolve(__dirname, 'dist')
     },
     resolve: {
+        //extensions: ['.js', '.json', '.png'],
         alias: {
-            '@models': path.resolve(__dirname, 'src/models'),
-            '@': path.resolve(__dirname, 'src')
+            '@views': path.resolve(__dirname, 'src/html/views'),
+            '@includes': path.resolve(__dirname, 'src/html/includes'),
+            '@scss': path.resolve(__dirname, 'src/scss'),
+            '@': path.resolve(__dirname, 'src'),
         }
     },
     optimization: optimization(),
@@ -112,6 +143,14 @@ module.exports = {
     plugins: plugins(),
     module: {
         rules: [
+            {
+                test: /\.html$/,
+                include: path.resolve(__dirname, 'src/html/includes'),
+                loader: 'html-loader',
+                options: {
+                    minimize: false,
+                }
+            },
             {
                 test: /\.css$/,
                 use: cssLoaders()

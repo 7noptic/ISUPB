@@ -1,30 +1,64 @@
-.module{
+.module {
   padding-bottom: 25px;
 
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 50%;
+  cursor: pointer;
+  &__img {
 
-  &__img{
+    position: relative;
     width: 140px;
-    height: 160px;
-    background-image: url("../img/polygon.svg");
-    background-repeat: no-repeat;
-    background-position: 0 0;
+    height: 80.83px;
+    background-color: #f7f7f7;
+    margin: 40.41px 0;
     display: flex;
     justify-content: center;
     align-items: center;
     transition: $transition4;
-    cursor: pointer;
-    &:hover{
-      background-image: url("../img/polygon-orange.svg");
-      & svg path{
+
+    &:before,
+    &:after {
+      content: "";
+      position: absolute;
+      width: 0;
+      border-left: 70px solid transparent;
+      border-right: 70px solid transparent;
+      transition: $transition4;
+
+    }
+
+    &:before {
+      bottom: 100%;
+      border-bottom: 40.41px solid #f7f7f7;
+    }
+
+    &:after {
+      top: 100%;
+      width: 0;
+      border-top: 40.41px solid #f7f7f7;
+    }
+    & path{
+      transition: $transition4;
+    }
+
+    &:hover {
+      background-color: $orange;
+
+      &::before {
+        border-bottom: 40.41px solid $orange;
+      }
+      &::after {
+        border-top: 40.41px solid $orange;
+      }
+      & path {
         fill: #fff;
       }
     }
   }
-  &__text{
+
+  &__text {
     font-size: 14px;
     font-weight: 300;
     text-align: center;

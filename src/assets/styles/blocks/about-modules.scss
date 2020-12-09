@@ -1,0 +1,26 @@
+.about-modules{
+display: flex;
+  &__text{
+    width: 35%;
+    padding-right: 70px;
+  }
+  &__img{
+    width: 65%;
+    position: relative;
+    &-hexagon{
+      position: absolute;
+      top: 50px;
+      left: 20px;
+    }
+  }
+  &__title{
+    font-weight: 700;
+    font-size: 40px;
+    padding: 45px 0;
+  }
+  &__description{
+    font-weight: 300;
+    font-size: 14px;
+    padding-bottom: 105px;
+  }
+}

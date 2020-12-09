@@ -1,0 +1,38 @@
+.preproject {
+  &__title {
+    padding-bottom: 50px;
+    font-weight: 700;
+    font-size: 18px;
+  }
+
+  &__modules {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  &__module {
+    width: 33%;
+  }
+
+  &__description {
+    font-weight: 800;
+    font-size: 12px;
+    padding: 30px 30px 60px 0;
+    & span{
+      color: $orange;
+    }
+  }
+  &__img{
+    & path, & svg{
+      transition: $transition4;
+
+    }
+    &:hover{
+      & path{
+        fill: $orange;
+      }
+    }
+  }
+}

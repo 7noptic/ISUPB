@@ -1,0 +1,20 @@
+.form-input {
+  padding: 9px 12px;
+  border: 1px solid rgba(0, 0, 0, .5);
+  border-radius: $radiusBtn;
+  transition: $transition4;
+
+  &:hover {
+    border: 1px solid rgba(253, 121, 0, .4);;
+  }
+
+  &:active, &:focus {
+    border: 1px solid $orange;
+    background-color: #f7f7f7;
+  }
+
+  &::placeholder {
+    font-size: 12px;
+    font-weight: 400;
+  }
+}

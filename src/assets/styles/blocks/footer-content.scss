@@ -1,0 +1,52 @@
+.footer-content {
+  max-width: 1630px;
+  margin: 0 auto;
+  padding: 40px 0 30px;
+  border-bottom: 1px solid #d8d8d8;
+  display: flex;
+
+  &__item {
+    padding-right: 50px;
+    min-width: 300px;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 18px;
+    padding-bottom: 32px;
+
+  }
+
+  &__elemlist {
+    padding-bottom: 15px;
+    transition: $transition4;
+
+    &:active {
+      transform: scale(1.05);
+    }
+  }
+
+  &__link {
+    font-size: 12px;
+    font-weight: 400;
+    transition: $transition4;
+
+    & span {
+      font-weight: 600;
+      font-size: 14px;
+
+      &:hover {
+        color: $orange;
+      }
+
+      &:active {
+        transform: scale(1.05);
+      }
+    }
+
+    &:hover {
+      color: $orange;
+    }
+
+  }
+}

@@ -1,0 +1,69 @@
+.requisition-img{
+  display: flex;
+  &__hexagon{
+    mix-blend-mode: hard-light;
+    &:first-child{
+      margin-left: 0;
+      opacity: .03;
+      animation: HexagonOpacity1Child ease-in-out 3s infinite;
+    }
+    &:nth-child(2){
+      opacity: .1;
+      animation: HexagonOpacity2Child ease-in-out 2.2s infinite;
+    }
+    &:nth-child(3){
+      opacity: .15;
+      animation: HexagonOpacity3Child ease-in-out 2.7s infinite;
+    }
+    &:nth-child(4){
+      opacity: .9;
+      animation: HexagonOpacity4Child ease-in-out 2.8s infinite;
+    }
+    margin-left: -130px;
+  }
+}
+
+@keyframes HexagonOpacity1Child {
+  0%{
+    opacity: .03;
+  }
+  50%{
+    opacity: .06;
+  }
+  100%{
+    opacity: .03;
+  }
+}
+@keyframes HexagonOpacity2Child {
+  0%{
+    opacity: .1;
+  }
+  50%{
+    opacity: .15;
+  }
+  100%{
+    opacity: .1;
+  }
+}
+@keyframes HexagonOpacity3Child {
+  0%{
+    opacity: .15;
+  }
+  50%{
+    opacity: .2;
+  }
+  100%{
+    opacity: .15;
+  }
+}
+@keyframes HexagonOpacity4Child {
+  0%{
+    opacity: .7;
+  }
+  50%{
+    opacity: .9;
+  }
+  100%{
+    opacity: .7;
+  }
+}

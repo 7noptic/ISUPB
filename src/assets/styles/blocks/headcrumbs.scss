@@ -1,0 +1,44 @@
+.headcrumbs {
+  padding: 20px 0 10px;
+  max-width: 1630px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    padding-right: 30px;
+    position: relative;
+
+    &::after {
+      content: url("../img/headcrumbsarrow.svg");
+      display: block;
+      position: absolute;
+      top: -1px;
+      right: 11px;
+    }
+
+    &:last-child {
+      & a {
+        opacity: 1;
+      }
+
+      &::after {
+        content: '';
+        display: none;
+      }
+    }
+  }
+
+  &__link {
+    font-size: 12px;
+    opacity: .5;
+    &:hover{
+      color: $orange;
+    }
+  }
+}

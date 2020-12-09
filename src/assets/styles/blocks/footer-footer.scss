@@ -1,0 +1,46 @@
+.footer-footer {
+  max-width: 1630px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 30px;
+
+  &__list {
+    display: flex;
+  }
+
+  &__elemlist {
+    transition: $transition4;
+    padding-right: 35px;
+
+    &:active {
+      transform: scale(1.05);
+    }
+  }
+
+  &__link {
+    transition: $transition4;
+    font-size: 12px;
+
+    &:hover {
+      color: $orange;
+    }
+  }
+  &__logo{
+    transition: $transition4;
+    cursor: pointer;
+    & path{
+      transition: $transition4;
+    }
+    &:hover{
+      & path{
+        fill:$orange;
+      }
+    }
+    &:active {
+      & path{
+        transform: scale(.9);
+      }
+    }
+  }
+}

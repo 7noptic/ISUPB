@@ -1,0 +1,41 @@
+.news-item{
+
+  
+  width: 50%;
+  padding-right: 8%;
+  padding-bottom: 30px;
+  cursor: pointer;
+  &__header{
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    font-weight: 400;
+    padding-bottom: 15px;
+
+  }
+  &__views{
+    position: relative;
+    &::before{
+      content: url("../img/eye.svg");
+      display: block;
+      position: absolute;
+      left: -26px;
+    }
+  }
+  &__title{
+    max-width: 440px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21px;
+    padding-bottom: 20px;
+  }
+  &__img{
+    padding-bottom: 20px;
+  }
+  &__description{
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 17px;
+    padding-bottom: 20px;
+  }
+}

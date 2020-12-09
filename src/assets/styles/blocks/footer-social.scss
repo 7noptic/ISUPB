@@ -1,0 +1,24 @@
+.footer-social{
+  display: flex;
+  &__title{
+    font-size: 14px;
+    font-weight: 600;
+  }
+  &__item{
+    margin-left: 30px;
+    transition: $transition4;
+    cursor: pointer;
+    &:hover{
+      transform: scale(1.1);
+      & svg path{
+        fill: $orange;
+        &.socialwhite{
+          fill: #fafafa;
+        }
+      }
+    }
+    &:active{
+     transform: scale(.9);
+    }
+  }
+}

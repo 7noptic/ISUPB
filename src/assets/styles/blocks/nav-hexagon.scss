@@ -1,0 +1,54 @@
+.nav-hexagon {
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: relative;
+  width: 52px;
+  height: 30px;
+  background-color: #f7f7f7;
+  margin: 15.01px 30px 15px 0px;
+  cursor: pointer;
+  transition: $transition4;
+  &-2 {
+    justify-content: flex-start;
+  }
+
+  &:hover {
+& path{
+  fill: #f7f7f7;
+}
+    background-color: lighten($yellow, 25%);
+
+    &:before {
+      border-bottom: 15px solid lighten($yellow, 25%);
+    }
+
+    &:after {
+      border-top: 15px solid lighten($yellow, 25%);
+    }
+  }
+
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    width: 0;
+    border-left: 26px solid transparent;
+    border-right: 26px solid transparent;
+    transition: $transition4;
+  }
+
+  &:before {
+    bottom: 100%;
+    border-bottom: 15px solid #f7f7f7;
+  }
+
+  &:after {
+    top: 100%;
+    width: 0;
+    border-top: 15px solid #f7f7f7;
+  }
+}
+
+

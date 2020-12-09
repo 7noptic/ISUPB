@@ -1,0 +1,45 @@
+.news-subtitle {
+  font-weight: 500;
+  font-size: 16px;
+  opacity: .5;
+  margin-right: 60px;
+  position: relative;
+  transition: $transition4;
+
+  &:hover {
+    opacity: .7;
+
+    &::after {
+      width: 100%;
+    }
+  }
+
+  &::after {
+    transition: $transition4;
+    content: '';
+    display: flex;
+    justify-content: center;
+    height: 4px;
+    background-color: $orange;
+    position: absolute;
+    bottom: -5px;
+    width: 0%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    transform: translateX(-50%);
+  }
+
+  &-active {
+    opacity: 1;
+
+    :hover {
+      opacity: 1;
+    }
+
+    &::after {
+      width: 100%;
+    }
+
+  }
+}

@@ -1,0 +1,22 @@
+.about-text{
+  width: 40%;
+  padding-right: 75px;
+  &__title{
+    font-size: 40px;
+    font-weight: 700;
+    padding-bottom: 40px;
+  }
+  &__subtitle{
+    font-size: 14px;
+    font-weight: 300;
+    padding-bottom: 30px;
+  }
+  &__readmore{
+    font-size: 14px;
+    font-weight: 600;
+    position: relative;
+    display: flex;
+    align-items: center;
+
+  }
+}

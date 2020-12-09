@@ -1,37 +1,167 @@
-@import "src/assets/styles/fonts";
-@import "src/assets/styles/vars";
-@import "src/assets/styles/default";
+@import "fonts";
+@import "vars";
+@import "default";
+
+/* А */
+@import "blocks/advantages";
+@import "blocks/advantage";
+
+@import "blocks/about";
+@import "blocks/about-text";
+@import "blocks/about-content";
+@import "blocks/about-modules";
+
+@import "blocks/agreement";
+
+@import "blocks/award";
+@import "blocks/awards";
+@import "blocks/awards-content";
+@import "blocks/awards-slider";
+@import "blocks/awards-nav";
+@import "blocks/about-system";
+
+/* В */
+@import "blocks/btn";
+
+/* D */
+@import "blocks/dots";
 
 
-@import "src/assets/styles/blocks/logo";
-@import "src/assets/styles/blocks/btn";
-@import "src/assets/styles/blocks/form-search";
-@import "src/assets/styles/blocks/header";
-@import "src/assets/styles/blocks/header-info";
-@import "src/assets/styles/blocks/location";
-@import "src/assets/styles/blocks/menu";
-@import "src/assets/styles/blocks/nav";
-@import "src/assets/styles/blocks/nav-contacts";
-@import "src/assets/styles/blocks/telegramm";
-@import "src/assets/styles/blocks/viber";
-@import "src/assets/styles/blocks/whatsapp";
+/* F */
+@import "blocks/footer";
+@import "blocks/footer-content";
+@import "blocks/footer-footer";
+@import "blocks/footer-header";
+@import "blocks/footer-social";
+
+@import "blocks/form-input";
+@import "blocks/form-search";
+
+/* H */
+@import "blocks/header";
+@import "blocks/header-info";
+
+@import "blocks/headcrumbs";
+
+/* I */
+@import "blocks/information";
+@import "blocks/information-wrapper";
+@import "blocks/information-img";
+@import "blocks/information-form";
+@import "blocks/information-modules";
 
 
-@import "src/assets/styles/blocks/information";
-@import "src/assets/styles/blocks/information-img";
-@import "src/assets/styles/blocks/information-form";
-@import "src/assets/styles/blocks/agreement";
-@import "src/assets/styles/blocks/dots";
-@import "src/assets/styles/blocks/information-modules";
-@import "src/assets/styles/blocks/modules";
-@import "src/assets/styles/blocks/module";
+/* L */
+@import "blocks/logo";
+@import "blocks/location";
 
 
-@import "src/assets/styles/blocks/request";
+/* M */
+@import "blocks/menu";
+
+@import "blocks/modules";
+@import "blocks/module";
+@import "blocks/module-big";
+
+/* N */
+@import "blocks/nav-hexagon";
+@import "blocks/nav";
+@import "blocks/nav-contacts";
+
+@import "blocks/numbers";
+@import "blocks/number";
+
+@import "blocks/news";
+@import "blocks/news-articles";
+@import "blocks/news-content";
+@import "blocks/news-form";
+@import "blocks/news-item";
+@import "blocks/news-mailing";
+@import "blocks/news-subtitle";
+@import "blocks/news-btn";
+
+/* P */
+@import "blocks/project-numbers";
+
+@import "blocks/projects";
+@import "blocks/projects-content";
+@import "blocks/projects-text";
+@import "blocks/projects-slider";
+@import "blocks/projects-nav";
+@import "blocks/project";
+
+@import "blocks/preproject";
+@import "blocks/placeholder";
 
 
-@import "src/assets/styles/blocks/stages";
-@import "src/assets/styles/blocks/stages-content";
-@import "src/assets/styles/blocks/stages-list";
-@import "src/assets/styles/blocks/stages-tabs";
+/* Q */
+@import "blocks/query";
+@import "blocks/query-form";
+@import "blocks/query-text";
+@import "blocks/query-img";
+
+/* R */
+@import "blocks/request";
+@import "blocks/readmore";
+
+@import "blocks/requisition";
+@import "blocks/requisition-img";
+@import "blocks/requisition-text";
+
+
+/* S */
+@import "blocks/stages";
+@import "blocks/stages-content";
+@import "blocks/stages-list";
+@import "blocks/stages-tabs";
+
+/* T */
+@import "blocks/telegramm";
+@import "blocks/title";
+
+/* V */
+@import "blocks/viber";
+
+/* W */
+@import "blocks/whatsapp";
+@import "blocks/wrapper";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@import "blocks/reviews";
+@import "blocks/reviews-nav";
+
+
+
+
+
+
+
+
+
+
+
+
 

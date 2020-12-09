@@ -1,3 +1,86 @@
-.stages-tabs{
+.stages-tabs {
   width: 50%;
+  margin: 0 auto;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 30px;
+  position: relative;
+  height: auto;
+  min-height: 490.01px;
+  background-color: transparent;
+  margin: 216.51px 0;
+  border-left: solid 3px #f7f7f7;
+  border-right: solid 3px #f7f7f7;
+  margin-top: -30px;
+  z-index: 0;
+  padding: 30px 50px 30px 88px;
+
+
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    width: 530.33px;
+    height: 530.33px;
+    -webkit-transform: scaleY(0.6774) rotate(-45deg);
+    -ms-transform: scaleY(0.6774) rotate(-45deg);
+    transform: scaleY(0.6774) rotate(-45deg);
+    background-color: inherit;
+    left: 104.8350px;
+  }
+
+ &:before {
+    top: -265.1650px;
+    border-top: solid 3px #f7f7f7;
+    border-right: solid 3px #f7f7f7;
+  }
+
+  &:after {
+    bottom: -265.1650px;
+    border-bottom: solid 3px #f7f7f7;
+    border-left: solid 3px #f7f7f7;
+  }
+  &__title {
+    font-size: 18px;
+    font-weight: 700;
+    padding-bottom: 20px;
+
+  }
+
+  &__subtitle{
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 30px;
+    padding-bottom: 40px;
+  }
+
+  &__list {
+
+  }
+
+  &__item {
+    position: relative;
+    padding-left: 30px;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 30px;
+  transition: $transition4;
+    cursor: pointer;
+    &:hover{
+      transform: scale(1.05);
+    }
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 6px 0 6px 12px;
+      border-color: transparent transparent transparent #ea5a00;
+      left: 0;
+      top: 8px;
+    }
+  }
 }

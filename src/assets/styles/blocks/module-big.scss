@@ -1,0 +1,64 @@
+.module {
+  &-big {
+    width: 33%;
+    padding-bottom: 65px;
+  }
+
+  &__img-big {
+
+    position: relative;
+    width: 300px;
+    height: 173.21px;
+    background-color: #f7f7f7;
+    margin: 86.60px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: $transition4;
+    & svg{
+      transform: scale(2.2);
+    }
+
+    &:before,
+    &:after {
+      content: "";
+      position: absolute;
+      width: 0;
+      border-left: 150px solid transparent;
+      border-right: 150px solid transparent;
+      transition: $transition4;
+
+    }
+
+    &:before {
+      bottom: 100%;
+      border-bottom: 86.60px solid #f7f7f7;
+    }
+
+    &:after {
+      top: 100%;
+      width: 0;
+      border-top: 86.60px solid #f7f7f7;
+    }
+    & path{
+      transition: $transition4;
+    }
+
+
+    &:hover {
+      background-color: $orange;
+
+      &::before {
+        border-bottom: 86.60px solid $orange;
+      }
+
+      &::after {
+        border-top: 86.60px solid $orange;
+      }
+
+      & path {
+        fill: #fff;
+      }
+    }
+  }
+}

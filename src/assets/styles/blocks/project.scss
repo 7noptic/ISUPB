@@ -1,0 +1,25 @@
+.project{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 30%;
+  min-height: 185px;
+  transition: $transition4;
+  cursor: pointer;
+  &:hover{
+    transform: scale(1.1);
+  }
+  &:active{
+    transform: scale(.9);
+  }
+  &__img{
+    min-height: 100px;
+  }
+  &__name{
+    padding-top: 10px;
+    font-size: 12px;
+    font-weight: 400;
+    text-align: center;
+    max-width: 170px;
+  }
+}

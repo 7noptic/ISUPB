@@ -64,10 +64,16 @@ button:active,
 button:focus,
 input,
 input:active,
-input:focus{
+input:focus,
+textarea,
+textarea:active,
+textarea:focus{
   cursor: pointer;
   border: none;
   outline: none;
+}
+textarea{
+  resize: none;
 }
 @media (prefers-reduced-motion: reduce) {
   * {
