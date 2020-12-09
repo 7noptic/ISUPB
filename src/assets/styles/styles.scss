@@ -18,10 +18,22 @@
 @import "blocks/awards-content";
 @import "blocks/awards-slider";
 @import "blocks/awards-nav";
-@import "blocks/about-system";
+
+@import "blocks/articles";
+@import "blocks/article";
+
 
 /* В */
 @import "blocks/btn";
+@import "blocks/board";
+@import "blocks/board-item";
+@import "blocks/board-article";
+
+/* C */
+@import "blocks/characteristics";
+@import "blocks/characteristic";
+@import "blocks/characteristic-nav";
+
 
 /* D */
 @import "blocks/dots";
@@ -37,6 +49,8 @@
 @import "blocks/form-input";
 @import "blocks/form-search";
 
+@import "blocks/faq";
+
 /* H */
 @import "blocks/header";
 @import "blocks/header-info";
@@ -50,6 +64,7 @@
 @import "blocks/information-form";
 @import "blocks/information-modules";
 
+@import "blocks/introduction";
 
 /* L */
 @import "blocks/logo";
@@ -62,6 +77,8 @@
 @import "blocks/modules";
 @import "blocks/module";
 @import "blocks/module-big";
+
+@import "blocks/module-more";
 
 /* N */
 @import "blocks/nav-hexagon";
@@ -93,6 +110,10 @@
 @import "blocks/preproject";
 @import "blocks/placeholder";
 
+@import "blocks/popular-requries";
+
+@import "blocks/pagination";
+
 
 /* Q */
 @import "blocks/query";
@@ -118,6 +139,9 @@
 /* T */
 @import "blocks/telegramm";
 @import "blocks/title";
+@import "blocks/text2column";
+@import "blocks/text-paragraph";
+@import "blocks/text-img";
 
 /* V */
 @import "blocks/viber";

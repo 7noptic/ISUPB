@@ -1,0 +1,17 @@
+.module-more{
+  max-width: 1400px;
+  padding: 80px 30px 100px;
+  margin: 0 auto;
+  &__img img{
+    box-shadow: 0 0 0 0 transparent;
+  }
+  &__title{
+    padding-bottom: 85px;
+  }
+  &__nav{
+    margin-top: -210px;
+    width: 115%;
+    margin-left: -70px;
+    padding-bottom: 200px;
+  }
+}

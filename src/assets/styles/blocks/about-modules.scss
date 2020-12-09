@@ -1,24 +1,42 @@
-.about-modules{
-display: flex;
-  &__text{
-    width: 35%;
+.about-modules {
+  width: 100%;
+  position: relative;
+  background-image: url("../img/hexagonbgright.svg");
+  background-position: right center;
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  &__wrapper {
+    display: flex;
+    max-width: 1630px;
+    padding: 80px 30px 100px;
+    margin: 0 auto;
+    z-index: 10;
+  }
+
+  &__text {
+    width: 36%;
     padding-right: 70px;
   }
-  &__img{
+
+  &__img {
     width: 65%;
     position: relative;
-    &-hexagon{
+
+    &-hexagon {
       position: absolute;
       top: 50px;
       left: 20px;
     }
   }
-  &__title{
+
+  &__title {
     font-weight: 700;
     font-size: 40px;
     padding: 45px 0;
   }
-  &__description{
+
+  &__description {
     font-weight: 300;
     font-size: 14px;
     padding-bottom: 105px;

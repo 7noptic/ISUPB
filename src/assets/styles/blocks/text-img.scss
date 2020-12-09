@@ -1,4 +1,4 @@
-.about-system {
+.text-img {
   max-width: 1630px;
   width: 100%;
   margin: 0 auto;
@@ -26,11 +26,11 @@
   }
 
   &__text {
-    width: 50%;
+    width: 45%;
   }
 
   &__img {
-    width: 50%;
+    width: 55%;
     display: flex;
     justify-content: flex-end;
     padding-right: 50px;

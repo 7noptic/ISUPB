@@ -1,0 +1,22 @@
+.board-article{
+  width: 33%;
+  padding: 10px 20px 80px;
+  &__title{
+    padding: 10px 20px;
+    font-weight: 600;
+    font-size: 14px;
+
+  }
+  &__description{
+    font-weight: 300;
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+  &__footer{
+    display: flex;
+    justify-content: space-between;
+    font-weight: 300;
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+}

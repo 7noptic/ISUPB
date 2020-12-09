@@ -1,0 +1,31 @@
+.characteristic {
+  position: relative;
+  width: auto;
+  height: 50px;
+  background-color: #f7f7f7;
+  margin: 0 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 15px;
+
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    width: 0;
+    border-top: 25px solid transparent;
+    border-bottom: 25px solid transparent;
+  }
+
+  &:before {
+    left: 100%;
+    border-left: 10px solid #f7f7f7;
+  }
+
+  &:after {
+    right: 100%;
+    width: 0;
+    border-right: 10px solid #f7f7f7;
+  }
+}

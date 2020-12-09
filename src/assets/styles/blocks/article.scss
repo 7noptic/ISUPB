@@ -1,0 +1,39 @@
+.article{
+  max-width: 1080px;
+  padding: 80px 30px 100px;
+  margin: 0 auto;
+&__title{
+  padding-bottom: 20px;
+}
+  &__data{
+    font-weight: 300;
+    font-size: 14px;
+    padding-bottom: 20px;
+  }
+  &__content{
+    display: flex;
+  }
+  &__item{
+    width: 60%;
+  }
+  &__header{
+    padding: 20px 10% 20px 0;
+  }
+  &__img{
+    padding-bottom: 35px;
+  }
+  &__aside{
+    padding-left: 70px;
+    padding-top: 45px;
+  }
+  &__list{
+
+  }
+  &__list-item{
+    padding-bottom: 30px;
+  }
+  &__link{
+    font-size: 14px;
+    font-weight: 600;
+  }
+}

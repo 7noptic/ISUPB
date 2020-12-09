@@ -1,0 +1,12 @@
+.characteristics{
+  max-width: 1630px;
+  padding: 0 30px 100px;
+  margin: 0 auto;
+  &__slider{
+    max-width: 1530px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

@@ -1,0 +1,30 @@
+.pagination{
+  display: flex;
+  justify-content: center;
+  &__start, &__end{
+    font-size: 14px;
+    font-weight: 600;
+    padding: 0 50px;
+  }
+  &__list{
+    display: flex;
+    justify-content: center;
+  }
+  &__item{
+    padding-right: 20px;
+    cursor: pointer;
+    transition: $transition4;
+    &:hover,&:focus,&:active{
+      transform: scale(1.1);
+    }
+    &:last-child{
+      padding-right: 0;
+    }
+  }
+  &__link{
+    transition: $transition4;
+    &:focus,&:active{
+      font-weight: 600;
+    }
+  }
+}
