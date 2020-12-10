@@ -1,0 +1,32 @@
+.form-questions {
+  padding-bottom: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  input.form-questions__search {
+    width: 90%;
+
+    &:-ms-input-placeholder {
+      text-align:left;
+    }
+    &::-moz-placeholder {  /* Firefox 19+ */
+      text-align:left;
+    }
+    &:-moz-placeholder { /* Firefox 18- */
+      text-align:left;
+    }
+    &::-webkit-input-placeholder {
+      text-align:left;
+    }
+  }
+
+  &__submit {
+    padding: 11px 18px 5px;
+
+    &:hover {
+      background-color: $orange;
+      transform: scale(1.1);
+    }
+  }
+}

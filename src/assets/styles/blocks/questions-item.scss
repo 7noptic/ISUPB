@@ -1,0 +1,30 @@
+.questions-item{
+  &__title{
+    padding-bottom: 40px;
+    font-weight: 700;
+    font-size: 18px;
+    opacity: .5;
+    transition: $transition4;
+    cursor: pointer;
+    &-active{
+      opacity: 1;
+      &:hover{
+        transform: scale(1) !important;
+        opacity:  1 !important;
+      }
+    }
+    &:hover{
+      transform: scale(1.1);
+      opacity: .7;
+    }
+  }
+  &__text{
+    padding-bottom: 60px;
+    font-weight: 300;
+    font-size: 14px;
+    display: none;
+    &-active{
+      display: block;
+    }
+  }
+}

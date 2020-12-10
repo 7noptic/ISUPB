@@ -1,0 +1,95 @@
+.vacancy {
+  background-color: #f7f7f7;
+  padding: 10px 20px;
+  border-radius: $radiusBtn;
+  margin-bottom: 20px;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    align-items: center;
+
+    &:hover {
+      & .vacancy__img {
+        background-color: lighten($yellow, 25%);
+
+        &:before {
+          border-left: 10px solid lighten($yellow, 25%);
+        }
+
+        &:after {
+          border-right: 10px solid lighten($yellow, 25%);
+        }
+      }
+    }
+  }
+
+  &__title {
+    align-items: center;
+    display: flex;
+  }
+
+  &__content {
+    display: none;
+  }
+
+  &__img {
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    position: relative;
+    width: auto;
+    height: 30px;
+    background-color: $yellow;
+    margin-right: 35px;
+    padding: 2px;
+    cursor: pointer;
+    transition: $transition4;
+
+    &-2 {
+      justify-content: flex-start;
+    }
+
+    &:hover {
+      & path {
+
+      }
+
+      background-color: lighten($yellow, 25%);
+
+      &:before {
+        border-left: 10px solid lighten($yellow, 25%);
+      }
+
+      &:after {
+        border-right: 10px solid lighten($yellow, 25%);
+      }
+    }
+
+    &:before,
+    &:after {
+      content: "";
+      position: absolute;
+      width: 0;
+      top: 0;
+      border-top: 15px solid transparent;
+      border-bottom: 15px solid transparent;
+      transition: $transition4;
+    }
+
+    &:before {
+      left: 100%;
+      border-left: 10px solid $yellow;
+    }
+
+    &:after {
+      right: 100%;
+      width: 0;
+      border-right: 10px solid $yellow;
+    }
+
+
+  }
+}

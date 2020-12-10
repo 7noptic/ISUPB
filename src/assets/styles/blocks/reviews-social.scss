@@ -1,0 +1,20 @@
+.reviews-social {
+  display: flex;
+
+  &__item {
+    align-items: center;
+    display: flex;
+    padding-right: 100px;
+
+  }
+
+  &__name {
+    padding-left: 25px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    & span {
+      display: block;
+    }
+  }
+}

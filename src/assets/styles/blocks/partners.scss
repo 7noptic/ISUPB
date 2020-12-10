@@ -1,0 +1,22 @@
+.partners {
+  &__content {
+    align-items: flex-start;
+
+  }
+
+  &__text {
+    text-align: left;
+    padding-top: 100px;
+    max-width: 100%;
+  }
+  &__title{
+    font-weight: 700;
+    font-size: 40px;
+    padding-bottom: 40px;
+  }
+  &__subtitle{
+    font-weight: 600;
+    font-size: 24px;
+max-width: 605px;
+  }
+}

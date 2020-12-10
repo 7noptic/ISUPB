@@ -29,6 +29,11 @@
 @import "blocks/board-item";
 @import "blocks/board-article";
 
+@import "blocks/board-reviews";
+@import "blocks/board-video";
+
+@import "blocks/block-faq";
+
 /* C */
 @import "blocks/characteristics";
 @import "blocks/characteristic";
@@ -50,6 +55,11 @@
 @import "blocks/form-search";
 
 @import "blocks/faq";
+
+@import "blocks/form-questions";
+@import "blocks/form-call";
+@import "blocks/faq-content";
+
 
 /* H */
 @import "blocks/header";
@@ -114,12 +124,18 @@
 
 @import "blocks/pagination";
 
+@import "blocks/partners";
+
 
 /* Q */
 @import "blocks/query";
 @import "blocks/query-form";
 @import "blocks/query-text";
 @import "blocks/query-img";
+
+
+@import "blocks/questions";
+@import "blocks/questions-item";
 
 /* R */
 @import "blocks/request";
@@ -128,6 +144,12 @@
 @import "blocks/requisition";
 @import "blocks/requisition-img";
 @import "blocks/requisition-text";
+
+
+@import "blocks/reviews-recommendation";
+@import "blocks/reviews-social";
+
+
 
 
 /* S */
@@ -145,6 +167,9 @@
 
 /* V */
 @import "blocks/viber";
+@import "blocks/video-reviews";
+@import "blocks/vacancies";
+@import "blocks/vacancy";
 
 /* W */
 @import "blocks/whatsapp";
