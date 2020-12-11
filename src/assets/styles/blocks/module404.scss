@@ -1,0 +1,33 @@
+.module404 {
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  flex-direction: column;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  &__title {
+    font-size: 13px;
+    font-weight: 400;
+  }
+
+  &__nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    z-index: 0;
+    margin-top: -190px;
+    padding-bottom: 190px;
+
+    &-item {
+      cursor: pointer;
+      &:hover {
+        transform: scale(1.3);
+      }
+    }
+  }
+}

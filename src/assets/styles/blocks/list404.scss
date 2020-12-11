@@ -1,0 +1,14 @@
+.list404{
+
+  &__item{
+    padding-bottom: 10px;
+    font-size: 18px;
+
+  }
+  &__link{
+    font-size: 18px;
+    &:hover{
+      font-weight: 700;
+    }
+  }
+}

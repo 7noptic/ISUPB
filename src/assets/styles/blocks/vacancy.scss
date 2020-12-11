@@ -3,6 +3,23 @@
   padding: 10px 20px;
   border-radius: $radiusBtn;
   margin-bottom: 20px;
+  font-weight: 300;
+  transition: $transition4;
+  cursor: pointer;
+
+  &__price {
+    font-size: 16px;
+
+    & span {
+      font-weight: 700;
+    }
+
+
+  }
+
+  &:hover {
+    transform: scale(1.05);
+  }
 
   &__header {
     display: flex;
@@ -11,6 +28,7 @@
     align-items: center;
 
     &:hover {
+
       & .vacancy__img {
         background-color: lighten($yellow, 25%);
 
@@ -32,6 +50,23 @@
 
   &__content {
     display: none;
+    padding: 20px 25px 20px 50px;
+
+    &-active {
+      display: block;
+    }
+  }
+
+  &__submit {
+    min-width: 180px;
+    padding: 12.5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 12px;
+    margin-top: 20px;
   }
 
   &__img {
@@ -48,9 +83,6 @@
     cursor: pointer;
     transition: $transition4;
 
-    &-2 {
-      justify-content: flex-start;
-    }
 
     &:hover {
       & path {
@@ -90,6 +122,18 @@
       border-right: 10px solid $yellow;
     }
 
+    &-active {
+      background-color: rgba(0, 0, 0, .05);
+      align-items: flex-end;
+
+      &:before {
+        border-left: 10px solid rgba(0, 0, 0, .05);
+      }
+
+      &:after {
+        border-right: 10px solid rgba(0, 0, 0, .05);
+      }
+    }
 
   }
 }

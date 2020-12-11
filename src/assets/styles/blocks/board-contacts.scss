@@ -1,0 +1,26 @@
+.board-contacts{
+justify-content: space-around;
+  &__item{
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 160px;
+  }
+  &__title{
+    font-size: 18px;
+    font-weight: 700;
+    padding-bottom: 20px;
+  }
+  &__link{
+    font-weight: 600;
+    font-size: 24px;
+    transition: $transition4;
+    &:hover{
+      color: $orange;
+    }
+  }
+  &__description{
+    font-size: 14px;
+  }
+}

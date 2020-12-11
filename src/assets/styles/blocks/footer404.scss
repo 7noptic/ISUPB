@@ -1,0 +1,51 @@
+.footer404{
+  width: 100%;
+  background: #C4C4C4;
+  border: 1px solid #000000;
+  &__header{
+    max-width: 1240px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 25px;
+  }
+  &__content{
+    max-width: 1240px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 20px 30px;
+    border-top: 1px solid #000000;
+  }
+  &__footer{
+    display: flex;
+    justify-content: center;
+    background: #E3E3E3;
+    border-top: 1px solid #000000;
+    margin-left: -445px;
+    padding: 15px 0;
+
+  }
+  &__item{
+    width: 33%;
+    padding-right: 130px;
+  }
+  &__list{
+    display: flex;
+
+  }
+  &__subtitle{
+    font-weight: 700;
+    font-size: 18px;
+    padding-bottom: 15px;
+  }
+  &__btn{
+    width: 150%;
+  }
+  &__link{
+    padding-right: 35px;
+    &:hover{
+      font-weight: 700;
+    }
+  }
+}

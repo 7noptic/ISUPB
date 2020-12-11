@@ -1,6 +1,7 @@
 @import "fonts";
 @import "vars";
 @import "default";
+@import "animation";
 
 /* А */
 @import "blocks/advantages";
@@ -31,21 +32,30 @@
 
 @import "blocks/board-reviews";
 @import "blocks/board-video";
+@import "blocks/board-contacts";
 
 @import "blocks/block-faq";
+
+@import "blocks/banner404";
+@import "blocks/banners404";
 
 /* C */
 @import "blocks/characteristics";
 @import "blocks/characteristic";
 @import "blocks/characteristic-nav";
+@import "blocks/contacts";
 
 
 /* D */
 @import "blocks/dots";
 
+/* E */
+@import "blocks/employees";
+
 
 /* F */
 @import "blocks/footer";
+@import "blocks/footer404";
 @import "blocks/footer-content";
 @import "blocks/footer-footer";
 @import "blocks/footer-header";
@@ -61,8 +71,12 @@
 @import "blocks/faq-content";
 
 
+/* G */
+
+@import "blocks/glitch";
 /* H */
 @import "blocks/header";
+@import "blocks/header404";
 @import "blocks/header-info";
 
 @import "blocks/headcrumbs";
@@ -76,19 +90,27 @@
 
 @import "blocks/introduction";
 
+@import "blocks/info404";
+
 /* L */
 @import "blocks/logo";
 @import "blocks/location";
+@import "blocks/location404";
+@import "blocks/list404";
 
 
 /* M */
 @import "blocks/menu";
+@import "blocks/menu404";
 
 @import "blocks/modules";
 @import "blocks/module";
+@import "blocks/modules404";
+@import "blocks/module404";
 @import "blocks/module-big";
 
 @import "blocks/module-more";
+@import "blocks/map";
 
 /* N */
 @import "blocks/nav-hexagon";
@@ -146,8 +168,11 @@
 @import "blocks/requisition-text";
 
 
+@import "blocks/reviews";
+@import "blocks/reviews-nav";
 @import "blocks/reviews-recommendation";
 @import "blocks/reviews-social";
+@import "blocks/requisites";
 
 
 
@@ -157,6 +182,8 @@
 @import "blocks/stages-content";
 @import "blocks/stages-list";
 @import "blocks/stages-tabs";
+@import "blocks/social404";
+@import "blocks/slide-modules";
 
 /* T */
 @import "blocks/telegramm";
@@ -199,8 +226,6 @@
 
 
 
-@import "blocks/reviews";
-@import "blocks/reviews-nav";
 
 
 

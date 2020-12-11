@@ -15,7 +15,9 @@
   z-index: 0;
   padding: 30px 50px 30px 88px;
 
-
+&__btn{
+  padding: 14px 25px;
+}
   &:before,
   &:after {
     content: "";
@@ -28,9 +30,10 @@
     transform: scaleY(0.6774) rotate(-45deg);
     background-color: inherit;
     left: 104.8350px;
+    z-index: -1;
   }
 
- &:before {
+  &:before {
     top: -265.1650px;
     border-top: solid 3px #f7f7f7;
     border-right: solid 3px #f7f7f7;
@@ -41,6 +44,17 @@
     border-bottom: solid 3px #f7f7f7;
     border-left: solid 3px #f7f7f7;
   }
+
+  &__tab {
+    display: none;
+    animation: showTabs 1s;
+
+    &-active {
+      display: block;
+    }
+  }
+
+
   &__title {
     font-size: 18px;
     font-weight: 700;
@@ -48,7 +62,7 @@
 
   }
 
-  &__subtitle{
+  &__subtitle {
     font-weight: 300;
     font-size: 16px;
     line-height: 30px;
@@ -66,11 +80,13 @@
     font-size: 16px;
     line-height: 22px;
     padding-bottom: 20px;
-  transition: $transition4;
+    transition: $transition4;
     cursor: pointer;
-    &:hover{
+
+    &:hover {
       transform: scale(1.05);
     }
+
     &::before {
       content: '';
       display: block;

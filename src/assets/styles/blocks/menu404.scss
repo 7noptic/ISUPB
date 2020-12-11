@@ -1,0 +1,14 @@
+.menu404{
+
+  &__list{
+    display: flex;
+
+  }
+  &__item{
+    padding-right: 25px;
+    font-size: 18px;
+    &:hover{
+      transform: scale(1.1);
+    }
+  }
+}

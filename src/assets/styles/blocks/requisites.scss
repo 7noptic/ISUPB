@@ -1,0 +1,19 @@
+.requisites{
+  padding-bottom: 100px;
+  &__board{
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+  }
+  &__list{
+    width: 50%;
+
+  }
+  &__item{
+    padding-right: 60px;
+
+    font-weight: 300;
+    font-size: 14px;
+  }
+}

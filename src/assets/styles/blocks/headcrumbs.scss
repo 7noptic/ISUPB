@@ -37,6 +37,7 @@
   &__link {
     font-size: 12px;
     opacity: .5;
+    transition: $transition4;
     &:hover{
       color: $orange;
     }
