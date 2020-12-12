@@ -11,35 +11,91 @@ window.addEventListener('DOMContentLoaded', () => {
         faqContent = document.querySelectorAll('.questions-item__text'),
         faqParrent = document.querySelector('.questions');
 
-    if (faqParrent) {
-        faqParrent.addEventListener('click', (event) => {
-            showQuestion(event);
-        });
-    }
     if (tabsParrent) {
+        hideTabsContent(tabsContent, 'stages-tabs__tab-active', tabs, 'stages-list__link-active', true, 'stages-list__link', tabsHexagon, 'stages-list__hexagon-active');
+        showTabsContent(0, tabsContent, 'stages-tabs__tab-active', tabs, 'stages-list__link-active', true, 'stages-list__link', tabsHexagon, 'stages-list__hexagon-active');
+
         tabsParrent.addEventListener('click', (event) => {
+            event.preventDefault();
             showHideTabs(event);
         });
     }
     if (tabsParrentTwo) {
+        hideTabsContent(tabsContent, 'stages-tabs__tab-active', tabs, 'stages-list__link-active', false, 'stages-list__link');
+        showTabsContent(0, tabsContent, 'stages-tabs__tab-active', tabs, 'stages-list__link-active', false, 'stages-list__link');
+
         tabsParrentTwo.addEventListener('click', (event) => {
-            showHideTabs(event);
+            event.preventDefault();
+            showHideTabs(event, 0, tabsContent, 'stages-tabs__tab-active', tabs, 'stages-list__link-active', false, 'stages-list__link');
+        });
+    }
+    if (faqParrent) {
+        hideTabsContent(faqContent, 'questions-item__text-active', faq, 'questions-item__title-active', false, 'questions-item__title');
+        showTabsContent(0, faqContent, 'questions-item__text-active', faq, 'questions-item__title-active', false, 'questions-item__title');
+
+        faqParrent.addEventListener('click', (event) => {
+            event.preventDefault();
+            showHideTabs(event, 0, faqContent, 'questions-item__text-active', faq, 'questions-item__title-active', false, 'questions-item__title');
         });
     }
 
+    function showHideTabs(event, i = 0, content = tabsContent, contentClass = 'stages-tabs__tab-active', link = tabs, linkClass = 'stages-list__link-active', hexagonTrigger = true, classCheck = 'stages-list__link', hexagon = tabsHexagon, hexagonClass = 'stages-list__hexagon-active') {
 
-    hideTabsContent();
-    showTabsContent();
-    hideFaq();
-    showFaq();
+        const target = event.target;
 
-    tabsParrent.addEventListener('click', (event) => {
-        showHideTabs(event);
-    });
-    tabsParrentTwo.addEventListener('click', (event) => {
-        showHideTabs(event);
-    });
+        if (target && target.classList.contains(classCheck)) {
+            console.log('sdf')
 
+            link.forEach((item, i) => {
+                if (target == item) {
+                    hideTabsContent(content, contentClass, link, linkClass, hexagonTrigger,classCheck, hexagon, hexagonClass);
+                    showTabsContent(i, content, contentClass, link, linkClass, hexagonTrigger,classCheck, hexagon, hexagonClass);
+                }
+            });
+        }
+
+    }
+    function hideTabsContent(content, contentClass, link, linkClass, hexagonTrigger,classCheck, hexagon, hexagonClass) {
+        content.forEach(item => {
+            item.classList.remove(contentClass);
+        });
+
+        link.forEach(item => {
+            item.classList.remove(linkClass);
+        });
+        link.forEach(item => {
+            if (hexagonTrigger) {
+                hexagon.forEach(item => {
+                    item.classList.remove(hexagonClass);
+                });
+            }
+        });
+
+
+    }
+    function showTabsContent(i = 0, content, contentClass, link, linkClass, hexagonTrigger,classCheck, hexagon, hexagonClass) {
+        content[i].classList.add(contentClass);
+        link[i].classList.add(linkClass);
+        link.forEach(item => {
+            if (hexagonTrigger) {
+                hexagon[i].classList.add(hexagonClass);
+            }
+        });
+
+    }
+
+
+
+
+
+    /*
+
+
+    function showFaq(i = 0) {
+        faqContent[i].classList.add('questions-item__text-active');
+        faq[i].classList.add('questions-item__title-active');
+
+    }
 
     function showQuestion(event) {
         event.preventDefault();
@@ -66,13 +122,11 @@ window.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    function showFaq(i = 0) {
-        faqContent[i].classList.add('questions-item__text-active');
-        faq[i].classList.add('questions-item__title-active');
+    hideFaq();
+    showFaq();
 
-    }
 
-    function showHideTabs(event) {
+    tabsParrentTwo.addEventListener('click', (event) => {
         event.preventDefault();
         const target = event.target;
 
@@ -84,40 +138,8 @@ window.addEventListener('DOMContentLoaded', () => {
                 }
             });
         }
-    }
+    });
 
-    function hideTabsContent() {
-        tabsContent.forEach(item => {
-            item.classList.remove('stages-tabs__tab-active');
-        });
-
-        tabs.forEach(item => {
-            item.classList.remove('stages-list__link-active');
-        });
-        tabs.forEach(item => {
-            if (item.hasChildNodes()) {
-                tabsHexagon.forEach(item => {
-                    item.classList.remove('stages-list__hexagon-active');
-
-                });
-            }
-        });
-
-
-    }
-
-    function showTabsContent(i = 0) {
-        tabsContent[i].classList.add('stages-tabs__tab-active');
-        tabs[i].classList.add('stages-list__link-active');
-        tabs.forEach(item => {
-            if (item.children.length > 0) {
-                console.log('asdf');
-                tabsHexagon[i].classList.add('stages-list__hexagon-active');
-            }
-        });
-
-    }
-    /*
         let test = document.querySelector('.project-numbers');
         elementInViewport2(test);
 
