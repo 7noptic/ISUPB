@@ -48,14 +48,15 @@ window.addEventListener('DOMContentLoaded', () => {
 
             link.forEach((item, i) => {
                 if (target == item) {
-                    hideTabsContent(content, contentClass, link, linkClass, hexagonTrigger,classCheck, hexagon, hexagonClass);
-                    showTabsContent(i, content, contentClass, link, linkClass, hexagonTrigger,classCheck, hexagon, hexagonClass);
+                    hideTabsContent(content, contentClass, link, linkClass, hexagonTrigger, classCheck, hexagon, hexagonClass);
+                    showTabsContent(i, content, contentClass, link, linkClass, hexagonTrigger, classCheck, hexagon, hexagonClass);
                 }
             });
         }
 
     }
-    function hideTabsContent(content, contentClass, link, linkClass, hexagonTrigger,classCheck, hexagon, hexagonClass) {
+
+    function hideTabsContent(content, contentClass, link, linkClass, hexagonTrigger, classCheck, hexagon, hexagonClass) {
         content.forEach(item => {
             item.classList.remove(contentClass);
         });
@@ -73,7 +74,8 @@ window.addEventListener('DOMContentLoaded', () => {
 
 
     }
-    function showTabsContent(i = 0, content, contentClass, link, linkClass, hexagonTrigger,classCheck, hexagon, hexagonClass) {
+
+    function showTabsContent(i = 0, content, contentClass, link, linkClass, hexagonTrigger, classCheck, hexagon, hexagonClass) {
         content[i].classList.add(contentClass);
         link[i].classList.add(linkClass);
         link.forEach(item => {
@@ -84,150 +86,55 @@ window.addEventListener('DOMContentLoaded', () => {
 
     }
 
+    if (scrollItems) {
+        window.addEventListener('scroll', animOnScroll);
+animOnScroll();
+        function animOnScroll() {
+            for (let i = 0; i < scrollItems.length; i++) {
+                const animItem = scrollItems[i],
+                    animItemHeight = animItem.offsetHeight,
+                    animItemOffset = offset(scrollItems).top,
+                    animStart = 4;
 
+                let animItemPoint = window.innerHeight - animItemHeight / animStart;
+                if(animItemHeight > window.innerHeight){
+                    animItemPoint = window.innerHeight - window.innerHeight / animStart;
 
-
-
-    /*
-
-
-    function showFaq(i = 0) {
-        faqContent[i].classList.add('questions-item__text-active');
-        faq[i].classList.add('questions-item__title-active');
-
-    }
-
-    function showQuestion(event) {
-        event.preventDefault();
-        const target = event.target;
-
-        if (target && target.classList.contains('questions-item__title')) {
-
-            faq.forEach((item, i) => {
-                if (target == item) {
-                    hideFaq();
-                    showFaq(i);
                 }
-            });
-        }
-    }
-
-    function hideFaq() {
-        faq.forEach(item => {
-            item.classList.remove('questions-item__title-active');
-        });
-
-        faqContent.forEach(item => {
-            item.classList.remove('questions-item__text-active');
-        });
-    }
-
-    hideFaq();
-    showFaq();
-
-
-    tabsParrentTwo.addEventListener('click', (event) => {
-        event.preventDefault();
-        const target = event.target;
-
-        if (target && target.classList.contains('stages-list__link')) {
-            tabs.forEach((item, i) => {
-                if (target == item) {
-                    hideTabsContent();
-                    showTabsContent(i);
+                if((pageYOffset > animItemOffset - animItemPoint) && pageYOffset < (animItemOffset +animItemHeight)){
+                    animItem.classList.add('animationShow');
+                }else {
+                    animItem.classList.remove('animationShow');
                 }
-            });
-        }
-    });
-
-        let test = document.querySelector('.project-numbers');
-        elementInViewport2(test);
-
-        function elementInViewport2(el) {
-            var top = el.offsetTop;
-            var left = el.offsetLeft;
-            var width = el.offsetWidth;
-            var height = el.offsetHeight;
-
-            while (el.offsetParent) {
-                el = el.offsetParent;
-                top += el.offsetTop;
-                left += el.offsetLeft;
             }
-            return (
-                top < (window.pageYOffset + window.innerHeight) &&
-                left < (window.pageXOffset + window.innerWidth) &&
-                (top + height) > window.pageYOffset &&
-                (left + width) > window.pageXOffset
-
-
-            );
+        }
+        function offset(el) {
+            const rect = el.getBoundingClientRect;
+            scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
+            scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            return {top: rect.top + scrollTop, left: rect.left + scrollLeft}
         }
 
-        АНИМАЦИЯ ЦИФР ПРИ СКРОЛЛЕ
-        var number = document.querySelector('.number'),
-            numberTop = number.getBoundingClientRect().top,
-            start = +number.innerHTML, end = +number.dataset.max;
+    }
 
-        window.addEventListener('scroll', function onScroll() {
-            if (window.pageYOffset > numberTop - window.innerHeight / 2) {
-                this.removeEventListener('scroll', onScroll);
-                var interval = setInterval(function () {
-                    number.innerHTML = ++start;
-                    if (start == end) {
-                        clearInterval(interval);
-                    }
-                }, 5);
+
+    const scrollItems = document.querySelectorAll('section');
+
+    const scrollAnimation = () => {
+        let windowCenter = (window.innerHeight) + window.scrollY;
+        console.log(windowCenter);
+        scrollItems.forEach(el => {
+            let scrollOffset = el.offsetTop + (el.offsetHeight / 2);
+            if (windowCenter >= scrollOffset) {
+                el.classList.add('animationShow');
+            } else {
+                el.classList.remove('animationShow');
             }
         });
-        var number1 = document.querySelector('.number1'),
-            number1Top = number1.getBoundingClientRect().top,
-            start1 = +number1.innerHTML, end1 = +number1.dataset.max;
+    };
 
-        window.addEventListener('scroll', function onScroll() {
-            if (window.pageYOffset > number1Top - window.innerHeight / 2) {
-                this.removeEventListener('scroll', onScroll);
-                var interval1 = setInterval(function () {
-                    number1.innerHTML = ++start1;
-                    if (start1 == end1) {
-                        clearInterval(interval1);
-                    }
-                }, 5);
-            }
-        });
-
-        var number2 = document.querySelector('.number2'),
-            number2Top = number2.getBoundingClientRect().top,
-            start2 = +number2.innerHTML, end2 = +number2.dataset.max;
-
-        window.addEventListener('scroll', function onScroll() {
-            if (window.pageYOffset > number2Top - window.innerHeight / 2) {
-                this.removeEventListener('scroll', onScroll);
-                var interval2 = setInterval(function () {
-                    number2.innerHTML = ++start2;
-                    if (start2 == end2) {
-                        clearInterval(interval2);
-                    }
-                }, 5);
-            }
-        });
-
-
-        var number3 = document.querySelector('.number3'),
-            number3Top = number3.getBoundingClientRect().top,
-            start3 = +number3.innerHTML, end3 = +number3.dataset.max;
-
-        window.addEventListener('scroll', function onScroll() {
-            if (window.pageYOffset > number3Top - window.innerHeight / 2) {
-                this.removeEventListener('scroll', onScroll);
-                var interval3 = setInterval(function () {
-                    number3.innerHTML = ++start3;
-                    if (start3 == end3) {
-                        clearInterval(interval3);
-                    }
-                }, 5);
-            }
-        });
-
-     */
+    // scrollAnimation();
+    // window.addEventListener('scroll', () => {
+    //     scrollAnimation();
+    // });
 });

@@ -1,3 +1,6 @@
+.animationShow{
+  animation: showTabs 1s;
+}
 @keyframes showTabs {
   0%{
     opacity: 0;
