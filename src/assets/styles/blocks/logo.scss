@@ -6,3 +6,18 @@
     transform: scale(1.1);
   }
 }
+@media screen and (max-width: 1440px){
+  .logo{
+    max-width: 160px;
+    display: flex;
+    align-items: center;
+  }
+
+}
+@media screen and (max-width: 1240px){
+  .logo{
+    max-width: 150px;
+    display: flex;
+    align-items: center;
+  }
+}

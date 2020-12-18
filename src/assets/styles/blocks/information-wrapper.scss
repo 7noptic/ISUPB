@@ -2,6 +2,12 @@
   max-width: 1630px;
   margin: 0 auto;
   display: flex;
-  padding: 42px 26px 100px;
+  padding: 42px 26px 20px;
 z-index: 10;
+  width: 100%;
+}
+@media screen and (max-width: 1630px){
+  .information-wrapper{
+    padding: 42px 15px 20px;
+  }
 }

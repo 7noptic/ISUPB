@@ -14,3 +14,30 @@
     }
   }
 }
+@media screen and (max-width: 1630px){
+  .location{
+    &__item{
+      padding: 10px 20px 10px 12px;
+    }
+
+  }
+
+}
+@media screen and (max-width: 1240px){
+  .location{
+    &__item{
+      padding: 10px 15px 10px 10px;
+    }
+
+  }
+
+}
+@media screen and (max-width: 1080px){
+  .location{
+    &__item{
+      &-text{
+        padding-left: 5px;
+      }
+    }
+  }
+}

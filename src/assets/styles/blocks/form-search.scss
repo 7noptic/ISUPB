@@ -22,3 +22,15 @@
     left: 11px;
   }
 }
+@media screen and (max-width: 1080px){
+  .form-search{
+    &__search{
+      width: 250px;
+      padding: 8px 20px 8px 45px;
+    }
+    &::before{
+
+      top: 4px;
+    }
+  }
+}

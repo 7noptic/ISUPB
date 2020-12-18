@@ -1,4 +1,17 @@
-.information-modules{
-  max-width: 340px;
-
+.information-modules {
+  width: 340px;
 }
+
+@media screen and (max-width: 1630px) {
+  .information-modules {
+    width: 22%;
+  }
+}
+
+
+@media screen and (max-width: 1240px) {
+  .information-modules {
+    width: 22%;
+  }
+}
+

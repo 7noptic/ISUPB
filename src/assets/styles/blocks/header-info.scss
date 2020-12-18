@@ -17,3 +17,39 @@
     align-items: center;
   }
 }
+@media screen and (max-width: 1630px){
+  .header-info{
+    padding-left: 25px;
+    &__top{
+      padding-left: 10px;
+      font-size: 11px;
+    }
+  }
+
+}
+@media screen and (max-width: 1440px){
+  .header-info{
+    &__top{
+      font-size: 11px;
+    }
+  }
+}
+@media screen and (max-width: 1240px){
+  .header-info{
+    padding-left: 10px;
+    &__top{
+      font-size: 10px;
+    }
+  }
+}
+@media screen and (max-width: 1080px){
+  .header-info{
+    padding-left: 10px;
+    &__bottom{
+      padding-top: 5px;
+    }
+    &__top{
+      font-size: 8px;
+    }
+  }
+}

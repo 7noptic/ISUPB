@@ -7,8 +7,19 @@
     display: block;
     font-weight: 700;
     width: 100%;
-    padding: 14px 46px;
+    padding: 14px;
+    display: flex;
     max-width: 345px;
     margin: 0 auto;
+    font-size: 18px;
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 1630px) {
+  .modules {
+    padding-top: calc(0px + (45 - 0) * ((100vw - 992px) / (1630 - 992)));
+    &__btn{
+      font-size: calc(10px + (18 - 10) * ((100vw - 992px) / (1630 - 992)));
+    }
   }
 }
