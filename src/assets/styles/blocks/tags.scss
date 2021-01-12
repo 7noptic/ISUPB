@@ -1,0 +1,24 @@
+.tags{
+  &__next{
+    position: absolute;
+    right: -30px;
+    top: 18%;
+    z-index: 10;
+  }
+  &__prev{
+    position: absolute;
+    left: 0;
+    top: 18%;
+    z-index: 10;
+  }
+}
+@media screen and (max-width: 1630px){
+  .tags{
+    &__next{
+      top: 31%;
+    }
+    &__prev{
+      top: 31%;
+    }
+  }
+}

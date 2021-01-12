@@ -1,7 +1,28 @@
 .projects{
 max-width: 1630px;
-  padding: 0 15px;
+  padding: 120px 15px;
   margin: 0 auto;
   &__title{
+  }
+}
+@media screen and (max-width: 1630px){
+  .projects{
+    padding: calc(60px + (120 - 60) * ((100vw - 991px) / (1630 - 991))) 15px;
+  }
+}
+@media screen and (max-width: 991px){
+  .projects{
+    padding:60px 15px;
+
+  }
+}
+@media screen and (max-width: 767px){
+  .projects{
+    padding: 50px 15px;
+  }
+}
+@media screen and (max-width: 575px){
+  .projects{
+    padding: 25px 15px;
   }
 }

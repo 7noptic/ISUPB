@@ -53,3 +53,16 @@
     }
   }
 }
+@media screen and (max-width: 991px){
+  .header-info{
+    width: auto;
+display: inline-block;
+&__bottom{
+  padding-bottom: 0;
+  justify-content: flex-end;
+}
+    &__top{
+      display: none;
+    }
+  }
+}

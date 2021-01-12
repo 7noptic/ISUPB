@@ -1,12 +1,28 @@
 .news-articles {
+
+  width: 65%;
   &__header{
     display: flex;
     padding-bottom: 40px;
+
   }
 
   &__content {
-    display: flex;
+    display: none;
+    &.active{
+      display: flex;
+      animation: showTabs 1s;
+    }
     justify-content: space-between;
     flex-wrap: wrap;
   }
+}
+@media screen and (max-width: 1630px){
+
+}
+@media screen and (max-width: 991px){
+.news-articles{
+
+  width: 100%;
+}
 }

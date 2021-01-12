@@ -3,7 +3,7 @@
   border: 1px solid rgba(0, 0, 0, .5);
   border-radius: $radiusBtn;
   transition: $transition4;
-
+  background-color: transparent;
   &:hover {
     border: 1px solid rgba(253, 121, 0, .4);;
   }

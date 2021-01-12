@@ -12,4 +12,9 @@
   .information {
     background-position: calc(-145px + (0 + 145) * ((100vw - 992px) / (1630 - 992))) 35px;
   }
+}@media screen and (max-width: 991px) {
+  .information {
+    background: none;
+  }
 }
+

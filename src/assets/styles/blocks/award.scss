@@ -1,4 +1,9 @@
 .award{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 0;
   &__subtitle{
     font-size: 16px;
     font-weight: 300;
@@ -17,4 +22,33 @@
     }
   }
 
+}
+@media screen and (max-width: 991px){
+  .award{
+    padding: 30px 0;
+    &__subtitle{
+      font-size: 14px;
+      padding-top: 20px;
+    }
+
+  }
+}
+@media screen and (max-width: 767px){
+  .award{
+    padding: 20px 0;
+    &__subtitle{
+      font-size: 12px;
+      padding-top: 15px;
+    }
+
+  }
+}
+@media screen and (max-width: 575px){
+  .award{
+    padding: 10px 0;
+    &__subtitle{
+      padding-top: 10px;
+    }
+
+  }
 }

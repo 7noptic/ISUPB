@@ -1,22 +1,70 @@
-.about-text{
+.about-text {
   width: 36%;
   padding-right: 75px;
-  &__title{
+
+  &__title {
     font-size: 40px;
     font-weight: 700;
     padding-bottom: 40px;
   }
-  &__subtitle{
+
+  &__subtitle {
     font-size: 14px;
     font-weight: 300;
     padding-bottom: 30px;
   }
-  &__readmore{
+
+  &__readmore {
     font-size: 14px;
     font-weight: 600;
     position: relative;
     display: flex;
     align-items: center;
 
+  }
+}
+
+@media screen and (max-width: 1630px) {
+  .about-text {
+    width: 40%;
+    padding-right: calc(15px + (75 - 18) * ((100vw - 991px) / (1630 - 991)));
+
+    &__title {
+      font-size: calc(26px + (40 - 26) * ((100vw - 991px) / (1630 - 991)));
+      padding-bottom: calc(20px + (40 - 20) * ((100vw - 991px) / (1630 - 991)));
+    }
+
+    &__subtitle {
+      font-size: calc(10px + (14 - 10) * ((100vw - 991px) / (1630 - 991)));
+      padding-bottom: calc(10px + (30 - 10) * ((100vw - 991px) / (1630 - 991)));
+    }
+
+    &__readmore {
+      font-size: calc(12px + (14 - 12) * ((100vw - 991px) / (1630 - 991)));
+    }
+  }
+}
+@media screen and (max-width: 1630px) {
+  .about-text {
+    width: 45%;
+  }
+}
+@media screen and (max-width: 991px) {
+  .about-text {
+    width: 50%;
+
+    &__title {
+      font-size: 26px;
+      padding-bottom: 20px;
+    }
+
+    &__subtitle {
+      font-size: 10px;
+      padding-bottom: 15px;
+    }
+
+    &__readmore {
+      font-size: 12px;
+    }
   }
 }

@@ -4,6 +4,9 @@
   justify-content: space-between;
   align-items: center;
   width: 35%;
+  padding: 0 15px;
+  background-color: transparent;
+  z-index: 10;
   &__name{
     width: 45%;
   }
@@ -26,5 +29,15 @@
   &__footer{
     display: flex;
     align-items: center;
+  }
+}
+@media screen and (max-width: 1630px){
+  .query-form{
+    width: calc(50% + (35 - 50) * ((100vw - 991px) / (1630 - 991)));
+  }
+}
+@media screen and (max-width: 991px){
+  .query-form{
+    width: 50%;
   }
 }

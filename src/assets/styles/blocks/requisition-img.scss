@@ -1,69 +1,189 @@
-.requisition-img{
+.requisition-img {
   display: flex;
-  &__hexagon{
+
+  &__hexagon {
     mix-blend-mode: hard-light;
-    &:first-child{
+
+    &:first-child {
       margin-left: 0;
       opacity: .03;
       animation: HexagonOpacity1Child ease-in-out 3s infinite;
     }
-    &:nth-child(2){
+
+    &:nth-child(2) {
       opacity: .1;
       animation: HexagonOpacity2Child ease-in-out 2.2s infinite;
     }
-    &:nth-child(3){
+
+    &:nth-child(3) {
       opacity: .15;
       animation: HexagonOpacity3Child ease-in-out 2.7s infinite;
     }
-    &:nth-child(4){
+
+    &:nth-child(4) {
       opacity: .9;
       animation: HexagonOpacity4Child ease-in-out 2.8s infinite;
     }
+
     margin-left: -130px;
   }
 }
 
+@media screen and (max-width: 1630px) {
+  .requisition-img {
+    &__hexagon {
+      margin-left: calc((-65px) + ((-130) - (-65)) * ((100vw - 991px) / (1630 - 991)));
+
+      &:first-child, &:nth-child(2), &:nth-child(3) {
+        width: calc(130px + (260 - 130) * ((100vw - 991px) / (1630 - 991)));
+        height: calc(150px + (300 - 150) * ((100vw - 991px) / (1630 - 991)));
+      }
+
+      &:nth-child(4) {
+        & svg {
+          width: calc(94px + (188 - 94) * ((100vw - 991px) / (1630 - 991)));
+          height: calc(58px + (116 - 58) * ((100vw - 991px) / (1630 - 991)));
+        }
+
+
+        width: calc(130px + (260 - 130) * ((100vw - 991px) / (1630 - 991)));
+        height: calc(75px + (150 - 75) * ((100vw - 991px) / (1630 - 991)));
+
+        &:before,
+        &:after {
+          border-left: calc(65px + (130 - 65) * ((100vw - 991px) / (1630 - 991))) solid transparent;
+          border-right: calc(65px + (130 - 65) * ((100vw - 991px) / (1630 - 991))) solid transparent;
+        }
+
+        &:before {
+          border-bottom: calc(32px + (65 - 32) * ((100vw - 991px) / (1630 - 991))) solid $yellow;
+        }
+
+        &:after {
+          border-top: calc(32px + (65 - 32) * ((100vw - 991px) / (1630 - 991))) solid $yellow;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 991px) {
+  .requisition-img {
+    &__hexagon {
+      margin-left: -65px;
+
+      &:first-child, &:nth-child(2), &:nth-child(3) {
+        width: 130px ;
+        height: 150px ;
+      }
+
+      &:nth-child(4) {
+        & svg {
+          width: 94px ;
+          height: 58px ;
+        }
+
+
+        width: 130px;
+        height: 75px ;
+
+        &:before,
+        &:after {
+          border-left: 65px  solid transparent;
+          border-right: 65px  solid transparent;
+        }
+
+        &:before {
+          border-bottom: 32px  solid $yellow;
+        }
+
+        &:after {
+          border-top: 32px  solid $yellow;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 991px) {
+  .requisition-img {
+    &__hexagon {
+      margin-left: -65px;
+
+      &:first-child, &:nth-child(2), &:nth-child(3) {
+        width: 130px ;
+        height: 150px ;
+      }
+
+      &:nth-child(4) {
+        & svg {
+          width: 94px ;
+          height: 58px ;
+        }
+
+
+        width: 130px;
+        height: 75px ;
+
+        &:before,
+        &:after {
+          border-left: 65px  solid transparent;
+          border-right: 65px  solid transparent;
+        }
+
+        &:before {
+          border-bottom: 32px  solid $yellow;
+        }
+
+        &:after {
+          border-top: 32px  solid $yellow;
+        }
+      }
+    }
+  }
+}
 @keyframes HexagonOpacity1Child {
-  0%{
+  0% {
     opacity: .03;
   }
-  50%{
+  50% {
     opacity: .06;
   }
-  100%{
+  100% {
     opacity: .03;
   }
 }
+
 @keyframes HexagonOpacity2Child {
-  0%{
+  0% {
     opacity: .1;
   }
-  50%{
+  50% {
     opacity: .15;
   }
-  100%{
+  100% {
     opacity: .1;
   }
 }
+
 @keyframes HexagonOpacity3Child {
-  0%{
+  0% {
     opacity: .15;
   }
-  50%{
+  50% {
     opacity: .2;
   }
-  100%{
+  100% {
     opacity: .15;
   }
 }
+
 @keyframes HexagonOpacity4Child {
-  0%{
+  0% {
     opacity: .7;
   }
-  50%{
+  50% {
     opacity: .9;
   }
-  100%{
+  100% {
     opacity: .7;
   }
 }

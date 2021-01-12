@@ -1,20 +1,20 @@
-.request{
+.request {
   max-width: 1630px;
   margin: 0 auto;
   display: flex;
   align-items: center;
   padding: 80px 110px 125px;
-  &__img{
+
+  &__img {
     display: flex;
     align-items: center;
     width: 55%;
   }
-  &__text{
+
+  &__text {
     width: 45%;
-    font-size: 24px;
-    font-weight: 600;
-    line-height: 30px;
   }
+
   &__hexagon {
     position: relative;
     width: 260px;
@@ -23,6 +23,7 @@
     margin: 75px 0;
     display: flex;
     align-items: center;
+
     &:before,
     &:after {
       content: "";
@@ -45,5 +46,51 @@
     }
   }
 
-
+  &__link {
+    padding: 12px 20px;
+    & svg {
+      display: none;
+    }
+  }
 }
+
+@media screen and (max-width: 1630px) {
+  .request {
+    &__hexagon {
+      margin: calc(37px + (75 - 37) * ((100vw - 991px) / (1630 - 991)));
+    }
+  }
+}
+@media screen and (max-width: 991px) {
+  .request {
+    padding: 80px 30px;
+    &__hexagon {
+      margin: 37px;
+    }
+  }
+}
+@media screen and (max-width: 767px) {
+  .request {
+    justify-content: center;
+    &__img{
+      display: none;
+    }
+    &__text{
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+    &__link{
+      height: 65px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 20;
+      & svg {
+        display: block;
+        margin-right: 20px;
+      }
+    }
+  }
+}
+

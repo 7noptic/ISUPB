@@ -3,7 +3,9 @@
   border-radius: $radiusBtn;
   transition: $transition4;
   color: #fff;
-
+  font-size: 12px;
+  font-weight: 800;
+text-transform: uppercase;
   &:hover{
     background-color: #fff;
     color: $orange;

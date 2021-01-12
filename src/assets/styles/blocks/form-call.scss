@@ -4,16 +4,19 @@
   align-items: center;
   width: 50%;
   &__form{
-    width: 340px;
+    width: 100%;
+    max-width: 340px;
   }
   &__title{
-    width: 340px;
+    width: 100%;
+    max-width: 340px;
     font-weight: 600;
     font-size: 24px;
     text-align: center;
   }
   &__subtitle{
-    width: 340px;
+    width: 100%;
+    max-width: 340px;
     font-weight: 300;
     font-size: 14px;
     text-align: center;
@@ -40,5 +43,17 @@
     text-align: center;
     font-weight: 400;
     font-size: 12px;
+  }
+}
+@media screen and (max-width: 1280px){
+  .form-call{
+    width: 40%;
+
+  }
+}
+@media screen and (max-width: 991px){
+  .form-call{
+    width: 100%;
+
   }
 }

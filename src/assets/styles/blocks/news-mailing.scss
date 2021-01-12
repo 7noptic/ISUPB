@@ -1,15 +1,19 @@
 .news-mailing {
+  &__wrapper {
+    width: 35%;
+  }
+
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   position: relative;
-  width: 100%;
-  max-width: 500px;
+  width: 500px;
   height: 288.94px;
   background-color: #f7f7f7;
   margin: 115.47px 0;
   padding: 15px 100px;
   mix-blend-mode: normal;
+
   &:before,
   &:after {
     content: "";
@@ -33,24 +37,106 @@
 
   &__hexagon-top {
     position: absolute;
-    top:-133px;
+    top: -133px;
     right: 0;
-    & svg{
+
+    & svg {
       mix-blend-mode: darken;
     }
   }
-  &__hexagon-bottom{
+
+  &__hexagon-bottom {
     position: absolute;
     left: -300px;
     bottom: -312px;
   }
 
-  &__title{
+  &__title {
     font-size: 18px;
     font-weight: 700;
     max-width: 235px;
     padding-bottom: 20px;
-
+text-align: center;
   }
 
+}
+
+@media screen and (max-width: 1630px) {
+  .news-mailing {
+    width: calc(340px + (500 - 340) * ((100vw - 991px) / (1630 - 991)));
+    padding: 15px calc(15px + (100 - 15) * ((100vw - 991px) / (1630 - 991)));
+
+    &:before,
+    &:after {
+      border-left: calc(170px + (250 - 170) * ((100vw - 991px) / (1630 - 991))) solid transparent;
+      border-right: calc(170px + (250 - 170) * ((100vw - 991px) / (1630 - 991))) solid transparent;
+    }
+
+    &:before {
+      border-bottom: calc(100px + (144 - 100) * ((100vw - 991px) / (1630 - 991))) solid #f7f7f7;
+    }
+
+    &:after {
+      border-top: calc(100px + (144 - 100) * ((100vw - 991px) / (1630 - 991))) solid #f7f7f7;
+    }
+
+    &__hexagon-top {
+
+      & svg {
+        width: calc(100px + (160 - 100) * ((100vw - 991px) / (1630 - 991)));
+      }
+    }
+
+    &__hexagon-bottom {
+      left: calc((-228px) + ((-300) - (-228)) * ((100vw - 991px) / (1630 - 991)));
+    }
+
+    &__title {
+      font-size: calc(14px + (18 - 14) * ((100vw - 991px) / (1630 - 991)));
+
+    }
+
+  }
+}
+@media screen and (max-width: 991px) {
+  .news-mailing {
+    &__wrapper{
+      width: 100%;
+    }
+    margin: 150px auto 30px;
+
+    width: 340px;
+    padding: 15px;
+
+    &:before,
+    &:after {
+      border-left: 170px solid transparent;
+      border-right: 170px solid transparent;
+    }
+
+    &:before {
+      border-bottom: 100px solid #f7f7f7;
+    }
+
+    &:after {
+      border-top: 100px solid #f7f7f7;
+    }
+
+    &__hexagon-top {
+
+      & svg {
+        width: 100px;
+      }
+    }
+
+    &__hexagon-bottom {
+      left: 100px;
+    }
+
+    &__title {
+      font-size: 14px;
+
+    }
+
+  }
 }

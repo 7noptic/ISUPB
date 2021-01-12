@@ -1,14 +1,18 @@
 .advantage {
   width: 25%;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   flex-direction: column;
   padding: 0 50px 60px;
+
   &__img {
-min-width: 180px;
+    min-width: 180px;
     transition: $transition4;
-    &:hover{
+    display: flex;
+    justify-content: center;
+
+    &:hover {
       transform: scale(1.1);
     }
   }
@@ -25,5 +29,81 @@ min-width: 180px;
     font-weight: 700;
     font-size: 24px;
     text-align: center;
+  }
+}
+
+@media screen and (max-width: 1630px) {
+  .advantage {
+    width: 25%;
+    display: flex;
+    padding: 0 calc(20px + (50 - 20) * ((100vw - 991px) / (1630 - 991))) calc(30px + (60 - 30) * ((100vw - 991px) / (1630 - 991)));
+
+    &__img {
+
+
+      & svg {
+        width: calc(120px + (180 - 120) * ((100vw - 991px) / (1630 - 991))) !important;
+        height: calc(120px + (180 - 120) * ((100vw - 991px) / (1630 - 991))) !important;
+      }
+    }
+
+    &__subtitle {
+      font-size: calc(10px + (14 - 10) * ((100vw - 991px) / (1630 - 991)));
+      padding: calc(15px + (30 - 15) * ((100vw - 991px) / (1630 - 991))) 0 5px;
+    }
+
+    &__title {
+      font-size: calc(14px + (24 - 14) * ((100vw - 991px) / (1630 - 991)));
+    }
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .advantage {
+    width: 33%;
+    padding: 0 20px 30px;
+
+    &__subtitle {
+      font-size: 10px;
+    }
+
+    &__title {
+      font-size: 14px;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .advantage {
+    width: 50%;
+    padding: 0 15px 20px;
+
+    &__subtitle {
+      font-size: 10px;
+    }
+
+    &__img {
+
+
+      & svg {
+        width: 100px !important;
+        height: 100px !important;
+      }
+    }
+
+    &__title {
+      font-size: 12px;
+    }
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .advantage {
+    width: 100%;
+
+    & svg {
+      width: 100px !important;
+      height: 100px !important;
+    }
   }
 }

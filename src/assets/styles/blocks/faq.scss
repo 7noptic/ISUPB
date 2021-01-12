@@ -9,3 +9,40 @@
 
   }
 }
+@media screen and (max-width: 1700px){
+  .faq{
+    &__text{
+      width: 120%;
+    }
+    &__tabs{
+      height: auto;
+      min-height: 290px;
+      padding: 0 25px 0 100px;
+
+    }
+  }
+}
+@media screen and (max-width: 1630px){
+  .faq{
+    &__text{
+      width: 100%;
+      margin-top: calc(0px + ((-50) - 0) * ((100vw - 991px) / (1630 - 991)));
+    }
+    &__tabs{
+      height: auto;
+      min-height: 290px;
+      padding: 0 25px 0  calc(25px + (100 - 25) * ((100vw - 991px) / (1630 - 991)));
+
+    }
+  }
+}
+@media screen and (max-width: 1630px){
+  .faq{
+    &__text{
+      margin-top: 0;
+    }
+    &__tabs{
+      padding: 0 25px;
+    }
+  }
+}

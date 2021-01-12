@@ -10,3 +10,11 @@
   background-repeat: no-repeat;
   background-size: contain;
 }
+@media screen and (max-width: 1630px) {
+  .query{
+    padding: calc(25px + (50 - 25) * ((100vw - 991px) / (1630 - 991))) calc(40px + (100 - 40) * ((100vw - 991px) / (1630 - 991))) calc(30px + (60 - 30) * ((100vw - 991px) / (1630 - 991)));
+    background-position: 110% center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}

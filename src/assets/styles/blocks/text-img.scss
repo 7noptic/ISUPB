@@ -24,16 +24,99 @@
     font-size: 14px;
     line-height: 17px;
   }
-
+&__block{
+  padding: 20px 0;
+  display: flex;
+  align-items: center;
+}
   &__text {
-    width: 45%;
+    width: 55%;
+    &-orange{
+      padding: 15px;
+      font-weight: 700;
+      font-size: 30px;
+      color: $orange;
+    }
   }
 
   &__img {
-    width: 55%;
+    width: 45%;
     display: flex;
     justify-content: flex-end;
     padding-right: 50px;
     align-items: center;
+  }
+}
+@media screen and (max-width: 1630px){
+  .text-img {
+    padding: calc(50px + (100 - 50) * ((100vw - 991px) / (1630 - 991))) 15px;
+    &__title {
+      font-weight: 700;
+      font-size: calc(26px + (40 - 26) * ((100vw - 991px) / (1630 - 991)));
+      padding-bottom: calc(30px + (60 - 30) * ((100vw - 991px) / (1630 - 991)));
+    }
+
+    &__subtitle {
+      font-size: calc(18px + (24 - 18) * ((100vw - 991px) / (1630 - 991)));
+      padding-bottom: calc(20px + (20 - 10) * ((100vw - 991px) / (1630 - 991)));
+      line-height: calc(24px + (30 - 24) * ((100vw - 991px) / (1630 - 991)));
+    }
+
+    &__description {
+      padding-bottom: calc(20px + (40 - 20) * ((100vw - 991px) / (1630 - 991)));
+      font-size: calc(12px + (14 - 12) * ((100vw - 991px) / (1630 - 991)));
+      line-height: calc(15px + (17 - 15) * ((100vw - 991px) / (1630 - 991)));
+    }
+    &__block{
+      padding: calc(10px + (20 - 10) * ((100vw - 991px) / (1630 - 991))) 0;
+    }
+    &__text {
+      width: calc(60% + (55 - 60) * ((100vw - 991px) / (1630 - 991)));
+      &-orange{
+        font-size: calc(20px + (30 - 20) * ((100vw - 991px) / (1630 - 991)));
+      }
+    }
+
+    &__img {
+      width: calc(40% + (45 - 40) * ((100vw - 991px) / (1630 - 991)));
+      padding-right: calc(20px + (50 - 20) * ((100vw - 991px) / (1630 - 991)));
+    }
+  }
+}
+@media screen and (max-width: 991px){
+  .text-img {
+    padding: 40px;
+    flex-wrap: wrap;
+    &__title {
+      font-size: 24px;
+      padding-bottom: 20px;
+    }
+
+    &__subtitle {
+      font-size: 16px;
+      padding-bottom: 15px;
+      line-height: 20px;
+    }
+
+    &__description {
+      padding-bottom: 15px;
+      font-size: 12px;
+      line-height: 15px;
+    }
+    &__block{
+      padding: 10px;
+    }
+    &__text {
+      width: 100%;
+      &-orange{
+        font-size: 20px;
+      }
+    }
+
+    &__img {
+      display: none;
+      width: 100%;
+      padding-right: 0;
+    }
   }
 }

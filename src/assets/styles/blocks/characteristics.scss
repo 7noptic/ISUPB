@@ -1,12 +1,30 @@
-.characteristics{
+.characteristics {
   max-width: 1630px;
   padding: 0 30px 100px;
   margin: 0 auto;
-  &__slider{
-    max-width: 1530px;
+
+  &__slider {
+    max-width: 1500px;
+    margin: 0 auto;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+}
+
+@media screen and (max-width: 1630px) {
+  .characteristics {
+    padding: 0 30px calc(50px + (100 - 50) * ((100vw - 991px) / (1630 - 991)));
+
+    &__slider {
+      margin: 0 15px;
+    }
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .characteristics {
+    padding: 0 30px 50px;
   }
 }

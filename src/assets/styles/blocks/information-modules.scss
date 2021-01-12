@@ -14,4 +14,15 @@
     width: 22%;
   }
 }
+@media screen and (max-width: 991px) {
+  .information-modules {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .information-modules {
+    order: 5;
+  }
+}
+
 

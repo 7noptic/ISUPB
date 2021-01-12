@@ -1,6 +1,12 @@
 .menu{
+  &__list{
+
   display: flex;
   justify-content: space-between;
+  }
+&__location{
+  display: none;
+}
   &__item{
 
   }
@@ -39,6 +45,50 @@
     &__link{
       font-size: 12px;
       padding: 8px 12px;
+    }
+  }
+}
+@media screen and (max-width: 991px){
+
+  .menu{
+    z-index: 20;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    max-width: 320px;
+    height: 100%;
+    background-color: $orange;
+    padding: 30px;
+    transition: $transition4;
+    overflow-x: hidden;
+    overflow-y: auto;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    border-right: 1px solid black;
+    color: white;
+    &.active{
+      left: 0;
+    }
+    &__list{
+      flex-direction: column;
+    }
+&__item{
+  padding-bottom: 15px;
+  &:last-child{
+    padding-bottom: 40px;
+  }
+}
+    &__link{
+      font-size: 16px;
+      color: #fff;
+      padding: 15px;
+
+    }
+    &__location{
+      display: flex;
+      flex-direction: column;
     }
   }
 }

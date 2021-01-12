@@ -10,9 +10,13 @@
   padding: 0 15px;
   cursor: pointer;
   transition: $transition4;
-&:hover{
-  transform: scale(1.1);
-}
+  font-size: 14px;
+  font-weight: 300;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+
   &:before,
   &:after {
     content: "";

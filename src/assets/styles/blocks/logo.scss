@@ -9,15 +9,26 @@
 @media screen and (max-width: 1440px){
   .logo{
     max-width: 160px;
-    display: flex;
-    align-items: center;
   }
 
 }
 @media screen and (max-width: 1240px){
   .logo{
     max-width: 150px;
-    display: flex;
-    align-items: center;
+  }
+}
+@media screen and (max-width: 991px){
+  .logo{
+    max-width: 130px;
+  }
+}
+@media screen and (max-width: 767px){
+  .logo{
+    max-width: 120px;
+  }
+}
+@media screen and (max-width: 575px){
+  .logo{
+    max-width: 110px;
   }
 }

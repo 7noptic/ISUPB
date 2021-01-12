@@ -22,3 +22,21 @@
     }
   }
 }
+@media screen and (max-width: 767px){
+  .footer-social{
+    width: 100%;
+    justify-content: space-between;
+    padding-top: 30px;
+    &__item{
+      margin-left: 0;
+    }
+  }
+}
+@media screen and (max-width: 575px){
+  .footer-social{
+    &__title{
+      display: none;
+    }
+
+  }
+}

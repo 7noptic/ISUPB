@@ -41,3 +41,17 @@
     }
   }
 }
+@media screen and (max-width: 991px){
+  .location{
+    &__item{
+      & svg {
+        & path{
+          fill: #fff;
+        }
+      }
+      &-text{
+        padding-left: 15px;
+      }
+    }
+  }
+}

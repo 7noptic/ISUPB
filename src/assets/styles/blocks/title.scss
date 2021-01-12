@@ -9,3 +9,39 @@
     text-align: left;
   }
 }
+@media screen and (max-width: 1630px){
+  .title{
+    font-size: calc(30px + (40 - 30) * ((100vw - 991px) / (1630 - 991)));
+    padding-bottom: calc(40px + (80 - 40) * ((100vw - 991px) / (1630 - 991)));
+    &-left{
+      font-size: calc(30px + (40 - 30) * ((100vw - 991px) / (1630 - 991)));
+    }
+  }
+}
+@media screen and (max-width: 991px){
+  .title{
+    font-size: 30px;
+    padding-bottom: 40px;
+    &-left{
+      font-size: 30px;
+    }
+  }
+}
+@media screen and (max-width: 767px){
+  .title{
+    font-size: 26px;
+    padding-bottom: 30px;
+    &-left{
+      font-size: 26px;
+    }
+  }
+}
+@media screen and (max-width: 575px){
+  .title{
+    font-size: 20px;
+    padding-bottom: 20px;
+    &-left{
+      font-size: 20px;
+    }
+  }
+}

@@ -6,11 +6,38 @@
     font-weight: 600;
     padding-bottom: 30px;
     line-height: 29px;
-    max-width: 180px;
   }
   &__subtitle{
     font-size: 14px;
     font-weight: 300;
     padding-bottom: 25px;
+  }
+}
+@media screen and (max-width: 1630px){
+  .requisition-text{
+    padding: 0 calc(10px + (35 - 10) * ((100vw - 991px) / (1630 - 991)));
+    max-width: calc(220px + (330 - 220) * ((100vw - 991px) / (1630 - 991)));
+    &__title{
+      font-size: calc(16px + (24 - 16) * ((100vw - 991px) / (1630 - 991)));
+      padding-bottom: calc(15px + (30 - 15) * ((100vw - 991px) / (1630 - 991)));
+    }
+    &__subtitle{
+      font-size: calc(10px + (14 - 10) * ((100vw - 991px) / (1630 - 991)));
+      padding-bottom: calc(15px + (25 - 15) * ((100vw - 991px) / (1630 - 991)));
+    }
+  }
+}
+@media screen and (max-width: 991px){
+  .requisition-text{
+    padding: 0 10px;
+    max-width: 220px;
+    &__title{
+      font-size: 16px;
+      padding-bottom: 15px;
+    }
+    &__subtitle{
+      font-size: 10px;
+      padding-bottom: 15px;
+    }
   }
 }

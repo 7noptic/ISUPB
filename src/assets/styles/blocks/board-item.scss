@@ -34,3 +34,55 @@
 
   }
 }
+@media screen and (max-width: 991px){
+  .board-item{
+    width: 50%;
+    padding-right: 5%;
+    padding-bottom: 50px;
+    &__header{
+      padding-bottom: 20px;
+    }
+    &__num{
+      font-size: 120px;
+      top: -79px;
+    }
+    &__img{
+      width: 25%;
+    }
+    &__title{
+      width: 50%;
+      font-size: 20px;
+    }
+    &__list{
+    }
+    &__item{
+
+    }
+  }
+}
+@media screen and (max-width: 600px){
+  .board-item{
+    width: 100%;
+    padding-right: 0%;
+    padding-bottom: 40px;
+    &__header{
+      padding-bottom: 20px;
+    }
+    &__num{
+      font-size: 120px;
+      top: -79px;
+    }
+    &__img{
+      width: 25%;
+    }
+    &__title{
+      width: 50%;
+      font-size: 20px;
+    }
+    &__list{
+    }
+    &__item{
+
+    }
+  }
+}

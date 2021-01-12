@@ -1,6 +1,7 @@
 .vacancies{
   width: 100%;
   max-width: 1040px;
+  padding: 0 15px;
   margin: 0 auto;
   &__title{
     padding-bottom: 80px;
@@ -12,5 +13,33 @@
     padding-bottom: 30px;
     font-weight: 700;
     font-size: 18px;
+  }
+}
+@media screen and (max-width: 1630px){
+  .vacancies{
+    &__title{
+      padding-bottom: calc(40px + (80 - 40) * ((100vw - 991px) / (1630 - 991)));
+    }
+    &__block{
+      padding-bottom: calc(40px + (80 - 40) * ((100vw - 991px) / (1630 - 991)));
+    }
+    &__subtitle{
+      padding-bottom: calc(20px + (30 - 20) * ((100vw - 991px) / (1630 - 991)));
+      font-size: calc(14px + (18 - 14) * ((100vw - 991px) / (1630 - 991)));
+    }
+  }
+}
+@media screen and (max-width: 991px){
+  .vacancies{
+    &__title{
+      padding-bottom: 30px;
+    }
+    &__block{
+      padding-bottom: 30px;
+    }
+    &__subtitle{
+      padding-bottom: 20px;
+      font-size: 14px;
+    }
   }
 }

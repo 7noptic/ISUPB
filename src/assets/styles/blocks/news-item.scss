@@ -1,11 +1,12 @@
-.news-item{
+.news-item {
 
-  
+
   width: 50%;
   padding-right: 8%;
   padding-bottom: 30px;
   cursor: pointer;
-  &__header{
+
+  &__header {
     display: flex;
     justify-content: space-between;
     font-size: 12px;
@@ -13,29 +14,94 @@
     padding-bottom: 15px;
 
   }
-  &__views{
+
+  &__footer {
+
+  }
+
+  &__views {
     position: relative;
-    &::before{
+
+    &::before {
       content: url("../img/eye.svg");
       display: block;
       position: absolute;
       left: -26px;
     }
   }
-  &__title{
+
+  &__title {
     max-width: 440px;
     font-weight: 700;
     font-size: 18px;
     line-height: 21px;
     padding-bottom: 20px;
   }
-  &__img{
+
+  &__img {
     padding-bottom: 20px;
   }
-  &__description{
+
+  &__description {
     font-size: 14px;
     font-weight: 300;
     line-height: 17px;
     padding-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 1630px) {
+  .news-item {
+    padding-right: 5%;
+    &__header {
+      font-size: calc(10px + (12 - 10) * ((100vw - 991px) / (1630 - 991)));
+    }
+
+    &__title {
+      font-size: calc(14px + (18 - 14) * ((100vw - 991px) / (1630 - 991)));
+    }
+
+
+    &__description {
+      font-size: calc(12px + (14 - 12) * ((100vw - 991px) / (1630 - 991)));
+    }
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .news-item {
+    width: 48%;
+    padding-right: 0;
+    &__header {
+      font-size: 10px;
+    }
+
+    &__title {
+      font-size: 14px;
+    }
+
+
+    &__description {
+      font-size: 12px;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .news-item {
+    width:100%;
+    padding-right: 0;
+    &__header {
+      font-size: 10px;
+    }
+
+    &__title {
+      font-size: 14px;
+    }
+
+
+    &__description {
+      font-size: 12px;
+    }
   }
 }

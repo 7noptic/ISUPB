@@ -13,3 +13,23 @@
     font-weight: 700;
   }
 }
+@media screen and (max-width: 1630px){
+  .number{
+    &__num{
+      font-size: calc(80px + (150 - 80) * ((100vw - 991px) / (1630 - 991)));
+    }
+    &__subtitle{
+      font-size: calc(12px + (18 - 12) * ((100vw - 991px) / (1630 - 991)));
+    }
+  }
+}
+@media screen and (max-width: 991px){
+  .number{
+    &__num{
+      font-size: 80px;
+    }
+    &__subtitle{
+      font-size: 12px;
+    }
+  }
+}

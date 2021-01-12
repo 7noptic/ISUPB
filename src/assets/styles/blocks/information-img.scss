@@ -2,6 +2,12 @@
   position: relative;
   display: flex;
   align-items: center;
+  width: 40%;
+
+  &__wrapper {
+    position: relative;
+  }
+
   &__img {
     z-index: 10;
   }
@@ -12,6 +18,7 @@
     bottom: 25px;
     right: 65px;
   }
+
   & svg {
     z-index: 10;
   }
@@ -21,9 +28,11 @@
 @media screen and (max-width: 1630px) {
   .information-img {
     width: 40%;
+
     &__top {
       right: calc((-50px) + (65 + 50) * ((100vw - 992px) / (1630 - 992)));
     }
+
     & svg {
       height: calc(250px + (528 - 250) * ((100vw - 992px) / (1630 - 992)));
       z-index: 10;
@@ -43,9 +52,27 @@
     }
   }
 }
+
 @media screen and (max-width: 1240px) {
   .information-img {
     width: 37%;
 
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .information-img {
+    width: 50%;
+
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .information-img {
+    width: 100%;
+    order: 3;
+    &__img{
+      margin: 0 auto;
+    }
   }
 }

@@ -1,0 +1,112 @@
+.swiper-container-reviews, .swiper-container-awards, .swiper-container-project, .swiper-container-information, .swiper-container-tags
+, .swiper-container-module{
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  overflow: hidden;
+  list-style: none;
+  padding: 0px 30px;
+  /* Fix of Webkit flickering */
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+}
+.swiper-container-tags{
+  padding: 20px 25px;
+}
+.swiper-slide__wauto {
+  text-align: center;
+  width: auto !important;
+}
+.swiper-button-prev, .swiper-container-rtl .swiper-button-next {
+  left: 34px;
+}
+
+.swiper-container-vertical > .swiper-wrapper {
+  flex-direction: column;
+}
+
+.swiper-container-multirow-column > .swiper-wrapper {
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.swiper-pagination-bullet {
+  border-radius: 0%;
+  cursor: pointer;
+  position: relative;
+  width: 10px;
+  height: 6px;
+  background-color: #000000;
+  margin: 3px 20px 0 0;
+  transition: $transition4;
+  opacity: .7;
+
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    width: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+  }
+
+  &:before {
+    bottom: 100%;
+    border-bottom: 2.89px solid #000000;
+  }
+
+  &:after {
+    top: 100%;
+    width: 0;
+    border-top: 2.89px solid #000000;
+  }
+
+  &-active {
+    background-color: $orange;
+    transform: scale(1.5);
+
+    &:before {
+      bottom: 100%;
+      border-bottom: 2.89px solid $orange;
+      transform: scale(1.15);
+    }
+
+    &:after {
+      top: 100%;
+      width: 0;
+      border-top: 2.89px solid $orange;
+      transform: scale(1.15);
+    }
+
+    &:hover {
+      background-color: $orange;
+
+      &:before {
+        bottom: 100%;
+        border-bottom: 2.89px solid $orange;
+      }
+
+      &:after {
+        top: 100%;
+        width: 0;
+        border-top: 2.89px solid $orange;
+      }
+    }
+  }
+
+  &:hover {
+    background-color: $orange;
+
+    &:before {
+      bottom: 100%;
+      border-bottom: 2.89px solid $orange;
+    }
+
+    &:after {
+      top: 100%;
+      width: 0;
+      border-top: 2.89px solid $orange;
+    }
+  }
+}

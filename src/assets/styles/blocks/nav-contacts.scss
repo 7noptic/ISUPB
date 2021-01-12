@@ -88,3 +88,12 @@
   }
 
 }
+@media screen and (max-width: 991px){
+  .nav-contacts {
+    flex-direction: column;
+    &__social{
+      display: none;
+    }
+  }
+
+}

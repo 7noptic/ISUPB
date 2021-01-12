@@ -6,3 +6,24 @@
     padding-bottom: 54px;
   }
 }
+@media screen and (max-width: 1630px){
+  .project-numbers{
+    padding:0 15px calc(100px + (250 - 100) * ((100vw - 991px) / (1630 - 991)));
+  }
+}
+@media screen and (max-width: 991px){
+  .project-numbers{
+    padding: 0 15px 100px;
+
+  }
+}
+@media screen and (max-width: 767px){
+  .project-numbers{
+    padding: 0 10px 50px;
+  }
+}
+@media screen and (max-width: 575px){
+  .project-numbers{
+    padding:0 10px 25px;
+  }
+}

@@ -44,3 +44,43 @@
     }
   }
 }
+@media screen and (max-width: 991px){
+  .footer-footer{
+    flex-wrap: wrap;
+
+    &__copy{
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      padding: 15px 0;
+    }
+    &__list{
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      padding: 15px 0;
+    }
+    &__logo{
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      padding: 15px 0;
+    }
+  }
+}
+@media screen and (max-width: 767px){
+  .footer-footer{
+    padding-top: 15px;
+    &__list {
+      justify-content: space-between;
+    }
+
+    &__elemlist {
+      padding-right: 0;
+
+    }
+
+
+  }
+
+}

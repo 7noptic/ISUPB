@@ -1,22 +1,85 @@
-.board-article{
+.board-article {
   width: 33%;
   padding: 10px 20px 80px;
-  &__title{
+
+  &__img {
+    display: flex;
+    justify-content: center;
+
+  }
+
+  &__title {
     padding: 10px 20px;
     font-weight: 600;
     font-size: 14px;
 
   }
-  &__description{
+
+  &__description {
     font-weight: 300;
     font-size: 14px;
     padding: 10px 20px;
   }
-  &__footer{
+
+  &__footer {
     display: flex;
     justify-content: space-between;
     font-weight: 300;
     font-size: 14px;
     padding: 10px 20px;
+  }
+}
+
+@media screen and (max-width: 1630px) {
+  .board-article {
+    padding: 10px 20px calc(40px + (80 - 40) * ((100vw - 991px) / (1630 - 991)));
+
+    &__title {
+      font-size: calc(12px + (14 - 12) * ((100vw - 991px) / (1630 - 991)));
+      padding: 10px;
+
+
+    }
+
+    &__description {
+      font-size: calc(12px + (14 - 12) * ((100vw - 991px) / (1630 - 991)));
+      padding: 10px;
+
+    }
+
+    &__footer {
+      font-size: calc(11px + (14 - 11) * ((100vw - 991px) / (1630 - 991)));
+      padding: 10px;
+
+    }
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .board-article {
+    width: 50%;
+    padding: 10px 15px 40px;
+
+    &__title {
+      font-size: 12px;
+    }
+
+    &__description {
+      font-size: 12px;
+    }
+
+    &__footer {
+      font-size: 12px;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .board-article {
+    width: 100%;
+    padding: 10px 0;
+
+    &__img {
+    }
   }
 }

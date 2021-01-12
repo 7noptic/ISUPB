@@ -4,14 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="shortcut icon" href="img/favicon/favicon.ico" />
+    <link rel="shortcut icon" href="img/favicon/favicon.ico"/>
     <link rel="icon" type="image/vnd.microsoft.icon" href="img/favicon/favicon.ico">
     <link rel="icon" type="image/x-icon" href="img/favicon/favicon.ico">
-    <link rel="icon" href="img/favicon/favicon.ico" />
+    <link rel="icon" href="img/favicon/favicon.ico"/>
     <title>ISUPB</title>
 </head>
 <body>
 <header class="header">
+    <div class="header__burger">
+        <span></span>
+    </div>
+    <div class="header__burger-fixed"></div>
     <a href="index.html" class="logo">
         <img src="img/logo-header.jpg" alt="logo" class="logo_img">
     </a>
@@ -69,13 +73,48 @@
         </div>
 
         <div class="header-info__bottom">
-            <nav>
-                <ul class="menu">
+            <nav class="menu">
+                <ul class="menu__list">
                     <li class="menu__item"><a href="#" class="menu__link">Услуги</a></li>
                     <li class="menu__item"><a href="aboutmodules.html" class="menu__link">Модули</a></li>
                     <li class="menu__item"><a href="introduction.html" class="menu__link">Внедрение</a></li>
                     <li class="menu__item"><a href="aboutsystem.html" class="menu__link">О системе</a></li>
                     <li class="menu__item"><a href="contacts.html" class="menu__link">Контакты</a></li>
+                </ul>
+                <ul class="location menu__location">
+
+                    <li class="location__item">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15.9291 2.45591C14.3454 0.872191 12.2397 0 10.0001 0C7.76042 0 5.65478 0.872152 4.07099 2.45591C2.4873 4.03959 1.61511 6.14514 1.61511 8.3848C1.61511 10.6245 2.4873 12.7301 4.07099 14.3138L9.58578 19.8284C9.7002 19.9429 9.85016 20 10.0001 20C10.15 20 10.3 19.9428 10.4144 19.8284L15.929 14.3138C17.5127 12.7301 18.3849 10.6245 18.3849 8.38484C18.3849 6.1451 17.5127 4.03955 15.9291 2.45591ZM12.6334 11.018C11.93 11.7214 10.9949 12.1088 10.0001 12.1088C9.00539 12.1088 8.07023 11.7214 7.3669 11.0181C6.6635 10.3147 6.27615 9.37953 6.27615 8.3848C6.27615 7.39011 6.6635 6.45495 7.3669 5.75155C8.07023 5.04818 9.00539 4.66084 10.0001 4.66084C10.9949 4.66084 11.93 5.04818 12.6334 5.75155C13.3367 6.45487 13.7241 7.39003 13.7241 8.38476C13.7241 9.37949 13.3367 10.3147 12.6334 11.018Z"
+                                  fill="black"/>
+                        </svg>
+                        <div class="location__item-text">Воровского 78а</div>
+                    </li>
+
+                    <li class="location__item">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10 0C4.48582 0 0 4.48582 0 10C0 15.5142 4.48582 20 10 20C15.5142 20 20 15.5142 20 10C20 4.48582 15.5142 0 10 0ZM13.5358 5.28582L14.125 4.69664C14.45 4.37082 14.9775 4.37082 15.3033 4.69664C15.6283 5.02164 15.6283 5.54914 15.3033 5.87496L14.7141 6.46414C14.5508 6.62664 14.3383 6.70832 14.125 6.70832C13.9116 6.70832 13.6983 6.62664 13.5358 6.46414C13.21 6.13832 13.21 5.61082 13.5358 5.28582ZM4.69668 4.69668C5.0225 4.37086 5.55 4.37086 5.875 4.69668L6.46418 5.28586C6.79 5.61086 6.79 6.13836 6.46418 6.46418C6.30168 6.62668 6.08836 6.70836 5.875 6.70836C5.66168 6.70836 5.44918 6.62668 5.28582 6.46418L4.69668 5.875C4.37168 5.54918 4.37168 5.02168 4.69668 4.69668ZM3.33332 10.8333C2.87332 10.8333 2.5 10.4608 2.5 10C2.5 9.53918 2.87332 9.16668 3.33332 9.16668H4.16664C4.62664 9.16668 4.99996 9.53918 4.99996 10C4.99996 10.4608 4.62664 10.8333 4.16664 10.8333H3.33332ZM6.46418 14.7142L5.875 15.3033C5.7125 15.4666 5.49918 15.5475 5.28582 15.5475C5.0725 15.5475 4.86 15.4667 4.69664 15.3033C4.37164 14.9783 4.37164 14.4508 4.69664 14.125L5.28582 13.5358C5.61164 13.2108 6.13914 13.2108 6.46414 13.5358C6.79 13.8617 6.79 14.3892 6.46418 14.7142ZM10.8333 16.6667C10.8333 17.1275 10.46 17.5 10 17.5C9.54 17.5 9.16668 17.1275 9.16668 16.6667V15.8334C9.16668 15.3725 9.54 15 10 15C10.46 15 10.8333 15.3725 10.8333 15.8334V16.6667ZM10.8333 10C10.8333 10.4608 10.46 10.8333 10 10.8333H7.5C7.04 10.8333 6.66668 10.4608 6.66668 10C6.66668 9.53918 7.04 9.16668 7.5 9.16668H9.16668V7.5C9.16668 7.03918 9.54 6.66668 10 6.66668C10.46 6.66668 10.8333 7.03918 10.8333 7.5V10ZM10.8333 4.16668C10.8333 4.6275 10.46 5 10 5C9.54 5 9.16668 4.6275 9.16668 4.16668V3.33332C9.16668 2.8725 9.54 2.5 10 2.5C10.46 2.5 10.8333 2.8725 10.8333 3.33332V4.16668ZM15.3033 15.3033C15.14 15.4666 14.9275 15.5475 14.7141 15.5475C14.5008 15.5475 14.2875 15.4667 14.125 15.3033L13.5358 14.7141C13.21 14.3891 13.21 13.8616 13.5358 13.5358C13.8608 13.2108 14.3883 13.2108 14.7141 13.5358L15.3033 14.125C15.6283 14.4508 15.6283 14.9783 15.3033 15.3033ZM16.6667 10.8333H15.8334C15.3733 10.8333 15 10.4608 15 10C15 9.53918 15.3733 9.16668 15.8333 9.16668H16.6666C17.1266 9.16668 17.5 9.53918 17.5 10C17.5 10.4608 17.1267 10.8333 16.6667 10.8333Z"
+                                  fill="black"/>
+                        </svg>
+                        <div class="location__item-text">Пн-Пт с 8:00 до 17:00</div>
+                    </li>
+
+                    <li class="location__item">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10.2437 13.7C10.1662 13.7337 10.0825 13.75 10 13.75C9.9175 13.75 9.83375 13.7337 9.75625 13.7L0 9.56873V18.75C0 19.44 0.56 20 1.25 20H18.75C19.44 20 20 19.44 20 18.75V9.56873L10.2437 13.7Z"
+                                  fill="black"/>
+                            <path d="M19.7125 6.0625L17.5 4.6625V1.25C17.5 0.5625 16.9375 0 16.25 0H3.75C3.0625 0 2.5 0.5625 2.5 1.25V4.6625L0.2875 6.0625C0.1125 6.175 0 6.375 0 6.5875V8.2125L3.75 9.8V1.25H16.25V9.8L20 8.2125V6.5875C20 6.375 19.8875 6.175 19.7125 6.0625Z"
+                                  fill="black"/>
+                            <path d="M14.375 2.5H5.625C5.28 2.5 5 2.78 5 3.125C5 3.47 5.28 3.75 5.625 3.75H14.375C14.72 3.75 15 3.47 15 3.125C15 2.78 14.72 2.5 14.375 2.5Z"
+                                  fill="black"/>
+                            <path d="M14.375 5H5.625C5.28 5 5 5.28 5 5.625C5 5.97 5.28 6.25 5.625 6.25H14.375C14.72 6.25 15 5.97 15 5.625C15 5.28 14.72 5 14.375 5Z"
+                                  fill="black"/>
+                            <path d="M10.625 7.5H5.625C5.28 7.5 5 7.78 5 8.125C5 8.47 5.28 8.75 5.625 8.75H10.625C10.97 8.75 11.25 8.47 11.25 8.125C11.25 7.78 10.97 7.5 10.625 7.5Z"
+                                  fill="black"/>
+                        </svg>
+                        <div class="location__item-text">info@isu-pb.ru</div>
+                    </li>
+
                 </ul>
             </nav>
             <nav class="nav-contacts">
@@ -153,35 +192,179 @@
     <section class="information">
         <div class="information-wrapper">
 
-
             <div class="information-img">
-                <img class="information-img__img" src="img/img%201.png" alt="img">
-                <div class="information-img__top">
-                    <svg style="mix-blend-mode:hard-light" width="361" height="528" viewBox="0 0 361 528" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <g style="mix-blend-mode:hard-light">
-                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                  d="M194.158 316.64L194.134 240.403L127.976 202.263L61.8417 240.36L61.8662 316.597L128.024 354.737L194.158 316.64ZM128.047 426L256 352.291L255.953 204.791L127.953 131L0 204.709L0.0473475 352.209L128.047 426Z"
-                                  fill="#EA5800"/>
-                        </g>
-                        <g style="mix-blend-mode:hard-light">
-                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                  d="M93.6008 0L34.1008 34.337L34 102.837L93.3992 137L152.899 102.663L153 34.163L93.6008 0Z"
-                                  fill="#EA5800"/>
-                        </g>
-                        <g style="mix-blend-mode:hard-light">
-                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                  d="M315.033 272L269.033 298.778L269 352.278L314.967 379L360.967 352.222L361 298.722L315.033 272Z"
-                                  fill="#EA5800"/>
-                        </g>
-                        <g style="mix-blend-mode:hard-light">
-                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                  d="M263.132 528L335 486.864L334.868 404.363L262.868 363L191 404.137L191.132 486.637L263.132 528Z"
-                                  fill="#EA5800"/>
-                        </g>
-                    </svg>
+                <div class="swiper-container-information">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="information-img__wrapper">
 
+                                <img class="information-img__img" src="img/img%201.png" alt="img">
+                                <div class="information-img__top">
+                                    <svg style="mix-blend-mode:hard-light" width="361" height="528"
+                                         viewBox="0 0 361 528" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <g style="mix-blend-mode:hard-light">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                  d="M194.158 316.64L194.134 240.403L127.976 202.263L61.8417 240.36L61.8662 316.597L128.024 354.737L194.158 316.64ZM128.047 426L256 352.291L255.953 204.791L127.953 131L0 204.709L0.0473475 352.209L128.047 426Z"
+                                                  fill="#EA5800"/>
+                                        </g>
+                                        <g style="mix-blend-mode:hard-light">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                  d="M93.6008 0L34.1008 34.337L34 102.837L93.3992 137L152.899 102.663L153 34.163L93.6008 0Z"
+                                                  fill="#EA5800"/>
+                                        </g>
+                                        <g style="mix-blend-mode:hard-light">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                  d="M315.033 272L269.033 298.778L269 352.278L314.967 379L360.967 352.222L361 298.722L315.033 272Z"
+                                                  fill="#EA5800"/>
+                                        </g>
+                                        <g style="mix-blend-mode:hard-light">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                  d="M263.132 528L335 486.864L334.868 404.363L262.868 363L191 404.137L191.132 486.637L263.132 528Z"
+                                                  fill="#EA5800"/>
+                                        </g>
+                                    </svg>
+
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="information-img__wrapper">
+                                <img class="information-img__img" src="img/img%201.png" alt="img">
+                                <div class="information-img__top">
+                                    <svg style="mix-blend-mode:hard-light" width="361" height="528"
+                                         viewBox="0 0 361 528" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <g style="mix-blend-mode:hard-light">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                  d="M194.158 316.64L194.134 240.403L127.976 202.263L61.8417 240.36L61.8662 316.597L128.024 354.737L194.158 316.64ZM128.047 426L256 352.291L255.953 204.791L127.953 131L0 204.709L0.0473475 352.209L128.047 426Z"
+                                                  fill="#EA5800"/>
+                                        </g>
+                                        <g style="mix-blend-mode:hard-light">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                  d="M93.6008 0L34.1008 34.337L34 102.837L93.3992 137L152.899 102.663L153 34.163L93.6008 0Z"
+                                                  fill="#EA5800"/>
+                                        </g>
+                                        <g style="mix-blend-mode:hard-light">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                  d="M315.033 272L269.033 298.778L269 352.278L314.967 379L360.967 352.222L361 298.722L315.033 272Z"
+                                                  fill="#EA5800"/>
+                                        </g>
+                                        <g style="mix-blend-mode:hard-light">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                  d="M263.132 528L335 486.864L334.868 404.363L262.868 363L191 404.137L191.132 486.637L263.132 528Z"
+                                                  fill="#EA5800"/>
+                                        </g>
+                                    </svg>
+
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="information-img__wrapper">
+                                <img class="information-img__img" src="img/img%201.png" alt="img">
+                                <div class="information-img__top">
+                                    <svg style="mix-blend-mode:hard-light" width="361" height="528"
+                                         viewBox="0 0 361 528" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <g style="mix-blend-mode:hard-light">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                  d="M194.158 316.64L194.134 240.403L127.976 202.263L61.8417 240.36L61.8662 316.597L128.024 354.737L194.158 316.64ZM128.047 426L256 352.291L255.953 204.791L127.953 131L0 204.709L0.0473475 352.209L128.047 426Z"
+                                                  fill="#EA5800"/>
+                                        </g>
+                                        <g style="mix-blend-mode:hard-light">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                  d="M93.6008 0L34.1008 34.337L34 102.837L93.3992 137L152.899 102.663L153 34.163L93.6008 0Z"
+                                                  fill="#EA5800"/>
+                                        </g>
+                                        <g style="mix-blend-mode:hard-light">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                  d="M315.033 272L269.033 298.778L269 352.278L314.967 379L360.967 352.222L361 298.722L315.033 272Z"
+                                                  fill="#EA5800"/>
+                                        </g>
+                                        <g style="mix-blend-mode:hard-light">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                  d="M263.132 528L335 486.864L334.868 404.363L262.868 363L191 404.137L191.132 486.637L263.132 528Z"
+                                                  fill="#EA5800"/>
+                                        </g>
+                                    </svg>
+
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="information-img__wrapper">
+                                <img class="information-img__img" src="img/img%201.png" alt="img">
+                                <div class="information-img__top">
+                                    <svg style="mix-blend-mode:hard-light" width="361" height="528"
+                                         viewBox="0 0 361 528" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <g style="mix-blend-mode:hard-light">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                  d="M194.158 316.64L194.134 240.403L127.976 202.263L61.8417 240.36L61.8662 316.597L128.024 354.737L194.158 316.64ZM128.047 426L256 352.291L255.953 204.791L127.953 131L0 204.709L0.0473475 352.209L128.047 426Z"
+                                                  fill="#EA5800"/>
+                                        </g>
+                                        <g style="mix-blend-mode:hard-light">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                  d="M93.6008 0L34.1008 34.337L34 102.837L93.3992 137L152.899 102.663L153 34.163L93.6008 0Z"
+                                                  fill="#EA5800"/>
+                                        </g>
+                                        <g style="mix-blend-mode:hard-light">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                  d="M315.033 272L269.033 298.778L269 352.278L314.967 379L360.967 352.222L361 298.722L315.033 272Z"
+                                                  fill="#EA5800"/>
+                                        </g>
+                                        <g style="mix-blend-mode:hard-light">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                  d="M263.132 528L335 486.864L334.868 404.363L262.868 363L191 404.137L191.132 486.637L263.132 528Z"
+                                                  fill="#EA5800"/>
+                                        </g>
+                                    </svg>
+
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="information-img__wrapper">
+                                <img class="information-img__img" src="img/img%201.png" alt="img">
+                                <div class="information-img__top">
+                                    <svg style="mix-blend-mode:hard-light" width="361" height="528"
+                                         viewBox="0 0 361 528" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <g style="mix-blend-mode:hard-light">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                  d="M194.158 316.64L194.134 240.403L127.976 202.263L61.8417 240.36L61.8662 316.597L128.024 354.737L194.158 316.64ZM128.047 426L256 352.291L255.953 204.791L127.953 131L0 204.709L0.0473475 352.209L128.047 426Z"
+                                                  fill="#EA5800"/>
+                                        </g>
+                                        <g style="mix-blend-mode:hard-light">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                  d="M93.6008 0L34.1008 34.337L34 102.837L93.3992 137L152.899 102.663L153 34.163L93.6008 0Z"
+                                                  fill="#EA5800"/>
+                                        </g>
+                                        <g style="mix-blend-mode:hard-light">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                  d="M315.033 272L269.033 298.778L269 352.278L314.967 379L360.967 352.222L361 298.722L315.033 272Z"
+                                                  fill="#EA5800"/>
+                                        </g>
+                                        <g style="mix-blend-mode:hard-light">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                  d="M263.132 528L335 486.864L334.868 404.363L262.868 363L191 404.137L191.132 486.637L263.132 528Z"
+                                                  fill="#EA5800"/>
+                                        </g>
+                                    </svg>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
                 </div>
             </div>
+
             <div class="information-form">
                 <h1 class="information-form__title">
                     ИСУПБ основан на принципе
@@ -206,12 +389,9 @@
                     </div>
 
                 </form>
-                <nav class="dots">
-                    <span class="dots__dot dots__dot-active"></span>
-                    <span class="dots__dot"></span>
-                    <span class="dots__dot"></span>
-                    <span class="dots__dot"></span>
-                    <span class="dots__dot"></span>
+                <nav class="dots information-form__dots">
+                    <div class="swiper-pagination-information"></div>
+
                 </nav>
             </div>
             <div class="information-modules">
@@ -359,39 +539,93 @@
                 </a>
             </div>
         </div>
-    </section><!-- !information -->
+    </section> <!-- !information -->
     <section class="request">
         <div class="request__img">
+            <div class="requisition-img">
+                <svg class="requisition-img__hexagon" width="260" height="300" viewBox="0 0 260 300" fill="none"
+                     xmlns="http://www.w3.org/2000/svg">
+                    <g style="mix-blend-mode:hard-light">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                              d="M130.22 0L0.220301 75.1905L0 225.19L129.78 300L259.78 224.81L260 74.8095L130.22 0Z"
+                              fill="#7E7E7E"/>
+                    </g>
+                </svg>
+                <svg class="requisition-img__hexagon" width="260" height="300" viewBox="0 0 260 300" fill="none"
+                     xmlns="http://www.w3.org/2000/svg">
+                    <g style="mix-blend-mode:hard-light">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                              d="M130.22 0L0.220301 75.1905L0 225.19L129.78 300L259.78 224.81L260 74.8095L130.22 0Z"
+                              fill="#7D7D7D"/>
+                    </g>
+                </svg>
+                <svg class="requisition-img__hexagon" width="260" height="300" viewBox="0 0 260 300" fill="none"
+                     xmlns="http://www.w3.org/2000/svg">
+                    <g style="mix-blend-mode:hard-light">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                              d="M130.22 0L0.220301 75.1905L0 225.19L129.78 300L259.78 224.81L260 74.8095L130.22 0Z"
+                              fill="#777777"/>
+                    </g>
+                </svg>
+                <div class="request__hexagon requisition-img__hexagon">
+                    <svg width="188" height="116" viewBox="0 0 188 116" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M188 58L88 0.264973V115.735L188 58ZM0 68H98V48H0V68Z" fill="white"/>
+                    </svg>
+
+                </div>
+            </div>
+            <!--
             <img src="img/img%202.jpg" alt="img">
             <div class="request__hexagon">
                 <svg width="188" height="116" viewBox="0 0 188 116" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M188 58L88 0.264973V115.735L188 58ZM0 68H98V48H0V68Z" fill="white"/>
                 </svg>
 
-            </div>
+            </div> -->
         </div>
-        <h2 class="request__text">
-            Подайте заявку и получите демонстрационный доступ к Интегрированной Системе Управления Производственной
-            Безопасностью
-        </h2>
-    </section><!-- !request -->
+        <div class="request__text">
+            <a href="#" class="btn request__link">
+                <svg width="77" height="49" viewBox="0 0 77 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M20.5347 0.500004L0.0347377 12.5305L-6.29977e-06 36.5305L20.4653 48.5L40.9653 36.4695L41 12.4695L20.5347 0.500004Z"
+                          fill="#F4F4F4"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M39.5347 0.500004L19.0347 12.5305L19 36.5305L39.4653 48.5L59.9653 36.4695L60 12.4695L39.5347 0.500004Z"
+                          fill="#E9E9E9"/>
+                    <path opacity="0.8" fill-rule="evenodd" clip-rule="evenodd"
+                          d="M56.5347 0.500004L36.0347 12.5305L36 36.5305L56.4653 48.5L76.9653 36.4695L77 12.4695L56.5347 0.500004Z"
+                          fill="#FFB50F"/>
+                    <path d="M64.1372 25L49.1372 16.3397L49.1372 33.6603L64.1372 25ZM36 26.5L50.6372 26.5L50.6372 23.5L36 23.5L36 26.5Z"
+                          fill="#E9E9E9"/>
+                </svg>
+                Получить бесплатный доступ</a>
+        </div>
+    </section> <!-- !request -->
     <section class="stages">
         <h2 class="stages__title title">
             Этапы работы
         </h2>
         <div class="stages-content">
             <ol class="stages-list">
-                <li class="stages-list__item"><a href="#" class="stages-list__link"><span class="stages-list__hexagon">1</span>Предпроектное обследование</a></li>
-                <li class="stages-list__item"><a href="#" class="stages-list__link"><span class="stages-list__hexagon">2</span>Помощь в разработке технического задания</a></li>
-                <li class="stages-list__item"><a href="#" class="stages-list__link"><span class="stages-list__hexagon">3</span>Коммерческое предложение</a></li>
-                <li class="stages-list__item"><a href="#" class="stages-list__link"><span class="stages-list__hexagon">4</span>Внедрение «ПОД КЛЮЧ»</a></li>
-                <li class="stages-list__item"><a href="#" class="stages-list__link"><span class="stages-list__hexagon">5</span>Сопровождение</a></li>
-                <li class="stages-list__item"><a href="#" class="stages-list__link"><span class="stages-list__hexagon">6</span>Развитие системы</a></li>
+                <li class="stages-list__item"><a href="#" class="stages-list__link js-stages__link"><span
+                        class="stages-list__hexagon">1</span>Предпроектное обследование</a></li>
+                <li class="stages-list__item"><a href="#" class="stages-list__link js-stages__link"><span
+                        class="stages-list__hexagon">2</span>Помощь в разработке технического задания</a></li>
+                <li class="stages-list__item"><a href="#" class="stages-list__link js-stages__link"><span
+                        class="stages-list__hexagon">3</span>Коммерческое предложение</a></li>
+                <li class="stages-list__item"><a href="#" class="stages-list__link js-stages__link"><span
+                        class="stages-list__hexagon">4</span>Внедрение «ПОД КЛЮЧ»</a></li>
+                <li class="stages-list__item"><a href="#" class="stages-list__link js-stages__link"><span
+                        class="stages-list__hexagon">5</span>Сопровождение</a></li>
+                <li class="stages-list__item"><a href="#" class="stages-list__link js-stages__link"><span
+                        class="stages-list__hexagon">6</span>Развитие системы</a></li>
             </ol>
             <div class="stages-tabs">
-                <div class="stages-tabs__tab">
+
+                <div class="stages-tabs__tab js-stages__tab">
                     <div class="stages-tabs__subtitle">
-                        Первичный анализ существующих бизнес-процессов Заказчика в области производственной безопасности.
+                        Первичный анализ существующих бизнес-процессов Заказчика в области производственной
+                        безопасности.
                     </div>
                     <div class="stages-tabs__title">
                         По результатам анализа, вы получите:
@@ -404,9 +638,10 @@
                     </ul>
                 </div>
 
-                <div class="stages-tabs__tab">
+                <div class="stages-tabs__tab js-stages__tab">
                     <div class="stages-tabs__subtitle">
-                        Первичный анализ существующих бизнес-процессов Заказчика в области производственной безопасности.
+                        Первичный анализ существующих бизнес-процессов Заказчика в области производственной
+                        безопасности.
                     </div>
                     <div class="stages-tabs__title">
                         По результатам анализа, вы получите:
@@ -420,9 +655,10 @@
                     </ul>
                 </div>
 
-                <div class="stages-tabs__tab">
+                <div class="stages-tabs__tab js-stages__tab">
                     <div class="stages-tabs__subtitle">
-                        Первичный анализ существующих бизнес-процессов Заказчика в области производственной безопасности.
+                        Первичный анализ существующих бизнес-процессов Заказчика в области производственной
+                        безопасности.
                     </div>
                     <div class="stages-tabs__title">
                         По результатам анализа, вы получите:
@@ -432,7 +668,7 @@
                     </ul>
                 </div>
 
-                <div class="stages-tabs__tab">
+                <div class="stages-tabs__tab js-stages__tab">
 
                     <div class="stages-tabs__title">
                         По результатам анализа, вы получите:
@@ -446,9 +682,10 @@
                     </ul>
                 </div>
 
-                <div class="stages-tabs__tab">
+                <div class="stages-tabs__tab js-stages__tab">
                     <div class="stages-tabs__subtitle">
-                        Первичный анализ существующих бизнес-процессов Заказчика в области производственной безопасности.
+                        Первичный анализ существующих бизнес-процессов Заказчика в области производственной
+                        безопасности.
                     </div>
                     <div class="stages-tabs__title">
                         По результатам анализа, вы получите:
@@ -458,7 +695,7 @@
                     </ul>
                 </div>
 
-                <div class="stages-tabs__tab stages-tabs__tab-active">
+                <div class="stages-tabs__tab js-stages__tab">
 
                     <div class="stages-tabs__title">
                         По результатам анализа, вы получите:
@@ -474,22 +711,21 @@
 
             </div>
         </div>
-    </section><!-- !stages -->
+    </section> <!-- !stages -->
     <section class="query">
         <div class="query-text">
             <h2 class="query-text__title">
-                Запрос
+                ОСТАВИТЬ ЗАЯВКУ
+                НА ПРЕДПРОЕКТНОЕ
+                ОБСЛЕДОВАНИЕ
             </h2>
-            <h3 class="query-text__subtitle">
-                Вы можете связаться с нами любым удобным для вас способом: по телефону +7, по e-mail или оставьте заявку
-                на сайте. Да запуска работы по вашему проекту сообщите ваши ФИО, название организации, опишите задачу
-                или задайте вопрос
-            </h3>
+
         </div>
         <form action="post" class="query-form">
             <input type="text" class="query-form__name form-name form-input" placeholder="Имя">
             <input type="number" class="query-form__tel form-input" placeholder="+7  (       )       -        -">
-            <textarea name="textarea" cols="30" rows="10" class="query-form__quest form-input" placeholder="Ваш вопрос"></textarea>
+            <textarea name="textarea" cols="30" rows="10" class="query-form__quest form-input"
+                      placeholder="Ваш вопрос"></textarea>
             <footer class="query-form__footer">
                 <input type="submit" class="query-form__submit btn" value="Оставить заявку">
                 <div class="query-form__agreement agreement">
@@ -516,7 +752,7 @@
 
         </div>
 
-    </section><!-- !query -->
+    </section> <!-- !query -->
     <section class="advantages">
         <div class="advantage">
             <div class="advantage__img">
@@ -715,7 +951,7 @@
                 ПРОЦЕССОВ
             </div>
         </div>
-    </section><!-- !advantages -->
+    </section> <!-- !advantages -->
     <section class="about">
         <div class="about-text">
             <h2 class="about-text__title">
@@ -733,10 +969,10 @@
                 <div class="readmore"></div>
             </a>
         </div>
-        <div class="about-content">
+        <div class="about__content">
             <img src="img/aboutcontent.jpg" alt="img">
         </div>
-    </section><!-- !about -->
+    </section> <!-- !about -->
     <section class="project-numbers">
         <h2 class="project-numbers__title title">
             Информ проект в цифрах
@@ -780,7 +1016,7 @@
             </div>
         </div>
 
-    </section><!-- !project-numbers -->
+    </section> <!-- !project-numbers -->
     <section class="requisition">
         <div class="requisition-img">
             <svg class="requisition-img__hexagon" width="260" height="300" viewBox="0 0 260 300" fill="none"
@@ -815,23 +1051,21 @@
             </div>
         </div>
         <div class="requisition-text">
-            <div class="requisition-text__title">
-                Раскажи нам
-                о своих целях
-            </div>
+            <h3 class="requisition-text__title">
+                Узнать стоимость
+                проекта
+            </h3>
 
-            <div class="requisition-text__subtitle">
-                И мы поможем выбрать подходящий функционал системы
-            </div>
-
-            <div class="requisition-text__subtitle">
-                Перезвоним и ответим на все вопросы о выборе функционал
-            </div>
+            <p class="requisition-text__subtitle">
+                Наш менеджер свяжется с Вами
+                и поможет рассчитать стоимость исходя из объема автоматизации
+            </p>
         </div>
         <form action="post" class="query-form">
             <input type="text" class="query-form__name form-name form-input" placeholder="Имя">
             <input type="number" class="query-form__tel form-input" placeholder="+7  (       )       -        -">
-            <textarea name="textarea" cols="30" rows="10" class="query-form__quest form-input" placeholder="Ваш вопрос"></textarea>
+            <textarea name="textarea" cols="30" rows="10" class="query-form__quest form-input"
+                      placeholder="Ваш вопрос"></textarea>
             <footer class="query-form__footer">
                 <input type="submit" class="query-form__submit btn" value="Оставить заявку">
                 <div class="query-form__agreement agreement">
@@ -839,72 +1073,137 @@
                 </div>
             </footer>
         </form>
-    </section><!-- !requisition -->
+    </section> <!-- !requisition -->
     <section class="awards">
         <h2 class="awards__title title">
             Наши награды и сертификаты
         </h2>
-        <div class="awards-content">
-            <div class="awards-slider">
-                <div class="award">
-                    <a href="#" class="award__img">
-                        <img src="img/award.jpg" alt="award">
-                    </a>
-                    <h3 class="award__subtitle">
-                        Lorem ipsum dolor sit amet
-                        consectetur adipiscing elit
-                    </h3>
+        <div class="swiper-container-awards">
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide">
+                    <div class="award">
+                        <a href="img/award.jpg" class="awards-slider__img fresco" data-fresco-group="awards">
+                            <img src="img/award.jpg" alt="award">
+                        </a>
+                        <h3 class="award__subtitle">
+                            Lorem ipsum dolor sit amet
+                            consectetur adipiscing elit
+                        </h3>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="award">
+                        <a href="img/award.jpg" class="awards-slider__img fresco" data-fresco-group="awards">
+                            <img src="img/award.jpg" alt="award">
+                        </a>
+                        <h3 class="award__subtitle">
+                            Lorem ipsum dolor sit amet
+                            consectetur adipiscing elit
+                        </h3>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="award">
+                        <a href="img/award.jpg" class="awards-slider__img fresco" data-fresco-group="awards">
+                            <img src="img/award.jpg" alt="award">
+                        </a>
+                        <h3 class="award__subtitle">
+                            Lorem ipsum dolor sit amet
+                            consectetur adipiscing elit
+                        </h3>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="award">
+                        <a href="img/award.jpg" class="awards-slider__img fresco" data-fresco-group="awards">
+                            <img src="img/award.jpg" alt="award">
+                        </a>
+                        <h3 class="award__subtitle">
+                            Lorem ipsum dolor sit amet
+                            consectetur adipiscing elit
+                        </h3>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="award">
+                        <a href="img/award.jpg" class="awards-slider__img fresco" data-fresco-group="awards">
+                            <img src="img/award.jpg" alt="award">
+                        </a>
+                        <h3 class="award__subtitle">
+                            Lorem ipsum dolor sit amet
+                            consectetur adipiscing elit
+                        </h3>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="award">
+                        <a href="img/award.jpg" class="awards-slider__img fresco" data-fresco-group="awards">
+                            <img src="img/award.jpg" alt="award">
+                        </a>
+                        <h3 class="award__subtitle">
+                            Lorem ipsum dolor sit amet
+                            consectetur adipiscing elit
+                        </h3>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="award">
+                        <a href="img/award.jpg" class="awards-slider__img fresco" data-fresco-group="awards">
+                            <img src="img/award.jpg" alt="award">
+                        </a>
+                        <h3 class="award__subtitle">
+                            Lorem ipsum dolor sit amet
+                            consectetur adipiscing elit
+                        </h3>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="award">
+                        <a href="img/award.jpg" class="awards-slider__img fresco" data-fresco-group="awards">
+                            <img src="img/award.jpg" alt="award">
+                        </a>
+                        <h3 class="award__subtitle">
+                            Lorem ipsum dolor sit amet
+                            consectetur adipiscing elit
+                        </h3>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="award">
+                        <a href="img/award.jpg" class="awards-slider__img fresco" data-fresco-group="awards">
+                            <img src="img/award.jpg" alt="award">
+                        </a>
+                        <h3 class="award__subtitle">
+                            Lorem ipsum dolor sit amet
+                            consectetur adipiscing elit
+                        </h3>
+                    </div>
                 </div>
 
-                <div class="award">
-                    <a href="#" class="award__img">
-                        <img src="img/award.jpg" alt="award">
-                    </a>
-                    <h3 class="award__subtitle">
-                        Lorem ipsum dolor sit amet
-                        consectetur adipiscing elit
-                    </h3>
+
+            </div>
+            <div class="awards__next">
+                <div class="awards-nav__hexagon nav-hexagon nav-hexagon-2">
+                    <svg width="38" height="24" viewBox="0 0 38 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M37.9261 12.2002L17.9261 0.65319V23.7472L37.9261 12.2002ZM0 14.2002L19.9261 14.2002V10.2002L0 10.2002L0 14.2002Z"
+                              fill="black"/>
+                    </svg>
                 </div>
 
-                <div class="award">
-                    <a href="#" class="award__img">
-                        <img src="img/award.jpg" alt="award">
-                    </a>
-                    <h3 class="award__subtitle">
-                        Lorem ipsum dolor sit amet
-                        consectetur adipiscing elit
-                    </h3>
-                </div>
-
-                <div class="award">
-                    <a href="#" class="award__img">
-                        <img src="img/award.jpg" alt="award">
-                    </a>
-                    <h3 class="award__subtitle">
-                        Lorem ipsum dolor sit amet
-                        consectetur adipiscing elit
-                    </h3>
+            </div>
+            <div class="awards__prev">
+                <div class="awards-nav__hexagon nav-hexagon">
+                    <svg width="39" height="24" viewBox="0 0 39 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0.174015 11.7998L20.174 23.3468L20.174 0.252797L0.174015 11.7998ZM38.1002 9.7998L18.174 9.7998L18.174 13.7998L38.1002 13.7998L38.1002 9.7998Z"
+                              fill="black"/>
+                    </svg>
                 </div>
             </div>
-
-
         </div>
 
-        <nav class="nav awards-nav">
-            <div class="awards-nav__hexagon nav-hexagon">
-                <svg width="39" height="24" viewBox="0 0 39 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M0.174015 11.7998L20.174 23.3468L20.174 0.252797L0.174015 11.7998ZM38.1002 9.7998L18.174 9.7998L18.174 13.7998L38.1002 13.7998L38.1002 9.7998Z"
-                          fill="black"/>
-                </svg>
-            </div>
-            <div class="awards-nav__hexagon nav-hexagon nav-hexagon-2">
-                <svg width="38" height="24" viewBox="0 0 38 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M37.9261 12.2002L17.9261 0.65319V23.7472L37.9261 12.2002ZM0 14.2002L19.9261 14.2002V10.2002L0 10.2002L0 14.2002Z"
-                          fill="black"/>
-                </svg>
-            </div>
-        </nav>
-    </section><!-- !awards -->
+
+    </section> <!-- !awards -->
     <section class="projects">
         <div class="projects__title title">Реализованные проекты ИСУПБ</div>
         <div class="projects-content">
@@ -924,159 +1223,241 @@
                 </div>
             </div>
             <div class="projects-slider">
-                <div class="projects-slider__content">
-                    <div class="project">
-                        <div class="project__img">
-                            <img src="img/novonordisk.jpg" alt="logo">
+                <div class="swiper-container-project">
+                    <div class="swiper-wrapper">
+
+                        <div class="swiper-slide">
+                            <div class="project">
+                                <div class="project__img">
+                                    <img src="img/novonordisk.jpg" alt="logo">
+                                </div>
+                                <h4 class="project__name">
+                                    ООО
+                                    «Ново Нордиск»
+                                </h4>
+                            </div>
                         </div>
-                        <h4 class="project__name">
-                            ООО
-                            «Ново Нордиск»
-                        </h4>
+                        <div class="swiper-slide">
+                            <div class="project">
+                                <div class="project__img">
+                                    <img src="img/taxcom.jpg" alt="logo">
+                                </div>
+                                <h4 class="project__name">
+                                    АО
+                                    «Таском»
+                                </h4>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="project">
+                                <div class="project__img">
+                                    <img src="img/kraftway.jpg" alt="logo">
+                                </div>
+                                <h4 class="project__name">
+                                    ЗАО «Крафтвэй
+                                    корпорэйшн ПЛС»
+                                </h4>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="project">
+                                <div class="project__img">
+                                    <img src="img/gazprom.jpg" alt="logo">
+                                </div>
+                                <h4 class="project__name">
+                                    ООО «ГАЗПРОМНЕФТЬ-
+                                    Рязанский завод битумных
+                                    материалов»
+                                </h4>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="project">
+                                <div class="project__img">
+                                    <img src="img/tehnonikol.jpg" alt="logo">
+                                </div>
+                                <h4 class="project__name">
+                                    ООО «ТехноНИКОЛЬ СБЕ
+                                    Минеральная изоляция»
+                                </h4>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="project">
+                                <div class="project__img">
+                                    <img src="img/airports.jpg" alt="logo">
+                                </div>
+                                <h4 class="project__name">
+                                    ФКП
+                                    «Аэропорты Красноярья»
+                                </h4>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="project">
+                                <div class="project__img">
+                                    <img src="img/segesha.jpg" alt="logo">
+                                </div>
+                                <h4 class="project__name">
+                                    предприятие
+                                    АО «Сегежский ЦБК»
+                                </h4>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="project">
+                                <div class="project__img">
+                                    <img src="img/gazprom.jpg" alt="logo">
+                                </div>
+                                <h4 class="project__name">
+                                    предприятие
+                                    ООО «Сибметахим»
+                                </h4>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="project">
+                                <div class="project__img">
+                                    <img src="img/pepsico.jpg" alt="logo">
+                                </div>
+                                <h4 class="project__name">
+                                    Корпорация
+                                    PepsiCo - Россия
+                                </h4>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="project">
+                                <div class="project__img">
+                                    <img src="img/ermitazh.jpg" alt="logo">
+                                </div>
+                                <h4 class="project__name">
+                                    ФГБУ культуры
+                                    «Государственный Эрмитаж»
+                                </h4>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="project">
+                                <div class="project__img">
+                                    <img src="img/eh.jpg" alt="logo">
+                                </div>
+                                <h4 class="project__name">
+                                    ЗАО
+                                    «Элкам-нефтемаш»
+                                </h4>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="project">
+                                <div class="project__img">
+                                    <img src="img/moek.jpg" alt="logo">
+                                </div>
+                                <h4 class="project__name">
+                                    ОАО
+                                    «Московская объединенная
+                                    энергетическая компания»
+                                </h4>
+                            </div>
+                        </div>
                     </div>
-                    <div class="project">
-                        <div class="project__img">
-                            <img src="img/taxcom.jpg" alt="logo">
+                    <div class="project__next">
+                        <div class="awards-nav__hexagon nav-hexagon nav-hexagon-2">
+                            <svg width="38" height="24" viewBox="0 0 38 24" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path d="M37.9261 12.2002L17.9261 0.65319V23.7472L37.9261 12.2002ZM0 14.2002L19.9261 14.2002V10.2002L0 10.2002L0 14.2002Z"
+                                      fill="black"/>
+                            </svg>
                         </div>
-                        <h4 class="project__name">
-                            АО
-                            «Таском»
-                        </h4>
+
                     </div>
-                    <div class="project">
-                        <div class="project__img">
-                            <img src="img/kraftway.jpg" alt="logo">
+                    <div class="project__prev">
+                        <div class="awards-nav__hexagon nav-hexagon">
+                            <svg width="39" height="24" viewBox="0 0 39 24" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0.174015 11.7998L20.174 23.3468L20.174 0.252797L0.174015 11.7998ZM38.1002 9.7998L18.174 9.7998L18.174 13.7998L38.1002 13.7998L38.1002 9.7998Z"
+                                      fill="black"/>
+                            </svg>
                         </div>
-                        <h4 class="project__name">
-                            ЗАО «Крафтвэй
-                            корпорэйшн ПЛС»
-                        </h4>
-                    </div>
-                    <div class="project">
-                        <div class="project__img">
-                            <img src="img/gazprom.jpg" alt="logo">
-                        </div>
-                        <h4 class="project__name">
-                            ООО «ГАЗПРОМНЕФТЬ-
-                            Рязанский завод битумных
-                            материалов»
-                        </h4>
-                    </div>
-                    <div class="project">
-                        <div class="project__img">
-                            <img src="img/tehnonikol.jpg" alt="logo">
-                        </div>
-                        <h4 class="project__name">
-                            ООО «ТехноНИКОЛЬ СБЕ
-                            Минеральная изоляция»
-                        </h4>
-                    </div>
-                    <div class="project">
-                        <div class="project__img">
-                            <img src="img/airports.jpg" alt="logo">
-                        </div>
-                        <h4 class="project__name">
-                            ФКП
-                            «Аэропорты Красноярья»
-                        </h4>
-                    </div>
-                    <div class="project">
-                        <div class="project__img">
-                            <img src="img/segesha.jpg" alt="logo">
-                        </div>
-                        <h4 class="project__name">
-                            предприятие
-                            АО «Сегежский ЦБК»
-                        </h4>
-                    </div>
-                    <div class="project">
-                        <div class="project__img">
-                            <img src="img/gazprom.jpg" alt="logo">
-                        </div>
-                        <h4 class="project__name">
-                            предприятие
-                            ООО «Сибметахим»
-                        </h4>
-                    </div>
-                    <div class="project">
-                        <div class="project__img">
-                            <img src="img/pepsico.jpg" alt="logo">
-                        </div>
-                        <h4 class="project__name">
-                            Корпорация
-                            PepsiCo - Россия
-                        </h4>
                     </div>
                 </div>
-                <nav class="nav projects-nav">
-                    <div class="projects-nav__hexagon nav-hexagon">
-                        <svg width="39" height="24" viewBox="0 0 39 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M0.174015 11.7998L20.174 23.3468L20.174 0.252797L0.174015 11.7998ZM38.1002 9.7998L18.174 9.7998L18.174 13.7998L38.1002 13.7998L38.1002 9.7998Z"
-                                  fill="black"/>
-                        </svg>
-                    </div>
-                    <div class="projects-nav__hexagon nav-hexagon nav-hexagon-2">
-                        <svg width="38" height="24" viewBox="0 0 38 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M37.9261 12.2002L17.9261 0.65319V23.7472L37.9261 12.2002ZM0 14.2002L19.9261 14.2002V10.2002L0 10.2002L0 14.2002Z"
-                                  fill="black"/>
-                        </svg>
-                    </div>
-                </nav>
+
             </div>
 
         </div>
-    </section><!-- !project -->
+    </section> <!-- !project -->
     <section class="reviews awards">
         <h2 class="awards__title title">
             Отзывы клиентов
         </h2>
-        <div class="awards-content">
-            <div class="awards-slider">
-                <div class="award">
-                    <a href="#" class="award__img">
-                        <img src="img/reviews.jpg" alt="award">
-                    </a>
+        <div class="swiper-container-reviews">
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide">
+                    <div class="awards-slider">
+                        <a href="img/reviews.jpg" class="awards-slider__img fresco" data-fresco-group="reviews">
+                            <img src="img/reviews.jpg" alt="award">
+                        </a>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="awards-slider">
+                        <a href="img/reviews.jpg" class="awards-slider__img fresco" data-fresco-group="reviews">
+                            <img src="img/reviews.jpg" alt="award">
+                        </a>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="awards-slider">
+                        <a href="img/reviews.jpg" class="awards-slider__img fresco" data-fresco-group="reviews">
+                            <img src="img/reviews.jpg" alt="award">
+                        </a>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="awards-slider">
+                        <a href="img/reviews.jpg" class="awards-slider__img fresco" data-fresco-group="reviews">
+                            <img src="img/reviews.jpg" alt="award">
+                        </a>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="awards-slider">
+                        <a href="img/reviews.jpg" class="awards-slider__img fresco" data-fresco-group="reviews">
+                            <img src="img/reviews.jpg" alt="award">
+                        </a>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="awards-slider">
+                        <a href="img/reviews.jpg" class="awards-slider__img fresco" data-fresco-group="reviews">
+                            <img src="img/reviews.jpg" alt="award">
+                        </a>
+                    </div>
                 </div>
 
-                <div class="award">
-                    <a href="#" class="award__img">
-                        <img src="img/reviews.jpg" alt="award">
-                    </a>
-                </div>
 
-                <div class="award">
-                    <a href="#" class="award__img">
-                        <img src="img/reviews.jpg" alt="award">
-                    </a>
-                </div>
-
-                <div class="award">
-                    <a href="#" class="award__img">
-                        <img src="img/reviews.jpg" alt="award">
-                    </a>
+            </div>
+            <div class="reviews__next">
+                <div class="awards-nav__hexagon nav-hexagon nav-hexagon-2">
+                    <svg width="38" height="24" viewBox="0 0 38 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M37.9261 12.2002L17.9261 0.65319V23.7472L37.9261 12.2002ZM0 14.2002L19.9261 14.2002V10.2002L0 10.2002L0 14.2002Z"
+                              fill="black"/>
+                    </svg>
                 </div>
 
             </div>
-
-
+            <div class="reviews__prev">
+                <div class="awards-nav__hexagon nav-hexagon">
+                    <svg width="39" height="24" viewBox="0 0 39 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0.174015 11.7998L20.174 23.3468L20.174 0.252797L0.174015 11.7998ZM38.1002 9.7998L18.174 9.7998L18.174 13.7998L38.1002 13.7998L38.1002 9.7998Z"
+                              fill="black"/>
+                    </svg>
+                </div>
+            </div>
         </div>
 
-        <nav class="nav reviews-nav">
-            <div class="awards-nav__hexagon nav-hexagon">
-                <svg width="39" height="24" viewBox="0 0 39 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M0.174015 11.7998L20.174 23.3468L20.174 0.252797L0.174015 11.7998ZM38.1002 9.7998L18.174 9.7998L18.174 13.7998L38.1002 13.7998L38.1002 9.7998Z"
-                          fill="black"/>
-                </svg>
-            </div>
-            <div class="awards-nav__hexagon nav-hexagon nav-hexagon-2">
-                <svg width="38" height="24" viewBox="0 0 38 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M37.9261 12.2002L17.9261 0.65319V23.7472L37.9261 12.2002ZM0 14.2002L19.9261 14.2002V10.2002L0 10.2002L0 14.2002Z"
-                          fill="black"/>
-                </svg>
-            </div>
-
-        </nav>
-    </section><!-- !reviews -->
+    </section> <!-- !reviews -->
     <section class="requisition">
         <div class="requisition-img">
             <svg class="requisition-img__hexagon" width="260" height="300" viewBox="0 0 260 300" fill="none"
@@ -1117,17 +1498,15 @@
             </div>
 
             <div class="requisition-text__subtitle">
-                И мы поможем выбрать подходящий функционал системы
-            </div>
-
-            <div class="requisition-text__subtitle">
-                Перезвоним и ответим на все вопросы о выборе функционал
+                Мы перезвоним ВАМ
+                и с удовольствием на них ответим!
             </div>
         </div>
         <form action="post" class="query-form">
             <input type="text" class="query-form__name form-name form-input" placeholder="Имя">
             <input type="number" class="query-form__tel form-input" placeholder="+7  (       )       -        -">
-            <textarea name="textarea" cols="30" rows="10" class="query-form__quest form-input" placeholder="Ваш вопрос"></textarea>
+            <textarea name="textarea" cols="30" rows="10" class="query-form__quest form-input"
+                      placeholder="Ваш вопрос"></textarea>
             <footer class="query-form__footer">
                 <input type="submit" class="query-form__submit btn" value="Оставить заявку">
                 <div class="query-form__agreement agreement">
@@ -1135,7 +1514,7 @@
                 </div>
             </footer>
         </form>
-    </section><!-- !requisition -->
+    </section> <!-- !requisition -->
     <section class="news">
 
         <h2 class="title news__title ">
@@ -1155,7 +1534,7 @@
                     </a>
                 </header>
 
-                <div class="news-articles__content">
+                <div class="news-articles__content active">
 
                     <div class="news-item">
                         <header class="news-item__header">
@@ -1170,10 +1549,10 @@
                             </div>
                         </header>
                         <div class="news-item__content">
-                            <h3 class="news-item__title">
+                            <a href="article.html" class="news-item__title">
                                 Роспотребнадзор разработал инструкцию
                                 по сбору информации об условиях труда работника
-                            </h3>
+                            </a>
                             <div class="news-item__img">
                                 <img src="img/news1.jpg" alt="news">
                             </div>
@@ -1200,10 +1579,10 @@
                             </div>
                         </header>
                         <div class="news-item__content">
-                            <h3 class="news-item__title">
+                            <a href="article.html" class="news-item__title">
                                 Роспотребнадзор разработал инструкцию
                                 по сбору информации об условиях труда работника
-                            </h3>
+                            </a>
                             <div class="news-item__img">
                                 <img src="img/news2.jpg" alt="news">
                             </div>
@@ -1217,69 +1596,143 @@
                             </a>
                         </div>
                     </div>
+                    <footer class="news-articles__footer">
+                        <a href="articles.html" class="news-btn btn">
+                            Все статьи
+                        </a>
+                    </footer>
+                </div>
+                <div class="news-articles__content">
+                    <div class="news-item">
+                        <header class="news-item__header">
+                            <time class="news-item__date">
+                                01.05.2020
+                            </time>
+                            <div class="news-item__author">
+                                Артем Опарин
+                            </div>
+                            <div class="news-item__views">
+                                156
+                            </div>
+                        </header>
+                        <div class="news-item__content">
+                            <a href="article.html" class="news-item__title">
+                                Роспотребнадзор разработал инструкцию
+                                по сбору информации об условиях труда работника
+                            </a>
+                            <div class="news-item__img">
+                                <img src="img/news2.jpg" alt="news">
+                            </div>
+                            <div class="news-item__description">
+                                Роспотребнадзором был разработан проект приказа «Об утверждении инструкции по
+                                составлению санитарно-гигиенической характеристики ...
+                            </div>
+                            <a href="article.html" class="news-item__readmore about-text__readmore">
+                                Узнать больше
+                                <div class="readmore"></div>
+                            </a>
+                        </div>
+
+                    </div>
+
+                    <div class="news-item">
+                        <header class="news-item__header">
+                            <time class="news-item__date">
+                                01.05.2020
+                            </time>
+                            <div class="news-item__author">
+                                Артем Опарин
+                            </div>
+                            <div class="news-item__views">
+                                156
+                            </div>
+                        </header>
+                        <div class="news-item__content">
+                            <a href="article.html" class="news-item__title">
+                                Роспотребнадзор разработал инструкцию
+                                по сбору информации об условиях труда работника
+                            </a>
+                            <div class="news-item__img">
+                                <img src="img/news1.jpg" alt="news">
+                            </div>
+                            <div class="news-item__description">
+                                Роспотребнадзором был разработан проект приказа «Об утверждении инструкции по
+                                составлению санитарно-гигиенической характеристики ...
+                            </div>
+                            <a href="article.html" class="news-item__readmore about-text__readmore">
+                                Узнать больше
+                                <div class="readmore"></div>
+                            </a>
+                        </div>
+
+                    </div>
+                    <footer class="news-articles__footer">
+                        <a href="articles.html" class="news-btn btn">
+                            Все Новости
+                        </a>
+                    </footer>
                 </div>
 
-                <footer class="news-articles__footer">
-                    <a href="articles.html" class="news-btn btn">
-                        Все статьи
-                    </a>
-                </footer>
 
             </div>
 
-
-            <div class="news-mailing">
-                <div class="news-mailing__hexagon-top">
-                    <svg width="159" height="223" viewBox="0 0 159 223" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <g style="mix-blend-mode:hard-light">
-                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                  d="M77.36 115.256L77.3502 84.761L50.9902 69.5052L24.6401 84.7441L24.6498 115.239L51.0098 130.495L77.36 115.256ZM51.0189 159L102 129.516L101.981 70.5164L50.9811 41L0 70.4836L0.018865 129.484L51.0189 159Z"
-                                  fill="#FEB104"/>
-                        </g>
-                        <g style="mix-blend-mode:hard-light">
-                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                  d="M69.5314 0L51.0314 10.7773L51 32.2773L69.4686 43L87.9687 32.2227L88 10.7227L69.5314 0Z"
-                                  fill="#FEB104"/>
-                        </g>
-                        <g style="mix-blend-mode:hard-light">
-                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                  d="M134.517 87L110.017 101.265L110 129.765L134.483 144L158.983 129.735L159 101.235L134.517 87Z"
-                                  fill="#FEB104"/>
-                        </g>
-                        <g style="mix-blend-mode:hard-light">
-                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                  d="M107.07 223L145 201.061L144.93 157.061L106.93 135L69 156.939L69.0695 200.939L107.07 223Z"
-                                  fill="#FEB104"/>
-                        </g>
-                    </svg>
-                    <div class="news-mailing__hexagon-bottom">
-                        <svg width="85" height="99" viewBox="0 0 85 99" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <div class="news-mailing__wrapper">
+                <div class="news-mailing">
+                    <div class="news-mailing__hexagon-top">
+                        <svg width="159" height="223" viewBox="0 0 159 223" fill="none"
+                             xmlns="http://www.w3.org/2000/svg">
                             <g style="mix-blend-mode:hard-light">
                                 <path fill-rule="evenodd" clip-rule="evenodd"
-                                      d="M42.5302 0L0.0301896 24.7764L0 74.2764L42.4698 99L84.9698 74.2236L85 24.7236L42.5302 0Z"
+                                      d="M77.36 115.256L77.3502 84.761L50.9902 69.5052L24.6401 84.7441L24.6498 115.239L51.0098 130.495L77.36 115.256ZM51.0189 159L102 129.516L101.981 70.5164L50.9811 41L0 70.4836L0.018865 129.484L51.0189 159Z"
+                                      fill="#FEB104"/>
+                            </g>
+                            <g style="mix-blend-mode:hard-light">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                      d="M69.5314 0L51.0314 10.7773L51 32.2773L69.4686 43L87.9687 32.2227L88 10.7227L69.5314 0Z"
+                                      fill="#FEB104"/>
+                            </g>
+                            <g style="mix-blend-mode:hard-light">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                      d="M134.517 87L110.017 101.265L110 129.765L134.483 144L158.983 129.735L159 101.235L134.517 87Z"
+                                      fill="#FEB104"/>
+                            </g>
+                            <g style="mix-blend-mode:hard-light">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                      d="M107.07 223L145 201.061L144.93 157.061L106.93 135L69 156.939L69.0695 200.939L107.07 223Z"
                                       fill="#FEB104"/>
                             </g>
                         </svg>
-                    </div>
+                        <div class="news-mailing__hexagon-bottom">
+                            <svg width="85" height="99" viewBox="0 0 85 99" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <g style="mix-blend-mode:hard-light">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                          d="M42.5302 0L0.0301896 24.7764L0 74.2764L42.4698 99L84.9698 74.2236L85 24.7236L42.5302 0Z"
+                                          fill="#FEB104"/>
+                                </g>
+                            </svg>
+                        </div>
 
-                </div>
-                <div class="news-mailing__title">
-                    Подпишись на свежие
-                    статьи и новости
+                    </div>
+                    <div class="news-mailing__title">
+                        Подпишись на свежие
+                        статьи и новости
 
-                </div>
-                <div class="news-form">
-                    <input type="text" class="news-form__name form-input" placeholder="Имя">
-                    <input type="email" class="news-form__email form-input" placeholder="E-mail">
-                    <input type="submit" class="news-form__submit btn" value="Подписаться">
-                    <div class="news-form__agreement agreement">
-                        Отправляя данную форму, я соглашаюсь с политикой обработки персональных данных
+                    </div>
+                    <div class="news-form">
+                        <input type="text" class="news-form__name form-input" placeholder="Имя">
+                        <input type="email" class="news-form__email form-input" placeholder="E-mail">
+                        <input type="submit" class="news-form__submit btn" value="Подписаться">
+                        <div class="news-form__agreement agreement">
+                            Отправляя данную форму, я соглашаюсь с политикой обработки персональных данных
+                        </div>
                     </div>
                 </div>
+
             </div>
 
         </div>
-    </section><!-- !news -->
+    </section> <!-- !news -->
 </main>
 <footer class="footer">
     <section class="footer-header">
@@ -1391,44 +1844,52 @@
     </section>
     <section class="footer-content">
 
-        <div class="footer-content__item">
+        <nav class="footer-content__item">
             <h4 class="footer-content__title">
                 О компании
             </h4>
             <ul class="footer-content__list">
-                <li class="footer-content__elemlist"><a href="aboutsystem.html" class="footer-content__link">О системе</a></li>
-                <li class="footer-content__elemlist"><a href="aboutmodules.html" class="footer-content__link">Модули системы</a></li>
-                <li class="footer-content__elemlist"><a href="contacts.html" class="footer-content__link">Контакты</a></li>
+                <li class="footer-content__elemlist"><a href="aboutsystem.html" class="footer-content__link">О
+                    системе</a></li>
+                <li class="footer-content__elemlist"><a href="aboutmodules.html" class="footer-content__link">Модули
+                    системы</a></li>
+                <li class="footer-content__elemlist"><a href="contacts.html" class="footer-content__link">Контакты</a>
+                </li>
                 <li class="footer-content__elemlist"><a href="aboutus.html" class="footer-content__link">О нас</a></li>
                 <li class="footer-content__elemlist"><a href="reviews.html" class="footer-content__link">Отзывы</a></li>
-                <li class="footer-content__elemlist"><a href="articles.html" class="footer-content__link">Статьи</a></li>
-                <li class="footer-content__elemlist"><a href="faq.html" class="footer-content__link">Вопрос-Ответ</a></li>
-                <li class="footer-content__elemlist"><a href="vacancies.html" class="footer-content__link">Вакансии</a></li>
+                <li class="footer-content__elemlist"><a href="articles.html" class="footer-content__link">Статьи</a>
+                </li>
+                <li class="footer-content__elemlist"><a href="faq.html" class="footer-content__link">Вопрос-Ответ</a>
+                </li>
+                <li class="footer-content__elemlist"><a href="vacancies.html" class="footer-content__link">Вакансии</a>
+                </li>
             </ul>
-        </div>
-        <div class="footer-content__item">
+        </nav>
+        <nav class="footer-content__item">
             <h4 class="footer-content__title">
                 Услуги
             </h4>
             <ul class="footer-content__list">
-                <li class="footer-content__elemlist"><a href="introduction.html" class="footer-content__link">Внедрение системы</a></li>
+                <li class="footer-content__elemlist"><a href="introduction.html" class="footer-content__link">Внедрение
+                    системы</a></li>
                 <li class="footer-content__elemlist"><a href="#" class="footer-content__link">Сопровождение системы</a>
                 </li>
             </ul>
-        </div>
-        <div class="footer-content__item">
+        </nav>
+        <nav class="footer-content__item">
             <h4 class="footer-content__title">
                 Наши направления
             </h4>
             <ul class="footer-content__list">
-                <li class="footer-content__elemlist"><a href="security.html" class="footer-content__link">Охрана труда</a></li>
+                <li class="footer-content__elemlist"><a href="security.html" class="footer-content__link">Охрана
+                    труда</a></li>
                 <li class="footer-content__elemlist"><a href="#" class="footer-content__link">Пожарная безопасность</a>
                 </li>
                 <li class="footer-content__elemlist"><a href="#" class="footer-content__link">Промышленная
                     безопасность</a></li>
             </ul>
-        </div>
-        <div class="footer-content__item">
+        </nav>
+        <nav class="footer-content__item">
             <h4 class="footer-content__title">
                 Контакты
             </h4>
@@ -1443,8 +1904,8 @@
                 <li class="footer-content__elemlist"><a href="#" class="footer-content__link"><span>610035, Киров, Воровского, 78а</span></a>
                 </li>
             </ul>
-        </div>
-        <div class="footer-content__item">
+        </nav>
+        <nav class="footer-content__item">
             <h4 class="footer-content__title">
                 Юридическая информация
             </h4>
@@ -1459,7 +1920,7 @@
                     БИК 000000000
                 </li>
             </ul>
-        </div>
+        </nav>
 
     </section>
     <section class="footer-footer">

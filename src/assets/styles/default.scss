@@ -9,6 +9,10 @@ ol[class] {
   padding: 0;
 }
 
+.lock {
+  overflow: hidden;
+}
+
 body,
 h1,
 h2,
@@ -26,7 +30,7 @@ dd {
   margin: 0;
 }
 
-html,body {
+html, body {
   min-height: 100vh;
   scroll-behavior: smooth;
   text-rendering: optimizeSpeed;
@@ -40,10 +44,12 @@ ul[class],
 ol[class] {
   list-style: none;
 }
-a{
+
+a {
   color: #000;
   text-decoration: none;
 }
+
 a:not([class]) {
   text-decoration-skip-ink: auto;
 }
@@ -60,6 +66,7 @@ textarea,
 select {
   font: inherit;
 }
+
 button,
 button:active,
 button:focus,
@@ -68,14 +75,16 @@ input:active,
 input:focus,
 textarea,
 textarea:active,
-textarea:focus{
+textarea:focus {
   cursor: pointer;
   border: none;
   outline: none;
 }
-textarea{
+
+textarea {
   resize: none;
 }
+
 @media (prefers-reduced-motion: reduce) {
   * {
     animation-duration: 0.01ms !important;

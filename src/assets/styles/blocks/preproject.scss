@@ -7,32 +7,49 @@
 
   &__modules {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
   }
 
   &__module {
-    width: 33%;
+    width: 30%;
   }
 
   &__description {
     font-weight: 800;
     font-size: 12px;
     padding: 30px 30px 60px 0;
-    & span{
+
+    & span {
       color: $orange;
     }
   }
-  &__img{
-    & path, & svg{
+
+  &__img {
+    & path, & svg {
       transition: $transition4;
 
     }
-    &:hover{
-      & path{
+
+    &:hover {
+      & path {
         fill: $orange;
       }
+    }
+  }
+}
+
+@media screen and (max-width: 1630px) {
+  .preproject {
+    &__title {
+      padding-bottom: calc(20px + (50 - 20) * ((100vw - 991px) / (1630 - 991)));
+      font-size: calc(14px + (18 - 14) * ((100vw - 991px) / (1630 - 991)));
+    }
+
+
+    &__description {
+      font-size: 12px;
+      padding: calc(15px + (30 - 15) * ((100vw - 991px) / (1630 - 991))) calc(15px + (30 - 15) * ((100vw - 991px) / (1630 - 991))) calc(15px + (30 - 15) * ((100vw - 991px) / (1630 - 991))) 0;
     }
   }
 }

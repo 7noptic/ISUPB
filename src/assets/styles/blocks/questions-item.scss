@@ -1,34 +1,52 @@
-.questions-item{
-  &__title{
+.questions-item {
+  &__title {
     padding-bottom: 40px;
     font-weight: 700;
     font-size: 18px;
     opacity: .5;
     transition: $transition4;
     cursor: pointer;
-    &-active{
+
+    &-active {
       opacity: 1;
-      &:hover{
+
+      &:hover {
         transform: scale(1) !important;
-        opacity:  1 !important;
+        opacity: 1 !important;
       }
     }
-    &:hover{
+
+    &:hover {
       transform: scale(1.1);
       opacity: .7;
     }
   }
-  &__text{
+
+  &__text {
     padding-bottom: 60px;
     font-weight: 300;
     font-size: 14px;
     display: none;
 
-      animation: showTabs 1s;
+    animation: showTabs 1s;
 
 
-    &-active{
+    &-active {
       display: block;
+    }
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .questions-item {
+    &__title {
+      padding-bottom: 20px;
+      font-size: 16px;
+    }
+
+    &__text {
+      padding-bottom: 20px;
+      font-size: 12px;
     }
   }
 }

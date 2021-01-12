@@ -50,3 +50,110 @@
 
   }
 }
+@media screen and (max-width: 1600px) {
+  .footer-content{
+    flex-wrap: wrap;
+    &__item{
+      width: 20%;
+      min-width: auto;
+    }
+  }
+}
+@media screen and (max-width: 1280px) {
+  .footer-content{
+    &__title{
+      font-size: 14px;
+    }
+    &__item{
+      padding-right: 15px;
+    }
+    &__link{
+      font-size: 10px;
+      & span{
+        font-size: 12px;
+      }
+    }
+    &__elemlist{
+      font-size: 12px;
+    }
+  }
+}
+@media screen and (max-width: 991px) {
+  .footer-content{
+    &__item{
+      width: 30%;
+
+    }
+    &__title{
+      padding-bottom: 10px;
+    }
+    &__elemlist{
+      padding-bottom: 8px;
+      &:last-child{
+        padding-bottom: 20px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 767px) {
+  .footer-content{
+    &__item{
+      width: 50%;
+
+    }
+
+  }
+}
+@media screen and(max-width: 575px){
+  .footer-content{
+    &__list{
+      display: none;
+      &.active{
+        display: block;
+      }
+    }
+    &__item{
+      width: 100%;
+
+    }
+    &__title{
+      position: relative;
+      &::after{
+        content: url("../img/ularrow.svg");
+        position: absolute;
+        top: -3px;
+        right: 10%;
+      }
+      &.active{
+        &::after{
+          content: url("../img/ularrow.svg");
+          position: absolute;
+          top: 0px;
+          right: 10%;
+          transform: rotate(180deg);
+        }
+      }
+    }
+    &__item{
+      &:last-child{
+        padding-bottom: 30px;
+      }
+    }
+  }
+}
+@media screen and(max-width: 360px){
+  .footer-content{
+
+    &__title{
+      &::after{
+        right: 0;
+      }
+      &.active{
+        &::after{
+          right: 0;
+        }
+      }
+    }
+
+  }
+}

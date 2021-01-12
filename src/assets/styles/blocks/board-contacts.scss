@@ -1,11 +1,13 @@
 .board-contacts{
-justify-content: space-around;
+justify-content: space-between;
+  padding: 0;
   &__item{
     width: 33%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-left: 160px;
+    padding-left: 10%;
+
   }
   &__title{
     font-size: 18px;
@@ -22,5 +24,22 @@ justify-content: space-around;
   }
   &__description{
     font-size: 14px;
+  }
+}
+@media screen and (max-width: 1630px){
+  .board-contacts{
+    &__item{
+    }
+    &__title{
+      font-size: calc(14px + (18 - 14) * ((100vw - 991px) / (1630 - 991)));
+      padding-bottom: calc(10px + (20 - 10) * ((100vw - 991px) / (1630 - 991)));
+    }
+    &__link{
+      font-size: calc(16px + (24 - 16) * ((100vw - 991px) / (1630 - 991)));
+
+    }
+    &__description{
+      font-size: calc(12px + (14 - 12) * ((100vw - 991px) / (1630 - 991)));
+    }
   }
 }

@@ -6,3 +6,10 @@
   padding: 40px 0 110px;
 }
 }
+@media screen and (max-width: 991px){
+  .introduction{
+    &__title{
+      padding-bottom: 40px!important;
+    }
+  }
+}

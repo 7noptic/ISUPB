@@ -1,10 +1,11 @@
 .popular-requries {
+  position: relative;
   &__title{
     padding-bottom: 40px;
     text-align: center;
   }
   &__slider {
-    width: auto;
+    width: 100%;
   }
   &__more{
     font-weight: 600;
@@ -18,5 +19,19 @@
     width: 100%;
     padding: 30px 30px 120px;
     align-items: center;
+    position: relative;
+  }
+}
+@media screen and (max-width: 1630px){
+  .popular-requries {
+    &__title{
+      padding-bottom: 20px;
+    }
+
+    &__content{
+
+      padding: 30px 77px 30px 37px;
+
+    }
   }
 }

@@ -11,3 +11,9 @@ z-index: 10;
     padding: 42px 15px 20px;
   }
 }
+@media screen and (max-width: 991px){
+  .information-wrapper{
+    flex-wrap: wrap;
+    padding: 15px;
+  }
+}

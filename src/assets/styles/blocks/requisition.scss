@@ -4,5 +4,25 @@
   justify-content: space-between;
   margin: 0 auto;
   max-width: 1500px;
-  padding-bottom: 250px;
+  padding: 125px 15px;
+}
+@media screen and (max-width: 1630px){
+  .requisition{
+    padding: calc(60px + (125 - 30) * ((100vw - 991px) / (1630 - 991))) 15px;
+  }
+}
+@media screen and (max-width: 991px){
+  .requisition{
+    padding: 40px 15px;
+
+  }
+}
+@media screen and (max-width: 767px){
+  .requisition{
+    padding: 30px 15px;
+  }
+}
+@media screen and (max-width: 575px){
+  .requisition{
+  }
 }

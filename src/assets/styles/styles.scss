@@ -37,8 +37,6 @@
 
 @import "blocks/block-faq";
 
-@import "blocks/banner404";
-@import "blocks/banners404";
 
 /* C */
 @import "blocks/characteristics";
@@ -56,7 +54,6 @@
 
 /* F */
 @import "blocks/footer";
-@import "blocks/footer404";
 @import "blocks/footer-content";
 @import "blocks/footer-footer";
 @import "blocks/footer-header";
@@ -77,7 +74,6 @@
 @import "blocks/glitch";
 /* H */
 @import "blocks/header";
-@import "blocks/header404";
 @import "blocks/header-info";
 
 @import "blocks/headcrumbs";
@@ -91,22 +87,18 @@
 
 @import "blocks/introduction";
 
-@import "blocks/info404";
 
 /* L */
 @import "blocks/logo";
 @import "blocks/location";
 @import "blocks/location404";
-@import "blocks/list404";
 
 
 /* M */
 @import "blocks/menu";
-@import "blocks/menu404";
 
 @import "blocks/modules";
 @import "blocks/module";
-@import "blocks/modules404";
 @import "blocks/module404";
 @import "blocks/module-big";
 
@@ -132,6 +124,7 @@
 
 /* P */
 @import "blocks/project-numbers";
+@import "blocks/page404";
 
 @import "blocks/projects";
 @import "blocks/projects-content";
@@ -183,8 +176,8 @@
 @import "blocks/stages-content";
 @import "blocks/stages-list";
 @import "blocks/stages-tabs";
-@import "blocks/social404";
 @import "blocks/slide-modules";
+@import "blocks/swiper-slider";
 
 /* T */
 @import "blocks/telegramm";
@@ -192,6 +185,7 @@
 @import "blocks/text2column";
 @import "blocks/text-paragraph";
 @import "blocks/text-img";
+@import "blocks/tags";
 
 /* V */
 @import "blocks/viber";

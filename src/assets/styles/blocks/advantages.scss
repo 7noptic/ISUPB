@@ -1,8 +1,27 @@
 .advantages{
   display: flex;
-  align-items: center;
   flex-wrap: wrap;
   max-width: 1630px;
   padding: 125px 15px 300px;
   margin: 0 auto;
+}
+@media screen and (max-width: 1630px){
+  .advantages{
+    padding: calc(50px + (125 - 50) * ((100vw - 991px) / (1630 - 991))) 15px calc(100px + (300 - 100) * ((100vw - 991px) / (1630 - 991)));
+  }
+}
+@media screen and (max-width: 991px){
+  .advantages{
+    padding: 50px 15px 100px;
+  }
+}
+@media screen and (max-width: 767px){
+  .advantages{
+    padding: 30px 10px 50px;
+  }
+}
+@media screen and (max-width: 575px){
+  .advantages{
+    padding: 25px 10px;
+  }
 }

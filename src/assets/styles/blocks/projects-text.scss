@@ -30,3 +30,33 @@ text-align: center;
     }
   }
 }
+@media screen and (max-width: 1280px){
+  .projects-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 30%;
+    &__title {
+      font-size: 250px;
+      line-height: 180px;
+    }
+
+    &__subtitle {
+      font-size: 20px;
+    }
+
+    &__description {
+      font-size: 18px;
+      line-height: 18px;
+    }
+
+    &__text {
+      font-size: 40px;
+      line-height: 50px;
+      & span {
+        font-size: 80px;
+      }
+    }
+  }
+}
