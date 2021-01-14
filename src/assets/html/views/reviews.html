@@ -8,12 +8,16 @@
 </head>
 <body>
 <header class="header">
+    <div class="header__burger">
+        <span></span>
+    </div>
+    <div class="header__burger-fixed"></div>
     <a href="index.html" class="logo">
         <img src="img/logo-header.jpg" alt="logo" class="logo_img">
     </a>
     <section class="header-info">
         <div class="header-info__top">
-            <div class="location">
+            <a href="#" class="location js-region">
                 <div class="location__item">
                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M15.9291 2.45591C14.3454 0.872191 12.2397 0 10.0001 0C7.76042 0 5.65478 0.872152 4.07099 2.45591C2.4873 4.03959 1.61511 6.14514 1.61511 8.3848C1.61511 10.6245 2.4873 12.7301 4.07099 14.3138L9.58578 19.8284C9.7002 19.9429 9.85016 20 10.0001 20C10.15 20 10.3 19.9428 10.4144 19.8284L15.929 14.3138C17.5127 12.7301 18.3849 10.6245 18.3849 8.38484C18.3849 6.1451 17.5127 4.03955 15.9291 2.45591ZM12.6334 11.018C11.93 11.7214 10.9949 12.1088 10.0001 12.1088C9.00539 12.1088 8.07023 11.7214 7.3669 11.0181C6.6635 10.3147 6.27615 9.37953 6.27615 8.3848C6.27615 7.39011 6.6635 6.45495 7.3669 5.75155C8.07023 5.04818 9.00539 4.66084 10.0001 4.66084C10.9949 4.66084 11.93 5.04818 12.6334 5.75155C13.3367 6.45487 13.7241 7.39003 13.7241 8.38476C13.7241 9.37949 13.3367 10.3147 12.6334 11.018Z"
@@ -22,7 +26,7 @@
                     <div class="location__item-text">Киров</div>
                 </div>
 
-            </div>
+            </a>
             <form action="post" method="post" class="form-search">
                 <input type="search" class="form-search__search" placeholder="Найди здесь">
             </form>
@@ -57,7 +61,7 @@
                         <path d="M10.625 7.5H5.625C5.28 7.5 5 7.78 5 8.125C5 8.47 5.28 8.75 5.625 8.75H10.625C10.97 8.75 11.25 8.47 11.25 8.125C11.25 7.78 10.97 7.5 10.625 7.5Z"
                               fill="black"/>
                     </svg>
-                    <div class="location__item-text">info@isu-pb.ru</div>
+                    <a href="mailto:info@isu-pb.ru" class="location__item-text">info@isu-pb.ru</a>
                 </li>
 
             </ul>
@@ -65,20 +69,55 @@
         </div>
 
         <div class="header-info__bottom">
-            <nav>
-                <ul class="menu">
+            <nav class="menu">
+                <ul class="menu__list">
                     <li class="menu__item"><a href="#" class="menu__link">Услуги</a></li>
                     <li class="menu__item"><a href="aboutmodules.html" class="menu__link">Модули</a></li>
                     <li class="menu__item"><a href="introduction.html" class="menu__link">Внедрение</a></li>
                     <li class="menu__item"><a href="aboutsystem.html" class="menu__link">О системе</a></li>
                     <li class="menu__item"><a href="contacts.html" class="menu__link">Контакты</a></li>
                 </ul>
+                <ul class="location menu__location">
+
+                    <li class="location__item">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15.9291 2.45591C14.3454 0.872191 12.2397 0 10.0001 0C7.76042 0 5.65478 0.872152 4.07099 2.45591C2.4873 4.03959 1.61511 6.14514 1.61511 8.3848C1.61511 10.6245 2.4873 12.7301 4.07099 14.3138L9.58578 19.8284C9.7002 19.9429 9.85016 20 10.0001 20C10.15 20 10.3 19.9428 10.4144 19.8284L15.929 14.3138C17.5127 12.7301 18.3849 10.6245 18.3849 8.38484C18.3849 6.1451 17.5127 4.03955 15.9291 2.45591ZM12.6334 11.018C11.93 11.7214 10.9949 12.1088 10.0001 12.1088C9.00539 12.1088 8.07023 11.7214 7.3669 11.0181C6.6635 10.3147 6.27615 9.37953 6.27615 8.3848C6.27615 7.39011 6.6635 6.45495 7.3669 5.75155C8.07023 5.04818 9.00539 4.66084 10.0001 4.66084C10.9949 4.66084 11.93 5.04818 12.6334 5.75155C13.3367 6.45487 13.7241 7.39003 13.7241 8.38476C13.7241 9.37949 13.3367 10.3147 12.6334 11.018Z"
+                                  fill="black"/>
+                        </svg>
+                        <h3 class="location__item-text">Воровского 78а</h3>
+                    </li>
+
+                    <li class="location__item">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10 0C4.48582 0 0 4.48582 0 10C0 15.5142 4.48582 20 10 20C15.5142 20 20 15.5142 20 10C20 4.48582 15.5142 0 10 0ZM13.5358 5.28582L14.125 4.69664C14.45 4.37082 14.9775 4.37082 15.3033 4.69664C15.6283 5.02164 15.6283 5.54914 15.3033 5.87496L14.7141 6.46414C14.5508 6.62664 14.3383 6.70832 14.125 6.70832C13.9116 6.70832 13.6983 6.62664 13.5358 6.46414C13.21 6.13832 13.21 5.61082 13.5358 5.28582ZM4.69668 4.69668C5.0225 4.37086 5.55 4.37086 5.875 4.69668L6.46418 5.28586C6.79 5.61086 6.79 6.13836 6.46418 6.46418C6.30168 6.62668 6.08836 6.70836 5.875 6.70836C5.66168 6.70836 5.44918 6.62668 5.28582 6.46418L4.69668 5.875C4.37168 5.54918 4.37168 5.02168 4.69668 4.69668ZM3.33332 10.8333C2.87332 10.8333 2.5 10.4608 2.5 10C2.5 9.53918 2.87332 9.16668 3.33332 9.16668H4.16664C4.62664 9.16668 4.99996 9.53918 4.99996 10C4.99996 10.4608 4.62664 10.8333 4.16664 10.8333H3.33332ZM6.46418 14.7142L5.875 15.3033C5.7125 15.4666 5.49918 15.5475 5.28582 15.5475C5.0725 15.5475 4.86 15.4667 4.69664 15.3033C4.37164 14.9783 4.37164 14.4508 4.69664 14.125L5.28582 13.5358C5.61164 13.2108 6.13914 13.2108 6.46414 13.5358C6.79 13.8617 6.79 14.3892 6.46418 14.7142ZM10.8333 16.6667C10.8333 17.1275 10.46 17.5 10 17.5C9.54 17.5 9.16668 17.1275 9.16668 16.6667V15.8334C9.16668 15.3725 9.54 15 10 15C10.46 15 10.8333 15.3725 10.8333 15.8334V16.6667ZM10.8333 10C10.8333 10.4608 10.46 10.8333 10 10.8333H7.5C7.04 10.8333 6.66668 10.4608 6.66668 10C6.66668 9.53918 7.04 9.16668 7.5 9.16668H9.16668V7.5C9.16668 7.03918 9.54 6.66668 10 6.66668C10.46 6.66668 10.8333 7.03918 10.8333 7.5V10ZM10.8333 4.16668C10.8333 4.6275 10.46 5 10 5C9.54 5 9.16668 4.6275 9.16668 4.16668V3.33332C9.16668 2.8725 9.54 2.5 10 2.5C10.46 2.5 10.8333 2.8725 10.8333 3.33332V4.16668ZM15.3033 15.3033C15.14 15.4666 14.9275 15.5475 14.7141 15.5475C14.5008 15.5475 14.2875 15.4667 14.125 15.3033L13.5358 14.7141C13.21 14.3891 13.21 13.8616 13.5358 13.5358C13.8608 13.2108 14.3883 13.2108 14.7141 13.5358L15.3033 14.125C15.6283 14.4508 15.6283 14.9783 15.3033 15.3033ZM16.6667 10.8333H15.8334C15.3733 10.8333 15 10.4608 15 10C15 9.53918 15.3733 9.16668 15.8333 9.16668H16.6666C17.1266 9.16668 17.5 9.53918 17.5 10C17.5 10.4608 17.1267 10.8333 16.6667 10.8333Z"
+                                  fill="black"/>
+                        </svg>
+                        <h3 class="location__item-text">Пн-Пт с 8:00 до 17:00</h3>
+                    </li>
+
+                    <li class="location__item">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10.2437 13.7C10.1662 13.7337 10.0825 13.75 10 13.75C9.9175 13.75 9.83375 13.7337 9.75625 13.7L0 9.56873V18.75C0 19.44 0.56 20 1.25 20H18.75C19.44 20 20 19.44 20 18.75V9.56873L10.2437 13.7Z"
+                                  fill="black"/>
+                            <path d="M19.7125 6.0625L17.5 4.6625V1.25C17.5 0.5625 16.9375 0 16.25 0H3.75C3.0625 0 2.5 0.5625 2.5 1.25V4.6625L0.2875 6.0625C0.1125 6.175 0 6.375 0 6.5875V8.2125L3.75 9.8V1.25H16.25V9.8L20 8.2125V6.5875C20 6.375 19.8875 6.175 19.7125 6.0625Z"
+                                  fill="black"/>
+                            <path d="M14.375 2.5H5.625C5.28 2.5 5 2.78 5 3.125C5 3.47 5.28 3.75 5.625 3.75H14.375C14.72 3.75 15 3.47 15 3.125C15 2.78 14.72 2.5 14.375 2.5Z"
+                                  fill="black"/>
+                            <path d="M14.375 5H5.625C5.28 5 5 5.28 5 5.625C5 5.97 5.28 6.25 5.625 6.25H14.375C14.72 6.25 15 5.97 15 5.625C15 5.28 14.72 5 14.375 5Z"
+                                  fill="black"/>
+                            <path d="M10.625 7.5H5.625C5.28 7.5 5 7.78 5 8.125C5 8.47 5.28 8.75 5.625 8.75H10.625C10.97 8.75 11.25 8.47 11.25 8.125C11.25 7.78 10.97 7.5 10.625 7.5Z"
+                                  fill="black"/>
+                        </svg>
+                        <a href="mailto:info@isu-pb.ru" class="location__item-text">info@isu-pb.ru</a>
+                    </li>
+
+                </ul>
             </nav>
             <nav class="nav-contacts">
                 <a href="tel:8-800-550-48-20" class="nav-contacts__number">
                     8-800-550-48-20
                 </a>
-                <button class="nav-contacts__call btn">
+                <button class="nav-contacts__call btn js-call">
                     ЗАКАЗАТЬ ЗВОНОК
                 </button>
                 <div class="nav-contacts__social">
@@ -161,51 +200,60 @@
 
 
             <div class="board-reviews">
-                <div class="board-reviews__img">
-                    <img src="img/reviews.jpg" alt="reviews">
-                </div>
+
+                <a href="img/reviews.jpg" class="awards-slider__img board-reviews__img fresco"
+                   data-fresco-group="reviews">
+                    <img src="img/reviews.jpg" alt="award">
+                </a>
             </div>
 
             <div class="board-reviews">
-                <div class="board-reviews__img">
-                    <img src="img/reviews.jpg" alt="reviews">
-                </div>
+                <a href="img/reviews.jpg" class="awards-slider__img board-reviews__img fresco"
+                   data-fresco-group="reviews">
+                    <img src="img/reviews.jpg" alt="award">
+                </a>
             </div>
 
             <div class="board-reviews">
-                <div class="board-reviews__img">
-                    <img src="img/reviews.jpg" alt="reviews">
-                </div>
+                <a href="img/reviews.jpg" class="awards-slider__img board-reviews__img fresco"
+                   data-fresco-group="reviews">
+                    <img src="img/reviews.jpg" alt="award">
+                </a>
             </div>
 
             <div class="board-reviews">
-                <div class="board-reviews__img">
-                    <img src="img/reviews.jpg" alt="reviews">
-                </div>
+                <a href="img/reviews.jpg" class="awards-slider__img board-reviews__img fresco"
+                   data-fresco-group="reviews">
+                    <img src="img/reviews.jpg" alt="award">
+                </a>
             </div>
 
             <div class="board-reviews">
-                <div class="board-reviews__img">
-                    <img src="img/reviews.jpg" alt="reviews">
-                </div>
+                <a href="img/reviews.jpg" class="awards-slider__img board-reviews__img fresco"
+                   data-fresco-group="reviews">
+                    <img src="img/reviews.jpg" alt="award">
+                </a>
             </div>
 
             <div class="board-reviews">
-                <div class="board-reviews__img">
-                    <img src="img/reviews.jpg" alt="reviews">
-                </div>
+                <a href="img/reviews.jpg" class="awards-slider__img board-reviews__img fresco"
+                   data-fresco-group="reviews">
+                    <img src="img/reviews.jpg" alt="award">
+                </a>
             </div>
 
             <div class="board-reviews">
-                <div class="board-reviews__img">
-                    <img src="img/reviews.jpg" alt="reviews">
-                </div>
+                <a href="img/reviews.jpg" class="awards-slider__img board-reviews__img fresco"
+                   data-fresco-group="reviews">
+                    <img src="img/reviews.jpg" alt="award">
+                </a>
             </div>
 
             <div class="board-reviews">
-                <div class="board-reviews__img">
-                    <img src="img/reviews.jpg" alt="reviews">
-                </div>
+                <a href="img/reviews.jpg" class="awards-slider__img board-reviews__img fresco"
+                   data-fresco-group="reviews">
+                    <img src="img/reviews.jpg" alt="award">
+                </a>
             </div>
         </div>
     </section>
@@ -213,26 +261,34 @@
         <h2 class="title video-reviews__title">Видео отзывы</h2>
         <div class="board">
             <div class="board-video">
-                <div class="board-video__img">
-                    <img src="img/video1.jpg" alt="video">
+                <div class="board-video__content">
+                    <iframe src="https://www.youtube.com/embed/QxW3uoDEcd0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
                 </div>
             </div>
 
             <div class="board-video">
-                <div class="board-video__img">
-                    <img src="img/video1.jpg" alt="video">
+                <div class="board-video__content">
+                    <iframe src="https://www.youtube.com/embed/QxW3uoDEcd0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
                 </div>
             </div>
 
             <div class="board-video">
-                <div class="board-video__img">
-                    <img src="img/video1.jpg" alt="video">
+                <div class="board-video__content">
+                    <iframe src="https://www.youtube.com/embed/QxW3uoDEcd0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
                 </div>
             </div>
 
             <div class="board-video">
-                <div class="board-video__img">
-                    <img src="img/video1.jpg" alt="video">
+                <div class="board-video__content">
+                    <iframe src="https://www.youtube.com/embed/QxW3uoDEcd0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
                 </div>
             </div>
         </div>
@@ -241,12 +297,15 @@
         <div class="reviews-social__item">
             <div class="reviews-social__img">
                 <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <g clip-path="url(#clip0)">
-                        <path d="M0 23C0 12.1577 0 6.73654 3.36827 3.36827C6.73654 0 12.1577 0 23 0H25C35.8423 0 41.2635 0 44.6317 3.36827C48 6.73654 48 12.1577 48 23V25C48 35.8423 48 41.2635 44.6317 44.6317C41.2635 48 35.8423 48 25 48H23C12.1577 48 6.73654 48 3.36827 44.6317C0 41.2635 0 35.8423 0 25L0 23Z" fill="#2787F5"/>
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12.9999 15H9.49913C8.49889 15 8.29883 15.4708 8.29883 15.9898C8.29883 16.9169 9.48569 21.5148 13.825 27.5959C16.7179 31.7488 20.7937 34 24.5026 34C26.7279 34 27.0032 33.5 27.0032 32.6388V29.5C27.0032 28.5 27.214 28.3004 27.9186 28.3004C28.4379 28.3004 29.328 28.56 31.405 30.5623C33.7787 32.9354 34.17 34 35.5051 34H39.0059C40.0062 34 40.5063 33.5 40.2178 32.5133C39.9021 31.5299 38.7688 30.103 37.265 28.4117C36.449 27.4476 35.2251 26.4094 34.8542 25.8902C34.335 25.2228 34.4833 24.9261 34.8542 24.3329C34.8542 24.3329 39.1194 18.3259 39.5645 16.2866C39.787 15.5449 39.5645 15 38.5058 15H35.005C34.1149 15 33.7045 15.4708 33.4819 15.9898C33.4819 15.9898 31.7017 20.3282 29.1797 23.1463C28.3637 23.962 27.9928 24.2216 27.5477 24.2216C27.3252 24.2216 27.0031 23.962 27.0031 23.2205V16.2866C27.0031 15.3966 26.7448 15 26.0029 15H20.5016C19.9454 15 19.6108 15.413 19.6108 15.8045C19.6108 16.6481 20.8718 16.8427 21.0018 19.2158V24.37C21.0018 25.5 20.7976 25.7049 20.3526 25.7049C19.1658 25.7049 16.2789 21.3471 14.5667 16.3607C14.2312 15.3915 13.8946 15 12.9999 15Z" fill="white"/>
+                    <g clip-path="url(#clip50)">
+                        <path d="M0 23C0 12.1577 0 6.73654 3.36827 3.36827C6.73654 0 12.1577 0 23 0H25C35.8423 0 41.2635 0 44.6317 3.36827C48 6.73654 48 12.1577 48 23V25C48 35.8423 48 41.2635 44.6317 44.6317C41.2635 48 35.8423 48 25 48H23C12.1577 48 6.73654 48 3.36827 44.6317C0 41.2635 0 35.8423 0 25L0 23Z"
+                              fill="#2787F5"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                              d="M12.9999 15H9.49913C8.49889 15 8.29883 15.4708 8.29883 15.9898C8.29883 16.9169 9.48569 21.5148 13.825 27.5959C16.7179 31.7488 20.7937 34 24.5026 34C26.7279 34 27.0032 33.5 27.0032 32.6388V29.5C27.0032 28.5 27.214 28.3004 27.9186 28.3004C28.4379 28.3004 29.328 28.56 31.405 30.5623C33.7787 32.9354 34.17 34 35.5051 34H39.0059C40.0062 34 40.5063 33.5 40.2178 32.5133C39.9021 31.5299 38.7688 30.103 37.265 28.4117C36.449 27.4476 35.2251 26.4094 34.8542 25.8902C34.335 25.2228 34.4833 24.9261 34.8542 24.3329C34.8542 24.3329 39.1194 18.3259 39.5645 16.2866C39.787 15.5449 39.5645 15 38.5058 15H35.005C34.1149 15 33.7045 15.4708 33.4819 15.9898C33.4819 15.9898 31.7017 20.3282 29.1797 23.1463C28.3637 23.962 27.9928 24.2216 27.5477 24.2216C27.3252 24.2216 27.0031 23.962 27.0031 23.2205V16.2866C27.0031 15.3966 26.7448 15 26.0029 15H20.5016C19.9454 15 19.6108 15.413 19.6108 15.8045C19.6108 16.6481 20.8718 16.8427 21.0018 19.2158V24.37C21.0018 25.5 20.7976 25.7049 20.3526 25.7049C19.1658 25.7049 16.2789 21.3471 14.5667 16.3607C14.2312 15.3915 13.8946 15 12.9999 15Z"
+                              fill="white"/>
                     </g>
                     <defs>
-                        <clipPath id="clip0">
+                        <clipPath id="clip50">
                             <rect width="48" height="48" fill="white"/>
                         </clipPath>
                     </defs>
@@ -261,8 +320,12 @@
         <div class="reviews-social__item">
             <div class="reviews-social__img">
                 <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M24.1931 0C13.5921 0.00573957 5 8.60361 5 19.2046C5 24.2898 7.02033 29.1742 10.6133 32.7729C14.0915 36.2511 22.2732 41.2818 22.7582 46.5651C22.83 47.3543 23.4039 48 24.1931 48C24.9823 48 25.5591 47.3543 25.628 46.5651C26.113 41.2818 34.289 36.2597 37.7643 32.7844C41.363 29.1857 43.3891 24.2985 43.3891 19.2046C43.392 8.60361 34.7941 0.00286978 24.1931 0Z" fill="#FF4433"/>
-                    <path opacity="0.251" fill-rule="evenodd" clip-rule="evenodd" d="M24.1836 25.9394C27.9028 25.9394 30.9218 22.9233 30.9218 19.2012C30.9218 15.4819 27.9057 12.4629 24.1836 12.4629C20.4643 12.4629 17.4453 15.479 17.4453 19.2012C17.4482 22.9233 20.4643 25.9394 24.1836 25.9394Z" fill="black"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M24.1931 0C13.5921 0.00573957 5 8.60361 5 19.2046C5 24.2898 7.02033 29.1742 10.6133 32.7729C14.0915 36.2511 22.2732 41.2818 22.7582 46.5651C22.83 47.3543 23.4039 48 24.1931 48C24.9823 48 25.5591 47.3543 25.628 46.5651C26.113 41.2818 34.289 36.2597 37.7643 32.7844C41.363 29.1857 43.3891 24.2985 43.3891 19.2046C43.392 8.60361 34.7941 0.00286978 24.1931 0Z"
+                          fill="#FF4433"/>
+                    <path opacity="0.251" fill-rule="evenodd" clip-rule="evenodd"
+                          d="M24.1836 25.9394C27.9028 25.9394 30.9218 22.9233 30.9218 19.2012C30.9218 15.4819 27.9057 12.4629 24.1836 12.4629C20.4643 12.4629 17.4453 15.479 17.4453 19.2012C17.4482 22.9233 20.4643 25.9394 24.1836 25.9394Z"
+                          fill="black"/>
                 </svg>
 
             </div>
@@ -284,88 +347,162 @@
                 </h3>
             </div>
             <div class="projects-slider">
-                <div class="projects-slider__content">
-                    <div class="project">
-                        <div class="project__img">
-                            <img src="img/novonordisk.jpg" alt="logo">
+                <div class="swiper-container-project">
+                    <div class="swiper-wrapper">
+
+                        <div class="swiper-slide">
+                            <div class="project">
+                                <div class="project__img">
+                                    <img src="img/novonordisk.jpg" alt="logo">
+                                </div>
+                                <h4 class="project__name">
+                                    ООО
+                                    «Ново Нордиск»
+                                </h4>
+                            </div>
                         </div>
-                        <h4 class="project__name">
-                            ООО
-                            «Ново Нордиск»
-                        </h4>
+                        <div class="swiper-slide">
+                            <div class="project">
+                                <div class="project__img">
+                                    <img src="img/taxcom.jpg" alt="logo">
+                                </div>
+                                <h4 class="project__name">
+                                    АО
+                                    «Таском»
+                                </h4>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="project">
+                                <div class="project__img">
+                                    <img src="img/kraftway.jpg" alt="logo">
+                                </div>
+                                <h4 class="project__name">
+                                    ЗАО «Крафтвэй
+                                    корпорэйшн ПЛС»
+                                </h4>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="project">
+                                <div class="project__img">
+                                    <img src="img/gazprom.jpg" alt="logo">
+                                </div>
+                                <h4 class="project__name">
+                                    ООО «ГАЗПРОМНЕФТЬ-
+                                    Рязанский завод битумных
+                                    материалов»
+                                </h4>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="project">
+                                <div class="project__img">
+                                    <img src="img/tehnonikol.jpg" alt="logo">
+                                </div>
+                                <h4 class="project__name">
+                                    ООО «ТехноНИКОЛЬ СБЕ
+                                    Минеральная изоляция»
+                                </h4>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="project">
+                                <div class="project__img">
+                                    <img src="img/airports.jpg" alt="logo">
+                                </div>
+                                <h4 class="project__name">
+                                    ФКП
+                                    «Аэропорты Красноярья»
+                                </h4>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="project">
+                                <div class="project__img">
+                                    <img src="img/segesha.jpg" alt="logo">
+                                </div>
+                                <h4 class="project__name">
+                                    предприятие
+                                    АО «Сегежский ЦБК»
+                                </h4>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="project">
+                                <div class="project__img">
+                                    <img src="img/gazprom.jpg" alt="logo">
+                                </div>
+                                <h4 class="project__name">
+                                    предприятие
+                                    ООО «Сибметахим»
+                                </h4>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="project">
+                                <div class="project__img">
+                                    <img src="img/pepsico.jpg" alt="logo">
+                                </div>
+                                <h4 class="project__name">
+                                    Корпорация
+                                    PepsiCo - Россия
+                                </h4>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="project">
+                                <div class="project__img">
+                                    <img src="img/ermitazh.jpg" alt="logo">
+                                </div>
+                                <h4 class="project__name">
+                                    ФГБУ культуры
+                                    «Государственный Эрмитаж»
+                                </h4>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="project">
+                                <div class="project__img">
+                                    <img src="img/eh.jpg" alt="logo">
+                                </div>
+                                <h4 class="project__name">
+                                    ЗАО
+                                    «Элкам-нефтемаш»
+                                </h4>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="project">
+                                <div class="project__img">
+                                    <img src="img/moek.jpg" alt="logo">
+                                </div>
+                                <h4 class="project__name">
+                                    ОАО
+                                    «Московская объединенная
+                                    энергетическая компания»
+                                </h4>
+                            </div>
+                        </div>
                     </div>
-                    <div class="project">
-                        <div class="project__img">
-                            <img src="img/taxcom.jpg" alt="logo">
+                    <div class="project__next">
+                        <div class="awards-nav__hexagon nav-hexagon nav-hexagon-2">
+                            <svg width="38" height="24" viewBox="0 0 38 24" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path d="M37.9261 12.2002L17.9261 0.65319V23.7472L37.9261 12.2002ZM0 14.2002L19.9261 14.2002V10.2002L0 10.2002L0 14.2002Z"
+                                      fill="black"/>
+                            </svg>
                         </div>
-                        <h4 class="project__name">
-                            АО
-                            «Таском»
-                        </h4>
+
                     </div>
-                    <div class="project">
-                        <div class="project__img">
-                            <img src="img/kraftway.jpg" alt="logo">
+                    <div class="project__prev">
+                        <div class="awards-nav__hexagon nav-hexagon">
+                            <svg width="39" height="24" viewBox="0 0 39 24" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0.174015 11.7998L20.174 23.3468L20.174 0.252797L0.174015 11.7998ZM38.1002 9.7998L18.174 9.7998L18.174 13.7998L38.1002 13.7998L38.1002 9.7998Z"
+                                      fill="black"/>
+                            </svg>
                         </div>
-                        <h4 class="project__name">
-                            ЗАО «Крафтвэй
-                            корпорэйшн ПЛС»
-                        </h4>
-                    </div>
-                    <div class="project">
-                        <div class="project__img">
-                            <img src="img/gazprom.jpg" alt="logo">
-                        </div>
-                        <h4 class="project__name">
-                            ООО «ГАЗПРОМНЕФТЬ-
-                            Рязанский завод битумных
-                            материалов»
-                        </h4>
-                    </div>
-                    <div class="project">
-                        <div class="project__img">
-                            <img src="img/tehnonikol.jpg" alt="logo">
-                        </div>
-                        <h4 class="project__name">
-                            ООО «ТехноНИКОЛЬ СБЕ
-                            Минеральная изоляция»
-                        </h4>
-                    </div>
-                    <div class="project">
-                        <div class="project__img">
-                            <img src="img/airports.jpg" alt="logo">
-                        </div>
-                        <h4 class="project__name">
-                            ФКП
-                            «Аэропорты Красноярья»
-                        </h4>
-                    </div>
-                    <div class="project">
-                        <div class="project__img">
-                            <img src="img/segesha.jpg" alt="logo">
-                        </div>
-                        <h4 class="project__name">
-                            предприятие
-                            АО «Сегежский ЦБК»
-                        </h4>
-                    </div>
-                    <div class="project">
-                        <div class="project__img">
-                            <img src="img/gazprom.jpg" alt="logo">
-                        </div>
-                        <h4 class="project__name">
-                            предприятие
-                            ООО «Сибметахим»
-                        </h4>
-                    </div>
-                    <div class="project">
-                        <div class="project__img">
-                            <img src="img/pepsico.jpg" alt="logo">
-                        </div>
-                        <h4 class="project__name">
-                            Корпорация
-                            PepsiCo - Россия
-                        </h4>
                     </div>
                 </div>
 
@@ -486,7 +623,7 @@
     </section>
     <section class="footer-content">
 
-        <div class="footer-content__item">
+        <nav class="footer-content__item">
             <h4 class="footer-content__title">
                 О компании
             </h4>
@@ -506,8 +643,8 @@
                 <li class="footer-content__elemlist"><a href="vacancies.html" class="footer-content__link">Вакансии</a>
                 </li>
             </ul>
-        </div>
-        <div class="footer-content__item">
+        </nav>
+        <nav class="footer-content__item">
             <h4 class="footer-content__title">
                 Услуги
             </h4>
@@ -517,8 +654,8 @@
                 <li class="footer-content__elemlist"><a href="#" class="footer-content__link">Сопровождение системы</a>
                 </li>
             </ul>
-        </div>
-        <div class="footer-content__item">
+        </nav>
+        <nav class="footer-content__item">
             <h4 class="footer-content__title">
                 Наши направления
             </h4>
@@ -530,8 +667,8 @@
                 <li class="footer-content__elemlist"><a href="#" class="footer-content__link">Промышленная
                     безопасность</a></li>
             </ul>
-        </div>
-        <div class="footer-content__item">
+        </nav>
+        <nav class="footer-content__item">
             <h4 class="footer-content__title">
                 Контакты
             </h4>
@@ -546,8 +683,8 @@
                 <li class="footer-content__elemlist"><a href="#" class="footer-content__link"><span>610035, Киров, Воровского, 78а</span></a>
                 </li>
             </ul>
-        </div>
-        <div class="footer-content__item">
+        </nav>
+        <nav class="footer-content__item">
             <h4 class="footer-content__title">
                 Юридическая информация
             </h4>
@@ -562,7 +699,7 @@
                     БИК 000000000
                 </li>
             </ul>
-        </div>
+        </nav>
 
     </section>
     <section class="footer-footer">
@@ -611,5 +748,133 @@
         </a>
     </section>
 </footer><!-- !footer -->
+<!-- MODAL -->
+<aside class="modal-call">
+    <div class="modal-call__wrapper">
+        <form action="post" class="modal-form">
+            <input type="text" class="modal-form__input form-input" placeholder="Имя">
+            <input type="number" class="form-input modal-form__input" placeholder="+7  (       )       -        -">
+            <textarea name="textarea" cols="30" rows="10" class="form-input modal-form__area"
+                      placeholder="Ваш вопрос"></textarea>
+            <a href="#" class="btn modal-form__btn">заказать звонок</a>
+            <div class="agreement modal-form__agreement">
+                Отправляя данную форму, я соглашаюсь с политикой обработки персональных данных
+            </div>
+
+        </form>
+        <div class="modal-call__exit">
+            <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12.9336 6.00793L8.93359 10.0099L12.9336 14.0119L14.0683 12.8766L11.2031 10.0099L14.0683 7.14328L12.9336 6.00793Z"
+                      fill="black"/>
+                <path d="M7.13277 6.00793L11.1328 10.0099L7.13277 14.0119L5.99807 12.8766L8.86333 10.0099L5.99807 7.14328L7.13277 6.00793Z"
+                      fill="black"/>
+                <rect x="1" y="1.005" width="18" height="18.0099" rx="3" stroke="black" stroke-width="2"/>
+            </svg>
+        </div>
+    </div>
+</aside>
+
+<aside class="modal-free">
+    <div class="modal-free__wrapper">
+        <form action="post" class="modal-form">
+            <input type="text" class="modal-form__input form-input" placeholder="Имя">
+            <input type="number" class="form-input modal-form__input" placeholder="+7  (       )       -        -">
+            <input type="email" class="modal-form__input form-input" placeholder="Email">
+            <input type="text" class="form-input modal-form__input" placeholder="Название компании">
+            <a href="#" class="btn modal-form__btn">отправить</a>
+            <div class="agreement modal-form__agreement">
+                Отправляя данную форму, я соглашаюсь с политикой обработки персональных данных
+            </div>
+
+        </form>
+        <div class="modal-free__exit">
+            <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12.9336 6.00793L8.93359 10.0099L12.9336 14.0119L14.0683 12.8766L11.2031 10.0099L14.0683 7.14328L12.9336 6.00793Z"
+                      fill="black"/>
+                <path d="M7.13277 6.00793L11.1328 10.0099L7.13277 14.0119L5.99807 12.8766L8.86333 10.0099L5.99807 7.14328L7.13277 6.00793Z"
+                      fill="black"/>
+                <rect x="1" y="1.005" width="18" height="18.0099" rx="3" stroke="black" stroke-width="2"/>
+            </svg>
+        </div>
+    </div>
+</aside>
+
+<aside class="modal-region">
+    <div class="modal-region__wrapper">
+        <div class="modal-region__row">
+            <p class="modal-region__city">
+                Ваш город: Санкт-Петербург?
+            </p>
+            <a href="#" class="btn modal-region__btn">
+                да
+            </a>
+
+        </div>
+        <div class="modal-region__row">
+            <form action="post" method="post" class="form-search modal-region__form">
+                <input type="search" class="form-search__search modal-region__search" placeholder="Найди здесь">
+            </form>
+            <a href="#" class="btn modal-region__btn">
+                <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="9.5" cy="9" r="8" stroke="white" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round"/>
+                    <path d="M19.5 19L15.15 14.65" stroke="white" stroke-width="2" stroke-linecap="round"
+                          stroke-linejoin="round"/>
+                </svg>
+
+            </a>
+        </div>
+        <ul class="modal-region__list">
+            <li><a href="#" class="modal-region__link">Москва</a></li>
+            <li><a href="#" class="modal-region__link">Санкт-Петербург</a></li>
+            <li><a href="#" class="modal-region__link">Дубай</a></li>
+            <li><a href="#" class="modal-region__link">Токио</a></li>
+            <li><a href="#" class="modal-region__link">Лондон</a></li>
+            <li><a href="#" class="modal-region__link">Рим</a></li>
+            <li><a href="#" class="modal-region__link">Москва</a></li>
+            <li><a href="#" class="modal-region__link">Санкт-Петербург</a></li>
+            <li><a href="#" class="modal-region__link">Дубай</a></li>
+            <li><a href="#" class="modal-region__link">Токио</a></li>
+            <li><a href="#" class="modal-region__link">Лондон</a></li>
+            <li><a href="#" class="modal-region__link">Рим</a></li>
+            <li><a href="#" class="modal-region__link">Москва</a></li>
+            <li><a href="#" class="modal-region__link">Санкт-Петербург</a></li>
+            <li><a href="#" class="modal-region__link">Дубай</a></li>
+            <li><a href="#" class="modal-region__link">Токио</a></li>
+            <li><a href="#" class="modal-region__link">Лондон</a></li>
+            <li><a href="#" class="modal-region__link">Рим</a></li>
+            <li><a href="#" class="modal-region__link">Москва</a></li>
+            <li><a href="#" class="modal-region__link">Санкт-Петербург</a></li>
+            <li><a href="#" class="modal-region__link">Дубай</a></li>
+            <li><a href="#" class="modal-region__link">Токио</a></li>
+            <li><a href="#" class="modal-region__link">Лондон</a></li>
+            <li><a href="#" class="modal-region__link">Рим</a></li>
+            <li><a href="#" class="modal-region__link">Москва</a></li>
+            <li><a href="#" class="modal-region__link">Санкт-Петербург</a></li>
+            <li><a href="#" class="modal-region__link">Дубай</a></li>
+            <li><a href="#" class="modal-region__link">Токио</a></li>
+            <li><a href="#" class="modal-region__link">Лондон</a></li>
+            <li><a href="#" class="modal-region__link">Рим</a></li>
+            <li><a href="#" class="modal-region__link">Москва</a></li>
+            <li><a href="#" class="modal-region__link">Санкт-Петербург</a></li>
+            <li><a href="#" class="modal-region__link">Дубай</a></li>
+            <li><a href="#" class="modal-region__link">Токио</a></li>
+            <li><a href="#" class="modal-region__link">Лондон</a></li>
+            <li><a href="#" class="modal-region__link">Рим</a></li>
+        </ul>
+
+        <div class="modal-region__exit">
+
+            <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12.9336 6.00793L8.93359 10.0099L12.9336 14.0119L14.0683 12.8766L11.2031 10.0099L14.0683 7.14328L12.9336 6.00793Z"
+                      fill="black"/>
+                <path d="M7.13277 6.00793L11.1328 10.0099L7.13277 14.0119L5.99807 12.8766L8.86333 10.0099L5.99807 7.14328L7.13277 6.00793Z"
+                      fill="black"/>
+                <rect x="1" y="1.005" width="18" height="18.0099" rx="3" stroke="black" stroke-width="2"/>
+            </svg>
+        </div>
+    </div>
+</aside>
+<!-- !MODAL -->
 </body>
 </html>

@@ -5,13 +5,14 @@
   &__item {
     padding-bottom: 20px;
   }
-
+&__faq{
+}
   &__link {
     font-size: 18px;
     display: flex;
     align-items: center;
     transition: $transition4;
-
+    width: 100%;
     &:hover {
       & .stages-list__hexagon {
         background-color: lighten($yellow, 25%);
@@ -39,7 +40,7 @@
     justify-content: center;
     align-items: center;
     position: relative;
-    width: 52px;
+    min-width: 52px;
     height: 30px;
     background-color: #f7f7f7;
     margin: 15.01px 30px 15px 0px;
@@ -136,6 +137,25 @@
 
 
     padding-bottom: 40px;
+
+    &__title {
+      padding-bottom: 50px;
+    }
+  }
+}
+@media screen and (max-width: 991px) {
+  .stages-list {
+    width: 100%;
+    padding-bottom: 40px;
+
+    &__item {
+      padding-bottom: 10px;
+    }
+
+    &__link {
+      font-size: 14px;
+    }
+
 
     &__title {
       padding-bottom: 50px;

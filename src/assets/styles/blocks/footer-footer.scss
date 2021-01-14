@@ -73,11 +73,12 @@
     padding-top: 15px;
     &__list {
       justify-content: space-between;
+      flex-wrap: wrap;
+
     }
 
     &__elemlist {
-      padding-right: 0;
-
+      padding: 0 10px;
     }
 
 

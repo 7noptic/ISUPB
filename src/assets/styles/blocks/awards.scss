@@ -18,3 +18,28 @@
     z-index: 10;
   }
 }
+@media screen and (max-width: 1630px){
+  .awards{
+    padding: calc(50px + (100 - 50) * ((100vw - 991px) / (1630 - 991))) 15px;
+  }
+}
+@media screen and (max-width: 991px){
+  .awards{
+    padding: 40px 15px;
+  }
+}
+@media screen and (max-width: 767px){
+  .awards{
+    padding: 30px 15px;
+  }
+}
+@media screen and (max-width: 575px){
+  .awards{
+    padding: 20px 0;
+  }
+}
+@media screen and (max-width: 360px){
+  .awards{
+    padding: 0;
+  }
+}

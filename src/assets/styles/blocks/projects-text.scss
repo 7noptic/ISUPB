@@ -38,25 +38,39 @@ text-align: center;
     flex-direction: column;
     width: 30%;
     &__title {
-      font-size: 250px;
+      font-size: 230px;
       line-height: 180px;
     }
 
     &__subtitle {
-      font-size: 20px;
+      font-size: 18px;
     }
 
     &__description {
-      font-size: 18px;
+      font-size: 16px;
       line-height: 18px;
     }
 
     &__text {
-      font-size: 40px;
+      font-size: 36px;
       line-height: 50px;
       & span {
-        font-size: 80px;
+        font-size: 70px;
       }
     }
+  }
+}
+@media screen and (max-width: 991px){
+  .projects-text {
+
+    width: 45%;
+
+  }
+}
+@media screen and (max-width: 767px){
+  .projects-text {
+
+    width: 100%;
+    margin: 0 auto;
   }
 }

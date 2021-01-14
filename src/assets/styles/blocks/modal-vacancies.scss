@@ -1,0 +1,48 @@
+.modal-vacancies{
+  position: fixed;
+  top: 0;
+  height: 100%;
+  left: -100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  z-index: 1000;
+  border-right: 1px solid $orange;
+
+  &.active {
+    left: 0;
+  }
+
+  &__wrapper {
+    padding: 50px 30px 50px 20px;
+    background-color: #fff;
+    border-radius: $radiusBtn;
+    width: 100%;
+    max-width: 360px;
+    height: 100%;
+    overflow: auto;
+
+  }
+
+
+
+
+  &__exit {
+    font-size: 26px;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    cursor: pointer;
+
+    & path, & rect {
+      transition: $transition4;
+    }
+
+    &:hover {
+      & path {
+        fill: $orange;
+        stroke: $orange;
+      }
+    }
+  }
+
+}

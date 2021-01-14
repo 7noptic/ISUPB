@@ -1,0 +1,93 @@
+.modal-region {
+  position: fixed;
+  top: 0;
+  height: 100%;
+  left: -100%;
+  overflow: hidden;
+  z-index: 1000;
+  border-right: 1px solid $orange;
+
+  &.active {
+    left: 0;
+  }
+
+  &__wrapper {
+    padding: 40px 20px 20px 20px;
+    background-color: #fff;
+    border-radius: $radiusBtn;
+    width: 100%;
+    max-width: 360px;
+    height: 100%;
+    overflow: auto;
+display: flex;
+    flex-direction: column;
+
+  }
+
+  &__row{
+    display: flex;
+    padding-bottom: 20px;
+    align-items: center;
+  }
+  &__btn{
+    width: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 36px;
+    font-weight: 800;
+    font-size: 14px;
+  }
+  &__city{
+    width: 85%;
+    font-weight: 300;
+    font-size: 14px;
+  }
+  &__form{
+    width: 85%;
+    padding-right: 10px;
+    &::before{
+      content: none;
+    }
+  }
+  &__search{
+    width: 100%;
+    padding: 10px;
+    height: 36px;
+    &::placeholder{
+      text-align: left;
+    }
+  }
+  &__list{
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+  &__link{
+    padding: 8px 8px 8px 0;
+    font-weight: 400;
+    font-size: 12px;
+    display: block;
+    width: 100%;
+  }
+  &__exit {
+    font-size: 26px;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    cursor: pointer;
+
+    & path, & rect {
+      transition: $transition4;
+    }
+
+    &:hover {
+      & path {
+        fill: $orange;
+        stroke: $orange;
+      }
+    }
+  }
+
+
+
+}

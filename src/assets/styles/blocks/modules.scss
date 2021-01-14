@@ -14,6 +14,13 @@
     font-size: 18px;
     justify-content: center;
   }
+  &__subtitle{
+    max-width: 620px;
+    font-weight: 300;
+    font-size: 14px;
+    text-align: center;
+    margin: 0 auto;
+  }
 }
 @media screen and (max-width: 1630px) {
   .modules {
@@ -28,6 +35,15 @@
     padding-top: 15px;
     &__btn{
       font-size: 12px;
+    }
+  }
+}
+@media screen and (max-width: 767px) {
+  .modules {
+    &__subtitle{
+      font-size: 12px;
+      text-align: center;
+      margin: 0 auto;
     }
   }
 }

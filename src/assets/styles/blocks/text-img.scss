@@ -2,7 +2,7 @@
   max-width: 1630px;
   width: 100%;
   margin: 0 auto;
-  padding: 100px 30px;
+  padding: 80px 30px;
   display: flex;
 
   &__title {
@@ -43,7 +43,8 @@
     width: 45%;
     display: flex;
     justify-content: flex-end;
-    padding-right: 50px;
+    padding: 0 15px;
+    margin: 0 auto;
     align-items: center;
   }
 }
@@ -79,13 +80,12 @@
 
     &__img {
       width: calc(40% + (45 - 40) * ((100vw - 991px) / (1630 - 991)));
-      padding-right: calc(20px + (50 - 20) * ((100vw - 991px) / (1630 - 991)));
     }
   }
 }
 @media screen and (max-width: 991px){
   .text-img {
-    padding: 40px;
+    padding: 40px 15px;
     flex-wrap: wrap;
     &__title {
       font-size: 24px;
@@ -116,7 +116,12 @@
     &__img {
       display: none;
       width: 100%;
-      padding-right: 0;
     }
+  }
+}
+@media screen and (max-width: 767px){
+  .text-img {
+    padding: 20px 15px;
+
   }
 }

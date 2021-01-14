@@ -53,3 +53,42 @@
     }
   }
 }
+@media screen and (max-width: 991px) {
+  .preproject {
+    &__title {
+      padding-bottom: 20px;
+      font-size:14px;
+    }
+&__module{
+  width: 33%;
+}
+
+    &__description {
+      font-size: 12px;
+      padding: 15px 15px 15px 0;
+    }
+  }
+}
+@media screen and (max-width: 767px) {
+  .preproject {
+
+    &__module{
+      width: 50%;
+    }
+
+  }
+}
+@media screen and (max-width: 575px) {
+  .preproject {
+
+    &__module{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      text-align: center;
+    }
+
+  }
+}

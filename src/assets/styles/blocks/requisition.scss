@@ -1,4 +1,4 @@
-.requisition{
+.requisition {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -6,23 +6,95 @@
   max-width: 1500px;
   padding: 125px 15px;
 }
-@media screen and (max-width: 1630px){
-  .requisition{
+
+@media screen and (max-width: 1630px) {
+  .requisition {
     padding: calc(60px + (125 - 30) * ((100vw - 991px) / (1630 - 991))) 15px;
   }
 }
-@media screen and (max-width: 991px){
-  .requisition{
+
+@media screen and (max-width: 991px) {
+  .requisition {
+    justify-content: start;
+    flex-wrap: wrap;
     padding: 40px 15px;
+
+    & > .query-form {
+      margin: 0 auto;
+      padding-top: 30px;
+    }
+
+    & > .requisition-img {
+      width: 50%;
+      order: 2;
+
+      & > .requisition-img__hexagon {
+
+        &:first-child, &:nth-child(2), &:nth-child(3) {
+          width: 130px;
+          height: 150px;
+        }
+
+        &:nth-child(4) {
+          & svg {
+            width: 94px;
+            height: 58px;
+          }
+
+
+          width: 130px;
+          height: 75px;
+
+          &:before,
+          &:after {
+            border-left: 65px solid transparent;
+            border-right: 65px solid transparent;
+          }
+
+          &:before {
+            border-bottom: 32px solid $yellow;
+          }
+
+          &:after {
+            border-top: 32px solid $yellow;
+          }
+        }
+      }
+
+      & > .request__hexagon {
+        margin-top: 37px;
+      }
+    }
 
   }
 }
-@media screen and (max-width: 767px){
-  .requisition{
+
+@media screen and (max-width: 767px) {
+  .requisition {
     padding: 30px 15px;
+
+    & > .requisition-img {
+      width: 50%;
+      order: 2;
+      & > .requisition-img__hexagon:first-child {
+        margin-left: -30%;
+      }
+
+    }
   }
 }
-@media screen and (max-width: 575px){
-  .requisition{
+
+@media screen and (max-width: 575px) {
+  .requisition {
+    padding: 30px 15px;
+
+    & > .requisition-img {
+      width: 50%;
+      order: 2;
+      & > .requisition-img__hexagon:first-child {
+        margin-left: -210px;
+      }
+
+    }
   }
 }

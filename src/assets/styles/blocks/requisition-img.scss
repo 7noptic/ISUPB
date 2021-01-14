@@ -103,49 +103,12 @@
     }
   }
 }
-@media screen and (max-width: 991px) {
-  .requisition-img {
-    &__hexagon {
-      margin-left: -65px;
-
-      &:first-child, &:nth-child(2), &:nth-child(3) {
-        width: 130px ;
-        height: 150px ;
-      }
-
-      &:nth-child(4) {
-        & svg {
-          width: 94px ;
-          height: 58px ;
-        }
-
-
-        width: 130px;
-        height: 75px ;
-
-        &:before,
-        &:after {
-          border-left: 65px  solid transparent;
-          border-right: 65px  solid transparent;
-        }
-
-        &:before {
-          border-bottom: 32px  solid $yellow;
-        }
-
-        &:after {
-          border-top: 32px  solid $yellow;
-        }
-      }
-    }
-  }
-}
 @keyframes HexagonOpacity1Child {
   0% {
     opacity: .03;
   }
   50% {
-    opacity: .06;
+    opacity: .1;
   }
   100% {
     opacity: .03;
@@ -157,7 +120,7 @@
     opacity: .1;
   }
   50% {
-    opacity: .15;
+    opacity: .20;
   }
   100% {
     opacity: .1;
@@ -169,7 +132,7 @@
     opacity: .15;
   }
   50% {
-    opacity: .2;
+    opacity: .3;
   }
   100% {
     opacity: .15;
@@ -178,12 +141,12 @@
 
 @keyframes HexagonOpacity4Child {
   0% {
-    opacity: .7;
+    opacity: .65;
   }
   50% {
     opacity: .9;
   }
   100% {
-    opacity: .7;
+    opacity: .65;
   }
 }

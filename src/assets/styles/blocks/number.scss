@@ -11,6 +11,7 @@
   &__subtitle{
     font-size: 18px;
     font-weight: 700;
+    text-align: center;
   }
 }
 @media screen and (max-width: 1630px){
@@ -28,6 +29,19 @@
     &__num{
       font-size: 80px;
     }
+    &__subtitle{
+      font-size: 12px;
+    }
+  }
+}
+@media screen and (max-width: 767px){
+  .number{
+    width: 50%;
+  }
+}
+@media screen and (max-width: 359px){
+  .number{
+    width: 100%;
     &__subtitle{
       font-size: 12px;
     }

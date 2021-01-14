@@ -8,8 +8,23 @@
 }
 @media screen and (max-width: 991px){
   .introduction{
+    padding: 15px;
     &__title{
       padding-bottom: 40px!important;
+    }
+  }
+}
+@media screen and (max-width: 767px){
+  .introduction{
+    &__title{
+      padding-top: 30px;
+    }
+  }
+}
+@media screen and (max-width:575px){
+  .introduction{
+    &__title{
+      padding-top: 20px;
     }
   }
 }

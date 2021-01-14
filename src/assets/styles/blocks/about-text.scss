@@ -68,3 +68,19 @@
     }
   }
 }
+@media screen and (max-width: 767px) {
+  .about-text {
+    width: 100%;
+    padding-bottom: 30px;
+    &__title {
+      font-size: 26px;
+      padding-bottom: 20px;
+    }
+
+    &__subtitle {
+      font-size: 12px;
+      padding-bottom: 15px;
+    }
+
+  }
+}

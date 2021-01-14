@@ -4,4 +4,27 @@
   justify-content: center;
   align-items: center;
   padding-bottom: 110px;
+
+}
+@media screen and (max-width:1440px){
+  .board-reviews{
+    width: 33%;
+    justify-content: space-between;
+    padding-bottom: 70px;
+
+  }
+}
+@media screen and (max-width:991px){
+  .board-reviews{
+    width:50%;
+    padding-bottom: 40px;
+
+  }
+}
+@media screen and (max-width:650px){
+  .board-reviews{
+    width:100%;
+    padding-bottom: 30px;
+
+  }
 }

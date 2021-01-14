@@ -17,3 +17,25 @@
     font-size: 14px;
   }
 }
+@media screen and (max-width: 991px){
+  .requisites {
+    padding-bottom: 50px;
+  }
+}
+@media screen and (max-width: 575px){
+  .requisites {
+    padding-bottom: 25px;
+    &__board{
+      flex-wrap: wrap;
+      padding: 15px;
+    }
+    &__list{
+      width: 100%;
+      padding-bottom: 20px!important;
+    }
+    &__item{
+      padding-right: 0;
+      font-size: 12px;
+    }
+  }
+}

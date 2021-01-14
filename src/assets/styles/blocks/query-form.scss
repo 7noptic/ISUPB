@@ -1,4 +1,4 @@
-.query-form{
+.query-form {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -7,37 +7,90 @@
   padding: 0 15px;
   background-color: transparent;
   z-index: 10;
-  &__name{
+
+  &__name {
     width: 45%;
   }
-  &__tel{
+
+  &__tel {
     width: 45%;
   }
-  &__quest{
+
+  &__quest {
     width: 100%;
     height: 70px;
     margin: 20px 0;
   }
-  &__submit{
+
+  &__submit {
     text-transform: uppercase;
     font-weight: 800;
     font-size: 12px;
     padding: 12.5px 26px;
   }
-  &__agreement{
+
+  &__agreement {
   }
-  &__footer{
+
+  &__footer {
     display: flex;
     align-items: center;
   }
 }
-@media screen and (max-width: 1630px){
-  .query-form{
+
+@media screen and (max-width: 1630px) {
+  .query-form {
     width: calc(50% + (35 - 50) * ((100vw - 991px) / (1630 - 991)));
+    &__agreement{
+      width: 50%;
+    }
+    &__submit{
+      width: 50%;
+      text-align: center;
+    }
   }
 }
-@media screen and (max-width: 991px){
-  .query-form{
-    width: 50%;
+
+@media screen and (max-width: 991px) {
+  .query-form {
+    width: 60%;
+    padding: 0;
+    order: 3;
+
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .query-form {
+    width: 100%;
+    order: 3;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .query-form {
+    &__name {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+
+    &__tel {
+      width: 100%;
+    }
+
+    &__footer {
+      flex-wrap: wrap;
+    }
+
+    &__submit {
+      width: 100%;
+    }
+
+    &__agreement {
+      width: 80%;
+      margin: 15px auto;
+      text-align: center;
+    }
+
   }
 }

@@ -1,11 +1,10 @@
 .reviews-social {
   display: flex;
-
+flex-wrap: wrap;
   &__item {
     align-items: center;
     display: flex;
     padding-right: 100px;
-
   }
 
   &__name {
@@ -15,6 +14,20 @@
     line-height: 17px;
     & span {
       display: block;
+    }
+  }
+}
+@media screen and (max-width: 575px){
+  .reviews-social {
+    &__item {
+      padding-right: 0;
+      width: 100%;
+      padding-bottom: 20px;
+    }
+
+    &__name {
+      padding-left: 20px;
+      font-size: 12px;
     }
   }
 }

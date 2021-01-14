@@ -63,7 +63,7 @@
 }
 @media screen and (max-width: 991px) {
   .request {
-    padding: 80px 30px;
+    padding: 80px 15px;
     &__hexagon {
       margin: 37px;
     }
@@ -72,6 +72,10 @@
 @media screen and (max-width: 767px) {
   .request {
     justify-content: center;
+    padding: 40px 15px;
+    &__hexagon {
+      margin: 37px;
+    }
     &__img{
       display: none;
     }
