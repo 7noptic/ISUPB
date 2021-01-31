@@ -5,6 +5,10 @@
   padding: 80px 30px;
   display: flex;
 
+  &__hexagon {
+    clip-path: polygon(50% 0, 100% 20%, 100% 80%, 50% 100%, 0 80%, 0 20%);
+  }
+
   &__title {
     font-weight: 700;
     font-size: 40px;
@@ -24,14 +28,17 @@
     font-size: 14px;
     line-height: 17px;
   }
-&__block{
-  padding: 20px 0;
-  display: flex;
-  align-items: center;
-}
+
+  &__block {
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+  }
+
   &__text {
     width: 55%;
-    &-orange{
+
+    &-orange {
       padding: 15px;
       font-weight: 700;
       font-size: 30px;
@@ -48,9 +55,11 @@
     align-items: center;
   }
 }
-@media screen and (max-width: 1630px){
+
+@media screen and (max-width: 1630px) {
   .text-img {
     padding: calc(50px + (100 - 50) * ((100vw - 991px) / (1630 - 991))) 15px;
+
     &__title {
       font-weight: 700;
       font-size: calc(26px + (40 - 26) * ((100vw - 991px) / (1630 - 991)));
@@ -68,12 +77,15 @@
       font-size: calc(12px + (14 - 12) * ((100vw - 991px) / (1630 - 991)));
       line-height: calc(15px + (17 - 15) * ((100vw - 991px) / (1630 - 991)));
     }
-    &__block{
+
+    &__block {
       padding: calc(10px + (20 - 10) * ((100vw - 991px) / (1630 - 991))) 0;
     }
+
     &__text {
       width: calc(60% + (55 - 60) * ((100vw - 991px) / (1630 - 991)));
-      &-orange{
+
+      &-orange {
         font-size: calc(20px + (30 - 20) * ((100vw - 991px) / (1630 - 991)));
       }
     }
@@ -83,10 +95,12 @@
     }
   }
 }
-@media screen and (max-width: 991px){
+
+@media screen and (max-width: 991px) {
   .text-img {
     padding: 40px 15px;
     flex-wrap: wrap;
+
     &__title {
       font-size: 24px;
       padding-bottom: 20px;
@@ -103,12 +117,15 @@
       font-size: 12px;
       line-height: 15px;
     }
-    &__block{
+
+    &__block {
       padding: 10px;
     }
+
     &__text {
       width: 100%;
-      &-orange{
+
+      &-orange {
         font-size: 20px;
       }
     }
@@ -119,7 +136,8 @@
     }
   }
 }
-@media screen and (max-width: 767px){
+
+@media screen and (max-width: 767px) {
   .text-img {
     padding: 20px 15px;
 

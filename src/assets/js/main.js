@@ -6,6 +6,7 @@ import Readmore from "readmore-js";
 
 Swiper.use([Navigation, Pagination]);
 window.addEventListener('DOMContentLoaded', () => {
+
     /* BURGER-MENU */
     $(document).ready(function () {
         let subMenuParent = document.querySelector('.header__nav');
@@ -450,6 +451,96 @@ window.addEventListener('DOMContentLoaded', () => {
 
 
     });
+    /* VIDEO */
+    function findVideos() {
+        let videos = document.querySelectorAll('.video');
 
+        for (let i = 0; i < videos.length; i++) {
+            setupVideo(videos[i]);
+        }
+    }
 
+    function setupVideo(video) {
+        let link = video.querySelector('.video__link');
+        let media = video.querySelector('.video__media');
+        let button = video.querySelector('.video__button');
+        let id = parseMediaURL(media);
+
+        video.addEventListener('click', () => {
+            let iframe = createIframe(id);
+
+            link.remove();
+            button.remove();
+            video.appendChild(iframe);
+        });
+
+        link.removeAttribute('href');
+        video.classList.add('video--enabled');
+    }
+
+    function parseMediaURL(media) {
+        let regexp = /https:\/\/i\.ytimg\.com\/vi\/([a-zA-Z0-9_-]+)\/hqdefault\.jpg/i;
+        let url = media.src;
+        let match = url.match(regexp);
+
+        return match[1];
+    }
+
+    function createIframe(id) {
+        let iframe = document.createElement('iframe');
+
+        iframe.setAttribute('allowfullscreen', '');
+        iframe.setAttribute('allow', 'autoplay');
+        iframe.setAttribute('src', generateURL(id));
+        iframe.classList.add('video__media');
+
+        return iframe;
+    }
+
+    function generateURL(id) {
+        let query = '?rel=0&showinfo=0&autoplay=1';
+
+        return 'https://www.youtube.com/embed/' + id + query;
+    }
+
+    findVideos();
+    /* FIX TEXT SLIDER */
+    let disable_triple_click = true,
+        down = new Date().getTime(),
+        old_down = down;
+
+    jQuery(document).ready(function($)
+    {
+        $('html').on('mousedown', function(e)
+        {
+            let time = new Date().getTime();
+
+            if((time - down) < 500 &&
+                (disable_triple_click || (down - old_down) > 500))
+            {
+                old_down = down;
+                down = time;
+
+                e.preventDefault(); // just in case
+                return false; // mandatory
+            }
+
+            old_down = down;
+            down = time;
+        });
+    });
+    /* FIX HEIGHT BLOCK IMG */
+    fixedHeight(document.querySelectorAll('.employees__img'));
+    fixedHeight(document.querySelectorAll('.board-article__img'));
+    function fixedHeight (items){
+        let maxHeight = 0;
+        items.forEach(item =>{
+            if( item.offsetHeight > maxHeight ) {
+                maxHeight = item.offsetHeight; 
+            }
+        });
+        items.forEach(item => {
+            item.style.height = maxHeight + 'px';
+        });
+    }
 }), { passive: false };
