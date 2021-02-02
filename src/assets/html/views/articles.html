@@ -517,16 +517,18 @@
             </div>
         </div>
         <form action="post" class="query-form">
-            <input type="text" class="query-form__name form-name form-input" placeholder="Имя">
-            <input type="number" class="query-form__tel form-input" placeholder="+7  (       )       -        -">
-            <textarea name="textarea" cols="30" rows="10" class="query-form__quest form-input"
-                      placeholder="Ваш вопрос"></textarea>
-            <footer class="query-form__footer">
-                <input type="submit" class="query-form__submit btn" value="Оставить заявку">
-                <div class="query-form__agreement agreement">
-                    Отправляя данную форму, я соглашаюсь с политикой обработки персональных данных
-                </div>
-            </footer>
+            <div class="query-form__block">
+                <input type="text" class="query-form__name form-name form-input" placeholder="Имя">
+                <input type="number" class="query-form__tel form-input" placeholder="+7  (       )       -        -">
+                <textarea name="textarea" cols="30" rows="10" class="query-form__quest form-input"
+                          placeholder="Ваш вопрос"></textarea>
+                <footer class="query-form__footer">
+                    <a href="#" class="query-form__submit btn">Оставить заявку</a>
+                    <div class="query-form__agreement agreement">
+                        Отправляя данную форму, я соглашаюсь с политикой обработки персональных данных
+                    </div>
+                </footer>
+            </div>
         </form>
     </section><!-- !requisition -->
 

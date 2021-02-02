@@ -4,7 +4,7 @@
   justify-content: center;
   flex-direction: column;
   padding: 160px 160px 0 30px;
-
+  width: 50%;
   &__title {
     font-weight: 600;
     font-size: 24px;
@@ -58,7 +58,7 @@
 
 @media screen and (max-width: 1630px) {
   .information-form {
-    width: 38%;
+    width: 50%;
     padding: calc(20px + (160 - 20) * ((100vw - 992px) / (1630 - 992))) calc(30px + (50 - 30) * ((100vw - 992px) / (1630 - 992))) 0;
     align-items: center;
 
@@ -91,14 +91,14 @@
 
 @media screen and (max-width: 1440px) {
   .information-form {
-    width: 37%;
+    width: 50%;
 
   }
 }
 
 @media screen and (max-width: 1240px) {
   .information-form {
-    width: 42%;
+    width: 50%;
   }
 }
 
@@ -155,7 +155,6 @@
       padding-bottom: 25px;
     }
     &__form{
-      display: none;
     }
   }
 }
