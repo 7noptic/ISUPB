@@ -1,56 +1,129 @@
-.menu{
-  &__list{
-
+#menu-header {
   display: flex;
   justify-content: space-between;
+  padding: 0;
+  margin: 0;
+
+  & > li {
+    list-style: none;
+
+    & > a {
+      font-size: 16px;
+      font-weight: 500;
+      padding: 10.5px 25px;
+      transition: $transition4;
+      border-radius: $radiusBtn;
+
+      &:hover {
+        background-color: $orange;
+        color: #fff;
+      }
+    }
   }
-&__location{
-  display: none;
 }
-  &__item{
+
+.menu {
+  &__list {
+
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__location {
+    display: none;
+  }
+
+  &__item {
 
   }
-  &__link{
+
+  &__link {
 
     font-size: 16px;
     font-weight: 500;
     padding: 10.5px 25px;
     transition: $transition4;
     border-radius: $radiusBtn;
-  &:hover{
-    background-color: $orange;
-    color: #fff;
-  }
+
+    &:hover {
+      background-color: $orange;
+      color: #fff;
+    }
 
   }
 }
-@media screen and (max-width: 1440px){
-  .menu{
-    &__link{
+
+@media screen and (max-width: 1440px) {
+  #menu-header {
+
+
+    & > li {
+      & > a {
+        font-size: 14px;
+        padding: 10.5px 18px;
+      }
+    }
+  }
+  .menu {
+    &__link {
       font-size: 14px;
       padding: 10.5px 18px;
     }
   }
 }
-@media screen and (max-width: 1240px){
-  .menu{
-    &__link{
+
+@media screen and (max-width: 1240px) {
+  #menu-header {
+
+
+    & > li {
+      & > a {
+        font-size: 13px;
+        padding: 10px 15px;
+      }
+    }
+  }
+  .menu {
+    &__link {
       font-size: 13px;
       padding: 10px 15px;
     }
   }
 }
-@media screen and (max-width: 1080px){
-  .menu{
-    &__link{
+
+@media screen and (max-width: 1080px) {
+  #menu-header {
+
+
+    & > li {
+      & > a {
+        font-size: 12px;
+        padding: 8px 12px;
+      }
+    }
+  }
+
+  .menu {
+    &__link {
       font-size: 12px;
       padding: 8px 12px;
     }
   }
 }
-@media screen and (max-width: 991px){
 
-  .menu{
+@media screen and (max-width: 991px) {
+  #menu-header {
+
+
+    & > li {
+      & > a {
+        font-size: 16px;
+        color: #fff;
+        padding: 15px;
+      }
+    }
+  }
+  .menu {
     z-index: 20;
     position: fixed;
     top: 0;
@@ -67,27 +140,32 @@
     justify-content: space-between;
     flex-direction: column;
     border-right: 1px solid black;
-    color: white ;
-    &.active{
+    color: white;
+
+    &.active {
       left: 0;
     }
 
-    &__list{
+    &__list {
       flex-direction: column;
     }
-&__item{
-  padding-bottom: 15px;
-  &:last-child{
-    padding-bottom: 40px;
-  }
-}
-    &__link{
+
+    &__item {
+      padding-bottom: 15px;
+
+      &:last-child {
+        padding-bottom: 40px;
+      }
+    }
+
+    &__link {
       font-size: 16px;
       color: #fff;
       padding: 15px;
 
     }
-    &__location{
+
+    &__location {
       display: flex;
       flex-direction: column;
 

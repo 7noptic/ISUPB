@@ -1,3 +1,38 @@
+#footer-menu1, #footer-menu2, #footer-menu3, #footer-menu4, #footer-menu5 {
+  & > li {
+    padding-bottom: 15px;
+    transition: $transition4;
+
+    &:active {
+      transform: scale(1.05);
+    }
+
+    & > a {
+      font-size: 12px;
+      font-weight: 400;
+      transition: $transition4;
+
+      & span {
+        font-weight: 600;
+        font-size: 14px;
+
+        &:hover {
+          color: $orange;
+        }
+
+        &:active {
+          transform: scale(1.05);
+        }
+      }
+
+      &:hover {
+        color: $orange;
+      }
+
+    }
+  }
+}
+
 .footer-content {
   max-width: 1630px;
   margin: 0 auto;
@@ -50,82 +85,108 @@
 
   }
 }
+
 @media screen and (max-width: 1600px) {
-  .footer-content{
+  .footer-content {
     flex-wrap: wrap;
-    &__item{
+
+    &__item {
       width: 20%;
       min-width: auto;
     }
   }
 }
+
 @media screen and (max-width: 1280px) {
-  .footer-content{
-    &__title{
+
+  .footer-content {
+    &__title {
       font-size: 14px;
     }
-    &__item{
+
+    &__item {
       padding-right: 15px;
     }
-    &__link{
+
+    &__link {
       font-size: 10px;
-      & span{
+
+      & span {
         font-size: 12px;
       }
     }
-    &__elemlist{
+
+    &__elemlist {
       font-size: 12px;
     }
   }
 }
+
 @media screen and (max-width: 991px) {
-  .footer-content{
-    &__item{
+  #footer-menu1, #footer-menu2, #footer-menu3, #footer-menu4, #footer-menu5 {
+    & > li {
+      padding-bottom: 8px;
+    }
+  }
+
+  .footer-content {
+    &__item {
       width: 30%;
 
     }
-    &__title{
+
+    &__title {
       padding-bottom: 10px;
     }
-    &__elemlist{
+
+    &__elemlist {
       padding-bottom: 8px;
-      &:last-child{
+
+      &:last-child {
         padding-bottom: 20px;
       }
     }
   }
+
 }
+
 @media screen and (max-width: 767px) {
-  .footer-content{
-    &__item{
+  .footer-content {
+    &__item {
       width: 50%;
 
     }
 
   }
 }
-@media screen and(max-width: 575px){
-  .footer-content{
-    &__list{
+
+@media screen and(max-width: 575px) {
+  .footer-content {
+    &__list {
       display: none;
-      &.active{
+
+      &.active {
         display: block;
       }
     }
-    &__item{
+
+    &__item {
       width: 100%;
 
     }
-    &__title{
+
+    &__title {
       position: relative;
-      &::after{
+
+      &::after {
         content: url("../img/ularrow.svg");
         position: absolute;
         top: -3px;
         right: 10%;
       }
-      &.active{
-        &::after{
+
+      &.active {
+        &::after {
           content: url("../img/ularrow.svg");
           position: absolute;
           top: 0px;
@@ -134,22 +195,25 @@
         }
       }
     }
-    &__item{
-      &:last-child{
+
+    &__item {
+      &:last-child {
         padding-bottom: 30px;
       }
     }
   }
 }
-@media screen and(max-width: 360px){
-  .footer-content{
 
-    &__title{
-      &::after{
+@media screen and(max-width: 360px) {
+  .footer-content {
+
+    &__title {
+      &::after {
         right: 0;
       }
-      &.active{
-        &::after{
+
+      &.active {
+        &::after {
           right: 0;
         }
       }

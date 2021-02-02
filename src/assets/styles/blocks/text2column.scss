@@ -3,9 +3,12 @@
   padding: 80px 30px 100px;
   margin: 0 auto;
   &__block{
-    display: flex;
+    display: none;
     justify-content: space-between;
     flex-wrap: wrap;
+    &.active{
+      display: flex;
+    }
   }
   &__title{
     max-width: 550px;

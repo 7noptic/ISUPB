@@ -39,13 +39,18 @@ window.addEventListener('DOMContentLoaded', () => {
         vacanciesParent = document.querySelector('.vacancies'),
         vacanciesContent = document.querySelectorAll('.vacancy__content'),
         vacancy = document.querySelectorAll('.vacancy__header'),
+
+        aboutsParent = document.querySelector('.js-about-tabs'),
+
+
         mediaQuery991 = window.matchMedia('(min-width: 992px)');
+
     if (vacanciesParent) {
 
         vacanciesParent.addEventListener('click', (event) => {
             event.preventDefault();
             showHideTabs(event, 0, vacanciesContent, 'vacancy__content-active', vacancy, 'vacancy-active', true, 'vacancy__header', vacancyHexagon, 'vacancy__img-active');
-        }, { passive: false });
+        }, {passive: false});
     }
     if (newsParent) {
         hideTabsContent(newsContent, 'active', news, 'news-subtitle-active', false, 'news-subtitle');
@@ -54,7 +59,7 @@ window.addEventListener('DOMContentLoaded', () => {
         newsParent.addEventListener('click', (event) => {
             event.preventDefault();
             showHideTabs(event, 0, newsContent, 'active', news, 'news-subtitle-active', false, 'news-subtitle');
-        }, { passive: false });
+        }, {passive: false});
     }
     if (tabsParent) {
         hideTabsContent(tabsContent, 'active', tabs, 'stages-list__link-active', true, 'stages-list__link', tabsHexagon, 'stages-list__hexagon-active');
@@ -105,15 +110,25 @@ window.addEventListener('DOMContentLoaded', () => {
                 }
             }
 
-        }, { passive: false });
+        }, {passive: false});
     }
     if (faqParent) {
         faqParent.addEventListener('click', (event) => {
             event.preventDefault();
             showHideTabs(event, 0, faqContent, 'questions-item__text-active', faq, 'questions-item__title-active', false, 'questions-item__title');
-        }, { passive: false });
+        }, {passive: false});
     }
+    if (aboutsParent) {
+        let abouts = aboutsParent.querySelectorAll('.characteristic'),
+            aboutsContent = aboutsParent.querySelectorAll('.text2column__block');
+        hideTabsContent(aboutsContent, 'active', abouts, 'active', false, 'characteristic');
+        showTabsContent(0, aboutsContent, 'active', abouts, 'active', false, 'characteristic');
 
+        aboutsParent.addEventListener('click', (event) => {
+            event.preventDefault();
+            showHideTabs(event, 0, aboutsContent, 'active', abouts, 'active', false, 'characteristic');
+        }, {passive: false});
+    }
     function showHideTabs(event, i = 0, content = tabsContent, contentClass = 'active', link = tabs, linkClass = 'stages-list__link-active', hexagonTrigger = true, classCheck = 'stages-list__link', hexagon = tabsHexagon, hexagonClass = 'stages-list__hexagon-active') {
         const target = event.target;
         if (target && target.classList.contains(classCheck)) {
@@ -160,7 +175,6 @@ window.addEventListener('DOMContentLoaded', () => {
     /* СЛАЙДЕРЫ */
     let swiperReviews = new Swiper('.swiper-container-reviews', {
         slidesPerView: 4,
-        loop: true,
         spaceBetween: 30,
         observer: true,
         observeParents: true,
@@ -190,7 +204,6 @@ window.addEventListener('DOMContentLoaded', () => {
     });
     let swiperAwards = new Swiper('.swiper-container-awards', {
         slidesPerView: 4,
-        loop: true,
         spaceBetween: 30,
         observer: true,
         observeParents: true,
@@ -219,7 +232,6 @@ window.addEventListener('DOMContentLoaded', () => {
     let swiperProject = new Swiper('.swiper-container-project', {
         slidesPerView: 3,
         slidesPerColumn: 3,
-        loop: false,
         spaceBetween: 15,
         observer: true,
         observeParents: true,
@@ -257,7 +269,6 @@ window.addEventListener('DOMContentLoaded', () => {
     });
     let swiperInformation = new Swiper('.swiper-container-information', {
         slidesPerView: 1,
-        loop: false,
         spaceBetween: 200,
         observer: true,
         observeParents: true,
@@ -271,7 +282,6 @@ window.addEventListener('DOMContentLoaded', () => {
     let swiperModule = new Swiper('.swiper-container-module', {
         slidesPerView: 5,
         spaceBetween: 30,
-        loop: true,
         observer: true,
         observeParents: true,
         navigation: {
@@ -299,7 +309,6 @@ window.addEventListener('DOMContentLoaded', () => {
     });
     let swiperTags = new Swiper('.swiper-container-tags', {
         slidesPerView: "auto",
-        loop: true,
         spaceBetween: 20,
         allowSlidePrev: true,
         allowSlideNext: true,
@@ -309,6 +318,7 @@ window.addEventListener('DOMContentLoaded', () => {
         },
 
     });
+
     /* СПИСКИ В ФУТЕРЕ */
     const footerMenuParent = document.querySelector('.footer'),
         footerLink = document.querySelectorAll('.footer-content__title'),
@@ -326,7 +336,7 @@ window.addEventListener('DOMContentLoaded', () => {
                 });
             }
 
-        }, { passive: false });
+        }, {passive: false});
     }
 
     /* АНИМАЦИЯ ЧИСЕЛ ПРИ СКРОЛЛЕ */
@@ -342,25 +352,25 @@ window.addEventListener('DOMContentLoaded', () => {
                 this.removeEventListener('scroll', onScroll);
                 let interval = setInterval(function () {
                     number[0].innerHTML = +number[0].innerHTML + 1;
-                    if (+number[0].innerHTML == +number[0].dataset.max) {
+                    if (+number[0].innerHTML === +number[0].dataset.max) {
                         clearInterval(interval);
                     }
                 }, 5);
                 let interval1 = setInterval(function () {
                     number[1].innerHTML = +number[1].innerHTML + 1;
-                    if (+number[1].innerHTML == +number[1].dataset.max) {
+                    if (+number[1].innerHTML === +number[1].dataset.max) {
                         clearInterval(interval1);
                     }
                 }, 5);
                 let interval2 = setInterval(function () {
                     number[2].innerHTML = +number[2].innerHTML + 1;
-                    if (+number[2].innerHTML == +number[2].dataset.max) {
+                    if (+number[2].innerHTML === +number[2].dataset.max) {
                         clearInterval(interval2);
                     }
                 }, 5);
                 let interval3 = setInterval(function () {
                     number[3].innerHTML = +number[3].innerHTML + 1;
-                    if (+number[3].innerHTML == +number[3].dataset.max) {
+                    if (+number[3].innerHTML === +number[3].dataset.max) {
                         clearInterval(interval3);
                     }
                 }, 1);
@@ -403,7 +413,6 @@ window.addEventListener('DOMContentLoaded', () => {
                 openModal(modalRegion);
             }
         }
-
         if (modalVacancies) {
 
             if (target && target.classList.contains('js-vacancies')) {
@@ -414,30 +423,29 @@ window.addEventListener('DOMContentLoaded', () => {
 
         /* закрытие модалок */
         if (exitCall) {
-            exitCall.addEventListener('click', () => {
-                event.preventDefault()
+            exitCall.addEventListener('click', (event) => {
+                event.preventDefault();
                 closeModal(modalCall);
             });
         }
         if (exitFree) {
-            exitFree.addEventListener('click', () => {
-                event.preventDefault()
+            exitFree.addEventListener('click', (event) => {
+                event.preventDefault();
                 closeModal(modalFree);
             });
         }
         if (exitRegion) {
-            exitRegion.addEventListener('click', () => {
-                event.preventDefault()
+            exitRegion.addEventListener('click', (event) => {
+                event.preventDefault();
                 closeModal(modalRegion);
             });
         }
         if (exitVacancies) {
-            exitVacancies.addEventListener('click', () => {
-                event.preventDefault()
+            exitVacancies.addEventListener('click', (event) => {
+                event.preventDefault();
                 closeModal(modalVacancies);
             });
         }
-
 
         function openModal(modal) {
             modal.classList.add('active');
@@ -447,10 +455,10 @@ window.addEventListener('DOMContentLoaded', () => {
         function closeModal(modal) {
             modal.classList.remove('active');
             $('html').removeClass('lock');
-        };
-
+        }
 
     });
+
     /* VIDEO */
     function findVideos() {
         let videos = document.querySelectorAll('.video');
@@ -509,15 +517,12 @@ window.addEventListener('DOMContentLoaded', () => {
         down = new Date().getTime(),
         old_down = down;
 
-    jQuery(document).ready(function($)
-    {
-        $('html').on('mousedown', function(e)
-        {
+    jQuery(document).ready(function ($) {
+        $('html').on('mousedown', function (e) {
             let time = new Date().getTime();
 
-            if((time - down) < 500 &&
-                (disable_triple_click || (down - old_down) > 500))
-            {
+            if ((time - down) < 500 &&
+                (disable_triple_click || (down - old_down) > 500)) {
                 old_down = down;
                 down = time;
 
@@ -532,15 +537,16 @@ window.addEventListener('DOMContentLoaded', () => {
     /* FIX HEIGHT BLOCK IMG */
     fixedHeight(document.querySelectorAll('.employees__img'));
     fixedHeight(document.querySelectorAll('.board-article__img'));
-    function fixedHeight (items){
+
+    function fixedHeight(items) {
         let maxHeight = 0;
-        items.forEach(item =>{
-            if( item.offsetHeight > maxHeight ) {
-                maxHeight = item.offsetHeight; 
+        items.forEach(item => {
+            if (item.offsetHeight > maxHeight) {
+                maxHeight = item.offsetHeight;
             }
         });
         items.forEach(item => {
             item.style.height = maxHeight + 'px';
         });
     }
-}), { passive: false };
+}, {passive: false});
