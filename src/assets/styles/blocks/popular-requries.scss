@@ -1,8 +1,17 @@
 .popular-requries {
   position: relative;
   &__title{
+
     padding-bottom: 40px;
     text-align: center;
+  }
+  &__subtitle{
+    font-size: 24px;
+    font-weight: 600;
+    padding-bottom: 20px;
+    max-width: 1600px;
+    margin: 0 auto;
+    width: 100%;
   }
   &__slider {
     width: 100%;
@@ -17,7 +26,7 @@
     max-width: 1630px;
     margin: 0 auto;
     width: 100%;
-    padding: 30px 30px 50px;
+    padding: 15px 30px 50px;
     align-items: center;
     position: relative;
   }
@@ -30,7 +39,7 @@
 
     &__content{
 
-      padding: 30px 77px 20px 37px;
+      padding: 15px 77px 20px 37px;
 
     }
   }

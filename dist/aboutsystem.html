@@ -45,12 +45,12 @@
       </div>
       <div class="header-info__bottom">
         <nav class="menu">
-          <ul class="menu__list">
-            <li class="menu__item"><a href="#" class="menu__link">Услуги</a></li>
-            <li class="menu__item"><a href="aboutmodules.html" class="menu__link">Модули</a></li>
-            <li class="menu__item"><a href="introduction.html" class="menu__link">Внедрение</a></li>
-            <li class="menu__item"><a href="aboutsystem.html" class="menu__link">О системе</a></li>
-            <li class="menu__item"><a href="contacts.html" class="menu__link">Контакты</a></li>
+          <ul id="menu-header">
+            <li><a href="#">Услуги</a></li>
+            <li><a href="aboutmodules.html">Модули</a></li>
+            <li><a href="introduction.html">Внедрение</a></li>
+            <li><a href="aboutsystem.html">О системе</a></li>
+            <li><a href="contacts.html">Контакты</a></li>
           </ul>
           <ul class="location menu__location">
             <li class="location__item"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -384,10 +384,12 @@
       <div class="query-text">
         <h2 class="query-text__title">ОСТАВИТЬ ЗАЯВКУ НА ПРЕДПРОЕКТНОЕ ОБСЛЕДОВАНИЕ</h2>
       </div>
-      <form action="post" class="query-form"><input type="text" class="query-form__name form-name form-input" placeholder="Имя"> <input type="number" class="query-form__tel form-input" placeholder="+7  (       )       -        -"> <textarea name="textarea" cols="30" rows="10" class="query-form__quest form-input" placeholder="Ваш вопрос"></textarea>
-        <footer class="query-form__footer"><a href="#" class="query-form__submit btn">Оставить заявку</a>
-          <div class="query-form__agreement agreement">Отправляя данную форму, я соглашаюсь с политикой обработки персональных данных</div>
-        </footer>
+      <form action="post" class="query-form">
+        <div class="query-form__block"><input type="text" class="query-form__name form-name form-input" placeholder="Имя"> <input type="tel" class="query-form__tel form-input" placeholder="+7  (       )       -        -"> <textarea name="textarea" cols="30" rows="10" class="query-form__quest form-input" placeholder="Ваш вопрос"></textarea>
+          <footer class="query-form__footer"><a href="#" class="query-form__submit btn">Оставить заявку</a>
+            <div class="query-form__agreement agreement">Отправляя данную форму, я соглашаюсь с политикой обработки персональных данных</div>
+          </footer>
+        </div>
       </form>
       <div class="query-img"><svg width="190" height="200" viewBox="0 0 190 200" fill="none" xmlns="http://www.w3.org/2000/svg">
           <g>
@@ -473,7 +475,7 @@
         <div class="requisition-text__title">Остались вопросы?</div>
         <div class="requisition-text__subtitle">Мы перезвоним ВАМ и с удовольствием на них ответим!</div>
       </div>
-      <form action="post" class="query-form"><input type="text" class="query-form__name form-name form-input" placeholder="Имя"> <input type="number" class="query-form__tel form-input" placeholder="+7  (       )       -        -"> <textarea name="textarea" cols="30" rows="10" class="query-form__quest form-input" placeholder="Ваш вопрос"></textarea>
+      <form action="post" class="query-form"><input type="text" class="query-form__name form-name form-input" placeholder="Имя"> <input type="tel" class="query-form__tel form-input" placeholder="+7  (       )       -        -"> <textarea name="textarea" cols="30" rows="10" class="query-form__quest form-input" placeholder="Ваш вопрос"></textarea>
         <footer class="query-form__footer"><input type="submit" class="query-form__submit btn" value="Оставить заявку">
           <div class="query-form__agreement agreement">Отправляя данную форму, я соглашаюсь с политикой обработки персональных данных</div>
         </footer>
@@ -538,49 +540,49 @@
     <section class="footer-content">
       <nav class="footer-content__item">
         <h4 class="footer-content__title">О компании</h4>
-        <ul class="footer-content__list">
-          <li class="footer-content__elemlist"><a href="aboutsystem.html" class="footer-content__link">О системе</a></li>
-          <li class="footer-content__elemlist"><a href="aboutmodules.html" class="footer-content__link">Модули системы</a></li>
-          <li class="footer-content__elemlist"><a href="contacts.html" class="footer-content__link">Контакты</a></li>
-          <li class="footer-content__elemlist"><a href="aboutus.html" class="footer-content__link">О нас</a></li>
-          <li class="footer-content__elemlist"><a href="reviews.html" class="footer-content__link">Отзывы</a></li>
-          <li class="footer-content__elemlist"><a href="articles.html" class="footer-content__link">Статьи</a></li>
-          <li class="footer-content__elemlist"><a href="faq.html" class="footer-content__link">Вопрос-Ответ</a></li>
-          <li class="footer-content__elemlist"><a href="vacancies.html" class="footer-content__link">Вакансии</a></li>
+        <ul class="footer-content__list" id="footer-menu1">
+          <li><a href="aboutsystem.html">О системе</a></li>
+          <li><a href="aboutmodules.html">Модули системы</a></li>
+          <li><a href="contacts.html">Контакты</a></li>
+          <li><a href="aboutus.html">О нас</a></li>
+          <li><a href="reviews.html">Отзывы</a></li>
+          <li><a href="articles.html">Статьи</a></li>
+          <li><a href="faq.html">Вопрос-Ответ</a></li>
+          <li><a href="vacancies.html">Вакансии</a></li>
         </ul>
       </nav>
       <nav class="footer-content__item">
         <h4 class="footer-content__title">Услуги</h4>
-        <ul class="footer-content__list">
-          <li class="footer-content__elemlist"><a href="introduction.html" class="footer-content__link">Внедрение системы</a></li>
-          <li class="footer-content__elemlist"><a href="#" class="footer-content__link">Сопровождение системы</a></li>
+        <ul class="footer-content__list" id="footer-menu2">
+          <li><a href="introduction.html">Внедрение системы</a></li>
+          <li><a href="#">Сопровождение системы</a></li>
         </ul>
       </nav>
       <nav class="footer-content__item">
         <h4 class="footer-content__title">Наши направления</h4>
-        <ul class="footer-content__list">
-          <li class="footer-content__elemlist"><a href="security.html" class="footer-content__link">Охрана труда</a></li>
-          <li class="footer-content__elemlist"><a href="#" class="footer-content__link">Пожарная безопасность</a></li>
-          <li class="footer-content__elemlist"><a href="#" class="footer-content__link">Промышленная безопасность</a></li>
+        <ul class="footer-content__list" id="footer-menu3">
+          <li><a href="security.html">Охрана труда</a></li>
+          <li><a href="#">Пожарная безопасность</a></li>
+          <li><a href="#">Промышленная безопасность</a></li>
         </ul>
       </nav>
       <nav class="footer-content__item">
         <h4 class="footer-content__title">Контакты</h4>
-        <ul class="footer-content__list">
-          <li class="footer-content__elemlist">Круглосуточная поддержка</li>
-          <li class="footer-content__elemlist"><a href="tel:88005504820" class="footer-content__link"><span>8-800-550-48-20</span></a></li>
-          <li class="footer-content__elemlist">Наш E-mail:</li>
-          <li class="footer-content__elemlist"><a href="email:info@isu-pb.ru" class="footer-content__link"><span>info@isu-pb.ru</span></a></li>
-          <li class="footer-content__elemlist">Наш адрес:</li>
-          <li class="footer-content__elemlist"><a href="#" class="footer-content__link"><span>610035, Киров, Воровского, 78а</span></a></li>
+        <ul class="footer-content__list" id="footer-menu4">
+          <li>Круглосуточная поддержка</li>
+          <li><a href="tel:88005504820"><span>8-800-550-48-20</span></a></li>
+          <li>Наш E-mail:</li>
+          <li><a href="email:info@isu-pb.ru"><span>info@isu-pb.ru</span></a></li>
+          <li>Наш адрес:</li>
+          <li><a href="#"><span>610035, Киров, Воровского, 78а</span></a></li>
         </ul>
       </nav>
       <nav class="footer-content__item">
         <h4 class="footer-content__title">Юридическая информация</h4>
-        <ul class="footer-content__list">
-          <li class="footer-content__elemlist">Лицензия №5316 от 25.12.2019</li>
-          <li class="footer-content__elemlist"><a href="#" class="footer-content__link"><span>Проверить лицензию</span></a></li>
-          <li class="footer-content__elemlist">Р/c № 4000000000000000 в ВТБ 24 (ПАО) Г. МОСКВА к/c 300000000000000000, БИК 000000000</li>
+        <ul class="footer-content__list" id="footer-menu5">
+          <li>Лицензия №5316 от 25.12.2019</li>
+          <li><a href="#"><span>Проверить лицензию</span></a></li>
+          <li>Р/c № 4000000000000000 в ВТБ 24 (ПАО) Г. МОСКВА к/c 300000000000000000, БИК 000000000</li>
         </ul>
       </nav>
     </section>
@@ -611,7 +613,7 @@
   <!-- MODAL -->
   <aside class="modal-call">
     <div class="modal-call__wrapper">
-      <form action="post" class="modal-form"><input type="text" class="modal-form__input form-input" placeholder="Имя"> <input type="number" class="form-input modal-form__input" placeholder="+7  (       )       -        -"> <textarea name="textarea" cols="30" rows="10" class="form-input modal-form__area" placeholder="Ваш вопрос"></textarea> <a href="#" class="btn modal-form__btn">заказать звонок</a>
+      <form action="post" class="modal-form"><input type="text" class="modal-form__input form-input" placeholder="Имя"> <input type="tel" class="form-input modal-form__input" placeholder="+7  (       )       -        -"> <textarea name="textarea" cols="30" rows="10" class="form-input modal-form__area" placeholder="Ваш вопрос"></textarea> <a href="#" class="btn modal-form__btn">заказать звонок</a>
         <div class="agreement modal-form__agreement">Отправляя данную форму, я соглашаюсь с политикой обработки персональных данных</div>
       </form>
       <div class="modal-call__exit"><svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -623,7 +625,7 @@
   </aside>
   <aside class="modal-free">
     <div class="modal-free__wrapper">
-      <form action="post" class="modal-form"><input type="text" class="modal-form__input form-input" placeholder="Имя"> <input type="number" class="form-input modal-form__input" placeholder="+7  (       )       -        -"> <input type="email" class="modal-form__input form-input" placeholder="Email"> <input type="text" class="form-input modal-form__input" placeholder="Название компании"> <a href="#" class="btn modal-form__btn">отправить</a>
+      <form action="post" class="modal-form"><input type="text" class="modal-form__input form-input" placeholder="Имя"> <input type="tel" class="form-input modal-form__input" placeholder="+7  (       )       -        -"> <input type="email" class="modal-form__input form-input" placeholder="Email"> <input type="text" class="form-input modal-form__input" placeholder="Название компании"> <a href="#" class="btn modal-form__btn">отправить</a>
         <div class="agreement modal-form__agreement">Отправляя данную форму, я соглашаюсь с политикой обработки персональных данных</div>
       </form>
       <div class="modal-free__exit"><svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -636,7 +638,7 @@
   <aside class="modal-region">
     <div class="modal-region__wrapper">
       <div class="modal-region__row">
-        <p class="modal-region__city">Ваш город: Санкт-Петербург?</p><a href="#" class="btn modal-region__btn">да</a>
+        <p class="modal-region__city">Ваш город: <span class="js-select-city">Санкт-Петербург</span>?</p><a href="#" class="btn modal-region__btn js-region-close">да</a>
       </div>
       <div class="modal-region__row">
         <form action="post" method="post" class="form-search modal-region__form"><input type="search" class="form-search__search modal-region__search" placeholder="Найди здесь"></form><a href="#" class="btn modal-region__btn"><svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">

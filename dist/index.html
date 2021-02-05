@@ -70,12 +70,12 @@
 
       <div class="header-info__bottom">
         <nav class="menu">
-          <ul class="menu__list">
-            <li class="menu__item"><a href="#" class="menu__link">Услуги</a></li>
-            <li class="menu__item"><a href="aboutmodules.html" class="menu__link">Модули</a></li>
-            <li class="menu__item"><a href="introduction.html" class="menu__link">Внедрение</a></li>
-            <li class="menu__item"><a href="aboutsystem.html" class="menu__link">О системе</a></li>
-            <li class="menu__item"><a href="contacts.html" class="menu__link">Контакты</a></li>
+          <ul id="menu-header">
+            <li><a href="#">Услуги</a></li>
+            <li><a href="aboutmodules.html">Модули</a></li>
+            <li><a href="introduction.html">Внедрение</a></li>
+            <li><a href="aboutsystem.html">О системе</a></li>
+            <li><a href="contacts.html">Контакты</a></li>
           </ul>
           <ul class="location menu__location">
 
@@ -172,117 +172,281 @@
           <div class="swiper-container-information">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
-                <div class="information-img__wrapper">
+                <div class="information-img__slide">
+                  <div class="information-img__wrapper">
 
-                  <img class="information-img__img" src="img/img%201.png" alt="img">
-                  <div class="information-img__top">
-                    <svg style="mix-blend-mode:hard-light" width="361" height="528" viewBox="0 0 361 528" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <g style="mix-blend-mode:hard-light">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M194.158 316.64L194.134 240.403L127.976 202.263L61.8417 240.36L61.8662 316.597L128.024 354.737L194.158 316.64ZM128.047 426L256 352.291L255.953 204.791L127.953 131L0 204.709L0.0473475 352.209L128.047 426Z" fill="#EA5800" />
-                      </g>
-                      <g style="mix-blend-mode:hard-light">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M93.6008 0L34.1008 34.337L34 102.837L93.3992 137L152.899 102.663L153 34.163L93.6008 0Z" fill="#EA5800" />
-                      </g>
-                      <g style="mix-blend-mode:hard-light">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M315.033 272L269.033 298.778L269 352.278L314.967 379L360.967 352.222L361 298.722L315.033 272Z" fill="#EA5800" />
-                      </g>
-                      <g style="mix-blend-mode:hard-light">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M263.132 528L335 486.864L334.868 404.363L262.868 363L191 404.137L191.132 486.637L263.132 528Z" fill="#EA5800" />
-                      </g>
-                    </svg>
+                    <img class="information-img__img" src="img/img%201.png" alt="img">
+                    <div class="information-img__top">
+                      <svg style="mix-blend-mode:hard-light" width="361" height="528" viewBox="0 0 361 528" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g style="mix-blend-mode:hard-light">
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M194.158 316.64L194.134 240.403L127.976 202.263L61.8417 240.36L61.8662 316.597L128.024 354.737L194.158 316.64ZM128.047 426L256 352.291L255.953 204.791L127.953 131L0 204.709L0.0473475 352.209L128.047 426Z" fill="#EA5800" />
+                        </g>
+                        <g style="mix-blend-mode:hard-light">
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M93.6008 0L34.1008 34.337L34 102.837L93.3992 137L152.899 102.663L153 34.163L93.6008 0Z" fill="#EA5800" />
+                        </g>
+                        <g style="mix-blend-mode:hard-light">
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M315.033 272L269.033 298.778L269 352.278L314.967 379L360.967 352.222L361 298.722L315.033 272Z" fill="#EA5800" />
+                        </g>
+                        <g style="mix-blend-mode:hard-light">
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M263.132 528L335 486.864L334.868 404.363L262.868 363L191 404.137L191.132 486.637L263.132 528Z" fill="#EA5800" />
+                        </g>
+                      </svg>
 
+                    </div>
+                  </div>
+                  <div class="information-form">
+                    <h1 class="information-form__title">
+                      ИСУПБ основан на принципе
+                      Системы Менеджмента Интегрированной Системы
+                    </h1>
+                    <h2 class="information-form__subtitle">
+                      Tincidunt eget nullam non nisi est sit. Tristique risus nec feugiat in.
+                      Tincidunt arcu non sodales
+                      neque
+                      sodales ut etiam sit amet.
+                    </h2>
+                    <form action="post" class="information-form__form">
+                      <div class="information-form__form-top">
+                        <input class="information-form__input form-input" type="text" placeholder="Имя">
+                        <input class="information-form__input form-input" type="tel" placeholder="+7  (       )       -        -">
+                      </div>
+                      <div class="information-form__form-bottom">
+                        <a href="#" class="information-form__submit btn">Оставить заявку</a>
+                        <div class="agreement information-form__agreement">
+                          Отправляя данную форму, я соглашаюсь с политикой обработки персональных
+                          данных
+                        </div>
+                      </div>
+
+                    </form>
+                    <nav class="dots information-form__dots">
+                      <div class="swiper-pagination-information"></div>
+
+                    </nav>
                   </div>
                 </div>
 
               </div>
               <div class="swiper-slide">
-                <div class="information-img__wrapper">
-                  <img class="information-img__img" src="img/img%201.png" alt="img">
-                  <div class="information-img__top">
-                    <svg style="mix-blend-mode:hard-light" width="361" height="528" viewBox="0 0 361 528" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <g style="mix-blend-mode:hard-light">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M194.158 316.64L194.134 240.403L127.976 202.263L61.8417 240.36L61.8662 316.597L128.024 354.737L194.158 316.64ZM128.047 426L256 352.291L255.953 204.791L127.953 131L0 204.709L0.0473475 352.209L128.047 426Z" fill="#EA5800" />
-                      </g>
-                      <g style="mix-blend-mode:hard-light">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M93.6008 0L34.1008 34.337L34 102.837L93.3992 137L152.899 102.663L153 34.163L93.6008 0Z" fill="#EA5800" />
-                      </g>
-                      <g style="mix-blend-mode:hard-light">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M315.033 272L269.033 298.778L269 352.278L314.967 379L360.967 352.222L361 298.722L315.033 272Z" fill="#EA5800" />
-                      </g>
-                      <g style="mix-blend-mode:hard-light">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M263.132 528L335 486.864L334.868 404.363L262.868 363L191 404.137L191.132 486.637L263.132 528Z" fill="#EA5800" />
-                      </g>
-                    </svg>
+                <div class="information-img__slide">
+                  <div class="information-img__wrapper">
 
+                    <img class="information-img__img" src="img/img%201.png" alt="img">
+                    <div class="information-img__top">
+                      <svg style="mix-blend-mode:hard-light" width="361" height="528" viewBox="0 0 361 528" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g style="mix-blend-mode:hard-light">
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M194.158 316.64L194.134 240.403L127.976 202.263L61.8417 240.36L61.8662 316.597L128.024 354.737L194.158 316.64ZM128.047 426L256 352.291L255.953 204.791L127.953 131L0 204.709L0.0473475 352.209L128.047 426Z" fill="#EA5800" />
+                        </g>
+                        <g style="mix-blend-mode:hard-light">
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M93.6008 0L34.1008 34.337L34 102.837L93.3992 137L152.899 102.663L153 34.163L93.6008 0Z" fill="#EA5800" />
+                        </g>
+                        <g style="mix-blend-mode:hard-light">
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M315.033 272L269.033 298.778L269 352.278L314.967 379L360.967 352.222L361 298.722L315.033 272Z" fill="#EA5800" />
+                        </g>
+                        <g style="mix-blend-mode:hard-light">
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M263.132 528L335 486.864L334.868 404.363L262.868 363L191 404.137L191.132 486.637L263.132 528Z" fill="#EA5800" />
+                        </g>
+                      </svg>
+
+                    </div>
+                  </div>
+                  <div class="information-form">
+                    <h1 class="information-form__title">
+                      ИСУПБ основан на принципе
+                      Системы Менеджмента Интегрированной Системы
+                    </h1>
+                    <h2 class="information-form__subtitle">
+                      Tincidunt eget nullam non nisi est sit. Tristique risus nec feugiat in.
+                      Tincidunt arcu non sodales
+                      neque
+                      sodales ut etiam sit amet.
+                    </h2>
+                    <form action="post" class="information-form__form">
+                      <div class="information-form__form-top">
+                        <input class="information-form__input form-input" type="text" placeholder="Имя">
+                        <input class="information-form__input form-input" type="tel" placeholder="+7  (       )       -        -">
+                      </div>
+                      <div class="information-form__form-bottom">
+                        <a href="#" class="information-form__submit btn">Оставить заявку</a>
+                        <div class="agreement information-form__agreement">
+                          Отправляя данную форму, я соглашаюсь с политикой обработки персональных
+                          данных
+                        </div>
+                      </div>
+
+                    </form>
+                    <nav class="dots information-form__dots">
+                      <div class="swiper-pagination-information"></div>
+
+                    </nav>
                   </div>
                 </div>
 
               </div>
               <div class="swiper-slide">
-                <div class="information-img__wrapper">
-                  <img class="information-img__img" src="img/img%201.png" alt="img">
-                  <div class="information-img__top">
-                    <svg style="mix-blend-mode:hard-light" width="361" height="528" viewBox="0 0 361 528" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <g style="mix-blend-mode:hard-light">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M194.158 316.64L194.134 240.403L127.976 202.263L61.8417 240.36L61.8662 316.597L128.024 354.737L194.158 316.64ZM128.047 426L256 352.291L255.953 204.791L127.953 131L0 204.709L0.0473475 352.209L128.047 426Z" fill="#EA5800" />
-                      </g>
-                      <g style="mix-blend-mode:hard-light">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M93.6008 0L34.1008 34.337L34 102.837L93.3992 137L152.899 102.663L153 34.163L93.6008 0Z" fill="#EA5800" />
-                      </g>
-                      <g style="mix-blend-mode:hard-light">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M315.033 272L269.033 298.778L269 352.278L314.967 379L360.967 352.222L361 298.722L315.033 272Z" fill="#EA5800" />
-                      </g>
-                      <g style="mix-blend-mode:hard-light">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M263.132 528L335 486.864L334.868 404.363L262.868 363L191 404.137L191.132 486.637L263.132 528Z" fill="#EA5800" />
-                      </g>
-                    </svg>
+                <div class="information-img__slide">
+                  <div class="information-img__wrapper">
 
+                    <img class="information-img__img" src="img/img%201.png" alt="img">
+                    <div class="information-img__top">
+                      <svg style="mix-blend-mode:hard-light" width="361" height="528" viewBox="0 0 361 528" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g style="mix-blend-mode:hard-light">
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M194.158 316.64L194.134 240.403L127.976 202.263L61.8417 240.36L61.8662 316.597L128.024 354.737L194.158 316.64ZM128.047 426L256 352.291L255.953 204.791L127.953 131L0 204.709L0.0473475 352.209L128.047 426Z" fill="#EA5800" />
+                        </g>
+                        <g style="mix-blend-mode:hard-light">
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M93.6008 0L34.1008 34.337L34 102.837L93.3992 137L152.899 102.663L153 34.163L93.6008 0Z" fill="#EA5800" />
+                        </g>
+                        <g style="mix-blend-mode:hard-light">
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M315.033 272L269.033 298.778L269 352.278L314.967 379L360.967 352.222L361 298.722L315.033 272Z" fill="#EA5800" />
+                        </g>
+                        <g style="mix-blend-mode:hard-light">
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M263.132 528L335 486.864L334.868 404.363L262.868 363L191 404.137L191.132 486.637L263.132 528Z" fill="#EA5800" />
+                        </g>
+                      </svg>
+
+                    </div>
+                  </div>
+                  <div class="information-form">
+                    <h1 class="information-form__title">
+                      ИСУПБ основан на принципе
+                      Системы Менеджмента Интегрированной Системы
+                    </h1>
+                    <h2 class="information-form__subtitle">
+                      Tincidunt eget nullam non nisi est sit. Tristique risus nec feugiat in.
+                      Tincidunt arcu non sodales
+                      neque
+                      sodales ut etiam sit amet.
+                    </h2>
+                    <form action="post" class="information-form__form">
+                      <div class="information-form__form-top">
+                        <input class="information-form__input form-input" type="text" placeholder="Имя">
+                        <input class="information-form__input form-input" type="tel" placeholder="+7  (       )       -        -">
+                      </div>
+                      <div class="information-form__form-bottom">
+                        <a href="#" class="information-form__submit btn">Оставить заявку</a>
+                        <div class="agreement information-form__agreement">
+                          Отправляя данную форму, я соглашаюсь с политикой обработки персональных
+                          данных
+                        </div>
+                      </div>
+
+                    </form>
+                    <nav class="dots information-form__dots">
+                      <div class="swiper-pagination-information"></div>
+
+                    </nav>
                   </div>
                 </div>
 
               </div>
               <div class="swiper-slide">
-                <div class="information-img__wrapper">
-                  <img class="information-img__img" src="img/img%201.png" alt="img">
-                  <div class="information-img__top">
-                    <svg style="mix-blend-mode:hard-light" width="361" height="528" viewBox="0 0 361 528" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <g style="mix-blend-mode:hard-light">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M194.158 316.64L194.134 240.403L127.976 202.263L61.8417 240.36L61.8662 316.597L128.024 354.737L194.158 316.64ZM128.047 426L256 352.291L255.953 204.791L127.953 131L0 204.709L0.0473475 352.209L128.047 426Z" fill="#EA5800" />
-                      </g>
-                      <g style="mix-blend-mode:hard-light">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M93.6008 0L34.1008 34.337L34 102.837L93.3992 137L152.899 102.663L153 34.163L93.6008 0Z" fill="#EA5800" />
-                      </g>
-                      <g style="mix-blend-mode:hard-light">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M315.033 272L269.033 298.778L269 352.278L314.967 379L360.967 352.222L361 298.722L315.033 272Z" fill="#EA5800" />
-                      </g>
-                      <g style="mix-blend-mode:hard-light">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M263.132 528L335 486.864L334.868 404.363L262.868 363L191 404.137L191.132 486.637L263.132 528Z" fill="#EA5800" />
-                      </g>
-                    </svg>
+                <div class="information-img__slide">
+                  <div class="information-img__wrapper">
 
+                    <img class="information-img__img" src="img/img%201.png" alt="img">
+                    <div class="information-img__top">
+                      <svg style="mix-blend-mode:hard-light" width="361" height="528" viewBox="0 0 361 528" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g style="mix-blend-mode:hard-light">
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M194.158 316.64L194.134 240.403L127.976 202.263L61.8417 240.36L61.8662 316.597L128.024 354.737L194.158 316.64ZM128.047 426L256 352.291L255.953 204.791L127.953 131L0 204.709L0.0473475 352.209L128.047 426Z" fill="#EA5800" />
+                        </g>
+                        <g style="mix-blend-mode:hard-light">
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M93.6008 0L34.1008 34.337L34 102.837L93.3992 137L152.899 102.663L153 34.163L93.6008 0Z" fill="#EA5800" />
+                        </g>
+                        <g style="mix-blend-mode:hard-light">
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M315.033 272L269.033 298.778L269 352.278L314.967 379L360.967 352.222L361 298.722L315.033 272Z" fill="#EA5800" />
+                        </g>
+                        <g style="mix-blend-mode:hard-light">
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M263.132 528L335 486.864L334.868 404.363L262.868 363L191 404.137L191.132 486.637L263.132 528Z" fill="#EA5800" />
+                        </g>
+                      </svg>
+
+                    </div>
+                  </div>
+                  <div class="information-form">
+                    <h1 class="information-form__title">
+                      ИСУПБ основан на принципе
+                      Системы Менеджмента Интегрированной Системы
+                    </h1>
+                    <h2 class="information-form__subtitle">
+                      Tincidunt eget nullam non nisi est sit. Tristique risus nec feugiat in.
+                      Tincidunt arcu non sodales
+                      neque
+                      sodales ut etiam sit amet.
+                    </h2>
+                    <form action="post" class="information-form__form">
+                      <div class="information-form__form-top">
+                        <input class="information-form__input form-input" type="text" placeholder="Имя">
+                        <input class="information-form__input form-input" type="tel" placeholder="+7  (       )       -        -">
+                      </div>
+                      <div class="information-form__form-bottom">
+                        <a href="#" class="information-form__submit btn">Оставить заявку</a>
+                        <div class="agreement information-form__agreement">
+                          Отправляя данную форму, я соглашаюсь с политикой обработки персональных
+                          данных
+                        </div>
+                      </div>
+
+                    </form>
+                    <nav class="dots information-form__dots">
+                      <div class="swiper-pagination-information"></div>
+
+                    </nav>
                   </div>
                 </div>
 
               </div>
               <div class="swiper-slide">
-                <div class="information-img__wrapper">
-                  <img class="information-img__img" src="img/img%201.png" alt="img">
-                  <div class="information-img__top">
-                    <svg style="mix-blend-mode:hard-light" width="361" height="528" viewBox="0 0 361 528" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <g style="mix-blend-mode:hard-light">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M194.158 316.64L194.134 240.403L127.976 202.263L61.8417 240.36L61.8662 316.597L128.024 354.737L194.158 316.64ZM128.047 426L256 352.291L255.953 204.791L127.953 131L0 204.709L0.0473475 352.209L128.047 426Z" fill="#EA5800" />
-                      </g>
-                      <g style="mix-blend-mode:hard-light">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M93.6008 0L34.1008 34.337L34 102.837L93.3992 137L152.899 102.663L153 34.163L93.6008 0Z" fill="#EA5800" />
-                      </g>
-                      <g style="mix-blend-mode:hard-light">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M315.033 272L269.033 298.778L269 352.278L314.967 379L360.967 352.222L361 298.722L315.033 272Z" fill="#EA5800" />
-                      </g>
-                      <g style="mix-blend-mode:hard-light">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M263.132 528L335 486.864L334.868 404.363L262.868 363L191 404.137L191.132 486.637L263.132 528Z" fill="#EA5800" />
-                      </g>
-                    </svg>
+                <div class="information-img__slide">
+                  <div class="information-img__wrapper">
 
+                    <img class="information-img__img" src="img/img%201.png" alt="img">
+                    <div class="information-img__top">
+                      <svg style="mix-blend-mode:hard-light" width="361" height="528" viewBox="0 0 361 528" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g style="mix-blend-mode:hard-light">
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M194.158 316.64L194.134 240.403L127.976 202.263L61.8417 240.36L61.8662 316.597L128.024 354.737L194.158 316.64ZM128.047 426L256 352.291L255.953 204.791L127.953 131L0 204.709L0.0473475 352.209L128.047 426Z" fill="#EA5800" />
+                        </g>
+                        <g style="mix-blend-mode:hard-light">
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M93.6008 0L34.1008 34.337L34 102.837L93.3992 137L152.899 102.663L153 34.163L93.6008 0Z" fill="#EA5800" />
+                        </g>
+                        <g style="mix-blend-mode:hard-light">
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M315.033 272L269.033 298.778L269 352.278L314.967 379L360.967 352.222L361 298.722L315.033 272Z" fill="#EA5800" />
+                        </g>
+                        <g style="mix-blend-mode:hard-light">
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M263.132 528L335 486.864L334.868 404.363L262.868 363L191 404.137L191.132 486.637L263.132 528Z" fill="#EA5800" />
+                        </g>
+                      </svg>
+
+                    </div>
+                  </div>
+                  <div class="information-form">
+                    <h1 class="information-form__title">
+                      ИСУПБ основан на принципе
+                      Системы Менеджмента Интегрированной Системы
+                    </h1>
+                    <h2 class="information-form__subtitle">
+                      Tincidunt eget nullam non nisi est sit. Tristique risus nec feugiat in.
+                      Tincidunt arcu non sodales
+                      neque
+                      sodales ut etiam sit amet.
+                    </h2>
+                    <form action="post" class="information-form__form">
+                      <div class="information-form__form-top">
+                        <input class="information-form__input form-input" type="text" placeholder="Имя">
+                        <input class="information-form__input form-input" type="tel" placeholder="+7  (       )       -        -">
+                      </div>
+                      <div class="information-form__form-bottom">
+                        <a href="#" class="information-form__submit btn">Оставить заявку</a>
+                        <div class="agreement information-form__agreement">
+                          Отправляя данную форму, я соглашаюсь с политикой обработки персональных
+                          данных
+                        </div>
+                      </div>
+
+                    </form>
+                    <nav class="dots information-form__dots">
+                      <div class="swiper-pagination-information"></div>
+
+                    </nav>
                   </div>
                 </div>
 
@@ -291,34 +455,7 @@
           </div>
         </div>
 
-        <div class="information-form">
-          <h1 class="information-form__title">
-            ИСУПБ основан на принципе
-            Системы Менеджмента Интегрированной Системы
-          </h1>
-          <h2 class="information-form__subtitle">
-            Tincidunt eget nullam non nisi est sit. Tristique risus nec feugiat in. Tincidunt arcu non sodales
-            neque
-            sodales ut etiam sit amet.
-          </h2>
-          <form action="post" class="information-form__form">
-            <div class="information-form__form-top">
-              <input class="information-form__input form-input" type="text" placeholder="Имя">
-              <input class="information-form__input form-input" type="number" placeholder="+7  (       )       -        -">
-            </div>
-            <div class="information-form__form-bottom">
-              <a href="#" class="information-form__submit btn">Оставить заявку</a>
-              <div class="agreement information-form__agreement">
-                Отправляя данную форму, я соглашаюсь с политикой обработки персональных данных
-              </div>
-            </div>
 
-          </form>
-          <nav class="dots information-form__dots">
-            <div class="swiper-pagination-information"></div>
-
-          </nav>
-        </div>
         <div class="information-modules">
           <!-- ЕБЛАНСКОЕ РЕШЕНИЕ -->
           <div class="modules">
@@ -633,16 +770,17 @@
 
       </div>
       <form action="post" class="query-form">
-        <input type="text" class="query-form__name form-name form-input" placeholder="Имя">
-        <input type="number" class="query-form__tel form-input" placeholder="+7  (       )       -        -">
-        <textarea name="textarea" cols="30" rows="10" class="query-form__quest form-input" placeholder="Ваш вопрос"></textarea>
-        <footer class="query-form__footer">
-          <a href="#" class="query-form__submit btn">Оставить заявку</a>
-          <div class="query-form__agreement agreement">
-            Отправляя данную форму, я соглашаюсь с политикой обработки персональных данных
-          </div>
-        </footer>
-
+        <div class="query-form__block">
+          <input type="text" class="query-form__name form-name form-input" placeholder="Имя">
+          <input type="tel" class="query-form__tel form-input" placeholder="+7  (       )       -        -">
+          <textarea name="textarea" cols="30" rows="10" class="query-form__quest form-input" placeholder="Ваш вопрос"></textarea>
+          <footer class="query-form__footer">
+            <a href="#" class="query-form__submit btn">Оставить заявку</a>
+            <div class="query-form__agreement agreement">
+              Отправляя данную форму, я соглашаюсь с политикой обработки персональных данных
+            </div>
+          </footer>
+        </div>
       </form>
       <div class="query-img">
         <svg width="190" height="200" viewBox="0 0 190 200" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -942,15 +1080,17 @@
         </p>
       </div>
       <form action="post" class="query-form">
-        <input type="text" class="query-form__name form-name form-input" placeholder="Имя">
-        <input type="number" class="query-form__tel form-input" placeholder="+7  (       )       -        -">
-        <textarea name="textarea" cols="30" rows="10" class="query-form__quest form-input" placeholder="Ваш вопрос"></textarea>
-        <footer class="query-form__footer">
-          <a href="#" class="query-form__submit btn">Оставить заявку</a>
-          <div class="query-form__agreement agreement">
-            Отправляя данную форму, я соглашаюсь с политикой обработки персональных данных
-          </div>
-        </footer>
+        <div class="query-form__block">
+          <input type="text" class="query-form__name form-name form-input" placeholder="Имя">
+          <input type="tel" class="query-form__tel form-input" placeholder="+7  (       )       -        -">
+          <textarea name="textarea" cols="30" rows="10" class="query-form__quest form-input" placeholder="Ваш вопрос"></textarea>
+          <footer class="query-form__footer">
+            <a href="#" class="query-form__submit btn">Оставить заявку</a>
+            <div class="query-form__agreement agreement">
+              Отправляя данную форму, я соглашаюсь с политикой обработки персональных данных
+            </div>
+          </footer>
+        </div>
       </form>
     </section> <!-- !requisition -->
     <section class="awards">
@@ -1364,15 +1504,17 @@
         </div>
       </div>
       <form action="post" class="query-form">
-        <input type="text" class="query-form__name form-name form-input" placeholder="Имя">
-        <input type="number" class="query-form__tel form-input" placeholder="+7  (       )       -        -">
-        <textarea name="textarea" cols="30" rows="10" class="query-form__quest form-input" placeholder="Ваш вопрос"></textarea>
-        <footer class="query-form__footer">
-          <a href="#" class="query-form__submit btn">Оставить заявку</a>
-          <div class="query-form__agreement agreement">
-            Отправляя данную форму, я соглашаюсь с политикой обработки персональных данных
-          </div>
-        </footer>
+        <div class="query-form__block">
+          <input type="text" class="query-form__name form-name form-input" placeholder="Имя">
+          <input type="tel" class="query-form__tel form-input" placeholder="+7  (       )       -        -">
+          <textarea name="textarea" cols="30" rows="10" class="query-form__quest form-input" placeholder="Ваш вопрос"></textarea>
+          <footer class="query-form__footer">
+            <a href="#" class="query-form__submit btn">Оставить заявку</a>
+            <div class="query-form__agreement agreement">
+              Отправляя данную форму, я соглашаюсь с политикой обработки персональных данных
+            </div>
+          </footer>
+        </div>
       </form>
     </section> <!-- !requisition -->
     <section class="news">
@@ -1405,7 +1547,7 @@
                   Артем Опарин
                 </div>
                 <div class="news-item__views">
-                  156
+                  <span>156</span>
                 </div>
               </header>
               <div class="news-item__content">
@@ -1435,7 +1577,9 @@
                   Артем Опарин
                 </div>
                 <div class="news-item__views">
-                  156
+                  <span>
+                    156
+                  </span>
                 </div>
               </header>
               <div class="news-item__content">
@@ -1472,7 +1616,7 @@
                   Артем Опарин
                 </div>
                 <div class="news-item__views">
-                  156
+                  <span>156</span>
                 </div>
               </header>
               <div class="news-item__content">
@@ -1504,7 +1648,7 @@
                   Артем Опарин
                 </div>
                 <div class="news-item__views">
-                  156
+                  <span>156</span>
                 </div>
               </header>
               <div class="news-item__content">
@@ -1584,8 +1728,8 @@
   </main>
   <footer class="footer">
     <section class="footer-header">
-      <a href="index.html" class="logo">
-        <img src="img/logo.png" alt="logo" class="logo_img">
+      <a href="index.html" class="logo footer__logo-top">
+        <img src="img/logo.png" alt="logo" class="logo__img">
       </a>
       <div class="footer-social">
 
@@ -1674,20 +1818,20 @@
         <h4 class="footer-content__title">
           О компании
         </h4>
-        <ul class="footer-content__list">
-          <li class="footer-content__elemlist"><a href="aboutsystem.html" class="footer-content__link">О
+        <ul class="footer-content__list" id="footer-menu1">
+          <li><a href="aboutsystem.html">О
               системе</a></li>
-          <li class="footer-content__elemlist"><a href="aboutmodules.html" class="footer-content__link">Модули
+          <li><a href="aboutmodules.html">Модули
               системы</a></li>
-          <li class="footer-content__elemlist"><a href="contacts.html" class="footer-content__link">Контакты</a>
+          <li><a href="contacts.html">Контакты</a>
           </li>
-          <li class="footer-content__elemlist"><a href="aboutus.html" class="footer-content__link">О нас</a></li>
-          <li class="footer-content__elemlist"><a href="reviews.html" class="footer-content__link">Отзывы</a></li>
-          <li class="footer-content__elemlist"><a href="articles.html" class="footer-content__link">Статьи</a>
+          <li><a href="aboutus.html">О нас</a></li>
+          <li><a href="reviews.html">Отзывы</a></li>
+          <li><a href="articles.html">Статьи</a>
           </li>
-          <li class="footer-content__elemlist"><a href="faq.html" class="footer-content__link">Вопрос-Ответ</a>
+          <li><a href="faq.html">Вопрос-Ответ</a>
           </li>
-          <li class="footer-content__elemlist"><a href="vacancies.html" class="footer-content__link">Вакансии</a>
+          <li><a href="vacancies.html">Вакансии</a>
           </li>
         </ul>
       </nav>
@@ -1695,10 +1839,10 @@
         <h4 class="footer-content__title">
           Услуги
         </h4>
-        <ul class="footer-content__list">
-          <li class="footer-content__elemlist"><a href="introduction.html" class="footer-content__link">Внедрение
+        <ul class="footer-content__list" id="footer-menu2">
+          <li><a href="introduction.html">Внедрение
               системы</a></li>
-          <li class="footer-content__elemlist"><a href="#" class="footer-content__link">Сопровождение системы</a>
+          <li><a href="#">Сопровождение системы</a>
           </li>
         </ul>
       </nav>
@@ -1706,12 +1850,12 @@
         <h4 class="footer-content__title">
           Наши направления
         </h4>
-        <ul class="footer-content__list">
-          <li class="footer-content__elemlist"><a href="security.html" class="footer-content__link">Охрана
+        <ul class="footer-content__list" id="footer-menu3">
+          <li><a href="security.html">Охрана
               труда</a></li>
-          <li class="footer-content__elemlist"><a href="#" class="footer-content__link">Пожарная безопасность</a>
+          <li><a href="#">Пожарная безопасность</a>
           </li>
-          <li class="footer-content__elemlist"><a href="#" class="footer-content__link">Промышленная
+          <li><a href="#">Промышленная
               безопасность</a></li>
         </ul>
       </nav>
@@ -1719,15 +1863,15 @@
         <h4 class="footer-content__title">
           Контакты
         </h4>
-        <ul class="footer-content__list">
-          <li class="footer-content__elemlist">Круглосуточная поддержка</li>
-          <li class="footer-content__elemlist"><a href="tel:88005504820" class="footer-content__link"><span>8-800-550-48-20</span></a>
+        <ul class="footer-content__list" id="footer-menu4">
+          <li>Круглосуточная поддержка</li>
+          <li><a href="tel:88005504820"><span>8-800-550-48-20</span></a>
           </li>
-          <li class="footer-content__elemlist">Наш E-mail:</li>
-          <li class="footer-content__elemlist"><a href="email:info@isu-pb.ru" class="footer-content__link"><span>info@isu-pb.ru</span></a>
+          <li>Наш E-mail:</li>
+          <li><a href="email:info@isu-pb.ru"><span>info@isu-pb.ru</span></a>
           </li>
-          <li class="footer-content__elemlist">Наш адрес:</li>
-          <li class="footer-content__elemlist"><a href="#" class="footer-content__link"><span>610035, Киров, Воровского, 78а</span></a>
+          <li>Наш адрес:</li>
+          <li><a href="#"><span>610035, Киров, Воровского, 78а</span></a>
           </li>
         </ul>
       </nav>
@@ -1735,11 +1879,11 @@
         <h4 class="footer-content__title">
           Юридическая информация
         </h4>
-        <ul class="footer-content__list">
-          <li class="footer-content__elemlist">Лицензия №5316 от 25.12.2019</li>
-          <li class="footer-content__elemlist"><a href="#" class="footer-content__link"><span>Проверить лицензию</span></a>
+        <ul class="footer-content__list" id="footer-menu5">
+          <li>Лицензия №5316 от 25.12.2019</li>
+          <li><a href="#"><span>Проверить лицензию</span></a>
           </li>
-          <li class="footer-content__elemlist">Р/c № 4000000000000000 в
+          <li>Р/c № 4000000000000000 в
             ВТБ 24 (ПАО) Г. МОСКВА
             к/c 300000000000000000,
             БИК 000000000
@@ -1749,6 +1893,9 @@
 
     </section>
     <section class="footer-footer">
+      <a href="index.html" class="logo footer__logo-bottom">
+        <img src="img/logo.png" alt="logo" class="logo__img">
+      </a>
       <div class="footer-footer__copy">
         2020 Информпроект «ИСУПБ»
       </div>
@@ -1782,14 +1929,15 @@
   <aside class="modal-call">
     <div class="modal-call__wrapper">
       <form action="post" class="modal-form">
-        <input type="text" class="modal-form__input form-input" placeholder="Имя">
-        <input type="number" class="form-input modal-form__input" placeholder="+7  (       )       -        -">
-        <textarea name="textarea" cols="30" rows="10" class="form-input modal-form__area" placeholder="Ваш вопрос"></textarea>
-        <a href="#" class="btn modal-form__btn">заказать звонок</a>
-        <div class="agreement modal-form__agreement">
-          Отправляя данную форму, я соглашаюсь с политикой обработки персональных данных
+        <div>
+          <input type="text" class="modal-form__input form-input" placeholder="Имя">
+          <input type="tel" class="form-input modal-form__input" placeholder="+7  (       )       -        -">
+          <textarea name="textarea" cols="30" rows="10" class="form-input modal-form__area" placeholder="Ваш вопрос"></textarea>
+          <a href="#" class="btn modal-form__btn">заказать звонок</a>
+          <div class="agreement modal-form__agreement">
+            Отправляя данную форму, я соглашаюсь с политикой обработки персональных данных
+          </div>
         </div>
-
       </form>
       <div class="modal-call__exit">
         <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1804,15 +1952,18 @@
   <aside class="modal-free">
     <div class="modal-free__wrapper">
       <form action="post" class="modal-form">
-        <input type="text" class="modal-form__input form-input" placeholder="Имя">
-        <input type="number" class="form-input modal-form__input" placeholder="+7  (       )       -        -">
-        <input type="email" class="modal-form__input form-input" placeholder="Email">
-        <input type="text" class="form-input modal-form__input" placeholder="Название компании">
-        <a href="#" class="btn modal-form__btn">отправить</a>
-        <div class="agreement modal-form__agreement">
-          Отправляя данную форму, я соглашаюсь с политикой обработки персональных данных
-        </div>
+        <div>
 
+
+          <input type="text" class="modal-form__input form-input" placeholder="Имя">
+          <input type="tel" class="form-input modal-form__input" placeholder="+7  (       )       -        -">
+          <input type="email" class="modal-form__input form-input" placeholder="Email">
+          <input type="text" class="form-input modal-form__input" placeholder="Название компании">
+          <a href="#" class="btn modal-form__btn">отправить</a>
+          <div class="agreement modal-form__agreement">
+            Отправляя данную форму, я соглашаюсь с политикой обработки персональных данных
+          </div>
+        </div>
       </form>
       <div class="modal-free__exit">
         <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1828,9 +1979,9 @@
     <div class="modal-region__wrapper">
       <div class="modal-region__row">
         <p class="modal-region__city">
-          Ваш город: Санкт-Петербург?
+          Ваш город: <span class="js-select-city">Санкт-Петербург</span>?
         </p>
-        <a href="#" class="btn modal-region__btn">
+        <a href="#" class="btn modal-region__btn js-region-close">
           да
         </a>
 
