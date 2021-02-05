@@ -11,7 +11,7 @@
   &__subtitle {
     font-size: 14px;
     font-weight: 300;
-    padding-bottom: 30px;
+    padding-bottom: 40px;
   }
 
   &__readmore {
@@ -30,13 +30,11 @@
     padding-right: calc(15px + (75 - 18) * ((100vw - 991px) / (1630 - 991)));
 
     &__title {
-      font-size: calc(26px + (40 - 26) * ((100vw - 991px) / (1630 - 991)));
-      padding-bottom: calc(20px + (40 - 20) * ((100vw - 991px) / (1630 - 991)));
+      font-size: calc(30px + (40 - 30) * ((100vw - 991px) / (1630 - 991)));
     }
 
     &__subtitle {
       font-size: calc(10px + (14 - 10) * ((100vw - 991px) / (1630 - 991)));
-      padding-bottom: calc(10px + (30 - 10) * ((100vw - 991px) / (1630 - 991)));
     }
 
     &__readmore {
@@ -54,8 +52,7 @@
     width: 50%;
 
     &__title {
-      font-size: 26px;
-      padding-bottom: 20px;
+      font-size: 30px;
     }
 
     &__subtitle {
@@ -73,8 +70,10 @@
     width: 100%;
     padding-bottom: 30px;
     &__title {
-      font-size: 26px;
-      padding-bottom: 20px;
+
+      font-size: 30px;
+      text-align: center;
+      padding-bottom: 40px;
     }
 
     &__subtitle {

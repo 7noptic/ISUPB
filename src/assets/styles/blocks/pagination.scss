@@ -30,6 +30,26 @@
     }
   }
 }
+.nav-links{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.page-numbers{
+  padding-right: 20px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 300;
+  &.current{
+    font-weight: 600;
+    font-size: 18px;
+  }
+  &.next,&.prev{
+    font-size: 14px;
+    font-weight: 600;
+    padding-right: 20px;
+  }
+}
 @media (max-width: 991px){
   .pagination {
     margin-bottom: 30px;
@@ -54,6 +74,26 @@
       &-active {
         font-size: 14px;
       }
+    }
+  }
+  .nav-links{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .page-numbers{
+    padding-right: 12px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 300;
+    &.current{
+      font-weight: 600;
+      font-size: 14px;
+    }
+    &.next,&.prev{
+      font-size: 10px;
+      font-weight: 600;
+      padding-right: 12px;
     }
   }
 }

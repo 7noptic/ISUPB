@@ -68,6 +68,9 @@ display: flex;
     font-size: 12px;
     display: block;
     width: 100%;
+    &:hover{
+      color: $orange;
+    }
   }
   &__exit {
     font-size: 26px;

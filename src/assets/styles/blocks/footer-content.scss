@@ -177,12 +177,14 @@
 
     &__title {
       position: relative;
+      cursor: pointer;
 
       &::after {
         content: url("../img/ularrow.svg");
         position: absolute;
         top: -3px;
         right: 10%;
+        transform: rotate(180deg);
       }
 
       &.active {
@@ -191,7 +193,7 @@
           position: absolute;
           top: 0px;
           right: 10%;
-          transform: rotate(180deg);
+          transform: rotate(0deg);
         }
       }
     }

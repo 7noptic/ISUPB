@@ -243,7 +243,7 @@
                                         <div class="information-form__form-top">
                                             <input class="information-form__input form-input" type="text"
                                                    placeholder="Имя">
-                                            <input class="information-form__input form-input" type="number"
+                                            <input class="information-form__input form-input" type="tel"
                                                    placeholder="+7  (       )       -        -">
                                         </div>
                                         <div class="information-form__form-bottom">
@@ -311,7 +311,7 @@
                                         <div class="information-form__form-top">
                                             <input class="information-form__input form-input" type="text"
                                                    placeholder="Имя">
-                                            <input class="information-form__input form-input" type="number"
+                                            <input class="information-form__input form-input" type="tel"
                                                    placeholder="+7  (       )       -        -">
                                         </div>
                                         <div class="information-form__form-bottom">
@@ -379,7 +379,7 @@
                                         <div class="information-form__form-top">
                                             <input class="information-form__input form-input" type="text"
                                                    placeholder="Имя">
-                                            <input class="information-form__input form-input" type="number"
+                                            <input class="information-form__input form-input" type="tel"
                                                    placeholder="+7  (       )       -        -">
                                         </div>
                                         <div class="information-form__form-bottom">
@@ -447,7 +447,7 @@
                                         <div class="information-form__form-top">
                                             <input class="information-form__input form-input" type="text"
                                                    placeholder="Имя">
-                                            <input class="information-form__input form-input" type="number"
+                                            <input class="information-form__input form-input" type="tel"
                                                    placeholder="+7  (       )       -        -">
                                         </div>
                                         <div class="information-form__form-bottom">
@@ -515,7 +515,7 @@
                                         <div class="information-form__form-top">
                                             <input class="information-form__input form-input" type="text"
                                                    placeholder="Имя">
-                                            <input class="information-form__input form-input" type="number"
+                                            <input class="information-form__input form-input" type="tel"
                                                    placeholder="+7  (       )       -        -">
                                         </div>
                                         <div class="information-form__form-bottom">
@@ -913,7 +913,7 @@
         <form action="post" class="query-form">
             <div class="query-form__block">
                 <input type="text" class="query-form__name form-name form-input" placeholder="Имя">
-                <input type="number" class="query-form__tel form-input" placeholder="+7  (       )       -        -">
+                <input type="tel" class="query-form__tel form-input" placeholder="+7  (       )       -        -">
                 <textarea name="textarea" cols="30" rows="10" class="query-form__quest form-input"
                           placeholder="Ваш вопрос"></textarea>
                 <footer class="query-form__footer">
@@ -1268,7 +1268,7 @@
         <form action="post" class="query-form">
             <div class="query-form__block">
                 <input type="text" class="query-form__name form-name form-input" placeholder="Имя">
-                <input type="number" class="query-form__tel form-input" placeholder="+7  (       )       -        -">
+                <input type="tel" class="query-form__tel form-input" placeholder="+7  (       )       -        -">
                 <textarea name="textarea" cols="30" rows="10" class="query-form__quest form-input"
                           placeholder="Ваш вопрос"></textarea>
                 <footer class="query-form__footer">
@@ -1710,7 +1710,7 @@
         <form action="post" class="query-form">
             <div class="query-form__block">
                 <input type="text" class="query-form__name form-name form-input" placeholder="Имя">
-                <input type="number" class="query-form__tel form-input" placeholder="+7  (       )       -        -">
+                <input type="tel" class="query-form__tel form-input" placeholder="+7  (       )       -        -">
                 <textarea name="textarea" cols="30" rows="10" class="query-form__quest form-input"
                           placeholder="Ваш вопрос"></textarea>
                 <footer class="query-form__footer">
@@ -1752,7 +1752,7 @@
                                 Артем Опарин
                             </div>
                             <div class="news-item__views">
-                                156
+                                <span>156</span>
                             </div>
                         </header>
                         <div class="news-item__content">
@@ -1782,7 +1782,9 @@
                                 Артем Опарин
                             </div>
                             <div class="news-item__views">
-                                156
+                                <span>
+                                    156
+                                </span>
                             </div>
                         </header>
                         <div class="news-item__content">
@@ -1819,7 +1821,7 @@
                                 Артем Опарин
                             </div>
                             <div class="news-item__views">
-                                156
+                                <span>156</span>
                             </div>
                         </header>
                         <div class="news-item__content">
@@ -1851,7 +1853,7 @@
                                 Артем Опарин
                             </div>
                             <div class="news-item__views">
-                                156
+                                <span>156</span>
                             </div>
                         </header>
                         <div class="news-item__content">
@@ -1943,8 +1945,8 @@
 </main>
 <footer class="footer">
     <section class="footer-header">
-        <a href="index.html" class="logo">
-            <img src="img/logo.png" alt="logo" class="logo_img">
+        <a href="index.html" class="logo footer__logo-top">
+            <img src="img/logo.png" alt="logo" class="logo__img">
         </a>
         <div class="footer-social">
 
@@ -2130,6 +2132,9 @@
 
     </section>
     <section class="footer-footer">
+        <a href="index.html" class="logo footer__logo-bottom">
+            <img src="img/logo.png" alt="logo" class="logo__img">
+        </a>
         <div class="footer-footer__copy">
             2020 Информпроект «ИСУПБ»
         </div>
@@ -2180,7 +2185,7 @@
     <div class="modal-call__wrapper">
         <form action="post" class="modal-form">
             <input type="text" class="modal-form__input form-input" placeholder="Имя">
-            <input type="number" class="form-input modal-form__input" placeholder="+7  (       )       -        -">
+            <input type="tel" class="form-input modal-form__input" placeholder="+7  (       )       -        -">
             <textarea name="textarea" cols="30" rows="10" class="form-input modal-form__area"
                       placeholder="Ваш вопрос"></textarea>
             <a href="#" class="btn modal-form__btn">заказать звонок</a>
@@ -2205,7 +2210,7 @@
     <div class="modal-free__wrapper">
         <form action="post" class="modal-form">
             <input type="text" class="modal-form__input form-input" placeholder="Имя">
-            <input type="number" class="form-input modal-form__input" placeholder="+7  (       )       -        -">
+            <input type="tel" class="form-input modal-form__input" placeholder="+7  (       )       -        -">
             <input type="email" class="modal-form__input form-input" placeholder="Email">
             <input type="text" class="form-input modal-form__input" placeholder="Название компании">
             <a href="#" class="btn modal-form__btn">отправить</a>
@@ -2230,9 +2235,9 @@
     <div class="modal-region__wrapper">
         <div class="modal-region__row">
             <p class="modal-region__city">
-                Ваш город: Санкт-Петербург?
+                Ваш город: <span class="js-select-city">Санкт-Петербург</span>?
             </p>
-            <a href="#" class="btn modal-region__btn">
+            <a href="#" class="btn modal-region__btn js-region-close">
                 да
             </a>
 

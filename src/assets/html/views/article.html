@@ -207,8 +207,8 @@
                         Артем Опарин
                     </div>
                     <div class="news-item__views">
-                        156
-                    </div>
+                                <span>156</span>
+                            </div>
                 </header>
                 <div class="article__img">
                     <img src="img/article.jpg" alt="article">
@@ -597,7 +597,7 @@
     <div class="modal-call__wrapper">
         <form action="post" class="modal-form">
             <input type="text" class="modal-form__input form-input" placeholder="Имя">
-            <input type="number" class="form-input modal-form__input" placeholder="+7  (       )       -        -">
+            <input type="tel" class="form-input modal-form__input" placeholder="+7  (       )       -        -">
             <textarea name="textarea" cols="30" rows="10" class="form-input modal-form__area"
                       placeholder="Ваш вопрос"></textarea>
             <a href="#" class="btn modal-form__btn">заказать звонок</a>
@@ -622,7 +622,7 @@
     <div class="modal-free__wrapper">
         <form action="post" class="modal-form">
             <input type="text" class="modal-form__input form-input" placeholder="Имя">
-            <input type="number" class="form-input modal-form__input" placeholder="+7  (       )       -        -">
+            <input type="tel" class="form-input modal-form__input" placeholder="+7  (       )       -        -">
             <input type="email" class="modal-form__input form-input" placeholder="Email">
             <input type="text" class="form-input modal-form__input" placeholder="Название компании">
             <a href="#" class="btn modal-form__btn">отправить</a>
@@ -647,9 +647,9 @@
     <div class="modal-region__wrapper">
         <div class="modal-region__row">
             <p class="modal-region__city">
-                Ваш город: Санкт-Петербург?
+                Ваш город: <span class="js-select-city">Санкт-Петербург</span>?
             </p>
-            <a href="#" class="btn modal-region__btn">
+            <a href="#" class="btn modal-region__btn js-region-close">
                 да
             </a>
 

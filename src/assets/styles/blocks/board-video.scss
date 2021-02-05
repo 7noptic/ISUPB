@@ -1,13 +1,14 @@
 .board-video {
-  width: 50%;
+  width: 48%;
   display: flex;
-  justify-content: center;
   align-items: center;
   padding-top: 100px;
+  &__board{
+    justify-content: space-between;
 
+  }
   &__content {
     width: 100%;
-    padding: 0 70px;
 
     & > iframe {
       width: 100%;
@@ -91,7 +92,6 @@
     padding-top: calc(30px + (100 - 30) * ((100vw - 767px) / (1440 - 767)));
 
     &__content {
-      padding: 0 calc(15px + (70 - 15) * ((100vw - 767px) / (1440 - 767)));;
 
       & > iframe {
         min-height: calc(200px + (350 - 200) * ((100vw - 767px) / (1440 - 767)));;
@@ -106,7 +106,6 @@
     padding-top: 15px;
 
     &__content {
-      padding: 0;
 
       & > iframe {
         min-height: 300px;

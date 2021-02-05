@@ -5,14 +5,17 @@
   &__item {
     padding-bottom: 20px;
   }
-&__faq{
-}
+
+  &__faq {
+  }
+
   &__link {
     font-size: 18px;
     display: flex;
     align-items: center;
     transition: $transition4;
     width: 100%;
+
     &:hover {
       & .stages-list__hexagon {
         background-color: lighten($yellow, 25%);
@@ -32,6 +35,10 @@
       align-items: center;
       font-size: 18px;
       font-weight: 700;
+
+      & > span {
+        color: #fff;
+      }
     }
   }
 
@@ -112,6 +119,10 @@
 
     &__link {
       font-size: calc(14px + (18 - 14) * ((100vw - 991px) / (1630 - 991)));
+
+      & > span {
+        font-size: 18px;
+      }
     }
 
     padding-top: 20px;
@@ -133,6 +144,10 @@
 
     &__link {
       font-size: 14px;
+
+      & > span {
+        font-size: 18px;
+      }
     }
 
 
@@ -143,6 +158,7 @@
     }
   }
 }
+
 @media screen and (max-width: 991px) {
   .stages-list {
     width: 100%;
@@ -154,11 +170,55 @@
 
     &__link {
       font-size: 14px;
+
+      & > span {
+        font-size: 18px;
+      }
     }
 
 
     &__title {
       padding-bottom: 50px;
+    }
+    &__hexagon {
+      min-width: 38px;
+      height: 24px;
+      margin: 15px 15px 15px 0px;
+
+
+      &:before,
+      &:after {
+        border-left: 19px solid transparent;
+        border-right: 19px solid transparent;
+      }
+
+      &:before {
+        border-bottom: 15px solid #f7f7f7;
+      }
+
+      &:after {
+        border-top: 15px solid #f7f7f7;
+      }
+    }
+
+    &__hexagon-active {
+      width: 38px;
+      height: 24px;
+      margin: 15px 15px 15px 0px;
+
+      &:before,
+      &:after {
+        border-left: 19px solid transparent;
+        border-right: 19px solid transparent;
+      }
+
+      &:before {
+        border-bottom: 15px solid $yellow;
+      }
+
+      &:after {
+        border-top: 15px solid $yellow;
+      }
     }
   }
 }

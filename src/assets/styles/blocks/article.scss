@@ -109,3 +109,15 @@ flex-wrap: wrap;
     }
   }
 }
+@media screen and (max-width: 575px){
+  .article{
+    &__header{
+     &>.news-item__author{
+       order: 1;
+     }
+      &>.news-item__views{
+        order: 2;
+      }
+    }
+  }
+}

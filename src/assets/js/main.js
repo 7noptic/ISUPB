@@ -21,7 +21,12 @@ window.addEventListener('DOMContentLoaded', () => {
         }
 
     });
-    /* ТАБЫ */
+
+    $('[type="tel"]').mask("+7 (999) 999-99-99");
+
+
+
+/* ТАБЫ */
     const tabs = document.querySelectorAll('.js-stages__link'),
         tabsFaq = document.querySelectorAll('.js-faq__list'),
         tabsContent = document.querySelectorAll('.js-stages__tab'),
@@ -129,6 +134,7 @@ window.addEventListener('DOMContentLoaded', () => {
             showHideTabs(event, 0, aboutsContent, 'active', abouts, 'active', false, 'characteristic');
         }, {passive: false});
     }
+
     function showHideTabs(event, i = 0, content = tabsContent, contentClass = 'active', link = tabs, linkClass = 'stages-list__link-active', hexagonTrigger = true, classCheck = 'stages-list__link', hexagon = tabsHexagon, hexagonClass = 'stages-list__hexagon-active') {
         const target = event.target;
         if (target && target.classList.contains(classCheck)) {
@@ -389,7 +395,9 @@ window.addEventListener('DOMContentLoaded', () => {
             modalVacancies = document.querySelector('.modal-vacancies'),
             exitVacancies = document.querySelector('.modal-vacancies__exit'),
             modalFree = document.querySelector('.modal-free'),
-            exitFree = document.querySelector('.modal-free__exit');
+            exitFree = document.querySelector('.modal-free__exit'),
+            regionSelect = document.querySelectorAll('.modal-region__link'),
+            regionBtn = document.querySelector('.js-region');
 
 
         /* открытие модалок */
@@ -439,6 +447,40 @@ window.addEventListener('DOMContentLoaded', () => {
                 event.preventDefault();
                 closeModal(modalRegion);
             });
+            if (target.classList.contains('modal-region__link')) {
+                event.preventDefault();
+                closeModal(modalRegion);
+                regionSelect.forEach(item => {
+                    if (item == target) {
+                        regionBtn.innerHTML = `
+                <div class="location__item">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15.9291 2.45591C14.3454 0.872191 12.2397 0 10.0001 0C7.76042 0 5.65478 0.872152 4.07099 2.45591C2.4873 4.03959 1.61511 6.14514 1.61511 8.3848C1.61511 10.6245 2.4873 12.7301 4.07099 14.3138L9.58578 19.8284C9.7002 19.9429 9.85016 20 10.0001 20C10.15 20 10.3 19.9428 10.4144 19.8284L15.929 14.3138C17.5127 12.7301 18.3849 10.6245 18.3849 8.38484C18.3849 6.1451 17.5127 4.03955 15.9291 2.45591ZM12.6334 11.018C11.93 11.7214 10.9949 12.1088 10.0001 12.1088C9.00539 12.1088 8.07023 11.7214 7.3669 11.0181C6.6635 10.3147 6.27615 9.37953 6.27615 8.3848C6.27615 7.39011 6.6635 6.45495 7.3669 5.75155C8.07023 5.04818 9.00539 4.66084 10.0001 4.66084C10.9949 4.66084 11.93 5.04818 12.6334 5.75155C13.3367 6.45487 13.7241 7.39003 13.7241 8.38476C13.7241 9.37949 13.3367 10.3147 12.6334 11.018Z"
+                              fill="black"/>
+                    </svg>
+                    <div class="location__item-text">${item.innerHTML}</div>
+                </div>
+`;
+                    }
+                });
+
+            }else if(target.classList.contains('js-region-close')){
+                event.preventDefault();
+                let city = document.querySelector('.js-select-city');
+                closeModal(modalRegion);
+
+                        regionBtn.innerHTML = `
+                <div class="location__item">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15.9291 2.45591C14.3454 0.872191 12.2397 0 10.0001 0C7.76042 0 5.65478 0.872152 4.07099 2.45591C2.4873 4.03959 1.61511 6.14514 1.61511 8.3848C1.61511 10.6245 2.4873 12.7301 4.07099 14.3138L9.58578 19.8284C9.7002 19.9429 9.85016 20 10.0001 20C10.15 20 10.3 19.9428 10.4144 19.8284L15.929 14.3138C17.5127 12.7301 18.3849 10.6245 18.3849 8.38484C18.3849 6.1451 17.5127 4.03955 15.9291 2.45591ZM12.6334 11.018C11.93 11.7214 10.9949 12.1088 10.0001 12.1088C9.00539 12.1088 8.07023 11.7214 7.3669 11.0181C6.6635 10.3147 6.27615 9.37953 6.27615 8.3848C6.27615 7.39011 6.6635 6.45495 7.3669 5.75155C8.07023 5.04818 9.00539 4.66084 10.0001 4.66084C10.9949 4.66084 11.93 5.04818 12.6334 5.75155C13.3367 6.45487 13.7241 7.39003 13.7241 8.38476C13.7241 9.37949 13.3367 10.3147 12.6334 11.018Z"
+                              fill="black"/>
+                    </svg>
+                    <div class="location__item-text">${city.innerHTML}</div>
+                </div>
+`;
+
+            }
+
         }
         if (exitVacancies) {
             exitVacancies.addEventListener('click', (event) => {

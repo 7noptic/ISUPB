@@ -1,20 +1,23 @@
 .requisites{
   padding-bottom: 100px;
   &__board{
-    max-width: 500px;
+    max-width: 550px;
     width: 100%;
     margin: 0 auto;
     display: flex;
   }
   &__list{
     width: 50%;
-
+    &:first-of-type,&:first-child{
+      padding-right: 60px;
+    }
   }
   &__item{
-    padding-right: 60px;
+
 
     font-weight: 300;
     font-size: 14px;
+
   }
 }
 @media screen and (max-width: 991px){
@@ -32,10 +35,14 @@
     &__list{
       width: 100%;
       padding-bottom: 20px!important;
+      &:first-of-type,&:first-child{
+        padding-right: 0px;
+      }
     }
     &__item{
       padding-right: 0;
       font-size: 12px;
     }
+
   }
 }

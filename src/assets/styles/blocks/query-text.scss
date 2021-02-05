@@ -39,6 +39,7 @@
 }
 @media screen and (max-width: 767px) {
   .query-text{
+    padding-left: 15px;
     order: 1;
     &__title{
       font-size: 18px;

@@ -26,6 +26,7 @@
   .footer-social{
     width: 100%;
     justify-content: space-between;
+    flex-wrap: wrap;
     padding-top: 30px;
     &__item{
       margin-left: 0;
@@ -35,7 +36,9 @@
 @media screen and (max-width: 575px){
   .footer-social{
     &__title{
-      display: none;
+      width: 100%;
+      padding-bottom: 20px;
+      text-align: center;
     }
 
   }

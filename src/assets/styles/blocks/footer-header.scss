@@ -14,3 +14,15 @@
     flex-wrap: wrap;
   }
 }
+@media screen and (max-width: 575px) {
+  .footer-header{
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: #fff;
+    margin-left: -15px;
+    margin-top: -15px;
+    padding: 15px;
+    width: calc(100% + 30px);
+    height: calc(100% + 15px);
+  }
+}
