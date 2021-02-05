@@ -1,0 +1,38 @@
+.search{
+  width: 100%;
+  max-width: 1630px;
+  padding: 15px 30px 75px ;
+  margin: 0 auto;
+  &__title{
+    font-size: 40px;
+    font-weight: 700;
+  }
+  &__result{
+    font-size: 32px;
+    display: block;
+    padding-bottom: 20px;
+    font-weight: 700;
+    &:hover{
+      color: $orange;
+    }
+  }
+}
+@media screen and (max-width: 1630px){
+  .search{
+    padding: 15px 15px 75px ;
+  }
+}
+@media screen and (max-width: 767px){
+  .search{
+    padding: 15px 15px 40px ;
+    &__result{
+      font-size: 20px;
+      display: block;
+      padding-bottom: 20px;
+      font-weight: 700;
+      &:hover{
+        color: $orange;
+      }
+    }
+  }
+}

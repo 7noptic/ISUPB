@@ -25,8 +25,7 @@ window.addEventListener('DOMContentLoaded', () => {
     $('[type="tel"]').mask("+7 (999) 999-99-99");
 
 
-
-/* ТАБЫ */
+    /* ТАБЫ */
     const tabs = document.querySelectorAll('.js-stages__link'),
         tabsFaq = document.querySelectorAll('.js-faq__list'),
         tabsContent = document.querySelectorAll('.js-stages__tab'),
@@ -53,7 +52,6 @@ window.addEventListener('DOMContentLoaded', () => {
     if (vacanciesParent) {
 
         vacanciesParent.addEventListener('click', (event) => {
-            event.preventDefault();
             showHideTabs(event, 0, vacanciesContent, 'vacancy__content-active', vacancy, 'vacancy-active', true, 'vacancy__header', vacancyHexagon, 'vacancy__img-active');
         }, {passive: false});
     }
@@ -62,7 +60,6 @@ window.addEventListener('DOMContentLoaded', () => {
         showTabsContent(0, newsContent, 'active', news, 'news-subtitle-active', false, 'news-subtitle');
 
         newsParent.addEventListener('click', (event) => {
-            event.preventDefault();
             showHideTabs(event, 0, newsContent, 'active', news, 'news-subtitle-active', false, 'news-subtitle');
         }, {passive: false});
     }
@@ -73,7 +70,6 @@ window.addEventListener('DOMContentLoaded', () => {
             tabsParent.style.minHeight = tabsContent[0].offsetHeight + 'px';
         }
         tabsParent.addEventListener('click', (event) => {
-            event.preventDefault();
             showHideTabs(event);
             /* fix bug height block */
             if (mediaQuery991.matches) {
@@ -99,7 +95,7 @@ window.addEventListener('DOMContentLoaded', () => {
             tabsParentTwo.style.minHeight = tabsFaqContent[0].offsetHeight + 'px';
         }
         tabsParentTwo.addEventListener('click', (event) => {
-            event.preventDefault();
+
             showHideTabs(event, 0, tabsFaqContent, 'active', tabsFaq, 'stages-list__link-active', false, 'stages-list__link');
             /* fix bug height block */
             if (mediaQuery991.matches) {
@@ -138,6 +134,7 @@ window.addEventListener('DOMContentLoaded', () => {
     function showHideTabs(event, i = 0, content = tabsContent, contentClass = 'active', link = tabs, linkClass = 'stages-list__link-active', hexagonTrigger = true, classCheck = 'stages-list__link', hexagon = tabsHexagon, hexagonClass = 'stages-list__hexagon-active') {
         const target = event.target;
         if (target && target.classList.contains(classCheck)) {
+            event.preventDefault();
             link.forEach((item, i) => {
                 if (target == item) {
                     hideTabsContent(content, contentClass, link, linkClass, hexagonTrigger, classCheck, hexagon, hexagonClass);
@@ -284,7 +281,31 @@ window.addEventListener('DOMContentLoaded', () => {
             clickable: true,
         },
 
+
     });
+    var sld = function () {
+
+        if ($(window).width() > 767) {
+
+            let swiperInformation = new Swiper('.swiper-container-information', {
+                slidesPerView: 1,
+                spaceBetween: 200,
+                observer: true,
+                observeParents: true,
+                pagination: {
+                    el: '.swiper-pagination-information',
+                    type: 'bullets',
+                    clickable: true,
+                },
+
+
+            });
+        } else {
+            swiperInformation.destroy(false,false);
+        }
+    };
+    sld();
+    $(window).resize(sld);
     let swiperModule = new Swiper('.swiper-container-module', {
         slidesPerView: 5,
         spaceBetween: 30,
@@ -464,12 +485,12 @@ window.addEventListener('DOMContentLoaded', () => {
                     }
                 });
 
-            }else if(target.classList.contains('js-region-close')){
+            } else if (target.classList.contains('js-region-close')) {
                 event.preventDefault();
                 let city = document.querySelector('.js-select-city');
                 closeModal(modalRegion);
 
-                        regionBtn.innerHTML = `
+                regionBtn.innerHTML = `
                 <div class="location__item">
                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M15.9291 2.45591C14.3454 0.872191 12.2397 0 10.0001 0C7.76042 0 5.65478 0.872152 4.07099 2.45591C2.4873 4.03959 1.61511 6.14514 1.61511 8.3848C1.61511 10.6245 2.4873 12.7301 4.07099 14.3138L9.58578 19.8284C9.7002 19.9429 9.85016 20 10.0001 20C10.15 20 10.3 19.9428 10.4144 19.8284L15.929 14.3138C17.5127 12.7301 18.3849 10.6245 18.3849 8.38484C18.3849 6.1451 17.5127 4.03955 15.9291 2.45591ZM12.6334 11.018C11.93 11.7214 10.9949 12.1088 10.0001 12.1088C9.00539 12.1088 8.07023 11.7214 7.3669 11.0181C6.6635 10.3147 6.27615 9.37953 6.27615 8.3848C6.27615 7.39011 6.6635 6.45495 7.3669 5.75155C8.07023 5.04818 9.00539 4.66084 10.0001 4.66084C10.9949 4.66084 11.93 5.04818 12.6334 5.75155C13.3367 6.45487 13.7241 7.39003 13.7241 8.38476C13.7241 9.37949 13.3367 10.3147 12.6334 11.018Z"

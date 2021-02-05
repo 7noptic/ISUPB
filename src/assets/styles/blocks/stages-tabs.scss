@@ -14,9 +14,11 @@
   padding: 30px 50px 30px 88px;
 
   &__btn {
+    margin-top: 20px;
     padding: 14px 25px;
     font-size: 18px;
     font-weight: 700;
+    display: table;
   }
 
   &:before,

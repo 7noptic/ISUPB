@@ -162,19 +162,17 @@
   .information-form {
     width: 100%;
     &__title {
-      order: 1;
     }
 
     &__subtitle {
-      order: 2;
       font-size: 12px;
       padding-bottom: 25px;
     }
     &__dots{
       order: 4;
+      display: none;
     }
     &__form{
-      display: none;
     }
   }
 }

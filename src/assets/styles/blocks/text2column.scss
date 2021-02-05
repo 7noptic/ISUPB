@@ -1,6 +1,6 @@
 .text2column{
   max-width: 1630px;
-  padding: 80px 30px 100px;
+  padding: 60px 30px 100px;
   margin: 0 auto;
   &__block{
     display: none;
@@ -26,7 +26,7 @@
 }
 @media screen and (max-width: 1630px){
   .text2column{
-    padding: calc(40px + (80 - 40) * ((100vw - 991px) / (1630 - 991))) calc(12px + (30 - 12) * ((100vw - 991px) / (1630 - 991))) calc(40px + (100 - 40) * ((100vw - 991px) / (1630 - 991)));
+    padding: calc(40px + (60 - 40) * ((100vw - 991px) / (1630 - 991))) calc(12px + (30 - 12) * ((100vw - 991px) / (1630 - 991))) calc(40px + (100 - 40) * ((100vw - 991px) / (1630 - 991)));
 
 
 
@@ -39,6 +39,7 @@
 }
 @media screen and (max-width: 767px){
   .text2column{
+    padding: 30px 15px;
     flex-wrap: wrap;
 
     &__img{
