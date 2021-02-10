@@ -1,0 +1,43 @@
+.query-form__block {
+  & > span {
+    width: 48%;
+
+    & > input {
+      width: 100% !important;
+      max-width: 100% !important;
+      margin-right: 0;
+    }
+
+  }
+
+  & > p {
+    width: 100% !important;
+  }
+
+}
+
+.query-form__footer {
+  flex-wrap: wrap;
+}
+@media screen and (max-width: 1080px) {
+
+  .query-form__agreement {
+    width: 80% !important;
+    text-align: center;
+    margin: 0 auto;
+    padding: 15px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .query-form__block {
+    padding: 15px 0 !important;
+  }
+
+}
+@media screen and (max-width: 991px){
+.information-form__form-top{
+  & > span{
+    width: 100%;
+  }
+}
+}

@@ -40,7 +40,7 @@
       }
 
       &:nth-child(4) {
-        & svg {
+        & svg, & img {
           width: calc(94px + (188 - 94) * ((100vw - 991px) / (1630 - 991)));
           height: calc(58px + (116 - 58) * ((100vw - 991px) / (1630 - 991)));
         }
@@ -77,7 +77,7 @@
       }
 
       &:nth-child(4) {
-        & svg {
+        & svg, & img {
           width: 94px ;
           height: 58px ;
         }

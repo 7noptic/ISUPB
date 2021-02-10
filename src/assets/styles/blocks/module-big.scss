@@ -25,7 +25,7 @@
     align-items: center;
     transition: $transition4;
 
-    & svg {
+    & svg, & img {
     }
 
     &:before,
@@ -92,7 +92,7 @@
       height: calc(130px + (174 - 130) * ((100vw - 991px) / (1440 - 991)));
       margin: calc(64px + (86 - 64) * ((100vw - 991px) / (1440 - 991))) 0;
 
-      & svg {
+      & svg, & img {
         width: calc(100px + (140 - 100) * ((100vw - 991px) / (1440 - 991)));
         height: calc(100px + (140 - 100) * ((100vw - 991px) / (1440 - 991)));
       }
@@ -151,7 +151,7 @@
       height: 130px;
       margin: 64px 0;
 
-      & svg {
+      & svg, & img {
         width: 100px;
         height: 100px;
       }

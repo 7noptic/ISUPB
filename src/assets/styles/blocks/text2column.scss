@@ -21,6 +21,16 @@
 }
   &__left,&__right{
     width: 47%;
+    padding-bottom: 30px;
+  }
+  &__img{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    & > div{
+      padding-bottom: 35px;
+    }
   }
 
 }
@@ -43,7 +53,7 @@
     flex-wrap: wrap;
 
     &__img{
-      & svg{
+      & svg, & img{
         width: 25%;
         height: 25%;
       }

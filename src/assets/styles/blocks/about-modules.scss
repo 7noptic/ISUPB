@@ -29,8 +29,24 @@
 
     &-hexagon {
       position: absolute;
-      top: 50px;
-      left: 20px;
+      width: 242px;
+      height: 280px;
+      top: 264px;
+      left: 75px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-image: url('../img/hexagonbg.svg');
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: contain;
+
+      & > img, & > svg {
+        width: 140px !important;
+        height: 140px !important;
+        max-width: 140px !important;
+        max-height: 140px !important;
+      }
     }
   }
 
@@ -75,12 +91,20 @@
     &__img {
 
       &-hexagon {
-        & svg {
-          width: calc(390px + (789 - 390) * ((100vw - 991px) / (1630 - 991)));
-          height: calc(322px + (644 - 322) * ((100vw - 991px) / (1630 - 991)));
+        width: calc(120px + (242 - 120) * ((100vw - 991px) / (1630 - 991)));
+        height: calc(130px + (280 - 130) * ((100vw - 991px) / (1630 - 991)));
+        top: calc(165px + (250 - 165) * ((100vw - 991px) / (1630 - 991)));
+        left: calc(51px + (60 - 51) * ((100vw - 991px) / (1630 - 991)));
+
+        & > img, & > svg {
+          width: calc(60px + (140 - 60) * ((100vw - 991px) / (1630 - 991))) !important;
+          height: calc(60px + (140 - 60) * ((100vw - 991px) / (1630 - 991))) !important;
+          max-width: calc(60px + (140 - 60) * ((100vw - 991px) / (1630 - 991))) !important;
+          max-height: calc(60px + (140 - 60) * ((100vw - 991px) / (1630 - 991))) !important;
         }
       }
     }
+
   }
 }
 
@@ -111,15 +135,25 @@
 
     &__img {
       width: 50%;
+
       &-hexagon {
-        & svg {
-          width: 280px;
-          height: 250px;
+        width: calc(90px + (120 - 90) * ((100vw - 767px) / (991 - 767)));
+        height: calc(100px + (130 - 100) * ((100vw - 767px) / (991 - 767)));
+        top: calc(98px + (127 - 98) * ((100vw - 767px) / (991 - 767)));
+        left: calc(26px + (33 - 26) * ((100vw - 767px) / (991 - 767)));
+
+        & > img, & > svg {
+          width: calc(45px + (60 - 45) * ((100vw - 767px) / (991 - 767))) !important;
+          height: calc(45px + (60 - 45) * ((100vw - 767px) / (991 - 767))) !important;
+          max-width: calc(45px + (60 - 45) * ((100vw - 767px) / (991 - 767))) !important;
+          max-height: calc(45px + (60 - 45) * ((100vw - 767px) / (991 - 767))) !important;
         }
       }
     }
+
   }
 }
+
 @media screen and (max-width: 767px) {
   .about-modules {
 
@@ -145,15 +179,25 @@
 
     &__img {
       width: 100%;
+
       &-hexagon {
-        & svg {
-          width: 390px;
-          height: 322px;
+        width: 120px;
+        height: 130px;
+        top: 0px;
+        left: 0px;
+
+        & > img, & > svg {
+          width: 70px !important;
+          height: 70px !important;
+          max-width: 70px !important;
+          max-height: 70px !important;
         }
       }
+
     }
   }
 }
+
 @media screen and (max-width: 575px) {
   .about-modules {
 
@@ -179,8 +223,19 @@
 
     &__img {
       width: 100%;
+
       &-hexagon {
-        display: none;
+        width: 100px;
+        height: 120px;
+        top: 30px;
+        left: 50px;
+
+        & > img, & > svg {
+          width: 50px !important;
+          height: 50px !important;
+          max-width: 50px !important;
+          max-height: 50px !important;
+        }
       }
     }
   }

@@ -95,10 +95,8 @@
         border-top: calc(25px + (40 - 25) * ((100vw - 992px) / (1440 - 992))) solid #f7f7f7;
       }
 
-      & svg {
-      }
 
-      & svg {
+      & svg, & img {
         width: calc(30px + (60 - 30) * ((100vw - 992px) / (1440 - 992)));
         height: calc(30px + (60 - 30) * ((100vw - 992px) / (1440 - 992)));
       }
@@ -137,7 +135,7 @@
       width: 140px;
       height: 80px;
       margin: 40.41px 0;
-      & svg {
+      & svg, & img {
         width: 60px;
         height: 60px;
       }

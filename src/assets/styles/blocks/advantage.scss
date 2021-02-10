@@ -41,7 +41,7 @@
     &__img {
 
 
-      & svg {
+      & svg, & img {
         width: calc(120px + (180 - 120) * ((100vw - 991px) / (1630 - 991))) !important;
         height: calc(120px + (180 - 120) * ((100vw - 991px) / (1630 - 991))) !important;
       }
@@ -85,7 +85,7 @@
     &__img {
 
 
-      & svg {
+      & svg, & img {
         width: 100px !important;
         height: 100px !important;
       }
@@ -100,11 +100,13 @@
 @media screen and (max-width: 575px) {
   .advantage {
     width: 50%;
-&__subtitle{
-  font-size: 8px;
-  padding-top: 15px;
-}
-    & svg {
+
+    &__subtitle {
+      font-size: 8px;
+      padding-top: 15px;
+    }
+
+    & svg, & img {
       width: 100px !important;
       height: 100px !important;
     }

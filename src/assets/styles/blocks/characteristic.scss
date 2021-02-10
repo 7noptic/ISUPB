@@ -13,6 +13,19 @@
   font-size: 14px;
   font-weight: 300;
 
+  &.active {
+    background-color: $orange;
+    font-weight: 600;
+    color: #fff;
+    &:before {
+      border-left: 10px solid $orange;
+    }
+
+    &:after {
+      border-right: 10px solid $orange;
+    }
+  }
+
   &:hover {
     transform: scale(1.1);
   }

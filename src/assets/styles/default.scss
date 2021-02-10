@@ -58,6 +58,7 @@ a:not([class]) {
 img {
   max-width: 100%;
   display: block;
+  height: auto;
 }
 
 
@@ -93,4 +94,7 @@ textarea {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
+}
+.d-none{
+  display: none !important;
 }

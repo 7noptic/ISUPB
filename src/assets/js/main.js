@@ -22,7 +22,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
     });
 
-    $('[type="tel"]').mask("+7 (999) 999-99-99");
+    //$('[type="tel"]').mask("+7 (999) 999-99-99");
 
 
     /* ТАБЫ */
@@ -271,6 +271,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
     });
     let swiperInformation = new Swiper('.swiper-container-information', {
+
         slidesPerView: 1,
         spaceBetween: 200,
         observer: true,
@@ -282,30 +283,8 @@ window.addEventListener('DOMContentLoaded', () => {
         },
 
 
+
     });
-    var sld = function () {
-
-        if ($(window).width() > 767) {
-
-            let swiperInformation = new Swiper('.swiper-container-information', {
-                slidesPerView: 1,
-                spaceBetween: 200,
-                observer: true,
-                observeParents: true,
-                pagination: {
-                    el: '.swiper-pagination-information',
-                    type: 'bullets',
-                    clickable: true,
-                },
-
-
-            });
-        } else {
-            swiperInformation.destroy(false,false);
-        }
-    };
-    sld();
-    $(window).resize(sld);
     let swiperModule = new Swiper('.swiper-container-module', {
         slidesPerView: 5,
         spaceBetween: 30,
@@ -335,7 +314,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
     });
     let swiperTags = new Swiper('.swiper-container-tags', {
-        slidesPerView: "auto",
+        slidesPerView: 2,
         spaceBetween: 20,
         allowSlidePrev: true,
         allowSlideNext: true,
@@ -456,12 +435,20 @@ window.addEventListener('DOMContentLoaded', () => {
                 event.preventDefault();
                 closeModal(modalCall);
             });
+            if (target.classList.contains('modal-form__btn')) {
+                event.preventDefault();
+                closeModal(modalCall);
+            }
         }
         if (exitFree) {
             exitFree.addEventListener('click', (event) => {
                 event.preventDefault();
                 closeModal(modalFree);
             });
+            if (target.classList.contains('modal-form__btn')) {
+                event.preventDefault();
+                closeModal(modalFree);
+            }
         }
         if (exitRegion) {
             exitRegion.addEventListener('click', (event) => {
