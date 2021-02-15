@@ -314,7 +314,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
     });
     let swiperTags = new Swiper('.swiper-container-tags', {
-        slidesPerView: 2,
+        slidesPerView: "auto",
         spaceBetween: 20,
         allowSlidePrev: true,
         allowSlideNext: true,
@@ -322,6 +322,27 @@ window.addEventListener('DOMContentLoaded', () => {
             nextEl: '.tags__next',
             prevEl: '.tags__prev',
         },
+
+    });
+    let swiperTags2 = new Swiper('.swiper-container-tags-2', {
+        slidesPerView: 2,
+        spaceBetween: 50,
+        allowSlidePrev: true,
+        allowSlideNext: true,
+        navigation: {
+            nextEl: '.tags__next-2',
+            prevEl: '.tags__prev-2',
+        },
+        breakpoints: {
+            0:{
+                slidesPerView: 1,
+                spaceBetween: 100,
+            },
+            767:{
+                slidesPerView: 2,
+                spaceBetween: 50,
+            },
+        }
 
     });
 

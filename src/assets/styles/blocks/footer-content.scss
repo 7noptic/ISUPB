@@ -55,6 +55,9 @@
   &__elemlist {
     padding-bottom: 15px;
     transition: $transition4;
+    & > span{
+      display: block;
+    }
 
     &:active {
       transform: scale(1.05);

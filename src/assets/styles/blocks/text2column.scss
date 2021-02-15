@@ -52,12 +52,6 @@
     padding: 30px 15px;
     flex-wrap: wrap;
 
-    &__img{
-      & svg, & img{
-        width: 25%;
-        height: 25%;
-      }
-    }
     &__left,&__right{
       width: 100%;
     }
