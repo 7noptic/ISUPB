@@ -4,6 +4,9 @@
   border-radius: $radiusBtn;
   transition: $transition4;
   background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   &:hover {
     border: 1px solid rgba(253, 121, 0, .4);;
   }

@@ -286,7 +286,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
     });
     let swiperModule = new Swiper('.swiper-container-module', {
-        slidesPerView: 5,
+        slidesPerView: 4,
         spaceBetween: 30,
         observer: true,
         observeParents: true,
@@ -307,9 +307,8 @@ window.addEventListener('DOMContentLoaded', () => {
             1440: {
                 slidesPerView: 4,
             },
-            1630: {
-                slidesPerView: 5,
-            },
+
+
         }
 
     });
@@ -405,12 +404,28 @@ window.addEventListener('DOMContentLoaded', () => {
         });
 
     }
+    let swal = document.querySelector('.swal2-popup');
+    if(swal){
+        swal.addEventListener('click', (event) => {
+            if (target && target.tagName == 'SPAN')  {
+                event.preventDefault();
+                closeModal(modalRegion);
+                closeModal(modalCall);
+                closeModal(modalSubscribe);
+                closeModal(modalVacancies);
+                closeModal(modalFree);
+            }
+        });
+    }
 
     /* МОДАЛКИ */
     document.addEventListener('click', (event) => {
         const target = event.target,
-            modalCall = document.querySelector('.modal-call'),
-            exitCall = document.querySelector('.modal-call__exit'),
+        modalCall = document.querySelector('.modal-call'),
+        exitCall = document.querySelector('.modal-call__exit'),
+        modalSubscribe = document.querySelector('.modal-subscribe'),
+        exitSubscribe = document.querySelector('.modal-subscribe__exit'),
+        
             modalRegion = document.querySelector('.modal-region'),
             exitRegion = document.querySelector('.modal-region__exit'),
             modalVacancies = document.querySelector('.modal-vacancies'),
@@ -420,6 +435,14 @@ window.addEventListener('DOMContentLoaded', () => {
             regionSelect = document.querySelectorAll('.modal-region__link'),
             regionBtn = document.querySelector('.js-region');
 
+            if (target && target.classList.contains('swal2-confirm')) {
+                event.preventDefault();
+                closeModal(modalRegion);
+                closeModal(modalCall);
+                closeModal(modalVacancies);
+                closeModal(modalFree);
+            }
+
 
         /* открытие модалок */
 
@@ -427,6 +450,12 @@ window.addEventListener('DOMContentLoaded', () => {
             if (target && target.classList.contains('js-call')) {
                 event.preventDefault();
                 openModal(modalCall);
+            }
+        }
+        if (modalSubscribe) {
+            if (target && target.classList.contains('js-subscribe')) {
+                event.preventDefault();
+                openModal(modalSubscribe);
             }
         }
         if (modalFree) {
@@ -456,20 +485,21 @@ window.addEventListener('DOMContentLoaded', () => {
                 event.preventDefault();
                 closeModal(modalCall);
             });
-            if (target.classList.contains('modal-form__btn')) {
+           
+        }
+        if (exitSubscribe) {
+            exitSubscribe.addEventListener('click', (event) => {
                 event.preventDefault();
-                closeModal(modalCall);
-            }
+                closeModal(modalSubscribe);
+            });
+           
         }
         if (exitFree) {
             exitFree.addEventListener('click', (event) => {
                 event.preventDefault();
                 closeModal(modalFree);
             });
-            if (target.classList.contains('modal-form__btn')) {
-                event.preventDefault();
-                closeModal(modalFree);
-            }
+            
         }
         if (exitRegion) {
             exitRegion.addEventListener('click', (event) => {
@@ -518,18 +548,18 @@ window.addEventListener('DOMContentLoaded', () => {
             });
         }
 
-        function openModal(modal) {
-            modal.classList.add('active');
-            $('html').addClass('lock');
-        }
-
-        function closeModal(modal) {
-            modal.classList.remove('active');
-            $('html').removeClass('lock');
-        }
+       
 
     });
+    function openModal(modal) {
+        modal.classList.add('active');
+        $('html').addClass('lock');
+    }
 
+    function closeModal(modal) {
+        modal.classList.remove('active');
+        $('html').removeClass('lock');
+    }
     /* VIDEO */
     function findVideos() {
         let videos = document.querySelectorAll('.video');
@@ -607,8 +637,15 @@ window.addEventListener('DOMContentLoaded', () => {
     });
     /* FIX HEIGHT BLOCK IMG */
     fixedHeight(document.querySelectorAll('.employees__img'));
-    fixedHeight(document.querySelectorAll('.board-article__img'));
-
+    fixedHeight(document.querySelectorAll('.advantage__subtitle'));
+    fixedHeight(document.querySelectorAll('.project'));
+    fixedHeight(document.querySelectorAll('.project__img'));
+    window.addEventListener("resize", (event) => {
+        fixedHeight(document.querySelectorAll('.employees__img'));
+    fixedHeight(document.querySelectorAll('.advantage__subtitle'));
+    fixedHeight(document.querySelectorAll('.project__img'));
+    fixedHeight(document.querySelectorAll('.project'));
+    })
     function fixedHeight(items) {
         let maxHeight = 0;
         items.forEach(item => {

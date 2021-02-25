@@ -15,9 +15,9 @@ get_header(); ?>
                 <a href="/" itemprop="item"><span itemprop="name">Главная</span></a></span>
             <span class="kb_sep"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/headcrumbsarrow.svg)"></span>
             <span itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
-                <a href="/moduli-sistemi/" itemprop="item"><span itemprop="name">Модули</span></a></span>
+                <a href="/moduli-sistemi/" itemprop="item"><span itemprop="name">Модули системы</span></a></span>
             <span class="kb_sep"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/headcrumbsarrow.svg)"></span>
-            <span class="kb_title">Управление обучением</span></div>
+            <span class="kb_title"><?php the_field( 'modul_-_zagolovok_h1' ); ?></span></div>
     </div>
 
     <section class="about-modules">
@@ -82,7 +82,7 @@ get_header(); ?>
         <section class="popular-requries">
             <div class="characteristics__content popular-requries__content">
                 <div class="characteristics__slider popular-requries__slider">
-                    <div class="swiper-container-tags">
+                    <div class="swiper-container-tags-2">
                         <div class="swiper-wrapper">
 
 							<?php while ( have_rows( 'modul_-_taby' ) ): the_row();
@@ -97,6 +97,25 @@ get_header(); ?>
 
 							<?php endwhile; ?>
 
+                        </div>
+                    </div>
+                    <div class="tags__next-2">
+                        <div class="awards-nav__hexagon nav-hexagon nav-hexagon-2">
+                            <svg width="38" height="24" viewBox="0 0 38 24" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path d="M37.9261 12.2002L17.9261 0.65319V23.7472L37.9261 12.2002ZM0 14.2002L19.9261 14.2002V10.2002L0 10.2002L0 14.2002Z"
+                                      fill="black"/>
+                            </svg>
+                        </div>
+
+                    </div>
+                    <div class="tags__prev-2">
+                        <div class="awards-nav__hexagon nav-hexagon">
+                            <svg width="39" height="24" viewBox="0 0 39 24" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0.174015 11.7998L20.174 23.3468L20.174 0.252797L0.174015 11.7998ZM38.1002 9.7998L18.174 9.7998L18.174 13.7998L38.1002 13.7998L38.1002 9.7998Z"
+                                      fill="black"/>
+                            </svg>
                         </div>
                     </div>
                 </div>
@@ -153,10 +172,13 @@ if ( $post_objects ): ?>
 					<?php setup_postdata( $post ); ?>
 
                     <div class="swiper-slide">
-                        <div class="award module-more__item">
+                        <div class="award module-more__item module module-big">
+                        <div class="module__img module__img-big">
                             <a href="<?php the_permalink(); ?>" class="award__img module-more__img">
 								<?php the_post_thumbnail( array( 238, 208 ) ); ?></a>
-                            <h3 class="award__subtitle module-more__subtitle"><a
+                           
+                </div>
+                <h3 class="award__subtitle module-more__subtitle"><a
                                         href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
                         </div>
                     </div>
@@ -164,26 +186,7 @@ if ( $post_objects ): ?>
 				<?php endforeach; ?>
 
             </div>
-            <div class="tags__next">
-                                    <div class="awards-nav__hexagon nav-hexagon nav-hexagon-2">
-                                        <svg width="38" height="24" viewBox="0 0 38 24" fill="none"
-                                             xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M37.9261 12.2002L17.9261 0.65319V23.7472L37.9261 12.2002ZM0 14.2002L19.9261 14.2002V10.2002L0 10.2002L0 14.2002Z"
-                                                  fill="black"/>
-                                        </svg>
-                                    </div>
 
-                                </div>
-                                <div class="tags__prev">
-                                    <div class="awards-nav__hexagon nav-hexagon">
-                                        <svg width="39" height="24" viewBox="0 0 39 24" fill="none"
-                                             xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M0.174015 11.7998L20.174 23.3468L20.174 0.252797L0.174015 11.7998ZM38.1002 9.7998L18.174 9.7998L18.174 13.7998L38.1002 13.7998L38.1002 9.7998Z"
-                                                  fill="black"/>
-                                        </svg>
-                                    </div>
-                                </div>
-        </div>
         <div class="module-more__next">
             <div class="awards-nav__hexagon nav-hexagon nav-hexagon-2">
                 <svg width="38" height="24" viewBox="0 0 38 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -250,9 +253,11 @@ if ( $post_objects ): ?>
 <?php get_template_part( 'template-parts/sections/find-cost' ); ?>
 
 
-<?php if ( have_rows( 'modul_-_tegi' ) ): ?>
+<?php if ( have_rows( 'modul_-_tegi' ) && get_field('modul_-_tegi_-_zagolovok') ): ?>
 
     <section class="popular-requries">
+        <h2 class="popular-requries__subtitle"><?php the_field('modul_-_tegi_-_zagolovok');?></h2>
+
         <div class="characteristics__content popular-requries__content">
             <div class="characteristics__slider popular-requries__slider">
                 <div class="swiper-container-tags">

@@ -6,7 +6,11 @@
   align-items: center;
   width: 50%;
   cursor: pointer;
-
+&:hover{
+  & > .module__text{
+    color: $orange;
+  }
+}
   &__img {
 
     position: relative;

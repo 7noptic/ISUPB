@@ -8,7 +8,7 @@
   justify-content: center;
   position: relative;
   width: 500px;
-  height: 288.94px;
+  height: 315px;
   background-color: #f7f7f7;
   margin: 115.47px 0;
   padding: 15px 100px;
@@ -48,15 +48,14 @@
   &__hexagon-bottom {
     position: absolute;
     left: -300px;
-    bottom: -312px;
+    bottom: -330px;
   }
 
   &__title {
     font-size: 18px;
     font-weight: 700;
-    max-width: 235px;
     padding-bottom: 20px;
-text-align: center;
+text-align: start;
   }
 
 }

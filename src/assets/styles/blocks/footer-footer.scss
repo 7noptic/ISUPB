@@ -45,7 +45,9 @@
       color: $orange;
     }
   }
-
+&__copy{
+  font-size: 12px;
+}
   &__logo {
     transition: $transition4;
     cursor: pointer;

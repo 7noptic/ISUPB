@@ -16,14 +16,14 @@
   &__next {
     position: absolute;
     right: -30px;
-    top: 48%;
+    top: 37%;
     z-index: 10;
   }
 
   &__prev {
     position: absolute;
     left: 0;
-    top: 48%;
+    top: 37%;
     z-index: 10;
   }
 
@@ -47,13 +47,7 @@
   .module-more {
     padding: 40px 30px;
 
-    &__next {
-      top: 45%;
-    }
-
-    &__prev {
-      top: 45%;
-    }
+  
 
     &__title {
       padding-bottom: 40px;

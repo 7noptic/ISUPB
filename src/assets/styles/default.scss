@@ -10,7 +10,7 @@ ol[class] {
 }
 
 .lock {
-  overflow: hidden;
+  //overflow: hidden;
 }
 
 body,
@@ -38,6 +38,7 @@ html, body {
   line-height: 1.5;
   font-family: 'Montserrat', sans-serif;
   overflow-x: hidden;
+ 
 }
 
 
@@ -81,8 +82,22 @@ textarea:focus {
   cursor: pointer;
   border: none;
   outline: none;
+  -webkit-appearance: none;
+       -moz-appearance:    none;
+       appearance:         none;
 }
+input,
+input:active,
+input:focus{
+  &::placeholder{
+    text-align: center!important;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
+  }
+}
 textarea {
   resize: none;
 }

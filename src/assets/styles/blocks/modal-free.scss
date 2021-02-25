@@ -2,14 +2,14 @@
   position: fixed;
   top: 0;
   height: 100%;
-  left: -200%;
+  right: -200%;
   overflow-x: hidden;
   overflow-y: auto;
   z-index: 1000;
-  border-right: 1px solid $orange;
+  border-left: 1px solid $orange;
 
   &.active {
-    left: 0;
+    right: 0;
   }
 
   &__wrapper {
