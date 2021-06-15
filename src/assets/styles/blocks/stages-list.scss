@@ -15,7 +15,16 @@
     align-items: center;
     transition: $transition4;
     width: 100%;
-
+    position: relative;
+&::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 100000000;
+}
     &:hover {
       & .stages-list__hexagon {
         background-color: lighten($yellow, 25%);

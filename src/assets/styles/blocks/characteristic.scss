@@ -27,11 +27,19 @@
   }
 
   &:hover {
-    transform: scale(1.1);
+    background-color: lighten($orange, 30%);
+    &:before {
+      border-left: 10px solid lighten($orange, 30%);
+    }
+
+    &:after {
+      border-right: 10px solid lighten($orange, 30%);
+    }
   }
 
   &:before,
   &:after {
+    transition: $transition4;
     content: "";
     position: absolute;
     width: 0;

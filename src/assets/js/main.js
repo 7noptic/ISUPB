@@ -1,11 +1,47 @@
 'use script';
 import jQuery from 'jquery';
 import $ from 'jquery';
-import Swiper, {Navigation, Pagination} from 'swiper';
+import Swiper, {Navigation, Pagination, Autoplay} from 'swiper';
 import Readmore from "readmore-js";
 
-Swiper.use([Navigation, Pagination]);
+Swiper.use([Navigation, Pagination, Autoplay]);
 window.addEventListener('DOMContentLoaded', () => {
+
+    let benefitItems = document.querySelectorAll('.benefit-item');
+    const mediaQuery = window.matchMedia('(min-width: 992px)');
+    window.addEventListener('resize', numerationBenefit, false);
+    numerationBenefit();
+
+    function numerationBenefit() {
+
+        if (benefitItems) {
+
+            if (mediaQuery.matches) {
+                console.log('yea');
+                let trigger;
+                for (let i = 0, count = 0; i < benefitItems.length; count++, i = i + 2) {
+                    let num = benefitItems[i].querySelector('.benefit-item__num');
+                    if (num) {
+                        num.innerHTML = count + 1;
+                        trigger = count + 1;
+                    }
+                }
+                for (let i = 1, count = trigger - 1; i < benefitItems.length; count++, i = i + 2) {
+                    let num = benefitItems[i].querySelector('.benefit-item__num');
+                    if (num) {
+                        num.innerHTML = count + 2;
+                    }
+                }
+            } else {
+                for (let i = 0; i < benefitItems.length; i++) {
+                    let num = benefitItems[i].querySelector('.benefit-item__num');
+                    if (num) {
+                        num.innerHTML = i + 1;
+                    }
+                }
+            }
+        }
+    }
 
     /* BURGER-MENU */
     $(document).ready(function () {
@@ -79,7 +115,13 @@ window.addEventListener('DOMContentLoaded', () => {
                 if (target && target.classList.contains('stages-list__link')) {
                     tabs.forEach((item, i) => {
                         if (target == item) {
-                            console.log(tabsContent[i].offsetHeight);
+                            tabsParent.style.minHeight = tabsContent[i].offsetHeight + 'px';
+                        }
+                    });
+                }
+                if (target && target.classList.contains('stages-list__hexagon')) {
+                    tabs.forEach((item, i) => {
+                        if (target == item) {
                             tabsParent.style.minHeight = tabsContent[i].offsetHeight + 'px';
                         }
                     });
@@ -88,6 +130,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
         });
     }
+
     if (tabsParentTwo) {
         hideTabsContent(tabsFaqContent, 'active', tabsFaq, 'stages-list__link-active', false, 'stages-list__link');
         showTabsContent(0, tabsFaqContent, 'active', tabsFaq, 'stages-list__link-active', false, 'stages-list__link');
@@ -121,7 +164,8 @@ window.addEventListener('DOMContentLoaded', () => {
     }
     if (aboutsParent) {
         let abouts = aboutsParent.querySelectorAll('.characteristic'),
-            aboutsContent = aboutsParent.querySelectorAll('.text2column__block');
+            aboutsContent = aboutsParent.querySelectorAll('.text2column__right');
+
         hideTabsContent(aboutsContent, 'active', abouts, 'active', false, 'characteristic');
         showTabsContent(0, aboutsContent, 'active', abouts, 'active', false, 'characteristic');
 
@@ -271,7 +315,9 @@ window.addEventListener('DOMContentLoaded', () => {
 
     });
     let swiperInformation = new Swiper('.swiper-container-information', {
-
+        autoplay: {
+            delay: 4000,
+        },
         slidesPerView: 1,
         spaceBetween: 200,
         observer: true,
@@ -281,7 +327,6 @@ window.addEventListener('DOMContentLoaded', () => {
             type: 'bullets',
             clickable: true,
         },
-
 
 
     });
@@ -333,11 +378,11 @@ window.addEventListener('DOMContentLoaded', () => {
             prevEl: '.tags__prev-2',
         },
         breakpoints: {
-            0:{
+            0: {
                 slidesPerView: 1,
                 spaceBetween: 100,
             },
-            767:{
+            767: {
                 slidesPerView: 2,
                 spaceBetween: 50,
             },
@@ -405,9 +450,9 @@ window.addEventListener('DOMContentLoaded', () => {
 
     }
     let swal = document.querySelector('.swal2-popup');
-    if(swal){
+    if (swal) {
         swal.addEventListener('click', (event) => {
-            if (target && target.tagName == 'SPAN')  {
+            if (target && target.tagName == 'SPAN') {
                 event.preventDefault();
                 closeModal(modalRegion);
                 closeModal(modalCall);
@@ -421,11 +466,11 @@ window.addEventListener('DOMContentLoaded', () => {
     /* МОДАЛКИ */
     document.addEventListener('click', (event) => {
         const target = event.target,
-        modalCall = document.querySelector('.modal-call'),
-        exitCall = document.querySelector('.modal-call__exit'),
-        modalSubscribe = document.querySelector('.modal-subscribe'),
-        exitSubscribe = document.querySelector('.modal-subscribe__exit'),
-        
+            modalCall = document.querySelector('.modal-call'),
+            exitCall = document.querySelector('.modal-call__exit'),
+            modalSubscribe = document.querySelector('.modal-subscribe'),
+            exitSubscribe = document.querySelector('.modal-subscribe__exit'),
+
             modalRegion = document.querySelector('.modal-region'),
             exitRegion = document.querySelector('.modal-region__exit'),
             modalVacancies = document.querySelector('.modal-vacancies'),
@@ -435,13 +480,13 @@ window.addEventListener('DOMContentLoaded', () => {
             regionSelect = document.querySelectorAll('.modal-region__link'),
             regionBtn = document.querySelector('.js-region');
 
-            if (target && target.classList.contains('swal2-confirm')) {
-                event.preventDefault();
-                closeModal(modalRegion);
-                closeModal(modalCall);
-                closeModal(modalVacancies);
-                closeModal(modalFree);
-            }
+        if (target && target.classList.contains('swal2-confirm')) {
+            event.preventDefault();
+            closeModal(modalRegion);
+            closeModal(modalCall);
+            closeModal(modalVacancies);
+            closeModal(modalFree);
+        }
 
 
         /* открытие модалок */
@@ -485,21 +530,21 @@ window.addEventListener('DOMContentLoaded', () => {
                 event.preventDefault();
                 closeModal(modalCall);
             });
-           
+
         }
         if (exitSubscribe) {
             exitSubscribe.addEventListener('click', (event) => {
                 event.preventDefault();
                 closeModal(modalSubscribe);
             });
-           
+
         }
         if (exitFree) {
             exitFree.addEventListener('click', (event) => {
                 event.preventDefault();
                 closeModal(modalFree);
             });
-            
+
         }
         if (exitRegion) {
             exitRegion.addEventListener('click', (event) => {
@@ -548,9 +593,9 @@ window.addEventListener('DOMContentLoaded', () => {
             });
         }
 
-       
 
     });
+
     function openModal(modal) {
         modal.classList.add('active');
         $('html').addClass('lock');
@@ -560,6 +605,7 @@ window.addEventListener('DOMContentLoaded', () => {
         modal.classList.remove('active');
         $('html').removeClass('lock');
     }
+
     /* VIDEO */
     function findVideos() {
         let videos = document.querySelectorAll('.video');
@@ -642,10 +688,11 @@ window.addEventListener('DOMContentLoaded', () => {
     fixedHeight(document.querySelectorAll('.project__img'));
     window.addEventListener("resize", (event) => {
         fixedHeight(document.querySelectorAll('.employees__img'));
-    fixedHeight(document.querySelectorAll('.advantage__subtitle'));
-    fixedHeight(document.querySelectorAll('.project__img'));
-    fixedHeight(document.querySelectorAll('.project'));
+        fixedHeight(document.querySelectorAll('.advantage__subtitle'));
+        fixedHeight(document.querySelectorAll('.project__img'));
+        fixedHeight(document.querySelectorAll('.project'));
     })
+
     function fixedHeight(items) {
         let maxHeight = 0;
         items.forEach(item => {

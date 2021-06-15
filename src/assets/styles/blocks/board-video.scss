@@ -33,6 +33,14 @@
   left: 0;
   width: 100%;
   height: 100%;
+  picture{
+  display: none;
+  }
+
+  background-image: url("../img/gazprom.jpg");
+  background-repeat: no-repeat;
+  background-position:center center;
+  background-size: cover;
 }
 
 .video__media {
