@@ -54,6 +54,7 @@ get_header(); ?>
     </section>
 
     <section class="about about-modules__about">
+
         <div class="about-text"><?php the_field('modul_-_tekst_o_module'); ?></div>
 
         <div class="about__content">
@@ -77,35 +78,33 @@ get_header(); ?>
                 </button>
             </div>
         </div>
+
     </section><!-- !about -->
 
 
 <?php if (have_rows('modul_-_taby')): ?>
 
 
+    <section class="text2column js-about-tabs">
 
 
-        <section class="text2column js-about-tabs">
+        <div class="text2column__block">
+            <div class="text2column__left text-paragraph">
+                <div class="pravki-tab">
+
+                    <?php while (have_rows('modul_-_taby')): the_row();
+                        $nazvanie_taba = get_sub_field('nazvanie_taba');
+                        ?>
+
+                        <a href="#" class="characteristic"><?php echo $nazvanie_taba; ?></a>
+
+                    <?php endwhile; ?>
+
+                </div>
+            </div>
 
 
-
-                <div class="text2column__block">
-                    <div class="text2column__left text-paragraph">
-                        <div class="pravki-tab">
-
-                               <?php while (have_rows('modul_-_taby')): the_row();
-                                    $nazvanie_taba = get_sub_field('nazvanie_taba');
-                               ?>
-
-                                    <a href="#" class="characteristic"><?php echo $nazvanie_taba; ?></a>
-
-                               <?php endwhile; ?>
-
-                         </div>
-                    </div>
-
-
- <?php while (have_rows('modul_-_taby')): the_row();
+            <?php while (have_rows('modul_-_taby')): the_row();
 
                 // переменные
                 $tekst_taba = get_sub_field('tekst_taba');
@@ -113,27 +112,27 @@ get_header(); ?>
                 $izobrazhenie2_taba = get_sub_field('izobrazhenie-2_taba');
 
                 ?>
-                    <div class="text2column__right">
+                <div class="text2column__right">
                     <div class="text-paragraph"><?php echo $tekst_taba; ?></div>
-                        <div class="text2column__img">
-                            <div class="">
-                                <a href="<?php echo $izobrazhenie_taba['url']; ?>" class="fresco">
-                                    <img src="<?php echo $izobrazhenie_taba['url']; ?>"
-                                         alt="<?php echo $izobrazhenie_taba['alt'] ?>"/></a>
-                            </div>
+                    <div class="text2column__img">
+                        <div class="">
+                            <a href="<?php echo $izobrazhenie_taba['url']; ?>" class="fresco">
+                                <img src="<?php echo $izobrazhenie_taba['url']; ?>"
+                                     alt="<?php echo $izobrazhenie_taba['alt'] ?>"/></a>
+                        </div>
 
-                            <div class="">
-                                <a href="<?php echo $izobrazhenie2_taba['url']; ?>" class="fresco">
-                                    <img src="<?php echo $izobrazhenie2_taba['url']; ?>"
-                                         alt="<?php echo $izobrazhenie2_taba['alt'] ?>"/></a>
-                            </div>
+                        <div class="">
+                            <a href="<?php echo $izobrazhenie2_taba['url']; ?>" class="fresco">
+                                <img src="<?php echo $izobrazhenie2_taba['url']; ?>"
+                                     alt="<?php echo $izobrazhenie2_taba['alt'] ?>"/></a>
                         </div>
                     </div>
+                </div>
 
 
             <?php endwhile; ?>
-</div>
-        </section>
+        </div>
+    </section>
 
 
 <?php endif; ?>
@@ -182,110 +181,50 @@ if ($post_objects): ?>
 
 <?php get_template_part('template-parts/sections/query'); ?>
 
-
 <?php
 
-$post_objects = get_field('modul_-_drugie_moduli');
+$post_objects = get_field('modul_-_faq_-_spisok');
 
 if ($post_objects): ?>
-    <section class="awards module-more">
-        <h2 class="module-more__title title"><?php the_field('modul_-_drugie_moduli_-_zagolovok'); ?></h2>
-        <div class="swiper-container-module">
-            <div class="swiper-wrapper">
+
+    <section class="stages faq">
+        <h2 class="stages__title title"><?php the_field('modul_-_faq_-_zagolovok'); ?></h2>
+        <div class="stages-content">
+            <ol class="stages-list stages-list__faq">
 
                 <?php foreach ($post_objects as $post): // Переменная должна быть названа обязательно $post (IMPORTANT) ?>
                     <?php setup_postdata($post); ?>
 
-                    <div class="swiper-slide">
-                        <div class="award module-more__item module module-big">
-                            <div class="module__img module__img-big">
-                                <a href="<?php the_permalink(); ?>" class="award__img module-more__img">
-                                    <?php the_post_thumbnail(array(238, 208)); ?></a>
+                    <li class="stages-list__item">
+                        <a href="#" class="stages-list__link js-faq__list"><?php the_title(); ?></a>
+                        <div class="stages-tabs__wrapper js-faq__tab">
+                            <div class="stages-tabs">
+                                <div class="stages-tabs__tab">
+                                    <div class="faq__text">
+                                        <?php the_content(); ?>
+                                        <button class="btn stages-tabs__btn">ЗАДАТЬ ВОПРОС</button>
+                                    </div>
+                                </div>
                             </div>
-                            <h3 class="award__subtitle module-more__subtitle">
-                                <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-                            </h3>
                         </div>
-                    </div>
+                    </li>
 
                 <?php endforeach; ?>
-            </div>
 
-            <div class="module-more__next">
-                <div class="awards-nav__hexagon nav-hexagon nav-hexagon-2">
-                    <svg width="38" height="24" viewBox="0 0 38 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M37.9261 12.2002L17.9261 0.65319V23.7472L37.9261 12.2002ZM0 14.2002L19.9261 14.2002V10.2002L0 10.2002L0 14.2002Z"
-                              fill="black"/>
-                    </svg>
-                </div>
-            </div>
-            <div class="module-more__prev">
-                <div class="awards-nav__hexagon nav-hexagon">
-                    <svg width="39" height="24" viewBox="0 0 39 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M0.174015 11.7998L20.174 23.3468L20.174 0.252797L0.174015 11.7998ZM38.1002 9.7998L18.174 9.7998L18.174 13.7998L38.1002 13.7998L38.1002 9.7998Z"
-                              fill="black"/>
-                    </svg>
-                </div>
-            </div>
+            </ol>
         </div>
-    </section><!-- !module-more awards -->
+    </section><!-- !stages -->
+
     <?php wp_reset_postdata(); // ВАЖНО - сбросьте значение $post object чтобы избежать ошибок в дальнейшем коде ?>
 <?php endif;
 
 ?>
 
 
-
-
-
 <?php get_template_part('template-parts/sections/find-cost'); ?>
 
 
-<?php if (have_rows('modul_-_tegi') && get_field('modul_-_tegi_-_zagolovok')): ?>
 
-    <section class="popular-requries">
-        <h2 class="popular-requries__subtitle"><?php the_field('modul_-_tegi_-_zagolovok'); ?></h2>
-
-        <div class="characteristics__content popular-requries__content">
-            <div class="characteristics__slider popular-requries__slider">
-                <div class="swiper-container-tags">
-                    <div class="swiper-wrapper">
-
-                        <?php while (have_rows('modul_-_tegi')): the_row();
-
-                            $title = get_sub_field('nazvanie_tega');
-                            $link = get_sub_field('ssylka_tega');
-
-                            ?>
-
-                            <div class="swiper-slide swiper-slide__wauto">
-                                <a href="#" class="characteristic"><?php echo $title; ?></a></div>
-
-                        <?php endwhile; ?>
-
-                    </div>
-                </div>
-                <div class="tags__next">
-                    <div class="awards-nav__hexagon nav-hexagon nav-hexagon-2">
-                        <svg width="38" height="24" viewBox="0 0 38 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M37.9261 12.2002L17.9261 0.65319V23.7472L37.9261 12.2002ZM0 14.2002L19.9261 14.2002V10.2002L0 10.2002L0 14.2002Z"
-                                  fill="black"/>
-                        </svg>
-                    </div>
-                </div>
-                <div class="tags__prev">
-                    <div class="awards-nav__hexagon nav-hexagon">
-                        <svg width="39" height="24" viewBox="0 0 39 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M0.174015 11.7998L20.174 23.3468L20.174 0.252797L0.174015 11.7998ZM38.1002 9.7998L18.174 9.7998L18.174 13.7998L38.1002 13.7998L38.1002 9.7998Z"
-                                  fill="black"/>
-                        </svg>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-<?php endif; ?>
 
 
 <?php

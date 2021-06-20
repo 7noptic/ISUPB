@@ -86,13 +86,13 @@ get_header();
 
                     <?php endif; ?>
 
-<nav class="dots information-form__dots">
-                                                <div class="swiper-pagination-information swiper-pagination-clickable swiper-pagination-bullets">
-                                                    <span class="swiper-pagination-bullet swiper-pagination-bullet-active"></span><span
-                                                            class="swiper-pagination-bullet"></span>
-                                                </div>
+                    <nav class="dots information-form__dots">
+                        <div class="swiper-pagination-information swiper-pagination-clickable swiper-pagination-bullets">
+                            <span class="swiper-pagination-bullet swiper-pagination-bullet-active"></span><span
+                                    class="swiper-pagination-bullet"></span>
+                        </div>
 
-                                            </nav>
+                    </nav>
 
 
                 </div>
@@ -196,134 +196,167 @@ get_header();
 
 <?php get_template_part('template-parts/sections/query'); ?>
 
-<section class="profit-block">
 
+    <section class="profit-block" style="display: none">
         <div class="profit-block__wrapper">
-<h2 class="title profit-block__title advantages__title">
-                 <?php the_field('preimushhesva_-_zagolovok'); ?>
-            </h2>
+            <h2 class="title profit-block__title advantages__title">
+                <?php the_field('glavnaya_-_preimushhestva_-_zagolovok'); ?></h2>
 
             <div class="profit__content">
                 <div class="profit-center">
                     <div class="profit-center__img">
-                        <img src="<?php echo get_template_directory_uri() ?>/assets/img/isubg.jpg" alt="">
-                        <h2>
-                        РЕЗУЛЬТАТ
-                        </h2>
-                        <h3>
-                            Переход на риск-ориентированный подход и повышение культуры безопасности  производственных процессов.
-                        </h3>
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/isubg.jpg" alt="">
+                        <?php if (have_rows('glavnaya_-_preimushhestva_-_czentralnyj')) : ?>
+                            <?php while (have_rows('glavnaya_-_preimushhestva_-_czentralnyj')) : the_row(); ?>
+
+                                <h2><?php the_sub_field('zagolovok'); ?></h2>
+
+                                <h3><?php the_sub_field('tekst'); ?></h3>
+
+
                         <div class="profit-center__ico">
-                            <img src="<?php echo get_template_directory_uri() ?>/assets/img/isu70.svg" alt="">
-                        </div>
-
-                        <div class="profit-arr profit-arr-1">
-                            <img src="<?php echo get_template_directory_uri() ?>/assets/img/parr1.svg" alt="">
-                        </div>
-
-                        <div class="profit-arr profit-arr-2">
-                            <img src="<?php echo get_template_directory_uri() ?>/assets/img/parr2.svg" alt="">
-                        </div>
-
-                        <div class="profit-arr profit-arr-3">
-                            <img src="<?php echo get_template_directory_uri() ?>/assets/img/parr3.svg" alt="">
-                        </div>
-
-                        <div class="profit-arr profit-arr-4">
-                            <img src="<?php echo get_template_directory_uri() ?>/assets/img/parr4.svg" alt="">
-                        </div>
-
-                        <div class="profit-arr profit-arr-5">
-                            <img src="<?php echo get_template_directory_uri() ?>/assets/img/parr5.svg" alt="">
-                        </div>
-                        <div class="profit-arr profit-arr-6">
-                            <img src="<?php echo get_template_directory_uri() ?>/assets/img/parr6.svg" alt="">
-                        </div>
-
-                    </div>
-                </div>
-                <div class="profit-item profit-item-1">
-                    <div class="profit-item__img">
-                        <img src="<?php echo get_template_directory_uri() ?>/assets/img/isu10.svg" alt="">
-                    </div>
-                    <div class="profit-item__text">
-                    <h3>Ответственность</h3>
-                        Внедрение под ключ –
-                        от проектирования
-                        до бслуживания
-                    </div>
-                </div>
-
-                <div class="profit-item profit-item-right profit-item-2">
-                    <div class="profit-item__text profit-item__text-right">
-                    <h3>гарантии</h3>
-                        На протяжении всех этапов работ с предприятием взаимодействует профессиональная внедренческая и сервисная команда.
-                    </div>
-                    <div class="profit-item__img">
-                        <img src="<?php echo get_template_directory_uri() ?>/assets/img/isu20.svg" alt="">
-                    </div>
-
-                </div>
-
-                <div class="profit-item profit-item-3">
-                    <div class="profit-item__img">
-                        <img src="<?php echo get_template_directory_uri() ?>/assets/img/isu30.svg" alt="">
-                    </div>
-                    <div class="profit-item__text">
-                    <h3>Накопленный
-                        опыт</h3>
-                        20-летний опыт работы на рынке оказания информационных услуг
+                         <?php $ikonka = get_sub_field('ikonka'); ?>
+                                                         <?php if ($ikonka) : ?>
+                                                             <img src="<?php echo esc_url($ikonka['url']); ?>"
+                                                                  alt="<?php echo esc_attr($ikonka['alt']); ?>"/>
+                                                         <?php endif; ?></div>
+                                                          <?php endwhile; ?>
+                                                                                 <?php endif; ?>
+                        <div class="profit-arr profit-arr-1"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/parr1.svg" alt=""></div>
+                        <div class="profit-arr profit-arr-2"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/parr2.svg" alt=""></div>
+                        <div class="profit-arr profit-arr-3"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/parr3.svg" alt=""></div>
+                        <div class="profit-arr profit-arr-4"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/parr4.svg" alt=""></div>
+                        <div class="profit-arr profit-arr-5"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/parr5.svg" alt=""></div>
+                        <div class="profit-arr profit-arr-6"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/parr6.svg" alt=""></div>
 
                     </div>
                 </div>
 
-                <div class="profit-item profit-item-right profit-item-4">
-                    <div class="profit-item__text profit-item__text-right">
-                    <h3>Удобство </h3>
-                        Бесшовная интеграция учетно-аналитической
-                        и нормативно- справочной системы. Широкие интеграционные
-                        возможности по переносу любых данных предприятия.
-                    </div>
-                    <div class="profit-item__img">
-                        <img src="<?php echo get_template_directory_uri() ?>/assets/img/isu40.svg" alt="">
-                    </div>
 
-                </div>
+                <?php if (have_rows('glavnaya_-_preimushhestva_-_pervyj')) : ?>
+                    <div class="profit-item profit-item-1">
+                        <?php while (have_rows('glavnaya_-_preimushhestva_-_pervyj')) : the_row(); ?>
+                            <?php $ikonka = get_sub_field('ikonka'); ?>
+                            <?php if ($ikonka) : ?>
+                                <div class="profit-item__img">
+                                    <img src="<?php echo esc_url($ikonka['url']); ?>"
+                                         alt="<?php echo esc_attr($ikonka['alt']); ?>"/>
+                                </div>
+                            <?php endif; ?>
+                            <div class="profit-item__text">
+                                <h3><?php the_sub_field('zagolovok'); ?></h3>
+                                <?php the_sub_field('tekst'); ?>
+                            </div>
+                        <?php endwhile; ?>
+                    </div>
+                <?php endif; ?>
 
-                <div class="profit-item profit-item-5">
-                    <div class="profit-item__img">
-                        <img src="<?php echo get_template_directory_uri() ?>/assets/img/isu50.svg" alt="">
-                    </div>
-                    <div class="profit-item__text">
-                    <h3>Индивидуальный
-                        подход</h3>
-                        Внедрение можно начинать
-                        с автоматизации  любого процесса, постепенно дополняя решение под меняющиеся задачи предприятия.
-                    </div>
-                </div>
 
-                <div class="profit-item profit-item-right profit-item-6">
-                    <div class="profit-item__text profit-item__text-right">
-                       <h3>Гибкость</h3>
-                        Модульный подход, позволяющий решать задачи как отдельного предприятия,
-                        так и холдинговых структур.
+                <?php if (have_rows('glavnaya_-_preimushhestva_-_vtoroj')) : ?>
+                    <div class="profit-item profit-item-right profit-item-2">
+                        <?php while (have_rows('glavnaya_-_preimushhestva_-_vtoroj')) : the_row(); ?>
+                            <div class="profit-item__text profit-item__text-right">
+                                <h3><?php the_sub_field('zagolovok'); ?></h3>
+                                <?php the_sub_field('tekst'); ?>
+                            </div>
+                            <?php $ikonka = get_sub_field('ikonka'); ?>
+                            <?php if ($ikonka) : ?>
+                                <div class="profit-item__img">
+                                    <img src="<?php echo esc_url($ikonka['url']); ?>"
+                                         alt="<?php echo esc_attr($ikonka['alt']); ?>"/>
+                                </div>
+                            <?php endif; ?>
+                        <?php endwhile; ?>
                     </div>
-                    <div class="profit-item__img">
-                        <img src="<?php echo get_template_directory_uri() ?>/assets/img/isu60.svg" alt="">
-                    </div>
+                <?php endif; ?>
 
-                </div>
+
+                <?php if (have_rows('glavnaya_-_preimushhestva_-_tretij')) : ?>
+                    <div class="profit-item profit-item-3">
+                        <?php while (have_rows('glavnaya_-_preimushhestva_-_tretij')) : the_row(); ?>
+                            <?php $ikonka = get_sub_field('ikonka'); ?>
+                            <?php if ($ikonka) : ?>
+                                <div class="profit-item__img">
+                                    <img src="<?php echo esc_url($ikonka['url']); ?>"
+                                         alt="<?php echo esc_attr($ikonka['alt']); ?>"/>
+                                </div>
+                            <?php endif; ?>
+                            <div class="profit-item__text">
+                                <h3><?php the_sub_field('zagolovok'); ?></h3>
+                                <?php the_sub_field('tekst'); ?>
+                            </div>
+                        <?php endwhile; ?>
+                    </div>
+                <?php endif; ?>
+
+
+                <?php if ( have_rows( 'glavnaya_-_preimushhestva_-_chetvertyj' ) ) : ?>
+                    <div class="profit-item profit-item-right profit-item-4">
+                        <?php while ( have_rows( 'glavnaya_-_preimushhestva_-_chetvertyj' ) ) : the_row(); ?>
+                            <div class="profit-item__text profit-item__text-right">
+                                <h3><?php the_sub_field('zagolovok'); ?></h3>
+                                <?php the_sub_field('tekst'); ?>
+                            </div>
+                            <?php $ikonka = get_sub_field('ikonka'); ?>
+                            <?php if ($ikonka) : ?>
+                                <div class="profit-item__img">
+                                    <img src="<?php echo esc_url($ikonka['url']); ?>"
+                                         alt="<?php echo esc_attr($ikonka['alt']); ?>"/>
+                                </div>
+                            <?php endif; ?>
+                        <?php endwhile; ?>
+                    </div>
+                <?php endif; ?>
+
+
+                <?php if (have_rows('glavnaya_-_preimushhestva_-_pyatyj')) : ?>
+                    <div class="profit-item profit-item-5">
+                        <?php while (have_rows('glavnaya_-_preimushhestva_-_pyatyj')) : the_row(); ?>
+                            <?php $ikonka = get_sub_field('ikonka'); ?>
+                            <?php if ($ikonka) : ?>
+                                <div class="profit-item__img">
+                                    <img src="<?php echo esc_url($ikonka['url']); ?>"
+                                         alt="<?php echo esc_attr($ikonka['alt']); ?>"/>
+                                </div>
+                            <?php endif; ?>
+                            <div class="profit-item__text">
+                                <h3><?php the_sub_field('zagolovok'); ?></h3>
+                                <?php the_sub_field('tekst'); ?>
+                            </div>
+                        <?php endwhile; ?>
+                    </div>
+                <?php endif; ?>
+
+
+                <?php if ( have_rows( 'glavnaya_-_preimushhestva_-_shestoj' ) ) : ?>
+                    <div class="profit-item profit-item-right profit-item-6">
+                        <?php while ( have_rows( 'glavnaya_-_preimushhestva_-_shestoj' ) ) : the_row(); ?>
+                            <div class="profit-item__text profit-item__text-right">
+                                <h3><?php the_sub_field('zagolovok'); ?></h3>
+                                <?php the_sub_field('tekst'); ?>
+                            </div>
+                            <?php $ikonka = get_sub_field('ikonka'); ?>
+                            <?php if ($ikonka) : ?>
+                                <div class="profit-item__img">
+                                    <img src="<?php echo esc_url($ikonka['url']); ?>"
+                                         alt="<?php echo esc_attr($ikonka['alt']); ?>"/>
+                                </div>
+                            <?php endif; ?>
+                        <?php endwhile; ?>
+                    </div>
+                <?php endif; ?>
+
             </div>
         </div>
     </section>
+
+
 <?php if (have_rows('glavnaya_-_preimushhesva')): ?>
 
     <section class="advantages">
-               <h2 class="title advantages__title">
-                    <?php the_field('preimushhesva_-_zagolovok'); ?>
-               </h2>
-
-
+        <h2 class="title advantages__title">
+            <?php the_field('preimushhesva_-_zagolovok'); ?>
+        </h2>
 
 
         <?php while (have_rows('glavnaya_-_preimushhesva')): the_row();
@@ -349,10 +382,11 @@ get_header();
             </div>
 
         <?php endwhile; ?>
-</div>
+        </div>
     </section> <!-- !advantages -->
 
 <?php endif; ?>
+
 
     <section class="about">
         <div class="about-text">
@@ -385,6 +419,7 @@ get_header();
             </div>
         </div>
     </section> <!-- !about -->
+
 
 <?php get_template_part('template-parts/sections/project-numbers'); ?>
 
