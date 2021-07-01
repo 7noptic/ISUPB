@@ -17,7 +17,6 @@ window.addEventListener('DOMContentLoaded', () => {
         if (benefitItems) {
 
             if (mediaQuery.matches) {
-                console.log('yea');
                 let trigger;
                 for (let i = 0, count = 0; i < benefitItems.length; count++, i = i + 2) {
                     let num = benefitItems[i].querySelector('.benefit-item__num');
@@ -43,20 +42,26 @@ window.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    /* BURGER-MENU */
-    $(document).ready(function () {
-        let subMenuParent = document.querySelector('.header__nav');
-        if ($('.header__burger')) {
-            $('.header__burger').click(function (event) {
-                event.preventDefault()
-                $('.header__burger,.header__burger-fixed,.menu').toggleClass('active');
+    /*BURGER-MENU*/
 
-                $('html').toggleClass('lock');
+    let bur = document.querySelector('.header__burger'),
+        burFix = document.querySelector('.header__burger-fixed'),
+        burmenu = document.querySelector('.menu');
+    if(bur){
+        bur.addEventListener('click', function (e) {
+            e.preventDefault();
 
-            });
-        }
+            this.classList.toggle('active');
+            if(burFix){
+                burFix.classList.toggle('active');
+            }
+            if(burmenu){
+                burmenu.classList.toggle('active');
+            }
+        }, false);
+    }
 
-    });
+
 
     //$('[type="tel"]').mask("+7 (999) 999-99-99");
 
@@ -315,20 +320,32 @@ window.addEventListener('DOMContentLoaded', () => {
 
     });
     let swiperInformation = new Swiper('.swiper-container-information', {
-        autoplay: {
-            delay: 4000,
-        },
         slidesPerView: 1,
         spaceBetween: 200,
         observer: true,
         observeParents: true,
+        autoplay:{
+          delay: 4000,
+        },
         pagination: {
             el: '.swiper-pagination-information',
             type: 'bullets',
             clickable: true,
         },
+        navigation: {
+            nextEl: '.information__next',
+            prevEl: '.information__prev',
+        },
 
 
+
+    });
+    $('.swiper-slide').on('mouseover', function() {
+        swiperInformation.autoplay.stop();
+    });
+
+    $('.swiper-slide').on('mouseout', function() {
+        swiperInformation.autoplay.start();
     });
     let swiperModule = new Swiper('.swiper-container-module', {
         slidesPerView: 4,
@@ -419,7 +436,6 @@ window.addEventListener('DOMContentLoaded', () => {
         window.addEventListener('scroll', function onScroll() {
 
             if (window.pageYOffset > numberTop - window.innerHeight / 2) {
-                console.log('worj');
                 this.removeEventListener('scroll', onScroll);
                 let interval = setInterval(function () {
                     number[0].innerHTML = +number[0].innerHTML + 1;

@@ -19,20 +19,21 @@ get_header();
         <div class="information-wrapper">
 
             <div class="information-img">
+
                 <div class="swiper-container-information">
 
-                    <?php if (have_rows('glavnaya_-_slajder')): ?>
+					<?php if ( have_rows( 'glavnaya_-_slajder' ) ): ?>
 
                         <div class="swiper-wrapper">
 
-                            <?php while (have_rows('glavnaya_-_slajder')): the_row();
+							<?php while ( have_rows( 'glavnaya_-_slajder' ) ): the_row();
 
-                                // переменные
-                                $izobrazhenie = get_sub_field('izobrazhenie');
-                                $zagolovok_slajda = get_sub_field('zagolovok_slajda');
-                                $opisanie_slajda = get_sub_field('opisanie_slajda');
+								// переменные
+								$izobrazhenie     = get_sub_field( 'izobrazhenie' );
+								$zagolovok_slajda = get_sub_field( 'zagolovok_slajda' );
+								$opisanie_slajda  = get_sub_field( 'opisanie_slajda' );
 
-                                ?>
+								?>
 
                                 <div class="swiper-slide">
                                     <div class="information-img__slide">
@@ -73,18 +74,20 @@ get_header();
                                             <h2 class="information-form__title"><?php echo $zagolovok_slajda; ?></h2>
                                             <h3 class="information-form__subtitle"><?php echo $opisanie_slajda ?></h3>
 
-                                            <?php echo do_shortcode('[contact-form-7 id="708" title="Форма рядом со слайдером"]') ?>
+											<?php echo do_shortcode( '[contact-form-7 id="708" title="Форма рядом со слайдером"]' ) ?>
+
+
 
 
                                         </div>
                                     </div>
                                 </div>
 
-                            <?php endwhile; ?>
+							<?php endwhile; ?>
 
                         </div>
 
-                    <?php endif; ?>
+					<?php endif; ?>
 
                     <nav class="dots information-form__dots">
                         <div class="swiper-pagination-information swiper-pagination-clickable swiper-pagination-bullets">
@@ -98,41 +101,41 @@ get_header();
                 </div>
             </div>
 
-            <?php if (have_rows('glavnaya_-_spisok_modulej')): ?>
+			<?php if ( have_rows( 'glavnaya_-_spisok_modulej' ) ): ?>
 
                 <div class="information-modules">
                     <div class="modules">
 
-                        <?php
+						<?php
 
-                        $post_objects = get_field('glavnaya_-_spisok_modulej');
+						$post_objects = get_field( 'glavnaya_-_spisok_modulej' );
 
-                        if ($post_objects): ?>
-                            <?php foreach ($post_objects as $post): // Переменная должна быть названа обязательно $post (IMPORTANT) ?>
-                                <?php setup_postdata($post); ?>
+						if ( $post_objects ): ?>
+							<?php foreach ( $post_objects as $post ): // Переменная должна быть названа обязательно $post (IMPORTANT) ?>
+								<?php setup_postdata( $post ); ?>
 
                                 <div class="module">
                                     <div class="module__img">
                                         <a href="<?php the_permalink(); ?>">
-                                            <?php the_post_thumbnail(array(60, 60)); ?>
+											<?php the_post_thumbnail( array( 60, 60 ) ); ?>
                                         </a>
                                     </div>
                                     <a href="<?php the_permalink(); ?>"
                                        class="module__text"><?php the_title(); ?></a>
                                 </div>
 
-                            <?php endforeach; ?>
-                            <?php wp_reset_postdata(); // ВАЖНО - сбросьте значение $post object чтобы избежать ошибок в дальнейшем коде ?>
-                        <?php endif;
+							<?php endforeach; ?>
+							<?php wp_reset_postdata(); // ВАЖНО - сбросьте значение $post object чтобы избежать ошибок в дальнейшем коде ?>
+						<?php endif;
 
-                        ?>
+						?>
 
                     </div>
-                    <a href="<?php the_field('glavnaya_-_spisok_modulej_-_ssylka_-_vse_moduli'); ?>"
+                    <a href="<?php the_field( 'glavnaya_-_spisok_modulej_-_ssylka_-_vse_moduli' ); ?>"
                        class="modules__btn btn">ВСЕ МОДУЛИ СИСТЕМЫ</a>
                 </div>
 
-            <?php endif; ?>
+			<?php endif; ?>
 
         </div>
     </section> <!-- !information -->
@@ -173,7 +176,7 @@ get_header();
             </div>
         </div>
         <div class="request__text">
-            <a href="<?php the_field('glavnaya_-_poluchit_besplatnyj_dostup_-_ssylka'); ?>"
+            <a href="<?php the_field( 'glavnaya_-_poluchit_besplatnyj_dostup_-_ssylka' ); ?>"
                class="btn request__link js-free">
                 <svg width="77" height="49" viewBox="0 0 77 49" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" clip-rule="evenodd"
@@ -188,185 +191,200 @@ get_header();
                     <path d="M64.1372 25L49.1372 16.3397L49.1372 33.6603L64.1372 25ZM36 26.5L50.6372 26.5L50.6372 23.5L36 23.5L36 26.5Z"
                           fill="#E9E9E9"/>
                 </svg>
-                <?php the_field('glavnaya_-_poluchit_besplatnyj_dostup_-_tekst_ssylki'); ?></a>
+				<?php the_field( 'glavnaya_-_poluchit_besplatnyj_dostup_-_tekst_ssylki' ); ?></a>
         </div>
     </section> <!-- !request -->
 
-<?php get_template_part('template-parts/sections/stages'); ?>
+<?php get_template_part( 'template-parts/sections/stages' ); ?>
 
-<?php get_template_part('template-parts/sections/query'); ?>
+<?php get_template_part( 'template-parts/sections/query' ); ?>
 
 
-    <section class="profit-block" style="display: none">
+    <section class="profit-block">
         <div class="profit-block__wrapper">
             <h2 class="title profit-block__title advantages__title">
-                <?php the_field('glavnaya_-_preimushhestva_-_zagolovok'); ?></h2>
+				<?php the_field( 'glavnaya_-_preimushhestva_-_zagolovok' ); ?></h2>
 
             <div class="profit__content">
                 <div class="profit-center">
                     <div class="profit-center__img">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/isubg.jpg" alt="">
-                        <?php if (have_rows('glavnaya_-_preimushhestva_-_czentralnyj')) : ?>
-                            <?php while (have_rows('glavnaya_-_preimushhestva_-_czentralnyj')) : the_row(); ?>
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/isubg.jpg" alt="">
+						<?php if ( have_rows( 'glavnaya_-_preimushhestva_-_czentralnyj' ) ) : ?>
+							<?php while ( have_rows( 'glavnaya_-_preimushhestva_-_czentralnyj' ) ) : the_row(); ?>
 
-                                <h2><?php the_sub_field('zagolovok'); ?></h2>
+                                <h2><?php the_sub_field( 'zagolovok' ); ?></h2>
 
-                                <h3><?php the_sub_field('tekst'); ?></h3>
+                                <h3><?php the_sub_field( 'tekst' ); ?></h3>
+
+                                <div class="profit-center__ico">
+									<?php $ikonka = get_sub_field( 'ikonka' ); ?>
+									<?php if ( $ikonka ) : ?>
+                                        <img src="<?php echo esc_url( $ikonka['url'] ); ?>"
+                                             alt="<?php echo esc_attr( $ikonka['alt'] ); ?>"/>
+									<?php endif; ?></div>
+							<?php endwhile; ?>
+						<?php endif; ?>
 
 
-                        <div class="profit-center__ico">
-                         <?php $ikonka = get_sub_field('ikonka'); ?>
-                                                         <?php if ($ikonka) : ?>
-                                                             <img src="<?php echo esc_url($ikonka['url']); ?>"
-                                                                  alt="<?php echo esc_attr($ikonka['alt']); ?>"/>
-                                                         <?php endif; ?></div>
-                                                          <?php endwhile; ?>
-                                                                                 <?php endif; ?>
-                        <div class="profit-arr profit-arr-1"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/parr1.svg" alt=""></div>
-                        <div class="profit-arr profit-arr-2"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/parr2.svg" alt=""></div>
-                        <div class="profit-arr profit-arr-3"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/parr3.svg" alt=""></div>
-                        <div class="profit-arr profit-arr-4"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/parr4.svg" alt=""></div>
-                        <div class="profit-arr profit-arr-5"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/parr5.svg" alt=""></div>
-                        <div class="profit-arr profit-arr-6"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/parr6.svg" alt=""></div>
+                        <div class="profit-arr profit-arr-1"><img
+                                    src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/parr1.svg"
+                                    alt=""></div>
+                        <div class="profit-arr profit-arr-2"><img
+                                    src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/parr2.svg"
+                                    alt=""></div>
+                        <div class="profit-arr profit-arr-3"><img
+                                    src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/parr3.svg"
+                                    alt=""></div>
+                        <div class="profit-arr profit-arr-4"><img
+                                    src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/parr4.svg"
+                                    alt=""></div>
+                        <div class="profit-arr profit-arr-5"><img
+                                    src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/parr5.svg"
+                                    alt=""></div>
+                        <div class="profit-arr profit-arr-6"><img
+                                    src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/parr6.svg"
+                                    alt=""></div>
 
                     </div>
                 </div>
 
 
-                <?php if (have_rows('glavnaya_-_preimushhestva_-_pervyj')) : ?>
+				<?php if ( have_rows( 'glavnaya_-_preimushhestva_-_pervyj' ) ) : ?>
                     <div class="profit-item profit-item-1">
-                        <?php while (have_rows('glavnaya_-_preimushhestva_-_pervyj')) : the_row(); ?>
-                            <?php $ikonka = get_sub_field('ikonka'); ?>
-                            <?php if ($ikonka) : ?>
+						<?php while ( have_rows( 'glavnaya_-_preimushhestva_-_pervyj' ) ) : the_row(); ?>
+							<?php $ikonka = get_sub_field( 'ikonka' ); ?>
+							<?php if ( $ikonka ) : ?>
                                 <div class="profit-item__img">
-                                    <img src="<?php echo esc_url($ikonka['url']); ?>"
-                                         alt="<?php echo esc_attr($ikonka['alt']); ?>"/>
+                                    <img width="100" height="100" src="<?php echo esc_url( $ikonka['url'] ); ?>"
+                                         alt="<?php echo esc_attr( $ikonka['alt'] ); ?>"/>
                                 </div>
-                            <?php endif; ?>
+							<?php endif; ?>
+
+
                             <div class="profit-item__text">
-                                <h3><?php the_sub_field('zagolovok'); ?></h3>
-                                <?php the_sub_field('tekst'); ?>
+                                <h3><?php the_sub_field( 'zagolovok' ); ?></h3>
+								<?php the_sub_field( 'tekst' ); ?>
                             </div>
-                        <?php endwhile; ?>
+						<?php endwhile; ?>
                     </div>
-                <?php endif; ?>
+				<?php endif; ?>
 
 
-                <?php if (have_rows('glavnaya_-_preimushhestva_-_vtoroj')) : ?>
+				<?php if ( have_rows( 'glavnaya_-_preimushhestva_-_vtoroj' ) ) : ?>
                     <div class="profit-item profit-item-right profit-item-2">
-                        <?php while (have_rows('glavnaya_-_preimushhestva_-_vtoroj')) : the_row(); ?>
+						<?php while ( have_rows( 'glavnaya_-_preimushhestva_-_vtoroj' ) ) : the_row(); ?>
                             <div class="profit-item__text profit-item__text-right">
-                                <h3><?php the_sub_field('zagolovok'); ?></h3>
-                                <?php the_sub_field('tekst'); ?>
+                                <h3><?php the_sub_field( 'zagolovok' ); ?></h3>
+								<?php the_sub_field( 'tekst' ); ?>
                             </div>
-                            <?php $ikonka = get_sub_field('ikonka'); ?>
-                            <?php if ($ikonka) : ?>
+							<?php $ikonka = get_sub_field( 'ikonka' ); ?>
+							<?php if ( $ikonka ) : ?>
                                 <div class="profit-item__img">
-                                    <img src="<?php echo esc_url($ikonka['url']); ?>"
-                                         alt="<?php echo esc_attr($ikonka['alt']); ?>"/>
+                                    <img width="100" height="100" src="<?php echo esc_url( $ikonka['url'] ); ?>"
+                                         alt="<?php echo esc_attr( $ikonka['alt'] ); ?>"/>
                                 </div>
-                            <?php endif; ?>
-                        <?php endwhile; ?>
+							<?php endif; ?>
+						<?php endwhile; ?>
                     </div>
-                <?php endif; ?>
+				<?php endif; ?>
 
 
-                <?php if (have_rows('glavnaya_-_preimushhestva_-_tretij')) : ?>
+				<?php if ( have_rows( 'glavnaya_-_preimushhestva_-_tretij' ) ) : ?>
                     <div class="profit-item profit-item-3">
-                        <?php while (have_rows('glavnaya_-_preimushhestva_-_tretij')) : the_row(); ?>
-                            <?php $ikonka = get_sub_field('ikonka'); ?>
-                            <?php if ($ikonka) : ?>
+						<?php while ( have_rows( 'glavnaya_-_preimushhestva_-_tretij' ) ) : the_row(); ?>
+							<?php $ikonka = get_sub_field( 'ikonka' ); ?>
+							<?php if ( $ikonka ) : ?>
                                 <div class="profit-item__img">
-                                    <img src="<?php echo esc_url($ikonka['url']); ?>"
-                                         alt="<?php echo esc_attr($ikonka['alt']); ?>"/>
+                                    <img width="100" height="100" src="<?php echo esc_url( $ikonka['url'] ); ?>"
+                                         alt="<?php echo esc_attr( $ikonka['alt'] ); ?>"/>
                                 </div>
-                            <?php endif; ?>
+							<?php endif; ?>
                             <div class="profit-item__text">
-                                <h3><?php the_sub_field('zagolovok'); ?></h3>
-                                <?php the_sub_field('tekst'); ?>
+                                <h3><?php the_sub_field( 'zagolovok' ); ?></h3>
+								<?php the_sub_field( 'tekst' ); ?>
                             </div>
-                        <?php endwhile; ?>
+						<?php endwhile; ?>
                     </div>
-                <?php endif; ?>
+				<?php endif; ?>
 
 
-                <?php if ( have_rows( 'glavnaya_-_preimushhestva_-_chetvertyj' ) ) : ?>
+				<?php if ( have_rows( 'glavnaya_-_preimushhestva_-_chetvertyj' ) ) : ?>
                     <div class="profit-item profit-item-right profit-item-4">
-                        <?php while ( have_rows( 'glavnaya_-_preimushhestva_-_chetvertyj' ) ) : the_row(); ?>
+						<?php while ( have_rows( 'glavnaya_-_preimushhestva_-_chetvertyj' ) ) : the_row(); ?>
                             <div class="profit-item__text profit-item__text-right">
-                                <h3><?php the_sub_field('zagolovok'); ?></h3>
-                                <?php the_sub_field('tekst'); ?>
+                                <h3><?php the_sub_field( 'zagolovok' ); ?></h3>
+								<?php the_sub_field( 'tekst' ); ?>
                             </div>
-                            <?php $ikonka = get_sub_field('ikonka'); ?>
-                            <?php if ($ikonka) : ?>
+							<?php $ikonka = get_sub_field( 'ikonka' ); ?>
+							<?php if ( $ikonka ) : ?>
                                 <div class="profit-item__img">
-                                    <img src="<?php echo esc_url($ikonka['url']); ?>"
-                                         alt="<?php echo esc_attr($ikonka['alt']); ?>"/>
+                                    <img width="100" height="100" src="<?php echo esc_url( $ikonka['url'] ); ?>"
+                                         alt="<?php echo esc_attr( $ikonka['alt'] ); ?>"/>
                                 </div>
-                            <?php endif; ?>
-                        <?php endwhile; ?>
+							<?php endif; ?>
+						<?php endwhile; ?>
                     </div>
-                <?php endif; ?>
+				<?php endif; ?>
 
 
-                <?php if (have_rows('glavnaya_-_preimushhestva_-_pyatyj')) : ?>
+				<?php if ( have_rows( 'glavnaya_-_preimushhestva_-_pyatyj' ) ) : ?>
                     <div class="profit-item profit-item-5">
-                        <?php while (have_rows('glavnaya_-_preimushhestva_-_pyatyj')) : the_row(); ?>
-                            <?php $ikonka = get_sub_field('ikonka'); ?>
-                            <?php if ($ikonka) : ?>
+						<?php while ( have_rows( 'glavnaya_-_preimushhestva_-_pyatyj' ) ) : the_row(); ?>
+							<?php $ikonka = get_sub_field( 'ikonka' ); ?>
+							<?php if ( $ikonka ) : ?>
                                 <div class="profit-item__img">
-                                    <img src="<?php echo esc_url($ikonka['url']); ?>"
-                                         alt="<?php echo esc_attr($ikonka['alt']); ?>"/>
+                                    <img width="100" height="100" src="<?php echo esc_url( $ikonka['url'] ); ?>"
+                                         alt="<?php echo esc_attr( $ikonka['alt'] ); ?>"/>
                                 </div>
-                            <?php endif; ?>
+							<?php endif; ?>
                             <div class="profit-item__text">
-                                <h3><?php the_sub_field('zagolovok'); ?></h3>
-                                <?php the_sub_field('tekst'); ?>
+                                <h3><?php the_sub_field( 'zagolovok' ); ?></h3>
+								<?php the_sub_field( 'tekst' ); ?>
                             </div>
-                        <?php endwhile; ?>
+						<?php endwhile; ?>
                     </div>
-                <?php endif; ?>
+				<?php endif; ?>
 
 
-                <?php if ( have_rows( 'glavnaya_-_preimushhestva_-_shestoj' ) ) : ?>
+				<?php if ( have_rows( 'glavnaya_-_preimushhestva_-_shestoj' ) ) : ?>
                     <div class="profit-item profit-item-right profit-item-6">
-                        <?php while ( have_rows( 'glavnaya_-_preimushhestva_-_shestoj' ) ) : the_row(); ?>
+						<?php while ( have_rows( 'glavnaya_-_preimushhestva_-_shestoj' ) ) : the_row(); ?>
                             <div class="profit-item__text profit-item__text-right">
-                                <h3><?php the_sub_field('zagolovok'); ?></h3>
-                                <?php the_sub_field('tekst'); ?>
+                                <h3><?php the_sub_field( 'zagolovok' ); ?></h3>
+								<?php the_sub_field( 'tekst' ); ?>
                             </div>
-                            <?php $ikonka = get_sub_field('ikonka'); ?>
-                            <?php if ($ikonka) : ?>
+							<?php $ikonka = get_sub_field( 'ikonka' ); ?>
+							<?php if ( $ikonka ) : ?>
                                 <div class="profit-item__img">
-                                    <img src="<?php echo esc_url($ikonka['url']); ?>"
-                                         alt="<?php echo esc_attr($ikonka['alt']); ?>"/>
+                                    <img width="100" height="100" src="<?php echo esc_url( $ikonka['url'] ); ?>"
+                                         alt="<?php echo esc_attr( $ikonka['alt'] ); ?>"/>
                                 </div>
-                            <?php endif; ?>
-                        <?php endwhile; ?>
+							<?php endif; ?>
+						<?php endwhile; ?>
                     </div>
-                <?php endif; ?>
+				<?php endif; ?>
 
             </div>
         </div>
     </section>
 
 
-<?php if (have_rows('glavnaya_-_preimushhesva')): ?>
+<?php if ( have_rows( 'glavnaya_-_preimushhesva' ) ): ?>
 
     <section class="advantages">
         <h2 class="title advantages__title">
-            <?php the_field('preimushhesva_-_zagolovok'); ?>
+			<?php the_field( 'preimushhesva_-_zagolovok' ); ?>
         </h2>
 
 
-        <?php while (have_rows('glavnaya_-_preimushhesva')): the_row();
+		<?php while ( have_rows( 'glavnaya_-_preimushhesva' ) ): the_row();
 
-            // переменные
-            $image = get_sub_field('ikonka');
-            $content = get_sub_field('opisanie');
-            $title = get_sub_field('nazvanie');
+			// переменные
+			$image   = get_sub_field( 'ikonka' );
+			$content = get_sub_field( 'opisanie' );
+			$title   = get_sub_field( 'nazvanie' );
 
-            ?>
+			?>
 
             <div class="advantage">
                 <div class="advantage__img">
@@ -374,14 +392,14 @@ get_header();
                          alt="<?php echo $image['alt'] ?>"/>
                 </div>
                 <div class="advantage__subtitle">
-                    <?php echo $content; ?>
+					<?php echo $content; ?>
                 </div>
                 <div class="advantage__title">
-                    <?php echo $title; ?>
+					<?php echo $title; ?>
                 </div>
             </div>
 
-        <?php endwhile; ?>
+		<?php endwhile; ?>
         </div>
     </section> <!-- !advantages -->
 
@@ -390,22 +408,22 @@ get_header();
 
     <section class="about">
         <div class="about-text">
-            <h2 class="about-text__title"><?php the_field('glavnaya_-_o_nas_-_zagolovok'); ?></h2>
-            <h3 class="about-text__subtitle"><?php the_field('glavnaya_-_o_nas_-_opisanie'); ?></h3>
-            <a href="<?php the_field('glavnaya_-_o_nas_-_uznat_bolshe_-_ssylka'); ?>" class="about-text__readmore">
+            <h2 class="about-text__title"><?php the_field( 'glavnaya_-_o_nas_-_zagolovok' ); ?></h2>
+            <h3 class="about-text__subtitle"><?php the_field( 'glavnaya_-_o_nas_-_opisanie' ); ?></h3>
+            <a href="<?php the_field( 'glavnaya_-_o_nas_-_uznat_bolshe_-_ssylka' ); ?>" class="about-text__readmore">
                 Узнать больше
                 <div class="readmore"></div>
             </a>
         </div>
         <div class="about__content">
             <div class="video">
-                <a class="video__link" href="https://youtu.be/<?php the_field('glavnaya_-_o_nas_-_ssylka_video'); ?>"
-                   style="background-image: url('<?php the_field('glavnaya_-_o_nas_-_prevyu_dlya_video') ?>')">
+                <a class="video__link" href="https://youtu.be/<?php the_field( 'glavnaya_-_o_nas_-_ssylka_video' ); ?>"
+                   style="background-image: url('<?php the_field( 'glavnaya_-_o_nas_-_prevyu_dlya_video' ) ?>')">
                     <picture>
-                        <source srcset="https://i.ytimg.com/vi_webp/<?php the_field('glavnaya_-_o_nas_-_ssylka_video'); ?>/hqdefault.webp"
+                        <source srcset="https://i.ytimg.com/vi_webp/<?php the_field( 'glavnaya_-_o_nas_-_ssylka_video' ); ?>/hqdefault.webp"
                                 type="image/webp">
                         <img class="video__media"
-                             src="https://i.ytimg.com/vi/<?php the_field('glavnaya_-_o_nas_-_ssylka_video'); ?>/hqdefault.jpg"
+                             src="https://i.ytimg.com/vi/<?php the_field( 'glavnaya_-_o_nas_-_ssylka_video' ); ?>/hqdefault.jpg"
                              alt="Исупб">
                     </picture>
                 </a>
@@ -421,22 +439,22 @@ get_header();
     </section> <!-- !about -->
 
 
-<?php get_template_part('template-parts/sections/project-numbers'); ?>
+<?php get_template_part( 'template-parts/sections/project-numbers' ); ?>
 
 
-<?php get_template_part('template-parts/sections/find-cost'); ?>
+<?php get_template_part( 'template-parts/sections/find-cost' ); ?>
 
 
-<?php get_template_part('template-parts/sections/awards'); ?>
+<?php get_template_part( 'template-parts/sections/awards' ); ?>
 
 
-<?php get_template_part('template-parts/sections/projects'); ?>
+<?php get_template_part( 'template-parts/sections/projects' ); ?>
 
 
-<?php get_template_part('template-parts/sections/reviews'); ?>
+<?php get_template_part( 'template-parts/sections/reviews' ); ?>
 
 
-<?php get_template_part('template-parts/sections/questions-remain'); ?>
+<?php get_template_part( 'template-parts/sections/questions-remain' ); ?>
 
     <section class="news">
 
@@ -448,77 +466,77 @@ get_header();
 
             <div class="news-articles">
 
-                <?php if (have_rows('glavnaya_-_stati_i_novosti')): ?>
+				<?php if ( have_rows( 'glavnaya_-_stati_i_novosti' ) ): ?>
 
                     <header class="news-articles__header">
 
-                        <?php
-                        $i = 0;
-                        while (have_rows('glavnaya_-_stati_i_novosti')): the_row();
-                            $i++;
+						<?php
+						$i = 0;
+						while ( have_rows( 'glavnaya_-_stati_i_novosti' ) ): the_row();
+							$i ++;
 
-                            // переменные
-                            $title = get_sub_field('nazvanie_taba');
+							// переменные
+							$title = get_sub_field( 'nazvanie_taba' );
 
-                            ?>
+							?>
 
-                            <a href="#" class="news-subtitle <?php if ($i == 1) {
-                                echo 'news-subtitle-active';
-                            } ?>">
-                                <?php echo $title; ?>
+                            <a href="#" class="news-subtitle <?php if ( $i == 1 ) {
+								echo 'news-subtitle-active';
+							} ?>">
+								<?php echo $title; ?>
                             </a>
 
-                        <?php endwhile; ?>
+						<?php endwhile; ?>
 
                     </header>
 
 
-                    <?php $j = 0;
-                    while (have_rows('glavnaya_-_stati_i_novosti')): the_row();
-                        $j++;
+					<?php $j = 0;
+					while ( have_rows( 'glavnaya_-_stati_i_novosti' ) ): the_row();
+						$j ++;
 
-                        $post_objects = get_sub_field('soderzhimoe_taba');
-                        $title = get_sub_field('nazvanie_taba');
-                        $allLink = get_sub_field('ssylka_na_vse_zapisi');
+						$post_objects = get_sub_field( 'soderzhimoe_taba' );
+						$title        = get_sub_field( 'nazvanie_taba' );
+						$allLink      = get_sub_field( 'ssylka_na_vse_zapisi' );
 
-                        ?>
+						?>
 
-                        <?php
+						<?php
 
-                        if ($post_objects): ?>
+						if ( $post_objects ): ?>
 
-                            <div class="news-articles__content <?php if ($j == 1) {
-                                echo 'active';
-                            } ?>">
+                            <div class="news-articles__content <?php if ( $j == 1 ) {
+								echo 'active';
+							} ?>">
 
-                                <?php foreach ($post_objects as $post): // Переменная должна быть названа обязательно $post (IMPORTANT) ?>
-                                    <?php setup_postdata($post); ?>
+								<?php foreach ( $post_objects as $post ): // Переменная должна быть названа обязательно $post (IMPORTANT) ?>
+									<?php setup_postdata( $post ); ?>
 
                                     <div class="news-item">
                                         <header class="news-item__header">
                                             <time datetime="2020-05-01" class="news-item__date">
-                                                <?php the_date(); ?>
+												<?php the_date(); ?>
                                             </time>
                                             <div class="news-item__author">
-                                                <?php the_author(); ?>
+												<?php the_author(); ?>
                                             </div>
                                             <div class="news-item__views">
-                                                <span><?php echo getPostViews(get_the_ID()); ?></span>
+                                                <span><?php echo getPostViews( get_the_ID() ); ?></span>
                                             </div>
                                         </header>
                                         <div class="news-item__content">
                                             <a href="<?php the_permalink(); ?>" class="news-item__title">
-                                                <?php the_title(); ?></a>
+												<?php the_title(); ?></a>
                                             <div class="news-item__img">
                                                 <a href="<?php the_permalink(); ?>">
-                                                    <?php the_post_thumbnail('post-home'); ?>
+													<?php the_post_thumbnail( 'post-home' ); ?>
                                                 </a>
                                             </div>
                                             <div class="news-item__description">
-                                                <?php
-                                                $text = strip_tags(get_the_excerpt());
-                                                echo mb_substr($text, 0, 141) . '...';
-                                                ?>
+												<?php
+												$text = strip_tags( get_the_excerpt() );
+												echo mb_substr( $text, 0, 141 ) . '...';
+												?>
                                             </div>
                                             <a href="<?php the_permalink(); ?>"
                                                class="news-item__readmore about-text__readmore">
@@ -528,22 +546,22 @@ get_header();
                                         </div>
                                     </div>
 
-                                <?php endforeach; ?>
+								<?php endforeach; ?>
 
                                 <footer class="news-articles__footer">
 
-                                    <?php
-                                    $terms = get_field('allLink');
-                                    if ($terms): ?>
+									<?php
+									$terms = get_field( 'allLink' );
+									if ( $terms ): ?>
                                         <ul>
-                                            <?php foreach ($terms as $term): ?>
-                                                <h2><?php echo esc_html($term->name); ?></h2>
-                                                <p><?php echo esc_html($term->description); ?></p>
-                                                <a href="<?php echo esc_url(get_term_link($term)); ?>">View all
-                                                    '<?php echo esc_html($term->name); ?>' posts</a>
-                                            <?php endforeach; ?>
+											<?php foreach ( $terms as $term ): ?>
+                                                <h2><?php echo esc_html( $term->name ); ?></h2>
+                                                <p><?php echo esc_html( $term->description ); ?></p>
+                                                <a href="<?php echo esc_url( get_term_link( $term ) ); ?>">View all
+                                                    '<?php echo esc_html( $term->name ); ?>' posts</a>
+											<?php endforeach; ?>
                                         </ul>
-                                    <?php endif; ?>
+									<?php endif; ?>
 
 
                                     <a href="<?php echo $allLink; ?>"
@@ -551,13 +569,13 @@ get_header();
                                 </footer>
                             </div>
 
-                            <?php wp_reset_postdata(); // ВАЖНО - сбросьте значение $post object чтобы избежать ошибок в дальнейшем коде ?>
-                        <?php endif;
+							<?php wp_reset_postdata(); // ВАЖНО - сбросьте значение $post object чтобы избежать ошибок в дальнейшем коде ?>
+						<?php endif;
 
-                        ?>
+						?>
 
-                    <?php endwhile; ?>
-                <?php endif; ?>
+					<?php endwhile; ?>
+				<?php endif; ?>
 
             </div>
 
@@ -599,10 +617,10 @@ get_header();
                         </div>
                     </div>
                     <div class="news-mailing__title">
-                        <?php the_field('glavnaya_-_stati_i_novosti_-_zagolovok_formy'); ?>
+						<?php the_field( 'glavnaya_-_stati_i_novosti_-_zagolovok_formy' ); ?>
                     </div>
                     <div class="news-form">
-                        <?php echo do_shortcode('[contact-form-7 id="552" title="Подпишись на свежие  статьи и новости"]'); ?>
+						<?php echo do_shortcode( '[contact-form-7 id="552" title="Подпишись на свежие  статьи и новости"]' ); ?>
                     </div>
                 </div>
             </div>
